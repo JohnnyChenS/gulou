@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk ls *)",
+      "Read(//Users/johnny/Downloads/**)",
+      "Bash(python3 -c ' *)",
+      "Bash(rtk read *)",
+      "Bash(rtk grep *)"
+    ]
+  }
+}

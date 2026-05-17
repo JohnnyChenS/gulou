@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+._*
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Misc
+.ll
