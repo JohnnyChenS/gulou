@@ -9,6 +9,7 @@ difficulty: foundational
 review_status: draft
 references:
   - Boshart, D. (1998). Oral Motor Analysis and Exercise. Boshart Enterprises.
+  - Green, J. R., Moore, C. A., & Reilly, K. J. (2002). The sequential development of oromotor coordination. Journal of Speech, Language, and Hearing Research, 45(3), 504-520.
   - Gisel, E. G. (1991). Effect of food texture on the development of chewing. The American Journal of Occupational Therapy, 45(4), 331-338.
   - Locke, J. L. (1993). The child's path to spoken language. Harvard University Press.
   - 中国《0-6岁儿童孤独症筛查干预服务规范》（口腔运动发育部分）

@@ -12,6 +12,7 @@ references:
   - Lillard, A. S. (2002). Pretend play and cognitive development. In U. Goswami (Ed.), Blackwell Handbook of Childhood Cognitive Development. Blackwell.
   - McCune, N. J. (1995). A normative study of representational play in the transition to language. Developmental Psychology, 31(2), 198-206.
   - Tomasello, M., Striano, T., & Rochat, P. (1999). Do young children use objects as symbols? British Journal of Developmental Psychology, 17(4), 563-582.
+  - Fein, G. G. (1981). Pretend play in childhood: An integrative review. Child Development, 52(4), 1095-1118.
 tags: [符号思维, 假装游戏, 象征性游戏, 想象力, 语言发展]
 related_prompts: [0-3-core-object-permanence-01, 0-3-core-self-awareness-01]
 ---
@@ -36,7 +37,7 @@ related_prompts: [0-3-core-object-permanence-01, 0-3-core-self-awareness-01]
 > 2. **5个阶梯式假装游戏**：从最简单的模仿性假装到需要想象替代的复杂假装，按难度递进排列。每个游戏说明：适合月龄、具体玩法、家长如何参与但不主导、这个游戏发展了什么。
 > 3. **日常生活中的符号体验**：在哪些日常场景中孩子自然地使用符号？（如模仿打电话、用手指画圈代表"画画"、发出"嘟嘟"声代表车）家长如何捕捉和延伸这些时刻？
 > 4. **假装游戏与语言发展的关系**：为什么假装游戏是语言习得的"预演"？在假装游戏中，物体和动作如何变成"词语"的前身？家长如何通过假装游戏自然地丰富孩子的词汇？
-> 5. **常见误区**：家长在引导假装游戏时常犯的3个错误：过度主导、纠正"不对"、用成品玩具替代开放性材料。为什么这些做法反而阻碍符号思维发展？
+> 5. **常见误区**：家长在引导假装游戏时常犯的3个错误：1）抢过主导权，告诉孩子"应该怎么玩"而非跟随孩子的节奏；2）纠正孩子"不对"的假装方式（如"这不是电话，是积木"），破坏了"用一物代表另一物"的符号思维核心；3）用结构固定的成品玩具替代开放性材料，限制了想象力的发挥空间。为什么这些做法反而阻碍符号思维发展？
 >
 > 请用通俗易懂的语言，适合非专业家长阅读。引用的理论请简单说明核心含义，不要使用过多学术术语。
 

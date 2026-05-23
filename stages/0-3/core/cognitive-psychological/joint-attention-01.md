@@ -12,6 +12,7 @@ references:
   - Mundy, P., Sigman, M., & Kasari, C. (1994). Joint attention, developmental level, and symptom presentation in autism. Development and Psychopathology, 6(3), 389-401.
   - Bakeman, R., & Adamson, L. B. (1984). Coordinating attention to people and objects in mother-infant and peer-infant interaction. Child Development, 55(4), 1278-1289.
   - Carpenter, M., Nagell, K., & Tomasello, M. (1998). Social cognition, joint attention, and communicative competence. Monographs of the Society for Research in Child Development, 63(4), 1-143.
+  - Charman, T., Baron-Cohen, S., Swettenham, J., Baird, G., & Drew, A. (2000). Testing joint attention, imitation, and play as infancy precursors to language and theory of mind. Cognitive Development, 15(4), 481-498.
 tags: [联合注意, 共享关注, 指物, 社会认知, 语言发展基础]
 related_prompts: [0-3-core-cause-effect-01, 0-3-core-attachment-01]
 ---
@@ -33,7 +34,7 @@ related_prompts: [0-3-core-cause-effect-01, 0-3-core-attachment-01]
 > 你是一位儿童社会认知发展专家，擅长将联合注意研究转化为家长可操作的日常互动。请为一位[填写：孩子月龄]个月大的孩子的家长，提供一份关于「联合注意培养」的详细指导方案，包含以下内容：
 >
 > 1. **该月龄的联合注意发展特征**：这个月龄段的孩子在联合注意方面应该具备哪些能力？（回应性联合注意：追随视线/手指；主动性联合注意：指物分享、展示）应该观察到哪些典型行为？
-> 2. **5个日常互动方法**：在亲子阅读、户外散步、玩具玩耍、日常护理等场景中，哪些具体做法能促进联合注意？包括家长如何"跟随孩子的注意"和如何"邀请孩子分享自己的注意"。
+> 2. **4个日常互动方法**：在亲子阅读、户外散步、玩具玩耍、日常护理等场景中，哪些具体做法能促进联合注意？包括家长如何"跟随孩子的注意"和如何"邀请孩子分享自己的注意"。
 > 3. **回应指物 vs 要求指物**：当孩子指东西时，如何区分"那是啥？"（信息寻求）和"看那个！"（分享体验）？家长应该如何回应这两种不同的指物？
 > 4. **联合注意与语言发展的关联**：为什么联合注意是语言习得的前提？在"共同关注"的时刻教孩子词语，为什么比随机教学有效得多？
 > 5. **需要关注的信号**：到什么月龄如果仍未出现追随视线或指物行为，家长应该关注？联合注意的哪些表现需要进一步评估？

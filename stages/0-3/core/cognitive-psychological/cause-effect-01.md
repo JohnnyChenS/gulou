@@ -10,6 +10,7 @@ review_status: draft
 references:
   - Piaget, J. (1952). The Origins of Intelligence in Children. International Universities Press.
   - Gopnik, A., Sobel, D. M., Schulz, L. E., & Glymour, C. (2001). Causal learning mechanisms in very young children. Science, 297(5582), 1176-1179.
+  - Gopnik, A. (2012). Scientific thinking in young children. Science, 337(6102), 1623-1627.
   - Meltzoff, A. N. (2007). The "like me" framework for recognizing and becoming an intentional agent. Acta Psychologica, 124(1), 26-43.
 tags: [因果关系, 认知发展, 探索, 动作-结果, 主动学习]
 related_prompts: [0-3-core-object-permanence-01, 0-3-core-joint-attention-01]
@@ -32,7 +33,7 @@ related_prompts: [0-3-core-object-permanence-01, 0-3-core-joint-attention-01]
 > 你是一位儿童认知发展专家，擅长将婴儿认知研究转化为家长可操作的日常互动。请为一位[填写：孩子月龄]个月大的孩子的家长，提供一份关于「因果关系推理培养」的详细指导方案，包含以下内容：
 >
 > 1. **该月龄的因果推理发展特征**：这个月龄段的孩子在因果关系理解方面处于哪个阶段？应该观察到哪些典型行为？（如：重复动作、有意试探、观察结果等）
-> 2. **6个因果探索活动**：按月龄递进，从简单的感官因果（拍打→声音）到稍复杂的工具性因果（拉绳子→玩具靠近）。每个活动说明：适合月龄、具体玩法、如何引导、孩子从中理解了什么。材料取自日常生活，无需购买特殊教具。
+> 2. **6个因果探索活动**：按月龄递进，从简单的感官因果（拍打→发声、摇晃→响动）到稍复杂的工具性因果（拉绳子→玩具靠近、按钮→灯光、推开障碍→拿到物体、倾斜容器→液体流出）。每个活动说明：适合月龄、具体玩法、如何引导、孩子从中理解了什么。材料取自日常生活，无需购买特殊教具。
 > 3. **日常生活中的因果体验**：在吃饭、洗澡、穿衣等场景中，有哪些自然的机会让孩子体验"我的动作产生了结果"？家长应该允许哪些"混乱"以换取学习机会？
 > 4. **过度干预与适度放手**：家长如何在"保护安全"和"允许探索"之间找到平衡？什么时候应该帮孩子完成，什么时候应该等待？哪些"帮忙"实际上剥夺了孩子的因果学习机会？
 > 5. **因果推理与客体永久性的关联**：这两项能力如何互相促进？孩子理解"我的动作导致物品消失/出现"如何加深对物体持续存在的理解？

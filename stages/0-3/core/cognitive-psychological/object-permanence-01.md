@@ -10,6 +10,8 @@ review_status: draft
 references:
   - Piaget, J. (1952). The Origins of Intelligence in Children. International Universities Press.
   - Baillargeon, R. (1987). Object permanence in 3.5- and 4.5-month-old infants. Developmental Psychology, 23(5), 655-664.
+  - Spelke, E. S., & Kinzler, K. D. (2007). Core knowledge. Developmental Science, 10(1), 89-96.
+  - Xu, F., & Carey, S. (1996). Infants' metaphysics: The case of numerical identity. Cognitive Psychology, 30(2), 111-153.
   - Erikson, E. H. (1950). Childhood and Society. W. W. Norton.
 tags: [客体永久性, 认知发展, 游戏, 躲猫猫, 分离焦虑]
 related_prompts: [0-3-core-attachment-01, 0-3-core-cause-effect-01]
@@ -32,7 +34,7 @@ related_prompts: [0-3-core-attachment-01, 0-3-core-cause-effect-01]
 > 你是一位儿童认知发展专家，擅长将皮亚杰认知发展理论转化为家长可操作的日常互动。请为一位[填写：孩子月龄]个月大的孩子的家长，提供一份关于「客体永久性培养」的详细指导方案，包含以下内容：
 >
 > 1. **该月龄的认知发展特征**：这个月龄段的孩子在客体永久性方面处于哪个阶段？应该观察到哪些典型行为？
-> 2. **6个阶梯游戏**：从最简单的遮挡游戏到较复杂的寻找游戏，按难度递进排列。每个游戏说明：适合月龄、具体玩法、家长如何引导、这个游戏锻炼了什么。游戏材料应取自日常生活（毛巾、纸盒、玩具等），无需购买特殊教具。
+> 2. **6个阶梯游戏**：从最简单的遮挡游戏到较复杂的寻找游戏，按难度递进排列（如：遮挡→部分露出→完全隐藏→转移隐藏→跨房间寻找→延迟寻找）。每个游戏说明：适合月龄、具体玩法、家长如何引导、这个游戏锻炼了什么。游戏材料应取自日常生活（毛巾、纸盒、玩具等），无需购买特殊教具。
 > 3. **日常生活中的渗透**：除了专门的游戏时间，在穿衣、吃饭、收拾玩具等日常场景中，有哪些自然的机会可以强化客体永久性？
 > 4. **与分离焦虑的关联**：客体永久性如何影响分离焦虑？当孩子因为"妈妈不见了"而哭闹时，如何在安抚的同时帮助孩子建立"妈妈会回来"的信念？
 > 5. **发育警示信号**：到什么月龄如果仍未出现寻找被遮挡物品的行为，家长应该关注？哪些表现需要寻求专业评估？
