@@ -5,7 +5,15 @@
       "Read(//Users/johnny/Downloads/**)",
       "Bash(python3 -c ' *)",
       "Bash(rtk read *)",
-      "Bash(rtk grep *)"
+      "Bash(rtk grep *)",
+      "Bash(awk -F'|' '{print NR\": \"NF-1\" columns\"}')",
+      "Bash(awk -F'|' '{print NF-1\" columns\"}')",
+      "Bash(awk -F'|' '{print NR+36\": \"NF-1\" columns\"}')",
+      "Bash(awk -F'|' '{print $8}')",
+      "Bash(awk '-F|' '{for\\(i=1;i<=NF;i++\\) print \"Column \"i\": \"$i}')",
+      "Bash(awk -F'|' '{print NR+34\": \"NF-1\" columns\"}')",
+      "Bash(awk -F'|' '{print NF}')",
+      "Bash(awk '-F|' '{for\\(i=1;i<=NF;i++\\) print i\": \"$i}')"
     ]
   }
 }
