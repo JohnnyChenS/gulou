@@ -24,7 +24,7 @@
 
 1. 在 `interests/` 下创建以兴趣名称命名的目录
 2. 创建 `_index.md`，按年龄阶段列出对应的 Prompt 链接（未覆盖的阶段标注"待贡献"）
-3. 在 `stages/<对应年龄>/interests/<兴趣名称>/` 下创建实际 Prompt 文件
+3. 在 `stages/<阶段>/兴趣/<兴趣名称>/` 下创建实际 Prompt 文件
 4. 更新 `interests/_index.md` 总览
 
 ### 4. 补充参考文献
