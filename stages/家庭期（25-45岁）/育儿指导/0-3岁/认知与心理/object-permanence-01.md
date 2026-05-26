@@ -14,6 +14,7 @@ references:
   - Xu, F., & Carey, S. (1996). Infants' metaphysics: The case of numerical identity. Cognitive Psychology, 30(2), 111-153.
   - Erikson, E. H. (1950). Childhood and Society. W. W. Norton.
 tags: [客体永久性, 认知发展, 游戏, 躲猫猫, 分离焦虑]
+learning_paths: [0-3-cognitive-psychological]
 related_prompts: [0-3-core-attachment-01, 0-3-core-cause-effect-01]
 ---
 

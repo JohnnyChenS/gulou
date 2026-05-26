@@ -13,6 +13,7 @@ references:
   - Erikson, E. H. (1950). Childhood and Society. W. W. Norton.
   - 中国《0-6岁儿童孤独症筛查干预服务规范》
 tags: [依恋, 安全感, 亲子关系, 分离焦虑, 信任]
+learning_paths: [0-3-cognitive-psychological]
 related_prompts: [0-3-core-object-permanence-01, 0-3-core-empathy-01]
 ---
 

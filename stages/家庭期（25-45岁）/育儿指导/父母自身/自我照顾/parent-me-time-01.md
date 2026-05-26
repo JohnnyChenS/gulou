@@ -13,6 +13,7 @@ references:
   - Rizzo, K. M., et al. (2013). The implications of marriage and parenthood for time use and well-being. Journal of Happiness Studies, 14(4), 1-25.
   - Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. American Psychologist, 55(1), 68-78.
 tags: [自我时间, 自我照顾, 时间管理, 边界设定, 角色平衡, 自我决定]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-identity-maintenance-01, parenting-parent-health-01]
 ---
 

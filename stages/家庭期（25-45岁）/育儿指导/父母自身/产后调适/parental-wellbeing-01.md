@@ -13,6 +13,7 @@ references:
   - Dennis, C. L., & Dowswell, T. (2013). Psychosocial and psychological interventions for preventing postpartum depression. Cochrane Database of Systematic Reviews, (2).
   - Nelson, S. K., Kushlev, K., & Lyubomirsky, S. (2014). The pains and pleasures of parenting. Psychological Bulletin, 140(3), 846-895.
 tags: [产后抑郁, 父亲心理健康, 夫妻关系, 睡眠剥夺, 自我照顾, 角色适应]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-prenatal-preparation-01, 0-3-core-attachment-01]
 ---
 

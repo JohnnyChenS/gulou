@@ -13,6 +13,7 @@ references:
   - Garfield, C. F., & Isacco, A. (2006). Urban fathers' involvement in their child's health and health care. Psychology of Men & Masculinity, 7(1), 32-48.
   - Lenz, E. R. (2002). Health-related quality of life and health promotion in the family. In M. H. Bornstein (Ed.), Handbook of Parenting (2nd ed., Vol. 5). Lawrence Erlbaum.
 tags: [身体健康, 心理保健, 运动, 营养, 睡眠, 压力管理, 自我关怀]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-me-time-01, parenting-identity-maintenance-01]
 ---
 

@@ -13,6 +13,7 @@ references:
   - Gopnik, A. (2012). Scientific thinking in young children. Science, 337(6102), 1623-1627.
   - Meltzoff, A. N. (2007). The "like me" framework for recognizing and becoming an intentional agent. Acta Psychologica, 124(1), 26-43.
 tags: [因果关系, 认知发展, 探索, 动作-结果, 主动学习]
+learning_paths: [0-3-cognitive-psychological]
 related_prompts: [0-3-core-object-permanence-01, 0-3-core-joint-attention-01]
 ---
 

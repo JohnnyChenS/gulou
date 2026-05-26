@@ -14,6 +14,7 @@ references:
   - Locke, J. L. (1993). The child's path to spoken language. Harvard University Press.
   - 中国《0-6岁儿童孤独症筛查干预服务规范》（口腔运动发育部分）
 tags: [口部运动, 咀嚼, 吞咽, 发音器官, 辅食添加, 语言发展基础]
+learning_paths: [0-3-physical]
 related_prompts: [0-3-core-sensory-integration-01, 0-3-core-attachment-01]
 ---
 

@@ -13,6 +13,7 @@ references:
   - Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation. American Psychologist, 55(1), 68-78.
   - Piaget, J. (1962). Play, Dreams and Imitation in Childhood. Norton.
 tags: [自主性, 独立性, 自我调节, 说"不", 适度的掌控感]
+learning_paths: [0-3-cognitive-psychological]
 related_prompts: [0-3-core-self-awareness-01, 0-3-core-empathy-01]
 ---
 

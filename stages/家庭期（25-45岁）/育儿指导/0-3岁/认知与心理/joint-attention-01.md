@@ -14,6 +14,7 @@ references:
   - Carpenter, M., Nagell, K., & Tomasello, M. (1998). Social cognition, joint attention, and communicative competence. Monographs of the Society for Research in Child Development, 63(4), 1-143.
   - Charman, T., Baron-Cohen, S., Swettenham, J., Baird, G., & Drew, A. (2000). Testing joint attention, imitation, and play as infancy precursors to language and theory of mind. Cognitive Development, 15(4), 481-498.
 tags: [联合注意, 共享关注, 指物, 社会认知, 语言发展基础]
+learning_paths: [0-3-cognitive-psychological]
 related_prompts: [0-3-core-cause-effect-01, 0-3-core-attachment-01]
 ---
 

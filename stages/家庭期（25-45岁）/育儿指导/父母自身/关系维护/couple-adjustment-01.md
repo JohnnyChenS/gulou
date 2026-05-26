@@ -13,6 +13,7 @@ references:
   - Doss, B. D., et al. (2009). A randomized controlled trial of the effects of the Bringing Baby Home workshop on marital interaction. Journal of Consulting and Clinical Psychology, 77(3), 554-567.
   - Kluwer, E. S. (2010). From partnership to parenthood: A review of marital change across the transition to parenthood. Journal of Family Theory & Review, 2(2), 105-125.
 tags: [夫妻关系, 产后调适, 婚姻满意度, 沟通, 分工, 亲密感]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-parental-wellbeing-01, parenting-intergenerational-parenting-01]
 ---
 

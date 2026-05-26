@@ -13,6 +13,7 @@ references:
   - Connolly, B. H., & Michael, B. T. (1986). Performance of retarded children on the fine motor scale of the Peabody Developmental Motor Scales. Physical Therapy, 66(7), 1101-1104.
   - 中国《3-6岁儿童学习与发展指南》（手部动作部分）
 tags: [精细动作, 抓握, 捏, 工具使用, 手眼协调, 书写准备]
+learning_paths: [0-3-physical]
 related_prompts: [0-3-core-gross-motor-01, 0-3-core-sensory-integration-01]
 ---
 

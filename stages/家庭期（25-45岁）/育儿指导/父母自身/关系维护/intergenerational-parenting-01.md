@@ -13,6 +13,7 @@ references:
   - Silverstein, M., & Bengtson, V. L. (1997). Intergenerational solidarity and the structure of adult child-parent relationships. American Sociological Review, 62(1), 108-124.
   - Fingerman, K. L. (2001). Aging Mothers and Their Adult Daughters: A Study in Mixed Emotions. Springer.
 tags: [代际关系, 育儿理念, 长辈, 边界设定, 尊重, 沟通]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-couple-adjustment-01, parenting-parenting-support-network-01]
 ---
 

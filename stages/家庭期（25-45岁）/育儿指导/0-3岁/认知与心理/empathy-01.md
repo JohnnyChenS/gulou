@@ -14,6 +14,7 @@ references:
   - Decety, J., & Meyer, M. (2008). From emotion resonance to empathic understanding. Developmental Science, 11(6), 861-872.
   - Eisenberg, N., & Fabes, R. A. (1998). Prosocial development. In W. Damon & N. Eisenberg (Eds.), Handbook of Child Psychology (5th ed., Vol. 3, pp. 701-778). Wiley.
 tags: [共情, 同理心, 情绪感知, 亲社会行为, 亲子互动]
+learning_paths: [0-3-cognitive-psychological]
 related_prompts: [0-3-core-attachment-01, 0-3-core-self-awareness-01]
 ---
 

@@ -13,6 +13,7 @@ references:
   - Nomaguchi, K., & Milkie, M. A. (2003). Costs and rewards of children: The effects of becoming a parent on adults' lives. Journal of Marriage and Family, 65(2), 356-374.
   - Axelson, H. (2015). Social identities in the transition to parenthood. Journal of Family Issues, 36(12), 1652-1675.
 tags: [身份认同, 角色冲突, 兴趣保持, 自我价值, 多元身份, 角色平衡]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-me-time-01, parenting-parent-health-01]
 ---
 

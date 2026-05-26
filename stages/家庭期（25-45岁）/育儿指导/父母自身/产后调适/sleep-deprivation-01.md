@@ -13,6 +13,7 @@ references:
   - Giallo, R., et al. (2013). The physical and mental health of fathers of infants. Journal of Reproductive and Infant Psychology, 31(1), 35-48.
   - Hiscock, H., et al. (2007). Improving infant sleep and maternal mental health. Archives of Disease in Childhood, 92(11), 952-958.
 tags: [睡眠剥夺, 睡眠训练, 婴儿睡眠, 疲劳管理, 轮班制, 情绪调节]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-parental-wellbeing-01, parenting-postpartum-depression-01]
 ---
 

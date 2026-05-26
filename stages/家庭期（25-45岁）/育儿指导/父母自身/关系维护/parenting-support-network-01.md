@@ -13,6 +13,7 @@ references:
   - Dunbar, R. I. M. (2010). The social role of touch in humans and primates: Behavioural function and neurobiological mechanisms. Neuroscience & Biobehavioral Reviews, 34(2), 260-268.
   - Cutrona, C. E., & Troutman, B. R. (1986). Social support, infant temperament, and parenting self-efficacy: A mediational model of postpartum depression. Child Development, 57(6), 1507-1518.
 tags: [社交支持, 社会网络, 孤独感, 家长社群, 求助, 互助]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-couple-adjustment-01, parenting-intergenerational-parenting-01]
 ---
 

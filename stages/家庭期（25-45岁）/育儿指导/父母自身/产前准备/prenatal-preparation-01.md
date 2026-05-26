@@ -13,6 +13,7 @@ references:
   - Cowan, C. P., & Cowan, P. A. (2000). When Partners Become Parents. Lawrence Erlbaum.
   - Brazelton, T. B., & Sparrow, J. D. (2006). Touchpoints: Birth to Three. Da Capo.
 tags: [产前准备, 新手父母, 焦虑, 角色转变, 夫妻关系, 父亲角色]
+learning_paths: [parenting-wellbeing]
 related_prompts: [0-3-core-attachment-01, parenting-parental-wellbeing-01]
 ---
 

@@ -14,6 +14,7 @@ references:
   - Dunn, W. (2001). The sensations of everyday life. American Journal of Occupational Therapy, 55(6), 606-612.
   - Miller, L. J., Anzalone, M. E., Lane, S. J., Cermak, S. A., & Osten, E. T. (2007). Concept evolution in sensory integration. American Journal of Occupational Therapy, 61(2), 135-140.
 tags: [感觉统合, 前庭觉, 本体觉, 触觉, 感官发展, 感觉处理]
+learning_paths: [0-3-physical]
 related_prompts: [0-3-core-gross-motor-01, 0-3-core-fine-motor-01]
 ---
 

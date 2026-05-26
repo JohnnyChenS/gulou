@@ -13,6 +13,7 @@ references:
   - Asendorpf, J. B., Warkentin, V., & Baudonnière, P. M. (1996). Self-awareness and other-awareness II: Mirror self-recognition. Developmental Psychology, 32(1), 86-97.
   - Erikson, E. H. (1950). Childhood and Society. W. W. Norton.
 tags: [自我意识, 镜像识别, 自我概念, 独立性, 我的]
+learning_paths: [0-3-cognitive-psychological]
 related_prompts: [0-3-core-empathy-01, 0-3-core-autonomy-01]
 ---
 

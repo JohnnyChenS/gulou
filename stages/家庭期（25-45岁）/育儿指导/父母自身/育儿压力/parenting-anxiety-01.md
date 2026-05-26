@@ -13,6 +13,7 @@ references:
   - Bayer, J. K., et al. (2009). The role of maternal anxiety in the early development of child anxiety. Psychological Medicine, 39(12), 2013-2022.
   - Rapee, R. M., et al. (2009). A controlled trial of the family-based treatment of anxiety in young children. Journal of Consulting and Clinical Psychology, 77(4), 694-707.
 tags: [育儿焦虑, 担忧, 安全感, 风险评估, 过度保护, 情绪管理]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-perfectionism-trap-01, parenting-comparison-anxiety-01]
 ---
 

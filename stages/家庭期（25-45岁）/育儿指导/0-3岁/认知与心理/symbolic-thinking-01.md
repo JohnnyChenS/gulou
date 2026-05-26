@@ -14,6 +14,7 @@ references:
   - Tomasello, M., Striano, T., & Rochat, P. (1999). Do young children use objects as symbols? British Journal of Developmental Psychology, 17(4), 563-582.
   - Fein, G. G. (1981). Pretend play in childhood: An integrative review. Child Development, 52(4), 1095-1118.
 tags: [符号思维, 假装游戏, 象征性游戏, 想象力, 语言发展]
+learning_paths: [0-3-cognitive-psychological]
 related_prompts: [0-3-core-object-permanence-01, 0-3-core-self-awareness-01]
 ---
 

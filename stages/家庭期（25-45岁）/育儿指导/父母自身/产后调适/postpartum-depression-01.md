@@ -13,6 +13,7 @@ references:
   - Howard, L. M., et al. (2014). Non-psychotic mental disorders in the perinatal period. The Lancet, 384(9956), 1775-1788.
   - O'Hara, M. W., & Swain, A. M. (1996). Rates and risk of postpartum depression—a meta-analysis. International Review of Psychiatry, 8(1), 37-54.
 tags: [产后抑郁, 产后焦虑, 心理健康, 早期识别, 干预, 父亲产后抑郁]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-parental-wellbeing-01, parenting-sleep-deprivation-01]
 ---
 

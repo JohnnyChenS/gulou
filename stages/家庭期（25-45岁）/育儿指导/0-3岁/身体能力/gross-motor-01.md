@@ -13,6 +13,7 @@ references:
   - Hadders-Algra, M. (2018). Early human motor development. Human Movement Science, 64, 40-49.
   - 中国《0-6岁儿童孤独症筛查干预服务规范》
 tags: [粗大动作, 翻身, 爬行, 学步, 运动发展里程碑, 俯卧时间]
+learning_paths: [0-3-physical]
 related_prompts: [0-3-core-fine-motor-01, 0-3-core-sensory-integration-01]
 ---
 

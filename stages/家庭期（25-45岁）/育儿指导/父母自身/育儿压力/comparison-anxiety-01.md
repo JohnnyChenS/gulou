@@ -13,6 +13,7 @@ references:
   - Crocker, J., & Wolfe, C. T. (2001). Contingencies of self-worth. Psychological Review, 108(3), 593-623.
   - Dweck, C. S. (2006). Mindset: The New Psychology of Success. Random House.
 tags: [社会比较, 别人家孩子, 竞争, 焦虑, 自我价值, 成长型思维]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-anxiety-01, parenting-perfectionism-trap-01]
 ---
 

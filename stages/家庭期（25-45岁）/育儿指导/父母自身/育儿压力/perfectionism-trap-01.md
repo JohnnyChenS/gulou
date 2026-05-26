@@ -13,6 +13,7 @@ references:
   - Hewitt, P. L., & Flett, G. L. (1991). Perfectionism in the self and social contexts. Journal of Personality and Social Psychology, 60(3), 456-470.
   - Winnicott, D. W. (1953). Transitional objects and transitional phenomena. International Journal of Psycho-Analysis, 34, 89-97.
 tags: [完美主义, 足够好的母亲, 自我接纳, 内在批评, 标准调整, 自我关怀]
+learning_paths: [parenting-wellbeing]
 related_prompts: [parenting-anxiety-01, parenting-comparison-anxiety-01]
 ---
 

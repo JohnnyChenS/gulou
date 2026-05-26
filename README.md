@@ -162,6 +162,7 @@ last_reviewed: <YYYY-MM-DD>
 references:
   - <APA格式引用>
 tags: [<标签1>, <标签2>]
+learning_paths: [<路径id>]
 related_prompts: [<关联prompt的id>]
 ---
 
@@ -209,6 +210,7 @@ related_prompts: [<关联prompt的id>]
 | `last_reviewed` | 否 | 最后审核日期，格式 YYYY-MM-DD |
 | `references` | 是 | 引用文献列表，APA 格式，须在 `references/` 目录中有记录 |
 | `tags` | 是 | 标签列表，便于搜索和索引 |
+| `learning_paths` | 否 | 所属学习路径的 id 列表，用于 AI Agent 理解学习路径结构 |
 | `related_prompts` | 否 | 关联 Prompt 的 id 列表 |
 
 ### Prompt 编写规范
@@ -220,6 +222,76 @@ related_prompts: [<关联prompt的id>]
 5. **语言**：中文为主，术语保留英文原文（如"执行功能 Executive Function"）
 6. **权威引用**：所有学习建议必须有理论或实证依据，禁止凭空编造
 7. **无商业内容**：Prompt 中不得包含任何商业推广或品牌推荐
+
+## 学习路径文件规范
+
+学习路径定义了 Prompt 之间的先后关系、完成标准和触发条件，是 AI Agent 实现长期陪伴引导的基础。
+
+### 文件位置
+
+```
+paths/
+├── _index.md                          # 路径总览
+├── <阶段>/
+│   └── <领域>.md                      # 该阶段该领域的学习路径
+└── <主题>/
+    └── <子主题>.md                    # 跨阶段主题路径
+```
+
+### 文件格式
+
+```markdown
+---
+id: <路径标识，如 0-3-cognitive-psychological>
+name: <路径名称>
+stage: <所属阶段>
+domain: <能力领域>
+description: <一句话描述>
+estimated_duration: <预计时长>
+review_status: expert-reviewed | community-contributed | draft
+---
+
+# <路径名称>
+
+## 路径总览
+
+<简要说明本路径覆盖的能力范围和设计逻辑>
+
+## 步骤
+
+### Step 1: <步骤名称>
+
+- **prompt**: <Prompt id>
+- **prerequisites**: [<前置 Prompt id 列表，空列表表示起始步骤>]
+- **age_range**: <适用年龄范围>
+- **completion_criteria**:
+  - <完成标准 1>
+  - <完成标准 2>
+- **trigger**:
+  - condition: user-initiated | time-based | state-based | event-based
+  - description: <触发条件的自然语言描述>
+  - agent_should: <Agent 收到触发信号后的具体行动指引>
+```
+
+### 字段说明
+
+| 字段 | 必填 | 说明 |
+|------|------|------|
+| `prompt` | 是 | 对应的 Prompt id |
+| `prerequisites` | 是 | 前置步骤的 Prompt id 列表，空列表 `[]` 表示起始步骤 |
+| `age_range` | 是 | 该步骤适用的年龄范围 |
+| `completion_criteria` | 是 | 自然语言描述的完成标准，Agent 据此判断用户是否掌握 |
+| `trigger.condition` | 是 | 触发类型：`user-initiated`（用户主动）、`time-based`（定时）、`state-based`（状态触发）、`event-based`（事件触发） |
+| `trigger.description` | 是 | 触发条件的自然语言描述 |
+| `trigger.agent_should` | 是 | Agent 的行动指引 |
+
+### 设计原则
+
+1. **路径 = 学习曲线**：一条路径覆盖一个能力领域从入门到掌握的完整过程
+2. **步骤有先后**：prerequisites 定义前置依赖，Agent 据此判断用户是否"准备好"
+3. **完成可评估**：completion_criteria 用自然语言描述，Agent 在对话中判断
+4. **触发可自动化**：trigger 告诉 Agent 何时主动推送，而非等用户来问
+5. **路径独立于 Prompt**：路径文件单独存放，路径变化不需要修改 Prompt 文件
 
 ## 内容治理
 
