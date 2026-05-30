@@ -22,7 +22,8 @@
 
 | 路径 | 文件 | 覆盖 Prompt | 说明 |
 |------|------|------------|------|
-| 父母心理健康 | [parenting/parent-wellbeing.md](parenting/parent-wellbeing.md) | 13 个 | 从产前准备到持续的自我照顾 |
+| 父母心理健康 | [parenting/parent-wellbeing.md](parenting/parent-wellbeing.md) | 13 个 | 从产前准备到持续的自我照顾（0-14 岁） |
+| 青春期父母指导 | [parenting/parent-adolescent.md](parenting/parent-adolescent.md) | 5 个 | 沟通重建、叛逆应对、心理危机、学业压力、数字生活（14-18 岁） |
 
 ### 待创建
 
@@ -30,6 +31,5 @@
 - 6-9 岁育儿指导路径
 - 9-12 岁育儿指导路径
 - 12-14 岁育儿指导路径
-- 青春期路径
 - 兴趣学习路径
 - ...
