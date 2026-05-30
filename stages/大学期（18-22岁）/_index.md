@@ -90,3 +90,12 @@ graph TD
 - Gottman亲密关系冲突修复研究
 - 自我决定理论（Ryan & Deci）
 - 大学生发展理论（Chickering）
+
+## 推荐兴趣
+
+以下兴趣领域在本阶段特别适合开始或深入：
+
+| 兴趣 | 阶段定位 | 说明 |
+|------|---------|------|
+| [英语学习](../../interests/english/intermediate.md) | 黄金期 | 时间充裕、学术需求迫切、出国准备，是全面突破的最佳窗口 |
+| [登山](../../interests/mountaineering/beginner.md) | 深入进阶 | 校园社团资源丰富、同伴群体支持，适合从入门走向进阶 |
