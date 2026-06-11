@@ -34,6 +34,7 @@ age_range: 22-28岁
 | 专业知识体系深化 | 从学习到实践的专业能力转化 | 22-28岁 | [professional-deepening-01](职业发展/professional-deepening-01.md) |
 | 职业身份确立 | 从学生到职业人的身份转变 | 22-28岁 | [professional-identity-01](职业发展/professional-identity-01.md) |
 | 工作-生活平衡 | 初步探索工作与生活的平衡 | 22-28岁 | [work-life-balance-01](职业发展/work-life-balance-01.md) |
+| 职场沟通与表达 | 工作汇报、会议发言、商务演讲 | 22-28岁 | [workplace-communication-01](职业发展/workplace-communication-01.md) |
 
 ### 财务规划
 
@@ -91,5 +92,5 @@ graph TD
 
 | 兴趣 | 阶段定位 | 说明 |
 |------|---------|------|
-| [英语学习](../../interests/english/intermediate.md) | 实用导向 | 工作场景驱动，效率优先，可聚焦专业英语和商务沟通 |
+| [英语学习](../../interests/language/英语学习/intermediate.md) | 实用导向 | 工作场景驱动，效率优先，可聚焦专业英语和商务沟通 |
 | [登山](../../interests/mountaineering/intermediate.md) | 持续进阶 | 经济独立支持装备升级，但需平衡工作与户外时间 |

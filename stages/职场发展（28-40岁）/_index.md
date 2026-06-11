@@ -33,6 +33,7 @@ age_range: 28-40岁
 |------|------|--------|--------|
 | 专业精通 | 从胜任到专家的专业能力提升 | 28-40岁 | [professional-mastery-01](专业精通/professional-mastery-01.md) |
 | 复杂问题解决 | 跨领域整合、系统性思考 | 28-40岁 | [complex-problem-solving-01](专业精通/complex-problem-solving-01.md) |
+| 创新与变革思维 | 创新管理、推动变革、突破思维定式 | 28-40岁 | [innovation-leadership-01](专业精通/innovation-leadership-01.md) |
 
 ### 领导力
 
@@ -94,4 +95,4 @@ graph TD
 
 | 兴趣 | 阶段定位 | 说明 |
 |------|---------|------|
-| [英语学习](../../interests/english/advanced.md) | 持续维护 | 专业领域深化，或重新激活已有基础，向学术/专业英语进阶 |
+| [英语学习](../../interests/language/英语学习/advanced.md) | 持续维护 | 专业领域深化，或重新激活已有基础，向学术/专业英语进阶 |

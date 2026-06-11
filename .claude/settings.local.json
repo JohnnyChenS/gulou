@@ -13,7 +13,31 @@
       "Bash(awk '-F|' '{for\\(i=1;i<=NF;i++\\) print \"Column \"i\": \"$i}')",
       "Bash(awk -F'|' '{print NR+34\": \"NF-1\" columns\"}')",
       "Bash(awk -F'|' '{print NF}')",
-      "Bash(awk '-F|' '{for\\(i=1;i<=NF;i++\\) print i\": \"$i}')"
+      "Bash(awk '-F|' '{for\\(i=1;i<=NF;i++\\) print i\": \"$i}')",
+      "Bash(mv 12-15/* 青春期/)",
+      "Bash(mv 15-18/* 青春期/)",
+      "Bash(rtk find *)",
+      "Bash(rtk git *)",
+      "Bash(cat)",
+      "Bash(chmod +x /tmp/restructure-stages.sh)",
+      "Bash(/tmp/restructure-stages.sh)",
+      "Bash(chmod +x /tmp/move-family-stage.sh)",
+      "Bash(/tmp/move-family-stage.sh)",
+      "Bash(rm -rf /Users/johnny/Development/vibe-coding/ideas/education/stages/__TRACKED_VAR__/core)",
+      "Bash(rm -rf /Users/johnny/Development/vibe-coding/ideas/education/stages/__TRACKED_VAR__/interests)",
+      "Bash(mv \"青春期\" \"青春期（14-18岁）\")",
+      "Bash(mv \"大学期\" \"大学期（18-22岁）\")",
+      "Bash(mv \"职场开始\" \"职场开始（22-28岁）\")",
+      "Bash(mv \"职场发展\" \"职场发展（28-40岁）\")",
+      "Bash(mv \"家庭期\" \"家庭期（25-45岁）\")",
+      "Bash(git reset *)",
+      "Bash(/usr/bin/find *)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node *)",
+      "Bash(rtk du *)",
+      "Bash(rtk wc *)",
+      "Bash(rtk npm *)"
     ]
   }
 }

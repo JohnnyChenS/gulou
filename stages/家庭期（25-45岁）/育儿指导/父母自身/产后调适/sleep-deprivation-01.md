@@ -62,7 +62,7 @@ related_prompts: [parenting-parental-wellbeing-01, parenting-postpartum-depressi
 
 ## 今天就能做的一件事
 
-> 请给出今天就可以做的一件事，具体到动作级别，不需要任何准备或器材。
+> 今天在宝宝白天小睡时，你也躺下睡——不要"趁机做家务"。哪怕只睡 20 分钟，也比打扫卫生更重要。
 
 ## 延伸探索
 

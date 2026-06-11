@@ -67,7 +67,7 @@ related_prompts: [parenting-couple-adjustment-01, parenting-parenting-support-ne
 
 ## 今天就能做的一件事
 
-> 请给出今天就可以做的一件事，具体到动作级别，不需要任何准备或器材。
+> 今天找一个长辈说得对的地方，真诚地感谢他们——比如"妈，你做的月子餐真的很好吃"。先建立情感连接，再处理分歧会容易得多。
 
 ## 延伸探索
 

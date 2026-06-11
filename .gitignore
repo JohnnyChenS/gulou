@@ -10,6 +10,9 @@
 # Sisyphus work tracking
 .sisyphus/
 
+# Website build (not part of open source content)
+website/
+
 # Misc
 .ll
 

@@ -36,6 +36,7 @@ age_range: 18-22岁
 | 专业知识体系构建 | 系统化学习专业知识 | 18-22岁 | [professional-knowledge-01](学术能力/professional-knowledge-01.md) |
 | 自主学习能力 | 从高中结构化到大学自主学习的过渡 | 18-22岁 | [autonomous-learning-01](学术能力/autonomous-learning-01.md) |
 | 学术诚信与批判性写作 | 学术规范、引用、批判性思维 | 18-22岁 | [academic-integrity-01](学术能力/academic-integrity-01.md) |
+| 学术表达与演讲 | 学术报告、课堂展示、正式演讲 | 18-22岁 | [academic-presentation-01](学术能力/academic-presentation-01.md) |
 
 ### 职业探索
 
@@ -55,6 +56,7 @@ age_range: 18-22岁
 |------|------|--------|--------|
 | 亲密关系建立 | 承诺、脆弱性、冲突修复 | 18-22岁 | [intimate-relationship-01](亲密关系/intimate-relationship-01.md) |
 | 社交网络经营 | 室友关系、社团归属、社交圈建立 | 18-22岁 | [social-network-01](亲密关系/social-network-01.md) |
+| 社交技能进阶 | 跨圈社交、职场式社交、社交边界管理 | 18-22岁 | [social-skills-advanced-01](亲密关系/social-skills-advanced-01.md) |
 
 ### 财务素养
 
@@ -97,5 +99,5 @@ graph TD
 
 | 兴趣 | 阶段定位 | 说明 |
 |------|---------|------|
-| [英语学习](../../interests/english/intermediate.md) | 黄金期 | 时间充裕、学术需求迫切、出国准备，是全面突破的最佳窗口 |
+| [英语学习](../../interests/language/英语学习/intermediate.md) | 黄金期 | 时间充裕、学术需求迫切、出国准备，是全面突破的最佳窗口 |
 | [登山](../../interests/mountaineering/beginner.md) | 深入进阶 | 校园社团资源丰富、同伴群体支持，适合从入门走向进阶 |

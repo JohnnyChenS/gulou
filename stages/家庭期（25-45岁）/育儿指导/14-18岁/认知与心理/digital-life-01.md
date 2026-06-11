@@ -2,7 +2,7 @@
 id: 14-18-core-digital-life-01
 stage: "14-18"
 track: core
-domain: physical
+domain: cognitive-psychological
 topic: 数字设备与网络管理
 age_range: 14-18y
 difficulty: foundational
@@ -67,9 +67,9 @@ Livingstone 和 Helsper 的研究发现，"限制型"媒介管理（单纯禁止
 
 ## 今天就能做的一件事
 
-> 请给出今天就可以做的一件事，具体到动作级别，不需要任何准备或器材。
+> 今天吃饭时，全家把手机放到另一个房间——包括你自己的。不需要宣布"新规则"，只是自然地做，然后在饭桌上问孩子一个关于他今天的问题。
 
 ## 延伸探索
 
-- [青春期叛逆与冲突应对](../认知与心理/adolescent-rebellion-01.md) — 手机/游戏冲突是青春期最常见的叛逆战场，理解叛逆的本质有助于改变管理方式
-- [青春期亲子沟通](../认知与心理/parent-teen-communication-01.md) — 数字设备管理的前提是沟通：规则需要协商而非单方面强加
+- [青春期叛逆与冲突应对](adolescent-rebellion-01.md) — 手机/游戏冲突是青春期最常见的叛逆战场，理解叛逆的本质有助于改变管理方式
+- [青春期亲子沟通](parent-teen-communication-01.md) — 数字设备管理的前提是沟通：规则需要协商而非单方面强加

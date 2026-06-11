@@ -18,6 +18,13 @@
 | 认知与心理发展 | [0-3/cognitive-psychological.md](0-3/cognitive-psychological.md) | 8 个 | 从依恋建立到符号思维萌芽 |
 | 身体能力发展 | [0-3/physical.md](0-3/physical.md) | 4 个 | 从粗大动作到感觉统合 |
 
+### 3-6 岁育儿指导
+
+| 路径 | 文件 | 覆盖 Prompt | 说明 |
+|------|------|------------|------|
+| 认知与心理发展 | [3-6/cognitive-psychological.md](3-6/cognitive-psychological.md) | 7 个 | 从心理理论到前阅读与前数学 |
+| 身体能力发展 | [3-6/physical.md](3-6/physical.md) | 5 个 | 从基本动作技能到户外活动习惯 |
+
 ### 父母自身支持
 
 | 路径 | 文件 | 覆盖 Prompt | 说明 |
@@ -27,7 +34,6 @@
 
 ### 待创建
 
-- 3-6 岁育儿指导路径
 - 6-9 岁育儿指导路径
 - 9-12 岁育儿指导路径
 - 12-14 岁育儿指导路径
