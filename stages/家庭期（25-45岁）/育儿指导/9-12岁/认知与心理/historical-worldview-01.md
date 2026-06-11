@@ -22,7 +22,7 @@ related_prompts: [9-12-core-innovative-thinking-01]
 
 ## 你需要知道的
 
-9-12 岁开始具备理解"过去"和"不同文化"的认知能力。历史思维不是记住年代，而是理解因果、变化和多元视角。
+Levstik 和 Barton 的研究表明，9-12 岁开始具备理解"过去"和"不同文化"的认知能力。Wineburg 指出，历史思维不是记住年代，而是理解因果、变化和多元视角。
 
 ---
 
@@ -39,6 +39,14 @@ related_prompts: [9-12-core-innovative-thinking-01]
 
 ---
 
+## 常见问题
+
+**"孩子对历史不感兴趣"**
+
+可以从他感兴趣的角度切入——如果他喜欢恐龙，就从恐龙时代开始；如果他喜欢战争，就从战争故事开始。
+
+---
+
 ## 今天就能做的一件事
 
 问孩子一个问题："你觉得 100 年后的人会怎么看我们今天的生活？"
@@ -47,5 +55,4 @@ related_prompts: [9-12-core-innovative-thinking-01]
 
 ## 延伸探索
 
-- [创新思维](innovative-thinking-01.md) — 理解历史变化需要创新思维
-- [批判性思维](critical-thinking-01.md) — 历史思维需要质疑和分析能力
+- [创新思维](innovative-thinking-01.md) — 理解历史变化需要创新视角
