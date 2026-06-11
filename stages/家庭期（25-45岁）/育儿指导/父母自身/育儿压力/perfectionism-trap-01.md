@@ -8,10 +8,9 @@ age_range: 0-18y
 difficulty: foundational
 review_status: draft
 references:
-  - Hewitt, P. L., & Flett, G. L. (1991). Perfectionism in the self and social contexts. Journal of Personality and Social Psychology, 60(3), 456-470.
+  - Hewitt, P. L., & Flett, G. L. (1991). Perfectionism in the self and social contexts. JPSP, 60(3), 456-470.
   - Frost, R. O., et al. (1990). The dimensions of perfectionism. Cognitive Therapy and Research, 14(5), 449-468.
-  - Slaney, R. B., et al. (2001). Almost Perfect Scale—Revised. Measurement and Evaluation in Counseling and Development, 34(1), 2-18.
-tags: [完美主义, 自我接纳, 育儿焦虑, 放下执念]
+tags: [完美主义, 自我接纳, 育儿焦虑]
 ---
 
 # 完美主义陷阱
@@ -33,6 +32,7 @@ tags: [完美主义, 自我接纳, 育儿焦虑, 放下执念]
 - 无法接受"及格"，必须"优秀"
 - 总觉得"别人做得比我好"
 - 放不下控制，什么都想亲力亲为
+- 犯错后反复自责
 
 ---
 
@@ -49,6 +49,21 @@ tags: [完美主义, 自我接纳, 育儿焦虑, 放下执念]
 
 ### 4. 减少信息输入
 信息越多，标准越高，焦虑越重。
+
+### 5. 和"不完美"的父母交流
+你会发现大家都在"及格"水平，没有人真的"完美"。
+
+---
+
+## 常见问题
+
+**"我总觉得做得不够"**
+
+"不够"的标准是谁定的？如果是你自己定的，可能太高了。问自己：如果朋友遇到同样的情况，我会觉得她"不够"吗？
+
+**"我犯了一个错，会不会影响孩子一辈子"**
+
+一个错误不会毁掉孩子。孩子需要的不是完美的父母，而是稳定的、爱他的父母。偶尔的失误在长期的稳定关系中微不足道。
 
 ---
 

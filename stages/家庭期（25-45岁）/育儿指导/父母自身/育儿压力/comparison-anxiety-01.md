@@ -9,9 +9,8 @@ difficulty: foundational
 review_status: draft
 references:
   - Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117-140.
-  - Buunk, A. P., & Gibbons, F. X. (2007). Social comparison: The end of a theory and the emergence of a field. Organizational Behavior and Human Decision Processes, 102(1), 3-21.
   - Nomaguchi, K., & Milkie, M. A. (2020). Parenthood and well-being: A decade in review. Journal of Marriage and Family, 82(1), 238-261.
-tags: [比较心理, 焦虑, 社交媒体, 别人家孩子, 自我接纳]
+tags: [比较心理, 焦虑, 社交媒体, 别人家孩子]
 ---
 
 # 比较与竞争心理
@@ -34,6 +33,7 @@ tags: [比较心理, 焦虑, 社交媒体, 别人家孩子, 自我接纳]
 | "别人家妈妈好轻松" | 你看到的是她想让你看到的 |
 | "别人家孩子吃得好多" | 吃多吃少是气质差异，不是能力差异 |
 | "别人家老公好给力" | 你不知道他们私下怎么吵架的 |
+| "别人家孩子都在学这学那" | 你不知道他们孩子是否快乐 |
 
 ---
 
@@ -50,6 +50,21 @@ tags: [比较心理, 焦虑, 社交媒体, 别人家孩子, 自我接纳]
 
 ### 4. 减少社交媒体时间
 每天刷社交媒体的时间和焦虑水平正相关。
+
+### 5. 和真实的父母交流
+和你信任的父母朋友聊聊——你会发现大家都差不多。
+
+---
+
+## 常见问题
+
+**"我控制不住要比"**
+
+比较是人类本能，不需要完全消除。关键是：比较之后你做了什么？如果比较让你焦虑，可以减少信息输入；如果比较让你学习，那是有价值的。
+
+**"别人家孩子确实比我孩子强"**
+
+每个孩子有自己的优势和节奏。"强"的标准是什么？如果是某个具体技能，可以引导但不要强迫。如果是整体发展，建议咨询儿科医生。
 
 ---
 
