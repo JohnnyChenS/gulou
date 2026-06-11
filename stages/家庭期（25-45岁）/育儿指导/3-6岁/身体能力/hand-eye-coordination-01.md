@@ -9,7 +9,6 @@ difficulty: foundational
 review_status: draft
 references:
   - Haywood, K. M., & Getchell, N. (2020). Life Span Motor Development (7th ed.). Human Kinetics.
-  - Bard, C., et al. (1990). Development of eye-hand coordination. University of South Carolina Press.
 tags: [手眼协调, 精细运动, 书写准备]
 related_prompts: [3-6-physical-basic-movement-01, 3-6-physical-handedness-01]
 ---

@@ -10,7 +10,6 @@ review_status: draft
 references:
   - Bratman, G. N., et al. (2015). Nature experience reduces rumination. PNAS, 112(28), 8567-8572.
   - Fjørtoft, I. (2001). The natural environment as a playground. Early Childhood Education Journal, 28(2), 111-117.
-  - Tandon, P. S., et al. (2012). Physical activity and screen time. AJPM, 42(5), 489-493.
 tags: [户外活动, 自然游戏, 运动习惯, 视力保护]
 related_prompts: [3-6-physical-basic-movement-01, 3-6-physical-balance-coordination-01]
 ---
@@ -35,7 +34,7 @@ related_prompts: [3-6-physical-basic-movement-01, 3-6-physical-balance-coordinat
 
 **"孩子只想玩手机不想出门"**
 
-可以设定规则："先户外 1 小时，再看 20 分钟屏幕"。户外活动本身会减少对屏幕的需求。
+可以设定规则："先户外 1 小时，再看 20 分钟屏幕"。
 
 **"户外玩什么？"**
 

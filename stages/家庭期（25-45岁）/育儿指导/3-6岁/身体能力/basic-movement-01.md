@@ -22,7 +22,7 @@ related_prompts: [3-6-physical-balance-coordination-01, 3-6-physical-hand-eye-co
 
 ## 你需要知道的
 
-3-6 岁是"基本动作技能期"——跑、跳、投、接、踢。这些是所有专项运动的"山脚"。基础不牢，后续运动学习会受限。
+Gallahue 的动作发展模型将 3-6 岁定义为"基本动作技能期"——这是从反射性动作向有意控制动作过渡的关键窗口。Logan 的纵向研究发现，幼儿园阶段的基本动作技能（跑、跳、投、接）预测儿童后期的运动参与和体能水平。基本动作技能是所有专项运动的"山脚"——基础不牢，后续运动学习会受限。
 
 ---
 
@@ -58,6 +58,13 @@ related_prompts: [3-6-physical-balance-coordination-01, 3-6-physical-hand-eye-co
 
 3-6 岁不需要专业培训。日常的跑跳游戏已经足够。如果孩子对某个运动有兴趣，可以让他尝试。
 
+**"孩子不愿意参加体育活动"**
+
+可以：
+- 从他感兴趣的活动开始
+- 和他一起做
+- 不要强调竞争
+
 ---
 
 ## 今天就能做的一件事
@@ -70,3 +77,4 @@ related_prompts: [3-6-physical-balance-coordination-01, 3-6-physical-hand-eye-co
 
 - [平衡与协调](balance-coordination-01.md) — 平衡是所有动作的基础
 - [手眼协调](hand-eye-coordination-01.md) — 投接球等物体控制技能的核心
+- [户外活动习惯](outdoor-habits-01.md) — 户外是基本动作技能发展的最佳场景
