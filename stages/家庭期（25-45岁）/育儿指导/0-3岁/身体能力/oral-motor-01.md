@@ -125,5 +125,5 @@ related_prompts: [0-3-core-sensory-integration-01, 0-3-core-attachment-01]
 ## 延伸探索
 
 - [精细动作](fine-motor-01.md) — 手部精细与口部精细协同发展
-- [语言发展](../../../../interests/language/母语发展/0-3岁.md) — 口腔肌肉是语言输出的物理基础
+- [语言发展](../../../../../interests/language/母语发展/0-3岁.md) — 口腔肌肉是语言输出的物理基础
 - [感觉统合](sensory-integration-01.md) — 口腔触觉是感觉统合的一部分

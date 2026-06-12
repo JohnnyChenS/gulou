@@ -152,5 +152,5 @@ related_prompts: [0-3-core-object-permanence-01, 0-3-core-self-awareness-01]
 
 - [客体永久性](object-permanence-01.md) — 用一物代表另一物需要先理解"不在场的东西存在"
 - [自我意识](self-awareness-01.md) — 角色扮演需要区分"真实的我"和"扮演的角色"
-- [语言发展](../../../../interests/language/母语发展/0-3岁.md) — 假装游戏是语言习得的"预演"
+- [语言发展](../../../../../interests/language/母语发展/0-3岁.md) — 假装游戏是语言习得的"预演"
 - [共情萌芽](empathy-01.md) — 假装游戏中的角色理解促进共情发展

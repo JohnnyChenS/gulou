@@ -150,5 +150,5 @@ related_prompts: [0-3-core-fine-motor-01, 0-3-core-sensory-integration-01]
 
 - [精细动作](fine-motor-01.md) — 肩臂稳定性是手指灵活性的基础
 - [感觉统合](sensory-integration-01.md) — 前庭觉和本体觉为动作提供身体位置信息
-- [语言发展](../../../../interests/language/母语发展/0-3岁.md) — 动作发展与语言发展相互促进
+- [语言发展](../../../../../interests/language/母语发展/0-3岁.md) — 动作发展与语言发展相互促进
 - [运动习惯培养](../../6-9岁/身体能力/sports-habits-01.md) — 早期运动习惯是终身运动的基础
