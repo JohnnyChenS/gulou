@@ -122,6 +122,15 @@ related_prompts: [12-14-core-puberty-communication-01, 14-18-core-digital-life-0
 
 ---
 
+## 推荐资源
+
+### 日常活动
+- 信息辨别练习（一起查证新闻真假）
+- 隐私保护教育（讨论什么不能透露）
+- 家庭数字公约（一起制定规则）
+
+---
+
 ## 延伸探索
 
 - [青春期前期沟通](puberty-communication-01.md) — 网络规则需要良好的沟通基础

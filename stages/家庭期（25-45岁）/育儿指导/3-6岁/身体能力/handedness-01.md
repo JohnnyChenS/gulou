@@ -107,6 +107,15 @@ related_prompts: [3-6-physical-hand-eye-coordination-01]
 
 ---
 
+## 推荐资源
+
+### 日常活动
+- 观察孩子用哪只手拿勺子、拿笔、扔球
+- 提供双手都可以操作的玩具
+- 如果是左利手，提供适合左手的工具
+
+---
+
 ## 延伸探索
 
 - [手眼协调](hand-eye-coordination-01.md) — 惯用手确立影响精细动作发展

@@ -133,6 +133,15 @@ related_prompts: [14-18-core-adolescent-rebellion-01, 14-18-core-parent-teen-com
 
 ---
 
+## 推荐资源
+
+### 日常活动
+- 制定"家庭数字公约"（全家遵守）
+- 以身作则（家长也放下手机）
+- 讨论而非禁止（"你在玩什么游戏？"）
+
+---
+
 ## 延伸探索
 
 - [叛逆与冲突应对](adolescent-rebellion-01.md) — 手机冲突是最常见的叛逆战场
