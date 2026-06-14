@@ -80,6 +80,24 @@ related_prompts: [english-intermediate-01]
 
 ---
 
+## 推荐资源
+
+### 阅读材料
+- 英文原著（如《哈利·波特》《了不起的盖茨比》）
+- 英文报刊（如 The Guardian, The New York Times）
+- 学术论文（专业领域）
+
+### 听力材料
+- TED Talks
+- 英文播客（如 This American Life, Serial）
+- 美剧/英剧（无字幕）
+
+### 写作工具
+- Grammarly（语法检查）
+- Hemingway Editor（简化写作）
+
+---
+
 ## 延伸探索
 
 - [英语进阶](intermediate.md) — 进阶基础

@@ -88,6 +88,26 @@ related_prompts: [english-beginner-01, english-advanced-01]
 
 ---
 
+## 推荐资源
+
+### 阅读材料
+- 牛津书虫系列（分级读物）
+- RAZ 分级阅读
+- 《小王子》英文版
+- 《夏洛的网》英文版
+
+### 听力材料
+- VOA Learning English（慢速）
+- TED-Ed（教育类短视频）
+- 英文播客（如 6 Minute English）
+
+### 工具
+- Anki（间隔重复）
+- 有道词典
+- 英语趣配音
+
+---
+
 ## 延伸探索
 
 - [英语入门](beginner.md) — 入门基础

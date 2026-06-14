@@ -110,6 +110,27 @@ related_prompts: [english-intermediate-01]
 
 ---
 
+## 推荐资源
+
+### 动画片
+- 《小猪佩奇》（英文版）— 简单日常对话
+- 《蓝色小考拉》（英文版）— 基础词汇
+- 《爱探险的朵拉》— 互动式学习
+- 《米奇妙妙屋》— 简单指令
+
+### 绘本
+- 《Brown Bear, Brown Bear, What Do You See?》— 重复句式
+- 《The Very Hungry Caterpillar》— 食物和数字
+- 《Goodnight Moon》— 睡前故事
+- 《Chicka Chicka Boom Boom》— 字母学习
+
+### 工具
+- Anki（间隔重复背单词）
+- 多邻国（游戏化学习）
+- 英语趣配音（跟读练习）
+
+---
+
 ## 延伸探索
 
 - [英语进阶](intermediate.md) — 入门后的进阶学习
