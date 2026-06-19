@@ -41,6 +41,6 @@ stage_name: 青春期前期
 - 埃里克森身份vs角色混乱（12-18）
 - Marcia身份状态理论
 - Steinberg双系统模型
-- LTAD训练训练阶段（Train to Train）
+- LTAD训练阶段（Train to Train）
 - 青春期生长突增（PHV）模型
 - 中国《国家学生体质健康标准》
