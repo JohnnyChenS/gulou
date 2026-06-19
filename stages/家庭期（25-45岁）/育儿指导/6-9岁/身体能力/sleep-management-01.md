@@ -118,6 +118,8 @@ related_prompts: [6-9-physical-sports-habits-01, 6-9-physical-vision-protection-
 
 ## 需要警惕的信号
 
+大多数孩子的发展时间线会自然追平。这里的信号是提醒你关注，而不是让你焦虑。每个孩子有自己的节奏。
+
 以下情况建议咨询儿科医生：
 
 - 持续入睡困难超过 1 个月

@@ -42,7 +42,7 @@ related_prompts: [6-9-physical-sports-habits-01, 6-9-physical-sleep-management-0
 ### 2. 户外时间保证（6 岁+）
 
 **具体做法**：
-1. 每天至少 1 小时户外活动
+1. 每天至少 2 小时户外活动（最少保证 1 小时）
 2. 阴天也有效——关键是自然光
 3. 可以是散步、骑车、打球、只是在外面玩
 
@@ -99,6 +99,8 @@ related_prompts: [6-9-physical-sports-habits-01, 6-9-physical-sleep-management-0
 
 ## 需要警惕的信号
 
+大多数孩子的发展时间线会自然追平。这里的信号是提醒你关注，而不是让你焦虑。每个孩子有自己的节奏。
+
 以下情况建议咨询眼科医生：
 
 - 孩子经常眯眼、歪头看东西
@@ -117,7 +119,7 @@ related_prompts: [6-9-physical-sports-habits-01, 6-9-physical-sleep-management-0
 
 ### 日常活动
 - 20-20-20 法则（每 20 分钟休息）
-- 户外时间（每天至少 1 小时）
+- 户外时间（每天至少 2 小时）
 - 读写姿势检查（一尺一拳一寸）
 
 ### 护眼工具

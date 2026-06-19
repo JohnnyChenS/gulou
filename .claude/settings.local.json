@@ -60,7 +60,8 @@
       "Bash(sed -i '' 's/0-3 岁育儿指导 Prompt/0-3 岁育儿指导内容/g' CLAUDE.md)",
       "Bash(sed -i '' 's/家庭期父母支持 Prompt/家庭期父母支持内容/g' CLAUDE.md)",
       "Bash(sed -i '' 's/14-18 岁育儿指导 Prompt/14-18 岁育儿指导内容/g' CLAUDE.md)",
-      "Bash(git apply *)"
+      "Bash(git apply *)",
+      "Skill(parenting-review)"
     ]
   }
 }
