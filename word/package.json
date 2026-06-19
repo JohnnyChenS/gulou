@@ -1,0 +1,11 @@
+{
+  "name": "education-docx",
+  "version": "1.0.0",
+  "description": "Markdown → Word 转换脚本",
+  "scripts": {
+    "build": "node scripts/build-docx.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
