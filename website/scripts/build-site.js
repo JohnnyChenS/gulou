@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 const matter = require('gray-matter');
 const { marked } = require('marked');
 const { resolvePath, resolveSlug, SLUG_MAP } = require('./slug-map');
@@ -25,6 +24,10 @@ const ROOT = path.resolve(__dirname, '../..');
 const WEBSITE = path.resolve(__dirname, '..');
 const OUT = path.join(WEBSITE, 'site');
 const TEMPLATE_DIR = path.join(WEBSITE, 'site-template');
+
+// Base path for GitHub Pages (e.g., '/gulou/' for https://user.github.io/gulou/)
+// Set via environment variable or defaults to '/' for local dev
+const BASE_PATH = process.env.BASE_PATH || '/';
 
 const CONTENT_DIRS = ['stages', 'interests', 'paths', 'references'];
 
@@ -182,20 +185,20 @@ function renderPage({ title, description, sidebar, metaCard, content, references
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title} - 鼓楼</title>
   <meta name="description" content="${description}">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="icon" type="image/png" href="${BASE_PATH}assets/favicon.png">
+  <link rel="stylesheet" href="${BASE_PATH}assets/style.css">
 </head>
 <body>
   <nav class="top-nav">
-    <a href="/" class="logo">
-      <img src="/assets/logo.png" alt="鼓楼" class="logo-img">
+    <a href="${BASE_PATH}" class="logo">
+      <img src="${BASE_PATH}assets/logo.png" alt="鼓楼" class="logo-img">
       <span>鼓楼</span>
     </a>
-    <a href="/stages/">阶段主线</a>
-    <a href="/interests/">兴趣副线</a>
-    <a href="/paths/">学习路径</a>
-    <a href="/references/">理论依据</a>
-    <a href="/roadmap.html">教育图谱</a>
+    <a href="${BASE_PATH}stages/">阶段主线</a>
+    <a href="${BASE_PATH}interests/">兴趣副线</a>
+    <a href="${BASE_PATH}paths/">学习路径</a>
+    <a href="${BASE_PATH}references/">理论依据</a>
+    <a href="${BASE_PATH}roadmap.html">教育图谱</a>
   </nav>
 
   <div class="layout">
@@ -227,24 +230,24 @@ function renderHomePage() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鼓楼 — 覆盖全人生阶段的成长知识库</title>
   <meta name="description" content="鼓楼 = grow。把权威的成长发展知识，整理成每个人看得懂、用得上的结构化内容。">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
-  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="icon" type="image/png" href="${BASE_PATH}assets/favicon.png">
+  <link rel="stylesheet" href="${BASE_PATH}assets/style.css">
 </head>
 <body>
   <nav class="top-nav">
-    <a href="/" class="logo">
-      <img src="/assets/logo.png" alt="鼓楼" class="logo-img">
+    <a href="${BASE_PATH}" class="logo">
+      <img src="${BASE_PATH}assets/logo.png" alt="鼓楼" class="logo-img">
       <span>鼓楼</span>
     </a>
-    <a href="/stages/">阶段主线</a>
-    <a href="/interests/">兴趣副线</a>
-    <a href="/paths/">学习路径</a>
-    <a href="/references/">理论依据</a>
-    <a href="/roadmap.html">教育图谱</a>
+    <a href="${BASE_PATH}stages/">阶段主线</a>
+    <a href="${BASE_PATH}interests/">兴趣副线</a>
+    <a href="${BASE_PATH}paths/">学习路径</a>
+    <a href="${BASE_PATH}references/">理论依据</a>
+    <a href="${BASE_PATH}roadmap.html">教育图谱</a>
   </nav>
 
   <div class="hero">
-    <img src="/assets/logo.png" alt="鼓楼" class="hero-logo">
+    <img src="${BASE_PATH}assets/logo.png" alt="鼓楼" class="hero-logo">
     <h1>鼓楼</h1>
     <p class="subtitle">鼓楼 = grow。鼓楼是我长大的地方，拨浪鼓是童年的声音。</p>
     <p>覆盖全人生阶段的成长知识库。<br>把权威的成长发展知识，整理成每个人看得懂、用得上的结构化内容。</p>
@@ -253,31 +256,31 @@ function renderHomePage() {
   <h2 style="text-align:center; margin-bottom:24px;">按人生阶段探索</h2>
 
   <div class="stage-grid">
-    <a href="/stages/14-18/" class="stage-card">
+    <a href="${BASE_PATH}stages/14-18/" class="stage-card">
       <h3>青春期（未完善）</h3>
       <p class="age">14-18 岁 · 身份探索、心理健康、学业发展</p>
     </a>
-    <a href="/stages/18-22/" class="stage-card">
+    <a href="${BASE_PATH}stages/18-22/" class="stage-card">
       <h3>大学期（未完善）</h3>
       <p class="age">18-22 岁 · 学术能力、职业探索、独立生活</p>
     </a>
-    <a href="/stages/22-28/" class="stage-card">
+    <a href="${BASE_PATH}stages/22-28/" class="stage-card">
       <h3>职场开始（未完善）</h3>
       <p class="age">22-28 岁 · 职业发展、财务规划、健康管理</p>
     </a>
-    <a href="/stages/28-40/" class="stage-card">
+    <a href="${BASE_PATH}stages/28-40/" class="stage-card">
       <h3>职场发展（未完善）</h3>
       <p class="age">28-40 岁 · 专业精通、领导力、认知发展</p>
     </a>
-    <a href="/stages/family/" class="stage-card">
+    <a href="${BASE_PATH}stages/family/" class="stage-card">
       <h3>家庭期</h3>
       <p class="age">25-45 岁 · 育儿指导、婚姻经营、家庭管理</p>
     </a>
-    <a href="/stages/40-60/" class="stage-card">
+    <a href="${BASE_PATH}stages/40-60/" class="stage-card">
       <h3>中年期（未完善）</h3>
       <p class="age">40-60 岁 · 智慧判断、职业传承、健康维护</p>
     </a>
-    <a href="/stages/60-plus/" class="stage-card">
+    <a href="${BASE_PATH}stages/60-plus/" class="stage-card">
       <h3>老年期（未完善）</h3>
       <p class="age">60+ 岁 · 认知保持、社会连接、生命叙事</p>
     </a>
@@ -286,11 +289,11 @@ function renderHomePage() {
   <h2 style="text-align:center; margin-bottom:24px;">按兴趣探索</h2>
 
   <div class="stage-grid" style="max-width:600px;">
-    <a href="/interests/language/" class="stage-card">
+    <a href="${BASE_PATH}interests/language/" class="stage-card">
       <h3>语言学习</h3>
       <p class="age">母语发展 + 英语学习</p>
     </a>
-    <a href="/interests/mountaineering/" class="stage-card">
+    <a href="${BASE_PATH}interests/mountaineering/" class="stage-card">
       <h3>登山</h3>
       <p class="age">从入门到自主攀登</p>
     </a>
@@ -321,22 +324,17 @@ function build() {
   fs.copyFileSync(path.join(TEMPLATE_DIR, 'style.css'), path.join(OUT, 'assets', 'style.css'));
   fs.copyFileSync(path.join(TEMPLATE_DIR, 'nav.js'), path.join(OUT, 'assets', 'nav.js'));
 
-  // 生成 favicon 和 logo
-  const logoSource = path.join(WEBSITE, 'static', 'logo.png');
-  if (fs.existsSync(logoSource)) {
-    console.log('Generating favicon and logo...');
-    try {
-      execSync(`sips -z 64 64 "${logoSource}" --out "${path.join(OUT, 'assets', 'logo.png')}"`, { stdio: 'pipe' });
-      execSync(`sips -z 32 32 "${logoSource}" --out "${path.join(OUT, 'assets', 'favicon.png')}"`, { stdio: 'pipe' });
-      console.log('  ✓ logo.png (64x64)');
-      console.log('  ✓ favicon.png (32x32)');
-    } catch (err) {
-      console.warn('  ⚠ Could not resize logo, copying original:', err.message);
-      fs.copyFileSync(logoSource, path.join(OUT, 'assets', 'logo.png'));
-      fs.copyFileSync(logoSource, path.join(OUT, 'assets', 'favicon.png'));
-    }
-  } else {
-    console.warn('  ⚠ Logo source not found at', logoSource);
+  // 复制 favicon 和 logo（预生成的静态资源）
+  const staticDir = path.join(WEBSITE, 'static');
+  const logoFile = path.join(staticDir, 'logo.png');
+  const faviconFile = path.join(staticDir, 'favicon.png');
+  if (fs.existsSync(logoFile)) {
+    fs.copyFileSync(logoFile, path.join(OUT, 'assets', 'logo.png'));
+    console.log('  ✓ logo.png');
+  }
+  if (fs.existsSync(faviconFile)) {
+    fs.copyFileSync(faviconFile, path.join(OUT, 'assets', 'favicon.png'));
+    console.log('  ✓ favicon.png');
   }
 
   // 写首页
