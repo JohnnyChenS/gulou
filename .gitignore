@@ -10,8 +10,12 @@
 # Sisyphus work tracking
 .sisyphus/
 
-# Website build (not part of open source content)
-website/
+# Dependencies
+node_modules/
+
+# Build artifacts
+website/site/
+word/docx/
 
 # Misc
 .ll
