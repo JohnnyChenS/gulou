@@ -337,6 +337,13 @@ function build() {
     console.log('  ✓ favicon.png');
   }
 
+  // 复制 CNAME（自定义域名）
+  const cnameFile = path.join(staticDir, 'CNAME');
+  if (fs.existsSync(cnameFile)) {
+    fs.copyFileSync(cnameFile, path.join(OUT, 'CNAME'));
+    console.log('  ✓ CNAME');
+  }
+
   // 写首页
   fs.writeFileSync(path.join(OUT, 'index.html'), renderHomePage());
   console.log('  ✓ index.html');
