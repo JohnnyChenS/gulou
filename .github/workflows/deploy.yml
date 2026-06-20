@@ -34,7 +34,7 @@ jobs:
 
       - name: Build site
         working-directory: website
-        run: BASE_PATH=/gulou/ npm run build
+        run: BASE_PATH=/ npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
