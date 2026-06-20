@@ -215,7 +215,7 @@ function renderPage({ title, description, sidebar, metaCard, content, references
   </div>
 
   <footer class="site-footer">
-    <p>内容基于 <a href="https://github.com/">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
+    <p>内容基于 <a href="https://github.com/JohnnyChenS/gulou">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
   </footer>
   <script src="/assets/nav.js"></script>
 </body>
@@ -302,7 +302,7 @@ function renderHomePage() {
   <div class="ad-slot" style="max-width:700px; margin:48px auto;">广告位</div>
 
   <footer class="site-footer" style="margin-left:0;">
-    <p>内容基于 <a href="https://github.com/">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
+    <p>内容基于 <a href="https://github.com/JohnnyChenS/gulou">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
   </footer>
 </body>
 </html>`;
