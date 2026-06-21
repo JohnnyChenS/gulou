@@ -18,8 +18,8 @@ review_status: draft
 
 ### Step 1: 运动习惯锚定
 
-- **prompt**: 9-12-physical-sports-habits-01
-- **prerequisites**: [6-9-physical-sports-habits-01]
+- **内容**: [运动习惯培养](../../stages/家庭期（25-45岁）/育儿指导/9-12岁/身体能力/sports-habits-01.md)
+- **prerequisites**: [运动习惯培养](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/sports-habits-01.md)
 - **age_range**: 9-12y
 - **completion_criteria**:
   - 用户理解此阶段是运动习惯"锚定"而非"建立"的阶段
@@ -32,8 +32,8 @@ review_status: draft
 
 ### Step 2: 视力保护
 
-- **prompt**: 9-12-physical-vision-protection-01
-- **prerequisites**: [6-9-physical-vision-protection-01]
+- **内容**: [视力保护](../../stages/家庭期（25-45岁）/育儿指导/9-12岁/身体能力/vision-protection-01.md)
+- **prerequisites**: [视力保护](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/vision-protection-01.md)
 - **age_range**: 9-12y
 - **completion_criteria**:
   - 用户了解 9-12 岁是近视发生和度数增长的高峰期
@@ -46,8 +46,8 @@ review_status: draft
 
 ### Step 3: 睡眠管理
 
-- **prompt**: 9-12-physical-sleep-management-01
-- **prerequisites**: [6-9-physical-sleep-management-01]
+- **内容**: [睡眠管理](../../stages/家庭期（25-45岁）/育儿指导/9-12岁/身体能力/sleep-management-01.md)
+- **prerequisites**: [睡眠管理](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/sleep-management-01.md)
 - **age_range**: 9-12y
 - **completion_criteria**:
   - 用户了解 9-12 岁仍需要 9-12 小时睡眠（随年龄下限递减）

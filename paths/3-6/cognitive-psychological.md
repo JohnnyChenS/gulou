@@ -18,7 +18,7 @@ review_status: draft
 
 ### Step 1: 心理理论基础
 
-- **prompt**: 3-6-core-theory-of-mind-01
+- **内容**: [理解他人的想法（心理理论）](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/theory-of-mind-01.md)
 - **prerequisites**: 无（起始步骤）
 - **age_range**: 3-5y
 - **completion_criteria**:
@@ -32,7 +32,7 @@ review_status: draft
 
 ### Step 2: 执行功能发展
 
-- **prompt**: 3-6-core-executive-function-01
+- **内容**: [自控力和专注力（执行功能）](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/executive-function-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 3-6y
 - **completion_criteria**:
@@ -46,8 +46,8 @@ review_status: draft
 
 ### Step 3: 延迟满足能力
 
-- **prompt**: 3-6-core-delay-of-gratification-01
-- **prerequisites**: [3-6-core-executive-function-01]
+- **内容**: [延迟满足](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/delay-of-gratification-01.md)
+- **prerequisites**: [自控力和专注力（执行功能）](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/executive-function-01.md)
 - **age_range**: 3-6y
 - **completion_criteria**:
   - 用户能描述延迟满足能力的发展规律和影响因素（策略、信任、环境）
@@ -60,8 +60,8 @@ review_status: draft
 
 ### Step 4: 情绪调节策略
 
-- **prompt**: 3-6-core-emotion-regulation-01
-- **prerequisites**: [3-6-core-theory-of-mind-01]
+- **内容**: [情绪管理（情绪调节）](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/emotion-regulation-01.md)
+- **prerequisites**: [理解他人的想法（心理理论）](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/theory-of-mind-01.md)
 - **age_range**: 3-6y
 - **completion_criteria**:
   - 用户能区分"情绪辅导"和"情绪压制"
@@ -74,7 +74,7 @@ review_status: draft
 
 ### Step 5: 社会性游戏发展
 
-- **prompt**: 3-6-core-social-play-01
+- **内容**: [社会性游戏](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/social-play-01.md)
 - **prerequisites**: [3-6-core-theory-of-mind-01, 3-6-core-emotion-regulation-01]
 - **age_range**: 3-6y
 - **completion_criteria**:
@@ -88,8 +88,8 @@ review_status: draft
 
 ### Step 6: 前阅读与前数学
 
-- **prompt**: 3-6-core-pre-literacy-math-01
-- **prerequisites**: [3-6-core-executive-function-01]
+- **内容**: [前阅读与前数学](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/pre-literacy-math-01.md)
+- **prerequisites**: [自控力和专注力（执行功能）](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/executive-function-01.md)
 - **age_range**: 4-6y
 - **completion_criteria**:
   - 用户能区分"前阅读技能"和"认字"，理解前阅读的重要性
@@ -102,8 +102,8 @@ review_status: draft
 
 ### Step 7: 性别认同与自我概念
 
-- **prompt**: 3-6-core-gender-identity-self-concept-01
-- **prerequisites**: [3-6-core-theory-of-mind-01]
+- **内容**: [性别认同与自我概念](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/gender-identity-self-concept-01.md)
+- **prerequisites**: [理解他人的想法（心理理论）](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/theory-of-mind-01.md)
 - **age_range**: 3-6y
 - **completion_criteria**:
   - 用户能描述性别认同发展的三个阶段（标签→稳定性→恒常性）

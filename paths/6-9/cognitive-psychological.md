@@ -18,7 +18,7 @@ review_status: draft
 
 ### Step 1: 友谊技能
 
-- **prompt**: 6-9-cognitive-friendship-skills-01
+- **内容**: [友谊技能](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/friendship-skills-01.md)
 - **prerequisites**: 无（起始步骤）
 - **age_range**: 6-9y
 - **completion_criteria**:
@@ -32,7 +32,7 @@ review_status: draft
 
 ### Step 2: 口头表达能力
 
-- **prompt**: 6-9-cognitive-oral-expression-01
+- **内容**: [口头表达能力](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/oral-expression-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 6-9y
 - **completion_criteria**:
@@ -46,7 +46,7 @@ review_status: draft
 
 ### Step 3: 创造性思维
 
-- **prompt**: 6-9-cognitive-creative-thinking-01
+- **内容**: [创造性思维](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/creative-thinking-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 6-9y
 - **completion_criteria**:
@@ -60,7 +60,7 @@ review_status: draft
 
 ### Step 4: 金钱概念与储蓄
 
-- **prompt**: 6-9-cognitive-money-concepts-01
+- **内容**: [花钱和存钱（金钱概念）](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/money-concepts-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 6-9y
 - **completion_criteria**:

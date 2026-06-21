@@ -18,7 +18,7 @@ review_status: draft
 
 ### Step 1: 同伴群体认同
 
-- **prompt**: 9-12-cognitive-peer-relationships-01
+- **内容**: [同伴关系](../../stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/peer-relationships-01.md)
 - **prerequisites**: 无（起始步骤）
 - **age_range**: 9-12y
 - **completion_criteria**:
@@ -32,7 +32,7 @@ review_status: draft
 
 ### Step 2: 历史观与世界观
 
-- **prompt**: 9-12-cognitive-historical-worldview-01
+- **内容**: [了解过去和不同文化](../../stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/historical-worldview-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 9-12y
 - **completion_criteria**:
@@ -46,7 +46,7 @@ review_status: draft
 
 ### Step 3: 演讲与公众表达
 
-- **prompt**: 9-12-cognitive-public-speaking-01
+- **内容**: [演讲与公众表达](../../stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/public-speaking-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 9-12y
 - **completion_criteria**:
@@ -60,8 +60,8 @@ review_status: draft
 
 ### Step 4: 创新思维
 
-- **prompt**: 9-12-cognitive-innovative-thinking-01
-- **prerequisites**: [9-12-cognitive-historical-worldview-01]
+- **内容**: [创新思维](../../stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/innovative-thinking-01.md)
+- **prerequisites**: [了解过去和不同文化](../../stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/historical-worldview-01.md)
 - **age_range**: 9-12y
 - **completion_criteria**:
   - 用户能区分创新思维和"胡思乱想"
@@ -74,7 +74,7 @@ review_status: draft
 
 ### Step 5: 消费决策与财务意识
 
-- **prompt**: 9-12-cognitive-financial-decision-01
+- **内容**: [花钱和存钱进阶（消费决策）](../../stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/financial-decision-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 9-12y
 - **completion_criteria**:

@@ -18,7 +18,7 @@ review_status: draft
 
 ### Step 1: 青春期前期亲子沟通
 
-- **prompt**: 12-14-cognitive-puberty-communication-01
+- **内容**: [青春期前期亲子沟通](../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/puberty-communication-01.md)
 - **prerequisites**: 无（起始步骤）
 - **age_range**: 12-14y
 - **completion_criteria**:
@@ -32,7 +32,7 @@ review_status: draft
 
 ### Step 2: 同伴关系深化
 
-- **prompt**: 12-14-cognitive-peer-relationship-deep-01
+- **内容**: [同伴关系深化](../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/peer-relationship-deep-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 12-14y
 - **completion_criteria**:
@@ -46,7 +46,7 @@ review_status: draft
 
 ### Step 3: 身体发育与性教育
 
-- **prompt**: 12-14-cognitive-body-development-01
+- **内容**: [身体发育与性教育](../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/body-development-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 12-14y
 - **completion_criteria**:
@@ -60,7 +60,7 @@ review_status: draft
 
 ### Step 4: 学业压力与时间管理
 
-- **prompt**: 12-14-cognitive-academic-time-management-01
+- **内容**: [学业压力与时间管理](../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/academic-time-management-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 12-14y
 - **completion_criteria**:
@@ -74,7 +74,7 @@ review_status: draft
 
 ### Step 5: 网络素养启蒙
 
-- **prompt**: 12-14-cognitive-digital-literacy-01
+- **内容**: [网络素养启蒙](../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/digital-literacy-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 12-14y
 - **completion_criteria**:
@@ -88,8 +88,8 @@ review_status: draft
 
 ### Step 6: 自我认同与价值观探索
 
-- **prompt**: 12-14-cognitive-identity-exploration-01
-- **prerequisites**: [12-14-cognitive-puberty-communication-01]
+- **内容**: [自我认同与价值观探索](../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/identity-exploration-01.md)
+- **prerequisites**: [青春期前期亲子沟通](../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/puberty-communication-01.md)
 - **age_range**: 12-14y
 - **completion_criteria**:
   - 用户能描述青春期身份探索的四个状态（弥散→早闭→延缓→达成）
