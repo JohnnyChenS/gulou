@@ -351,6 +351,8 @@ review_status: draft
 
 评估后如果需要深入了解某个主题，点击以下链接：
 
-**认知与心理**：[心理理论](认知与心理/theory-of-mind-01.md) | [执行功能](认知与心理/executive-function-01.md) | [延迟满足](认知与心理/delay-of-gratification-01.md) | [情绪调节](认知与心理/emotion-regulation-01.md) | [社会性游戏](认知与心理/social-play-01.md) | [前阅读与前数学](认知与心理/pre-literacy-math-01.md) | [性别认同与自我概念](认知与心理/gender-identity-self-concept-01.md)
+**认知与心理**：[理解他人的想法（心理理论）](认知与心理/theory-of-mind-01.md) | [自控力和专注力（执行功能）](认知与心理/executive-function-01.md) | [延迟满足](认知与心理/delay-of-gratification-01.md) | [情绪管理（情绪调节）](认知与心理/emotion-regulation-01.md) | [社会性游戏](认知与心理/social-play-01.md) | [前阅读与前数学](认知与心理/pre-literacy-math-01.md) | [性别认同与自我概念](认知与心理/gender-identity-self-concept-01.md)
 
 **身体能力**：[基本动作技能](身体能力/basic-movement-01.md) | [平衡与协调](身体能力/balance-coordination-01.md) | [手眼协调](身体能力/hand-eye-coordination-01.md) | [利手确立](身体能力/handedness-01.md) | [户外活动习惯](身体能力/outdoor-habits-01.md)
+
+**语言发展**：[3-6 岁母语发展](../../../../interests/language/母语发展/3-6岁.md) — 语言发展内容在兴趣/语言学习目录下

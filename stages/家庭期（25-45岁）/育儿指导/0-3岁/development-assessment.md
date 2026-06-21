@@ -408,3 +408,7 @@ review_status: draft
 **认知与心理**：[安全依恋](认知与心理/attachment-01.md) | [因果关系](认知与心理/cause-effect-01.md) | [客体永久性](认知与心理/object-permanence-01.md) | [联合注意](认知与心理/joint-attention-01.md) | [自主性](认知与心理/autonomy-01.md) | [自我意识](认知与心理/self-awareness-01.md) | [符号思维](认知与心理/symbolic-thinking-01.md) | [共情](认知与心理/empathy-01.md)
 
 **身体能力**：[粗大动作](身体能力/gross-motor-01.md) | [精细动作](身体能力/fine-motor-01.md) | [感觉统合](身体能力/sensory-integration-01.md) | [口部运动](身体能力/oral-motor-01.md)
+
+**语言发展**：[0-3 岁母语发展](../../../../interests/language/母语发展/0-3岁.md) — 语言发展内容在兴趣/语言学习目录下
+
+**父母支持**：[新手父母心理调适](../父母自身/产后调适/parental-wellbeing-01.md) | [睡眠剥夺应对](../父母自身/产后调适/sleep-deprivation-01.md) | [安全依恋](认知与心理/attachment-01.md) — 你的情绪状态直接影响依恋质量
