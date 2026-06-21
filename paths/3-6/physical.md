@@ -18,7 +18,7 @@ review_status: draft
 
 ### Step 1: 基本动作技能
 
-- **prompt**: 3-6-physical-basic-movement-01
+- **内容**: [基本动作技能](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/basic-movement-01.md)
 - **prerequisites**: 无（起始步骤）
 - **age_range**: 3-6y
 - **completion_criteria**:
@@ -32,8 +32,8 @@ review_status: draft
 
 ### Step 2: 平衡与协调
 
-- **prompt**: 3-6-physical-balance-coordination-01
-- **prerequisites**: [3-6-physical-basic-movement-01]
+- **内容**: [平衡与协调](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/balance-coordination-01.md)
+- **prerequisites**: [基本动作技能](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/basic-movement-01.md)
 - **age_range**: 3-6y
 - **completion_criteria**:
   - 用户能区分静态平衡和动态平衡
@@ -46,8 +46,8 @@ review_status: draft
 
 ### Step 3: 手眼协调
 
-- **prompt**: 3-6-physical-hand-eye-coordination-01
-- **prerequisites**: [3-6-physical-basic-movement-01]
+- **内容**: [手眼协调](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/hand-eye-coordination-01.md)
+- **prerequisites**: [基本动作技能](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/basic-movement-01.md)
 - **age_range**: 3-6y
 - **completion_criteria**:
   - 用户能描述手眼协调从粗大到精细的发展阶梯
@@ -60,8 +60,8 @@ review_status: draft
 
 ### Step 4: 利手确立
 
-- **prompt**: 3-6-physical-handedness-01
-- **prerequisites**: [3-6-physical-hand-eye-coordination-01]
+- **内容**: [利手确立](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/handedness-01.md)
+- **prerequisites**: [手眼协调](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/hand-eye-coordination-01.md)
 - **age_range**: 3-5y
 - **completion_criteria**:
   - 用户能描述利手确立的发展规律和影响因素
@@ -74,7 +74,7 @@ review_status: draft
 
 ### Step 5: 户外活动习惯
 
-- **prompt**: 3-6-physical-outdoor-habits-01
+- **内容**: [户外活动习惯](../../stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/outdoor-habits-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 3-6y
 - **completion_criteria**:

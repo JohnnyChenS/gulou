@@ -18,7 +18,7 @@ review_status: draft
 
 ### Step 1: 安全依恋基础
 
-- **prompt**: 0-3-core-attachment-01
+- **内容**: [安全依恋](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/attachment-01.md)
 - **prerequisites**: 无（起始步骤）
 - **age_range**: 0-18m
 - **completion_criteria**:
@@ -29,12 +29,11 @@ review_status: draft
 - **trigger**:
   - condition: user-initiated 或 state-based
   - description: 用户首次进入育儿阶段，或孩子出现分离焦虑、陌生人焦虑等依恋相关行为
-  - agent_should: 主动询问"孩子最近有没有特别黏你或者怕生的情况？这说明他的依恋在正常发展。"
 
 ### Step 2: 因果推理萌芽
 
-- **prompt**: 0-3-core-cause-effect-01
-- **prerequisites**: [0-3-core-attachment-01]
+- **内容**: [因果关系推理](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/cause-effect-01.md)
+- **prerequisites**: [安全依恋](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/attachment-01.md)
 - **age_range**: 4-12m
 - **completion_criteria**:
   - 用户能描述因果推理的发展阶段（次级循环反应→有意图行为→因果推理）
@@ -43,12 +42,11 @@ review_status: draft
 - **trigger**:
   - condition: state-based
   - description: 孩子约 4-6 个月，开始出现重复性动作（反复扔东西、拍打玩具）
-  - agent_should: 引导用户理解"孩子在做实验"，并提供适合该月龄的因果探索活动
 
 ### Step 3: 客体永久性
 
-- **prompt**: 0-3-core-object-permanence-01
-- **prerequisites**: [0-3-core-attachment-01]
+- **内容**: [客体永久性](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/object-permanence-01.md)
+- **prerequisites**: [安全依恋](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/attachment-01.md)
 - **age_range**: 6-18m
 - **completion_criteria**:
   - 用户能描述客体永久性的发展阶段
@@ -57,12 +55,11 @@ review_status: draft
 - **trigger**:
   - condition: state-based
   - description: 孩子约 6-8 个月，或用户报告孩子"看不到就以为没了"或"我离开他就哭"
-  - agent_should: 解释客体永久性与分离焦虑的关系，推荐阶梯式遮挡游戏
 
 ### Step 4: 联合注意
 
-- **prompt**: 0-3-core-joint-attention-01
-- **prerequisites**: [0-3-core-attachment-01, 0-3-core-cause-effect-01]
+- **内容**: [联合注意](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/joint-attention-01.md)
+- **prerequisites**: [安全依恋](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/attachment-01.md), [因果关系推理](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/cause-effect-01.md)
 - **age_range**: 9-15m
 - **completion_criteria**:
   - 用户能区分"回应指物"和"要求指物"两种联合注意
@@ -71,12 +68,11 @@ review_status: draft
 - **trigger**:
   - condition: state-based
   - description: 孩子约 9-12 个月，开始出现指物行为或跟随他人目光
-  - agent_should: 引导用户观察孩子的指物行为，区分"回应指物"和"要求指物"
 
 ### Step 5: 自主性萌芽
 
-- **prompt**: 0-3-core-autonomy-01
-- **prerequisites**: [0-3-core-attachment-01]
+- **内容**: [自主意志](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/autonomy-01.md)
+- **prerequisites**: [安全依恋](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/attachment-01.md)
 - **age_range**: 12-36m
 - **completion_criteria**:
   - 用户理解"可怕的两岁"的发展意义
@@ -85,12 +81,11 @@ review_status: draft
 - **trigger**:
   - condition: state-based
   - description: 孩子约 12-18 个月，开始出现"我自己来"或"不要"的行为
-  - agent_should: 帮助用户理解这是自主性发展的积极信号，提供给选择的策略
 
 ### Step 6: 自我意识
 
-- **prompt**: 0-3-core-self-awareness-01
-- **prerequisites**: [0-3-core-attachment-01, 0-3-core-autonomy-01]
+- **内容**: [自我意识觉醒](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/self-awareness-01.md)
+- **prerequisites**: [安全依恋](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/attachment-01.md), [自主意志](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/autonomy-01.md)
 - **age_range**: 15-24m
 - **completion_criteria**:
   - 用户能描述自我意识发展的三个层次（身体自我→类别自我→持续自我）
@@ -99,12 +94,11 @@ review_status: draft
 - **trigger**:
   - condition: state-based
   - description: 孩子约 15-18 个月，开始在镜子中认出自己，或出现"我的！"的表达
-  - agent_should: 引导用户理解自我意识的发展意义，区分"自我意识"和"自私"
 
 ### Step 7: 共情萌芽
 
-- **prompt**: 0-3-core-empathy-01
-- **prerequisites**: [0-3-core-self-awareness-01]
+- **内容**: [共情萌芽](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/empathy-01.md)
+- **prerequisites**: [自我意识觉醒](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/self-awareness-01.md)
 - **age_range**: 18-36m
 - **completion_criteria**:
   - 用户理解共情在 0-3 岁是萌芽阶段，不期望过高
@@ -113,12 +107,11 @@ review_status: draft
 - **trigger**:
   - condition: state-based
   - description: 孩子约 18-24 个月，出现初步的关切行为（看到别人哭会关注）
-  - agent_should: 引导用户用语言命名情绪，示范共情行为
 
 ### Step 8: 符号思维
 
-- **prompt**: 0-3-core-symbolic-thinking-01
-- **prerequisites**: [0-3-core-object-permanence-01]
+- **内容**: [符号思维萌芽](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/symbolic-thinking-01.md)
+- **prerequisites**: [客体永久性](../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/object-permanence-01.md)
 - **age_range**: 12-24m
 - **completion_criteria**:
   - 用户能描述符号思维与假装游戏的关系
@@ -127,4 +120,3 @@ review_status: draft
 - **trigger**:
   - condition: state-based
   - description: 孩子约 12-18 个月，开始出现假装行为（如假装打电话、喂娃娃吃饭）
-  - agent_should: 引导用户理解假装游戏对认知发展的重要性，提供阶梯式假装游戏建议

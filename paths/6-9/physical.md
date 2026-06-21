@@ -18,7 +18,7 @@ review_status: draft
 
 ### Step 1: 运动习惯培养
 
-- **prompt**: 6-9-physical-sports-habits-01
+- **内容**: [运动习惯培养](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/sports-habits-01.md)
 - **prerequisites**: 无（起始步骤）
 - **age_range**: 6-9y
 - **completion_criteria**:
@@ -32,7 +32,7 @@ review_status: draft
 
 ### Step 2: 视力保护与用眼卫生
 
-- **prompt**: 6-9-physical-vision-protection-01
+- **内容**: [视力保护](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/vision-protection-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 6-9y
 - **completion_criteria**:
@@ -46,7 +46,7 @@ review_status: draft
 
 ### Step 3: 睡眠管理
 
-- **prompt**: 6-9-physical-sleep-management-01
+- **内容**: [睡眠管理](../../stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/sleep-management-01.md)
 - **prerequisites**: 无（可与 Step 1 并行）
 - **age_range**: 6-9y
 - **completion_criteria**:
