@@ -1,6 +1,6 @@
 # 鼓楼 Gulou
 
-> 鼓楼 = grow。鼓楼是我长大的地方，拨浪鼓(logo) 是童年的声音。
+> 鼓楼 = grow，译为“成长”。同时“鼓楼”亦是我长大的地方，拨浪鼓(logo) 是童年的声音。
 
 [![License: CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 
