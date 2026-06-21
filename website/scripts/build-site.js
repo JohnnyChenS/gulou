@@ -229,7 +229,7 @@ function renderHomePage() {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鼓楼 — 覆盖全人生阶段的成长知识库</title>
-  <meta name="description" content="鼓楼 = grow。把权威的成长发展知识，整理成每个人看得懂、用得上的结构化内容。">
+  <meta name="description" content="鼓楼 = grow，译为“成长”。把权威的成长发展知识，整理成每个人看得懂、用得上的结构化内容。">
   <link rel="icon" type="image/png" href="${BASE_PATH}assets/favicon.png">
   <link rel="stylesheet" href="${BASE_PATH}assets/style.css">
 </head>
@@ -249,7 +249,7 @@ function renderHomePage() {
   <div class="hero">
     <img src="${BASE_PATH}assets/logo.png" alt="鼓楼" class="hero-logo">
     <h1>鼓楼</h1>
-    <p class="subtitle">鼓楼 = grow。鼓楼是我长大的地方，拨浪鼓是童年的声音。</p>
+    <p class="subtitle">鼓楼 = grow，译为“成长”。同时“鼓楼”亦是我长大的地方，拨浪鼓(logo) 是童年的声音。</p>
   </div>
 
   <div class="home-section">
