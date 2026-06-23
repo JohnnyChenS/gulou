@@ -12,12 +12,14 @@ references:
   - Przybylski, A. K., & Weinstein, N. (2017). A large-scale test of the Goldilocks hypothesis. Psychological Science, 28(2), 204-215.
   - 中国《未成年人网络保护条例》（2024）
 tags: [屏幕时间, 游戏成瘾, 社交媒体, 数字素养]
-related_prompts: [14-18-core-adolescent-rebellion-01, 14-18-core-parent-teen-communication-01]
+related_prompts: [14-18-core-adolescent-rebellion-01, 14-18-core-parent-teen-communication-01, 14-18-core-digital-life-02, 14-18-core-parent-teen-communication-02, 14-18-core-adolescent-rebellion-02]
 ---
 
 # 数字设备与网络管理
 
 > **一句话**：完全禁止和过度使用都有害——适度使用反而与最佳心理健康相关。
+>
+> ⚠️ **理论我们都懂，问题是做不做得到。** 如果你觉得这篇说的都对但实际就是做不到——你完全正常。隔壁的 [实战篇](digital-life-02.md) 才是你真正需要的：它不说漂亮话，只教搞砸了怎么修。
 
 ---
 

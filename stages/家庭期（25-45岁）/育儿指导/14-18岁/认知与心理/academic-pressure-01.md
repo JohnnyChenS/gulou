@@ -12,12 +12,14 @@ references:
   - Dweck, C. S. (2006). Mindset. Random House.
   - Pomerantz, E. M., et al. (2007). Parents' involvement in children's academic lives. Review of Educational Research, 77(1), 1-38.
 tags: [升学, 高考, 学业焦虑, 期望管理]
-related_prompts: [14-18-core-adolescent-mental-health-01]
+related_prompts: [14-18-core-adolescent-mental-health-01, 14-18-core-academic-pressure-02]
 ---
 
 # 升学压力与学业焦虑
 
 > **一句话**：没有哪场考试比孩子的生命更重要。
+>
+> ⚠️ **理论我们都懂，问题是做不做得到。** 如果你觉得这篇说的都对但实际就是做不到——你完全正常。隔壁的 [实战篇](academic-pressure-02.md) 才是你真正需要的：它不说漂亮话，只教搞砸了怎么修。
 
 ---
 

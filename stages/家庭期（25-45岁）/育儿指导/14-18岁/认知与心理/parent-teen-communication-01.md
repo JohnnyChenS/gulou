@@ -19,7 +19,7 @@ related_prompts: [14-18-core-adolescent-rebellion-01, 14-18-core-adolescent-ment
 
 > **一句话**：重建沟通的关键不是"怎么让孩子听话"，而是"怎么让孩子愿意和你说话"。
 
-> **💡 觉得这篇说得都对但就是做不到？** 那你需要隔壁的 [实战篇](parent-teen-communication-02.md) —— 它不说漂亮话
+> ⚠️ **理论我们都懂，问题是做不做得到。** 如果你觉得这篇说的都对但实际就是做不到——你完全正常。隔壁的 [实战篇](parent-teen-communication-02.md) 才是你真正需要的：它不说漂亮话，只教搞砸了怎么修。
 
 ---
 
@@ -125,6 +125,5 @@ Keijsers 和 Poulin 的纵向研究发现，青春期亲子沟通的频率和质
 
 ## 延伸探索
 
-- [实战篇：搞砸了怎么办](parent-teen-communication-02.md) — 道理都对但就是做不到？这篇教你修复
 - [叛逆与冲突应对](adolescent-rebellion-01.md) — 沟通断裂常常伴随叛逆行为
 - [心理健康危机识别](adolescent-mental-health-01.md) — "不愿沟通"可能是心理问题的信号

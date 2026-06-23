@@ -11,12 +11,14 @@ references:
   - Keijsers, L., & Poulin, F. (2013). Developmental changes in parent-child communication. Developmental Psychology, 49(12), 2301-2308.
   - Smetana, J. G. (2011). Adolescents, Families, and Social Development. Wiley-Blackwell.
 tags: [亲子沟通, 青春期前期, 沟通模式转变]
-related_prompts: [9-12-core-peer-relationships-01, 12-14-core-peer-relationship-deep-01]
+related_prompts: [9-12-core-peer-relationships-01, 12-14-core-peer-relationship-deep-01, 12-14-core-puberty-communication-02, 14-18-core-parent-teen-communication-02]
 ---
 
 # 青春期前期亲子沟通
 
 > **一句话**：12-14 岁是沟通转型的窗口期——此时调整，比等到 15-16 岁冲突爆发后修复容易得多。
+>
+> ⚠️ **理论我们都懂，问题是做不做得到。** 如果你觉得这篇说的都对但实际就是做不到——你完全正常。隔壁的 [实战篇](puberty-communication-02.md) 才是你真正需要的：它不说漂亮话，只教搞砸了怎么修。
 
 ---
 
