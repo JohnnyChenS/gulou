@@ -12,12 +12,14 @@ references:
   - Patterson, G. R. (1982). Coercive Family Process. Castalia.
   - Smetana, J. G. (2011). Adolescents, Families, and Social Development. Wiley-Blackwell.
 tags: [叛逆, 冲突, 自主权, 边界设定]
-related_prompts: [14-18-core-parent-teen-communication-01, 14-18-core-adolescent-mental-health-01]
+related_prompts: [14-18-core-parent-teen-communication-01, 14-18-core-adolescent-mental-health-01, 14-18-core-parent-teen-communication-02, 14-18-core-adolescent-rebellion-02]
 ---
 
 # 青春期叛逆与冲突应对
 
 > **一句话**：叛逆不是"不听话"，是"我需要证明我是独立的人"。
+>
+> ⚠️ **理论我们都懂，问题是做不做得到。** 如果你觉得这篇说的都对但实际就是做不到——你完全正常。隔壁的 [实战篇](adolescent-rebellion-02.md) 才是你真正需要的：它不说漂亮话，只教搞砸了怎么修。
 
 ---
 
