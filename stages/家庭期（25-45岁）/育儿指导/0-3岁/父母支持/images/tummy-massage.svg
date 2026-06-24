@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750">
+  <rect width="600" height="750" fill="#FFF8F0" rx="12"/>
+  <text x="300" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#D4825A">I Love You 腹部按摩法</text>
+  <text x="300" y="50" text-anchor="middle" font-size="11" fill="#999">（俯视图：你站在宝宝脚边，往下看）</text>
+
+  <!-- 宝宝身体轮廓（俯视） -->
+  <!-- 头 -->
+  <circle cx="300" cy="155" r="28" fill="#FFD5B8" stroke="#E8A87C" stroke-width="2"/>
+  <path d="M 278 145 Q 290 125 315 140 Q 325 148 322 158" fill="#444" stroke="#333" stroke-width="1"/>
+  <circle cx="293" cy="150" r="2.5" fill="#555"/>
+  <circle cx="308" cy="150" r="2.5" fill="#555"/>
+  <path d="M 296 159 Q 300 163 305 159" fill="none" stroke="#D88" stroke-width="1.2"/>
+  <text x="300" y="143" text-anchor="middle" font-size="9" fill="#333" font-weight="bold">头</text>
+
+  <!-- 身体 -->
+  <path d="M 272 180 Q 195 280 195 390 Q 195 470 300 470 Q 405 470 405 390 Q 405 280 328 180" fill="#FFE8D0" stroke="#E8A87C" stroke-width="2"/>
+  
+  <!-- 手臂 -->
+  <path d="M 200 270 Q 155 280 145 300" fill="none" stroke="#FFD5B8" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="143" cy="302" r="5" fill="#FFB599"/>
+  <text x="132" y="305" font-size="8" fill="#666">左手</text>
+  <path d="M 400 270 Q 445 280 455 300" fill="none" stroke="#FFD5B8" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="457" cy="302" r="5" fill="#FFB599"/>
+  <text x="460" y="305" font-size="8" fill="#666">右手</text>
+
+  <!-- 腿 -->
+  <path d="M 230 450 Q 185 520 175 560" fill="none" stroke="#FFD5B8" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="173" cy="565" r="6" fill="#FFB599" stroke="#E8A87C" stroke-width="1"/>
+  <text x="160" y="578" font-size="8" fill="#666">左脚</text>
+  <path d="M 370 450 Q 415 520 425 560" fill="none" stroke="#FFD5B8" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="427" cy="565" r="6" fill="#FFB599" stroke="#E8A87C" stroke-width="1"/>
+  <text x="432" y="578" font-size="8" fill="#666">右脚</text>
+
+  <!-- 肚脐 -->
+  <ellipse cx="300" cy="360" rx="7" ry="5" fill="#C4A88A"/>
+  <text x="300" y="350" text-anchor="middle" font-size="8" fill="#555">肚脐</text>
+
+  <!-- 按摩线 I - 红 -->
+  <path d="M 205 270 L 205 440" stroke="#FF6B6B" stroke-width="7" stroke-linecap="round"/>
+  <text x="195" y="255" font-size="18" font-weight="bold" fill="#FF6B6B">I</text>
+  <text x="155" y="360" font-size="9" fill="#FF6B6B">← 从左侧肋骨下方</text>
+  <text x="155" y="374" font-size="9" fill="#FF6B6B">画 I（5-10遍）</text>
+
+  <!-- 按摩线 L - 橙 -->
+  <path d="M 205 268 L 395 268 L 395 400" stroke="#FFA500" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="408" y="253" font-size="18" font-weight="bold" fill="#FFA500">L</text>
+  <text x="408" y="340" font-size="9" fill="#FFA500">→ 横过肚脐上方</text>
+  <text x="408" y="354" font-size="9" fill="#FFA500">再向下（5-10遍）</text>
+
+  <!-- 按摩线 U - 绿 -->
+  <path d="M 205 268 L 205 370 Q 205 445 300 445 Q 395 445 395 370 L 395 268" stroke="#4ECDC4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="408" y="253" font-size="18" font-weight="bold" fill="#4ECDC4">U</text>
+  <text x="408" y="410" font-size="9" fill="#4ECDC4">→ 从左侧绕到右侧</text>
+  <text x="408" y="424" font-size="9" fill="#4ECDC4">画倒U形（5-10遍）</text>
+
+  <!-- 顺时针标注 -->
+  <path d="M 440 360 A 150 90 0 0 1 160 360" stroke="#4ECDC4" stroke-width="2" stroke-dasharray="4,3" fill="none"/>
+  <text x="300" y="485" text-anchor="middle" font-size="10" fill="#4ECDC4">↻ 顺时针（顺着肠道蠕动方向）</text>
+
+  <!-- 操作步骤 -->
+  <rect x="30" y="500" width="540" height="115" rx="8" fill="#FFF5E6" stroke="#FFD5B8" stroke-width="1.5"/>
+  <text x="300" y="525" text-anchor="middle" font-size="13" font-weight="bold" fill="#D4825A">💡 怎么做</text>
+  <text x="50" y="548" font-size="11" fill="#555">1. 搓热双手 → 涂婴儿油 → 宝宝清醒且心情好</text>
+  <text x="50" y="566" font-size="11" fill="#555">2. 按 I → L → U 顺序，每个字母重复 5-10 遍</text>
+  <text x="50" y="584" font-size="11" fill="#555">3. 手法轻柔，不要用力按压</text>
+  <text x="50" y="602" font-size="11" fill="#555">4. 喂奶后 1 小时进行</text>
+
+  <!-- 警告 -->
+  <rect x="30" y="625" width="540" height="100" rx="8" fill="#FFF0E5" stroke="#FF6B6B" stroke-width="1"/>
+  <text x="300" y="650" text-anchor="middle" font-size="13" font-weight="bold" fill="#FF6B6B">⚠️ 不要做的事</text>
+  <text x="50" y="672" font-size="10" fill="#555">• 脐带未脱落前不要按摩腹部</text>
+  <text x="50" y="690" font-size="10" fill="#555">• 宝宝哭闹抗拒时立即停止</text>
+  <text x="50" y="708" font-size="10" fill="#555">• 不要在刚喂完奶时做</text>
+</svg>

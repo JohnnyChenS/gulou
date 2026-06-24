@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+  <rect width="800" height="550" fill="#FFF8F0" rx="12"/>
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#D4825A">怎么判断宝宝是不是胀气了？</text>
+
+  <!-- 左：胀气 -->
+  <rect x="15" y="50" width="375" height="485" rx="10" fill="#FFF0E5" stroke="#FF6B6B" stroke-width="2"/>
+  <text x="202" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#FF6B6B">⚠️ 胀气信号</text>
+
+  <circle cx="48" cy="118" r="12" fill="#FF6B6B"/>
+  <text x="48" y="122" text-anchor="middle" font-size="11" fill="white" font-weight="bold">1</text>
+  <text x="68" y="114" font-size="12" fill="#444" font-weight="bold">频繁哭闹，难以安抚</text>
+  <text x="68" y="132" font-size="10" fill="#888">特别是傍晚到夜间</text>
+
+  <circle cx="48" cy="188" r="12" fill="#FF6B6B"/>
+  <text x="48" y="192" text-anchor="middle" font-size="11" fill="white" font-weight="bold">2</text>
+  <text x="68" y="184" font-size="12" fill="#444" font-weight="bold">肚子鼓胀、摸上去硬</text>
+  <text x="68" y="202" font-size="10" fill="#888">像打鼓一样嘣嘣响</text>
+
+  <circle cx="48" cy="258" r="12" fill="#FF6B6B"/>
+  <text x="48" y="262" text-anchor="middle" font-size="11" fill="white" font-weight="bold">3</text>
+  <text x="68" y="254" font-size="12" fill="#444" font-weight="bold">双腿蜷缩、身体弓起</text>
+  <text x="68" y="272" font-size="10" fill="#888">面部憋红，用力表情</text>
+
+  <circle cx="48" cy="328" r="12" fill="#FF6B6B"/>
+  <text x="48" y="332" text-anchor="middle" font-size="11" fill="white" font-weight="bold">4</text>
+  <text x="68" y="324" font-size="12" fill="#444" font-weight="bold">吃奶时烦躁</text>
+  <text x="68" y="342" font-size="10" fill="#888">吃几口吐出来，反复</text>
+
+  <circle cx="48" cy="398" r="12" fill="#FF6B6B"/>
+  <text x="48" y="402" text-anchor="middle" font-size="11" fill="white" font-weight="bold">5</text>
+  <text x="68" y="394" font-size="12" fill="#444" font-weight="bold">放屁多、声音响</text>
+  <text x="68" y="412" font-size="10" fill="#888">放完屁或排便后明显好转</text>
+
+  <text x="402" y="300" text-anchor="middle" font-size="26">➡</text>
+
+  <!-- 右：正常 -->
+  <rect x="410" y="50" width="375" height="485" rx="10" fill="#F0FFF0" stroke="#4ECDC4" stroke-width="2"/>
+  <text x="597" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#2E8B57">✅ 正常情况</text>
+
+  <circle cx="445" cy="118" r="12" fill="#4ECDC4"/>
+  <text x="445" y="122" text-anchor="middle" font-size="11" fill="white" font-weight="bold">1</text>
+  <text x="465" y="114" font-size="12" fill="#444" font-weight="bold">哭闹可以安抚</text>
+  <text x="465" y="132" font-size="10" fill="#888">抱起来、喂奶就能停</text>
+
+  <circle cx="445" cy="188" r="12" fill="#4ECDC4"/>
+  <text x="445" y="192" text-anchor="middle" font-size="11" fill="white" font-weight="bold">2</text>
+  <text x="465" y="184" font-size="12" fill="#444" font-weight="bold">肚子柔软</text>
+  <text x="465" y="202" font-size="10" fill="#888">吃饱后略鼓但触感软</text>
+
+  <circle cx="445" cy="258" r="12" fill="#4ECDC4"/>
+  <text x="445" y="262" text-anchor="middle" font-size="11" fill="white" font-weight="bold">3</text>
+  <text x="465" y="254" font-size="12" fill="#444" font-weight="bold">吃奶顺畅</text>
+  <text x="465" y="272" font-size="10" fill="#888">节奏稳定，一次吃完</text>
+
+  <circle cx="445" cy="328" r="12" fill="#4ECDC4"/>
+  <text x="445" y="332" text-anchor="middle" font-size="11" fill="white" font-weight="bold">4</text>
+  <text x="465" y="324" font-size="12" fill="#444" font-weight="bold">大便规律、颜色正常</text>
+  <text x="465" y="342" font-size="10" fill="#888">母乳/配方奶对应色</text>
+
+  <circle cx="445" cy="398" r="12" fill="#4ECDC4"/>
+  <text x="445" y="402" text-anchor="middle" font-size="11" fill="white" font-weight="bold">5</text>
+  <text x="465" y="394" font-size="12" fill="#444" font-weight="bold">体重正常增长</text>
+  <text x="465" y="412" font-size="10" fill="#888">生长曲线在正常范围内</text>
+
+  <!-- 底部 -->
+  <rect x="15" y="450" width="770" height="70" rx="8" fill="#FFF5E6" stroke="#FFD5B8" stroke-width="1"/>
+  <text x="400" y="474" text-anchor="middle" font-size="12" font-weight="bold" fill="#D4825A">💡 简单判断法</text>
+  <text x="400" y="494" text-anchor="middle" font-size="11" fill="#555">哭闹 + 吃奶/体重/大便/精神都正常 → 大概率只是胀气，别慌</text>
+  <text x="400" y="511" text-anchor="middle" font-size="11" fill="#FF6B6B">发烧 / 喷射吐奶 / 血便 / 精神萎靡 → 立即就医</text>
+</svg>

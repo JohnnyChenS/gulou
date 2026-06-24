@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" width="700" height="900">
+  <rect width="700" height="900" fill="#FFF8F0" rx="12"/>
+  <text x="350" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#D4825A">新生儿排气操</text>
+  <text x="350" y="52" text-anchor="middle" font-size="11" fill="#999">（俯视图：宝宝平躺，你站在他脚边操作）</text>
+
+  <!-- 动作一 -->
+  <rect x="20" y="70" width="660" height="240" rx="10" fill="#F0FFF0" stroke="#4ECDC4" stroke-width="1.5"/>
+  <text x="350" y="98" text-anchor="middle" font-size="14" font-weight="bold" fill="#2E8B57">动作一：蹬自行车</text>
+
+  <!-- 宝宝头 -->
+  <circle cx="350" cy="145" r="24" fill="#FFD5B8" stroke="#E8A87C" stroke-width="2"/>
+  <path d="M 332 137 Q 342 120 362 132 Q 370 140 368 148" fill="#444" stroke="#333" stroke-width="1"/>
+  <circle cx="345" cy="142" r="2" fill="#555"/>
+  <circle cx="358" cy="142" r="2" fill="#555"/>
+  <text x="350" y="135" text-anchor="middle" font-size="9" fill="#333" font-weight="bold">头</text>
+
+  <!-- 身体 -->
+  <ellipse cx="350" cy="190" rx="30" ry="35" fill="#FFE8D0" stroke="#E8A87C" stroke-width="2"/>
+  <ellipse cx="350" cy="205" rx="5" ry="4" fill="#C4A88A"/>
+
+  <!-- 左腿（蹬起来） -->
+  <path d="M 335 220 L 295 185 L 280 155" fill="none" stroke="#FFD5B8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="278" cy="150" r="7" fill="#FFB599" stroke="#E8A87C" stroke-width="1"/>
+  <text x="265" y="145" font-size="8" fill="#666">左脚</text>
+
+  <!-- 右腿（伸直） -->
+  <path d="M 365 220 L 415 235 L 455 240" fill="none" stroke="#FFD5B8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="458" cy="241" r="7" fill="#FFB599" stroke="#E8A87C" stroke-width="1"/>
+  <text x="465" y="245" font-size="8" fill="#666">右脚</text>
+
+  <!-- 手 -->
+  <ellipse cx="345" cy="178" rx="12" ry="8" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+  <text x="345" y="181" text-anchor="middle" font-size="7" fill="#555">手</text>
+
+  <text x="80" y="295" font-size="11" fill="#555">握住宝宝小腿，交替屈伸，像蹬自行车</text>
+  <text x="80" y="312" font-size="11" fill="#555">一组 10-15 次，做 2-3 组</text>
+  <text x="80" y="329" font-size="11" fill="#4ECDC4">💡 做的时候常能听到"噗"的排气声</text>
+
+  <!-- 动作二 -->
+  <rect x="20" y="325" width="660" height="240" rx="10" fill="#F0FFF0" stroke="#4ECDC4" stroke-width="1.5"/>
+  <text x="350" y="353" text-anchor="middle" font-size="14" font-weight="bold" fill="#2E8B57">动作二：双膝压腹</text>
+
+  <circle cx="350" cy="400" r="24" fill="#FFD5B8" stroke="#E8A87C" stroke-width="2"/>
+  <path d="M 332 392 Q 342 375 362 387 Q 370 395 368 403" fill="#444" stroke="#333" stroke-width="1"/>
+  <circle cx="345" cy="397" r="2" fill="#555"/>
+  <circle cx="358" cy="397" r="2" fill="#555"/>
+  <text x="350" y="390" text-anchor="middle" font-size="9" fill="#333" font-weight="bold">头</text>
+
+  <ellipse cx="350" cy="440" rx="30" ry="35" fill="#FFE8D0" stroke="#E8A87C" stroke-width="2"/>
+
+  <!-- 双膝压腹 -->
+  <path d="M 335 475 Q 340 435 350 440 Q 360 435 365 475" fill="none" stroke="#FFD5B8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="350" cy="447" r="7" fill="#FFB599" stroke="#E8A87C" stroke-width="1"/>
+  <text x="350" y="440" text-anchor="middle" font-size="8" fill="#333" font-weight="bold">双膝</text>
+
+  <ellipse cx="350" cy="488" rx="14" ry="9" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+  <text x="350" y="491" text-anchor="middle" font-size="7" fill="#555">手握</text>
+
+  <path d="M 350 497 L 350 515" stroke="#4ECDC4" stroke-width="2.5"/>
+  <text x="365" y="515" font-size="10" fill="#4ECDC4">轻压腹部</text>
+  <text x="365" y="530" font-size="10" fill="#4ECDC4">保持10秒</text>
+
+  <text x="80" y="550" font-size="11" fill="#555">双膝同时弯曲，轻轻压向腹部</text>
+  <text x="80" y="567" font-size="11" fill="#555">保持 10 秒后放松，重复 5-8 次</text>
+
+  <!-- 动作三 -->
+  <rect x="20" y="580" width="660" height="240" rx="10" fill="#F0FFF0" stroke="#4ECDC4" stroke-width="1.5"/>
+  <text x="350" y="608" text-anchor="middle" font-size="14" font-weight="bold" fill="#2E8B57">动作三：顺时针摸肚</text>
+
+  <circle cx="350" cy="660" r="24" fill="#FFD5B8" stroke="#E8A87C" stroke-width="2"/>
+  <path d="M 332 652 Q 342 635 362 647 Q 370 655 368 663" fill="#444" stroke="#333" stroke-width="1"/>
+
+  <!-- 腹部放大 -->
+  <ellipse cx="350" cy="715" rx="70" ry="50" fill="#FFE8D0" stroke="#D4825A" stroke-width="2"/>
+  <ellipse cx="350" cy="715" rx="6" ry="5" fill="#C4A88A"/>
+  <text x="350" y="703" text-anchor="middle" font-size="8" fill="#555">肚脐</text>
+
+  <!-- 螺旋 -->
+  <path d="M 305 715 Q 305 680 350 680 Q 390 680 400 708 Q 410 745 350 750 Q 300 755 295 720 Q 290 700 312 695" stroke="#FF6B6B" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+
+  <ellipse cx="310" cy="690" rx="16" ry="12" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5" opacity="0.8"/>
+  <text x="310" y="694" text-anchor="middle" font-size="7" fill="#555">手掌</text>
+
+  <text x="80" y="800" font-size="11" fill="#555">手掌以肚脐为中心，顺时针由内向外画圈</text>
+  <text x="80" y="817" font-size="11" fill="#555">每圈约 10 秒，做 2-3 分钟</text>
+  <text x="80" y="834" font-size="11" fill="#555">配合婴儿油减少摩擦</text>
+
+  <text x="350" y="880" text-anchor="middle" font-size="10" fill="#999">每天 2-3 次 | 喂奶后 1 小时进行 | 宝宝不抗拒的前提下</text>
+</svg>

@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380">
+  <rect width="900" height="380" fill="#FFF8F0" rx="12"/>
+  <text x="450" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#D4825A">正确拍嗝的三种姿势</text>
+  
+  <!-- ======= 面板1：竖抱 ======= -->
+  <g transform="translate(10, 40)">
+    <rect x="0" y="0" width="285" height="330" rx="10" fill="#FFF5EE" stroke="#D4825A" stroke-width="1.5"/>
+    <text x="142" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#D4825A">① 竖抱拍嗝 ★</text>
+    
+    <!-- 大人（坐姿侧影） -->
+    <!-- 头 -->
+    <ellipse cx="130" cy="60" rx="22" ry="24" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <circle cx="140" cy="55" r="2.5" fill="#555"/>
+    <path d="M 120 52 Q 130 42 140 52" fill="none" stroke="#B88" stroke-width="1"/>
+    <!-- 头发 -->
+    <path d="M 115 48 Q 125 35 145 45 Q 148 52 145 58" fill="#666" stroke="#555" stroke-width="1"/>
+    <!-- 身体 -->
+    <rect x="112" y="82" width="40" height="140" rx="15" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <!-- 手臂（环抱宝宝） -->
+    <path d="M 130 100 Q 110 120 105 140" fill="none" stroke="#E8C8B0" stroke-width="12" stroke-linecap="round"/>
+    
+    <!-- 宝宝趴在肩头 -->
+    <!-- 宝宝头 -->
+    <circle cx="90" cy="85" r="16" fill="#FFD5B8" stroke="#E8A87C" stroke-width="1.5"/>
+    <!-- 宝宝头发 -->
+    <path d="M 78 80 Q 85 68 100 76" fill="#444" stroke="#333" stroke-width="1"/>
+    <!-- 宝宝眼睛 -->
+    <circle cx="95" cy="82" r="2" fill="#555"/>
+    <!-- 宝宝身体 -->
+    <ellipse cx="100" cy="120" rx="14" ry="32" fill="#FFD5B8" stroke="#E8A87C" stroke-width="1.5" transform="rotate(15, 100, 120)"/>
+    <!-- 宝宝腿 -->
+    <path d="M 105 145 Q 120 150 128 155" fill="none" stroke="#FFD5B8" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="130" cy="156" r="4" fill="#FFB599"/>
+    
+    <!-- 拍背手 -->
+    <circle cx="138" cy="115" r="15" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <text x="138" y="113" text-anchor="middle" font-size="8" fill="#666">🤚</text>
+    
+    <!-- 红色箭头 -->
+    <path d="M 138 130 L 138 155" stroke="#FF6B6B" stroke-width="2.5" marker-end="url(#arr)"/>
+    
+    <!-- 文字标注 -->
+    <text x="85" y="65" text-anchor="middle" font-size="9" fill="#333" font-weight="bold">头</text>
+    <text x="115" y="152" font-size="8" fill="#666">屁股</text>
+    <text x="140" y="165" font-size="8" fill="#666">脚</text>
+    <text x="155" y="125" font-size="8" fill="#FF6B6B">空心掌</text>
+    <text x="155" y="137" font-size="8" fill="#FF6B6B">由下拍上</text>
+    
+    <text x="142" y="305" text-anchor="middle" font-size="9" fill="#666">宝宝竖抱肩头，头靠大人肩上</text>
+    <text x="142" y="320" text-anchor="middle" font-size="9" fill="#666">空心掌由下往上拍背部</text>
+  </g>
+  
+  <!-- ======= 面板2：坐姿 ======= -->
+  <g transform="translate(305, 40)">
+    <rect x="0" y="0" width="285" height="330" rx="10" fill="#FFF5EE" stroke="#D4825A" stroke-width="1.5"/>
+    <text x="142" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#D4825A">② 坐姿拍嗝</text>
+    
+    <!-- 大人 -->
+    <ellipse cx="130" cy="55" rx="22" ry="24" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <circle cx="138" cy="50" r="2.5" fill="#555"/>
+    <path d="M 115 45 Q 125 32 145 42" fill="#666" stroke="#555" stroke-width="1"/>
+    <!-- 身体 -->
+    <rect x="112" y="78" width="40" height="130" rx="15" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <!-- 大腿 -->
+    <ellipse cx="135" cy="210" rx="50" ry="20" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <text x="175" y="215" font-size="8" fill="#999">大腿</text>
+    
+    <!-- 宝宝坐姿 -->
+    <ellipse cx="142" cy="155" rx="14" ry="28" fill="#FFD5B8" stroke="#E8A87C" stroke-width="1.5" transform="rotate(20, 142, 155)"/>
+    <!-- 宝宝头 -->
+    <circle cx="125" cy="125" r="15" fill="#FFD5B8" stroke="#E8A87C" stroke-width="1.5"/>
+    <path d="M 114 120 Q 120 110 133 116" fill="#444" stroke="#333" stroke-width="1"/>
+    <circle cx="130" cy="122" r="2" fill="#555"/>
+    <text x="125" y="108" text-anchor="middle" font-size="9" fill="#333" font-weight="bold">头</text>
+    
+    <!-- 宝宝腿 -->
+    <ellipse cx="155" cy="175" rx="6" ry="15" fill="#FFD5B8" stroke="#E8A87C" stroke-width="1" transform="rotate(30, 155, 175)"/>
+    
+    <!-- 前手 -->
+    <circle cx="100" cy="138" r="14" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <text x="80" y="133" font-size="8" fill="#666">手托</text>
+    <text x="80" y="145" font-size="8" fill="#666">下巴/胸口</text>
+    <path d="M 108 138 L 118 138" stroke="#C4A88A" stroke-width="1.5"/>
+    
+    <!-- 后手 -->
+    <circle cx="185" cy="128" r="15" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <text x="200" y="132" font-size="8" fill="#666">拍背</text>
+    <path d="M 172 128 L 158 128" stroke="#C4A88A" stroke-width="1.5"/>
+    
+    <text x="142" y="305" text-anchor="middle" font-size="9" fill="#666">宝宝坐大腿上，身体前倾30°</text>
+    <text x="142" y="320" text-anchor="middle" font-size="9" fill="#666">一手托下巴/胸口、一手拍背</text>
+  </g>
+  
+  <!-- ======= 面板3：趴腿 ======= -->
+  <g transform="translate(600, 40)">
+    <rect x="0" y="0" width="285" height="330" rx="10" fill="#FFF5EE" stroke="#D4825A" stroke-width="1.5"/>
+    <text x="142" y="22" text-anchor="middle" font-size="12" font-weight="bold" fill="#D4825A">③ 趴腿拍嗝</text>
+    
+    <!-- 大人大腿 -->
+    <ellipse cx="142" cy="215" rx="65" ry="25" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <text x="190" y="170" font-size="8" fill="#999">大腿</text>
+    
+    <!-- 宝宝趴在大腿上 -->
+    <ellipse cx="130" cy="165" rx="12" ry="28" fill="#FFD5B8" stroke="#E8A87C" stroke-width="1.5" transform="rotate(-70, 130, 165)"/>
+    
+    <!-- 宝宝头（侧向） -->
+    <circle cx="98" cy="155" r="16" fill="#FFD5B8" stroke="#E8A87C" stroke-width="1.5"/>
+    <path d="M 88 150 Q 92 140 105 145" fill="#444" stroke="#333" stroke-width="1"/>
+    <circle cx="103" cy="152" r="2" fill="#555"/>
+    <text x="90" y="142" text-anchor="middle" font-size="9" fill="#333" font-weight="bold">头</text>
+    <text x="90" y="158" text-anchor="middle" font-size="7" fill="#666">（侧向）</text>
+    
+    <!-- 口鼻警告 -->
+    <text x="70" y="140" font-size="7" fill="#FF6B6B">⚠️确保</text>
+    <text x="70" y="150" font-size="7" fill="#FF6B6B">口鼻露出</text>
+    
+    <!-- 宝宝屁股 -->
+    <circle cx="158" cy="162" r="10" fill="#FFD5B8" stroke="#E8A87C" stroke-width="1"/>
+    <text x="170" y="165" font-size="8" fill="#666">屁股</text>
+    
+    <!-- 宝宝腿 -->
+    <path d="M 165 158 Q 180 148 190 152" fill="none" stroke="#FFD5B8" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="192" cy="153" r="4" fill="#FFB599"/>
+    <text x="197" y="156" font-size="8" fill="#666">脚</text>
+    
+    <!-- 拍背手 -->
+    <circle cx="130" cy="110" r="15" fill="#F0D5B8" stroke="#C4A88A" stroke-width="1.5"/>
+    <text x="130" y="108" text-anchor="middle" font-size="8" fill="#666">🤚</text>
+    <path d="M 130 125 L 130 142" stroke="#FF6B6B" stroke-width="2.5"/>
+    
+    <text x="142" y="305" text-anchor="middle" font-size="9" fill="#666">宝宝趴在大腿上，头略高于脚</text>
+    <text x="142" y="320" text-anchor="middle" font-size="9" fill="#666">头侧一边，口鼻露出</text>
+  </g>
+  
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FF6B6B"/>
+    </marker>
+  </defs>
+</svg>
