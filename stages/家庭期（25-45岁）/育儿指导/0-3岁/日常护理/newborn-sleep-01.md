@@ -51,6 +51,8 @@ related_prompts: [0-3-dailycare-colic-01, 0-3-dailycare-feeding-01, parenting-sl
 
 ## 方法一：识别睡眠信号 🚦（最重要的一步）
 
+![睡眠信号识别](assets/sleep/sleep-cues.svg)
+
 **时机决定成败。** 错过最佳哄睡窗口，宝宝会进入"过度疲劳"状态——肾上腺素飙升，更难入睡。
 
 | 阶段 | 信号 | 该做什么 |
@@ -64,6 +66,8 @@ related_prompts: [0-3-dailycare-colic-01, 0-3-dailycare-feeding-01, parenting-sl
 ---
 
 ## 方法二：5S 哄睡法 ✋（打包带走）
+
+![5S 哄睡法](assets/sleep/5s-method.svg)
 
 基于 Harvey Karp 的 "The Happiest Baby on the Block"。按顺序尝试，叠加使用。
 

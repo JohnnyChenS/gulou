@@ -42,7 +42,7 @@ related_prompts: [0-3-dailycare-colic-01, 0-3-core-gross-motor-01]
 
 ## 方法一：擦浴 🧽（脐带脱落前）
 
-![擦浴步骤](assets/bathing/sponge-bath.png)
+![擦浴步骤](assets/bathing/sponge-bath.svg)
 
 | 步骤 | 怎么做 | 关键细节 |
 |------|--------|---------|
@@ -60,7 +60,7 @@ related_prompts: [0-3-dailycare-colic-01, 0-3-core-gross-motor-01]
 
 ## 方法二：盆浴 🛁（脐带脱落后）
 
-![盆浴步骤](assets/bathing/tub-bath.png)
+![盆浴步骤](assets/bathing/tub-bath.svg)
 
 | 步骤 | 怎么做 | 关键细节 |
 |------|--------|---------|

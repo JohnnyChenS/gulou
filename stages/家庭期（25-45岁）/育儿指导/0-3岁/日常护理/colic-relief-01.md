@@ -45,7 +45,7 @@ related_prompts: [0-3-dailycare-newborn-sleep-01, 0-3-dailycare-feeding-01]
 
 ## 方法一：飞机抱 🛩️（成功率最高的第一招）
 
-![飞机抱分解动作](assets/colic/airplane-hold.png)
+![飞机抱分解动作](assets/colic/airplane-hold.svg)
 
 | 步骤 | 怎么做 | 关键细节 |
 |------|--------|---------|
@@ -63,7 +63,7 @@ related_prompts: [0-3-dailycare-newborn-sleep-01, 0-3-dailycare-feeding-01]
 
 ## 方法二：排气操 🦵（如果飞机抱没完全缓解）
 
-![排气操动作序列](assets/colic/bicycle-exercise.png)
+![排气操动作序列](assets/colic/bicycle-exercise.svg)
 
 | 步骤 | 怎么做 | 关键细节 |
 |------|--------|---------|

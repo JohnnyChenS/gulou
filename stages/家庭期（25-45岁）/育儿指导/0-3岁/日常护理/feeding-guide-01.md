@@ -45,7 +45,7 @@ related_prompts: [0-3-dailycare-colic-01, 0-3-dailycare-newborn-sleep-01]
 
 ## 方法一：正确拍嗝 👋（不拍好，吃多少都不舒服）
 
-![三种拍嗝姿势](assets/feeding/burping-positions.png)
+![三种拍嗝姿势](assets/feeding/burping-positions.svg)
 
 喂奶时宝宝会吞入空气，气泡卡在胃里 = 假性饱腹感 + 胀气。
 
@@ -67,7 +67,7 @@ related_prompts: [0-3-dailycare-colic-01, 0-3-dailycare-newborn-sleep-01]
 
 ## 方法二：奶量参考 🍼（心里有数，不用猜）
 
-![奶量参考表](assets/feeding/feeding-amounts.png)
+![奶量参考表](assets/feeding/feeding-amounts.svg)
 
 > **以下为参考值，每个宝宝不同。相信宝宝的饥饿信号，不要强喂。**
 
