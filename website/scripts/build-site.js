@@ -36,6 +36,25 @@ const SKIP = new Set(['.git', '.claude', '.sisyphus', 'node_modules', 'CLAUDE.md
 
 // ─── Helpers ───────────────────────────────────────────────────────────────
 
+/** 递归收集目录下所有非 .md 文件（图片等静态资源） */
+function collectAssets(dir, base) {
+  const results = [];
+  if (!fs.existsSync(dir)) return results;
+
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    if (SKIP.has(entry.name)) continue;
+    const full = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      results.push(...collectAssets(full, base));
+    } else if (!entry.name.endsWith('.md')) {
+      const rel = path.relative(base, full);
+      results.push({ full, rel });
+    }
+  }
+  return results;
+}
+
 /** 递归收集目录下所有 .md 文件 */
 function collectMdFiles(dir, base) {
   const results = [];
@@ -478,6 +497,34 @@ function build() {
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, html);
     count++;
+  }
+
+  // 复制静态资源（图片等非 .md 文件）
+  let assetCount = 0;
+  for (const dir of CONTENT_DIRS) {
+    const fullDir = path.join(ROOT, dir);
+    const assets = collectAssets(fullDir, ROOT);
+    for (const { full, rel } of assets) {
+      // 使用与 md 文件相同的 slug 解析获取输出路径
+      const mdRel = rel.replace(/[^/]+$/, '_index.md');  // 用同目录的 _index.md 来确定 slug 前缀
+
+      // 取同目录路径来确定 slug 的基础路径
+      const dirPath = path.dirname(rel);
+      let outRel;
+      // 尝试用 resolvePath 解析同目录下的 _index.md 来确定 slug 映射
+      const indexRel = dirPath + '/_index.md';
+      const indexOut = resolvePath(indexRel);
+      // 输出路径 = index 所在目录 + 原始文件名
+      outRel = path.dirname(indexOut) + '/' + path.basename(rel);
+
+      const outPath = path.join(OUT, outRel);
+      fs.mkdirSync(path.dirname(outPath), { recursive: true });
+      fs.copyFileSync(full, outPath);
+      assetCount++;
+    }
+  }
+  if (assetCount > 0) {
+    console.log(`\n  ✓ ${assetCount} static assets copied`);
   }
 
   // 生成目录索引页（如果 _index.md 不存在）

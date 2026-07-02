@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="400" height="280">
+  <rect width="400" height="280" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="150" y="90" width="100" height="70" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <circle cx="200" cy="125" r="18" fill="none" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="183" y1="125" x2="217" y2="125" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="200" y1="108" x2="200" y2="142" stroke="#94a3b8" stroke-width="2"/>
+  <text x="200" y="185" text-anchor="middle" fill="#94a3b8" font-size="14" font-family="sans-serif">图片待补充</text>
+  <text x="200" y="205" text-anchor="middle" fill="#cbd5e1" font-size="11" font-family="sans-serif">宝宝出生后拍照补上</text>
+</svg>
