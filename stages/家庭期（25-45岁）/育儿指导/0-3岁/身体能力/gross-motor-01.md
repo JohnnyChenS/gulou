@@ -13,6 +13,45 @@ references:
   - Hadders-Algra, M. (2018). Early human motor development. Human Movement Science, 64, 40-49.
 tags: [粗大动作, 翻身, 爬行, 学步, 俯卧时间]
 related_prompts: [0-3-core-fine-motor-01, 0-3-core-sensory-integration-01]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-24m
+    stage: 婴幼儿早期动作发展
+  intent_triggers:
+    - 用户担心宝宝不会抬头、翻身、爬行或走路
+    - 用户想知道当前月龄该练什么动作
+    - 用户报告宝宝趴着抗拒或活动机会不足
+  growth_tasks:
+    - 建立每日俯卧时间
+    - 观察粗大动作里程碑
+    - 提供安全的翻身、爬行和站立探索环境
+  observable_signals:
+    - 俯卧抬头
+    - 翻身
+    - 独坐
+    - 爬行
+    - 扶站和独走
+  measurable_indicators:
+    - 每天累计俯卧时间
+    - 每次俯卧可坚持时长
+    - 是否达到当前月龄关键动作窗口
+    - 家中每天自由活动时长
+  suggested_actions:
+    - 清醒时每天安排多次短时俯卧
+    - 用玩具引导抬头、转头和伸手
+    - 减少长时间抱着、躺椅和限制性设备使用
+  red_flags:
+    - 6 个月仍不能翻身
+    - 9 个月仍不能独坐
+    - 15 个月仍不能独立行走
+    - 一侧身体明显比另一侧弱
+    - 18 个月以上仍频繁摔跤
+  review_questions:
+    - 这周宝宝每天大约趴了多久？
+    - 宝宝最抗拒哪个动作练习？
+    - 家里有哪些限制宝宝自由活动的场景？
+    - 是否出现了新的抬头、翻身、爬行或站立信号？
 ---
 
 # 粗大动作

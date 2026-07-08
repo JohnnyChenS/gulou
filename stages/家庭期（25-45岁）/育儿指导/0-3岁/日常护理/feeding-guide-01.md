@@ -10,9 +10,52 @@ review_status: draft
 references:
   - American Academy of Pediatrics. (2023). Breastfeeding and the Use of Human Milk. Pediatrics, 150(1).
   - World Health Organization. (2021). Infant and Young Child Feeding. Fact Sheet.
+  - Centers for Disease Control and Prevention. (2026). Tips for Infant Formula Feeding.
+  - Centers for Disease Control and Prevention. (2025). Preventing Cronobacter in Infants.
   - Horta, B. L., et al. (2015). Breastfeeding and intelligence: A systematic review. Acta Paediatrica, 104(S467), 14-19.
 tags: [喂养, 母乳, 奶粉, 拍嗝, 奶量]
 related_prompts: [0-3-dailycare-colic-01, 0-3-dailycare-newborn-sleep-01]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-6m
+    stage: 新生儿和小婴儿喂养期
+  intent_triggers:
+    - 用户担心母乳不够或宝宝没吃饱
+    - 用户询问奶量、喂奶频率或是否需要加奶粉
+    - 用户报告喂完哭闹、吐奶或频繁找奶
+  growth_tasks:
+    - 建立按需喂养和饥饱信号识别
+    - 用尿量和体重判断喂养是否足够
+    - 降低喂养焦虑和家庭冲突
+  observable_signals:
+    - 湿尿布数量
+    - 大便颜色和次数
+    - 喂奶时吞咽声
+    - 喂后是否放松或转头拒绝
+    - 体重增长趋势
+  measurable_indicators:
+    - 每天湿尿布数量
+    - 每天喂奶次数
+    - 单次奶量或亲喂时长
+    - 每周体重变化
+    - 喂后吐奶或哭闹次数
+  suggested_actions:
+    - 优先看湿尿布和体重，不用单次奶量判断成败
+    - 奶粉按说明精确冲调，不自行加浓或稀释
+    - 喂奶前洗手，奶瓶和奶嘴按规范清洁
+    - 喂完观察饱足信号，不追着喂
+  red_flags:
+    - 出生第 5 天后每天湿尿布少于 6 片
+    - 出生 2 周仍未恢复到出生体重
+    - 喷射状呕吐
+    - 拒绝吃奶超过 6 小时
+    - 体重不增或下降
+  review_questions:
+    - 这周每天湿尿布大约有几片？
+    - 最让你焦虑的是奶量、体重还是哭闹？
+    - 有没有因为喂养方式和家人发生冲突？
+    - 宝宝喂后更常见的是放松、吐奶还是继续哭闹？
 ---
 
 # 喂养实操
