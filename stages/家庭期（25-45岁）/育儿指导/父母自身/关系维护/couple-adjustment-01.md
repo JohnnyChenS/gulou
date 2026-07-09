@@ -12,6 +12,46 @@ references:
   - Gottman, J. M., & Silver, N. (2012). What Makes Love Last?. Simon & Schuster.
   - Doss, B. D., et al. (2009). Effects of the Bringing Baby Home workshop. Journal of Consulting and Clinical Psychology, 77(3), 554-567.
 tags: [夫妻关系, 产后调适, 沟通, 分工, 亲密感]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-3y
+    stage: 产后伴侣关系重构期
+  intent_triggers:
+    - 用户和伴侣因夜间带娃或家务分工吵架
+    - 用户觉得自己一个人在扛
+    - 用户抱怨伴侣不参与育儿或不理解自己
+    - 用户产后亲密感下降
+  growth_tasks:
+    - 把隐性期待转成明确分工
+    - 避免在睡眠剥夺时讨论重大问题
+    - 建立每日低成本情感连接
+    - 从帮忙思维转为共同养育
+  observable_signals:
+    - 夜间分工是否明确
+    - 争吵发生时间和触发点
+    - 是否有感谢和正向表达
+    - 是否存在代际冲突影响夫妻关系
+  measurable_indicators:
+    - 每周关于分工的清醒时段沟通次数
+    - 每天 10 分钟非育儿对话是否发生
+    - 夜间任务是否写清楚
+    - 父母双方最长连续睡眠时长
+  suggested_actions:
+    - 把夜奶、拍嗝、换尿布、哄睡、采购等任务写成清单
+    - 每周用 10 分钟调整一次分工
+    - 不在凌晨或极度疲惫时讨论重要话题
+    - 每天说一句具体感谢
+  red_flags:
+    - 每次沟通都升级为攻击、辱骂或威胁
+    - 一方长期完全退出育儿和家庭协作
+    - 伴侣关系冲突伴随产后抑郁红旗信号
+    - 出现家庭暴力或人身安全风险
+  review_questions:
+    - 这周最常吵的是哪一项具体任务？
+    - 有没有写下而不是口头假设分工？
+    - 上一次非深夜、非吵架状态的沟通是什么时候？
+    - 双方各自最需要被看见的一件事是什么？
 ---
 
 # 夫妻关系产后调适

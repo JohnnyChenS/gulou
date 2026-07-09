@@ -13,6 +13,44 @@ references:
   - Blume-Peytavi, U., et al. (2016). Bathing and cleansing in newborns. Journal of the European Academy of Dermatology, 30(1), 3-11.
 tags: [洗澡, 脐带护理, 新生儿, 日常护理]
 related_prompts: [0-3-dailycare-colic-01, 0-3-core-gross-motor-01]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-3m
+    stage: 新生儿清洁护理期
+  intent_triggers:
+    - 用户第一次给宝宝洗澡感到紧张
+    - 用户询问脐带没脱落能不能洗澡
+    - 用户担心脐带护理、室温、水温或红肿感染
+  growth_tasks:
+    - 建立安全擦浴和盆浴流程
+    - 保持脐部清洁干燥
+    - 识别脐部感染和洗澡后低体温风险
+  observable_signals:
+    - 脐带是否脱落和干燥
+    - 脐周是否发红、肿胀或渗液
+    - 洗澡时是否发抖、嘴唇发紫
+    - 皮肤是否干燥、皮疹或大面积脱皮
+  measurable_indicators:
+    - 每周洗澡或擦浴次数
+    - 脐部清洁次数
+    - 室温和水温是否达标
+    - 脐带脱落时间
+  suggested_actions:
+    - 脐带脱落前只擦浴，避免泡水
+    - 洗澡前准备好所有用品并保持室温 26-28°C
+    - 水温控制在 37-38°C
+    - 尿布前端向下折，避免盖住脐带
+  red_flags:
+    - 脐部周围发红、肿胀、有脓性分泌物或触碰就哭
+    - 脐带超过 4 周未脱落
+    - 洗完澡后发抖、嘴唇发紫或体温偏低
+    - 全身皮疹或大面积脱皮
+  review_questions:
+    - 脐带目前是否干燥、是否被尿布盖住？
+    - 洗澡前用品是否能一次准备齐？
+    - 宝宝洗澡最抗拒的是入水、洗头还是出水？
+    - 是否出现脐部感染或低体温信号？
 ---
 
 # 洗澡与脐带护理

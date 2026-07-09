@@ -12,6 +12,44 @@ references:
   - Dunn, W. (2001). The sensations of everyday life. American Journal of Occupational Therapy, 55(6), 606-612.
 tags: [感觉统合, 前庭觉, 触觉, 感官发展]
 related_prompts: [0-3-core-gross-motor-01, 0-3-core-fine-motor-01]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-36m
+    stage: 感觉体验和整合发展期
+  intent_triggers:
+    - 用户担心孩子怕洗头、怕草地、怕声音或抗拒触感
+    - 用户询问感统训练是否必要
+    - 用户描述孩子特别爱转圈、撞、爬、跳或停不下来
+  growth_tasks:
+    - 理解孩子的感觉偏好
+    - 提供安全、渐进、多样的感觉体验
+    - 避免把普通感觉偏好过早诊断为问题
+  observable_signals:
+    - 对声音、触感、光线或水的反应
+    - 是否喜欢摇晃、翻滚、爬、跳
+    - 是否抗拒特定材质或地面
+    - 是否对疼痛或碰撞反应过弱
+  measurable_indicators:
+    - 每天户外或大运动时长
+    - 本周尝试的新触感或新环境数量
+    - 抗拒刺激时可接受的接近步骤
+    - 感觉反应是否影响吃饭、洗澡、睡眠或社交
+  suggested_actions:
+    - 一次只引入 1-2 种新感觉刺激
+    - 先观察、再接触、再体验，不强迫
+    - 用水、布料、草地、沙地、音乐等日常场景提供输入
+    - 对感觉寻求型孩子提供安全的大运动机会
+  red_flags:
+    - 对日常声音、触感或光线极度抗拒并严重影响生活
+    - 对疼痛几乎没有反应
+    - 24 个月以上仍不能在多种地面独立行走
+    - 频繁撞墙、撞头或自伤
+  review_questions:
+    - 这周孩子最抗拒哪种感觉刺激？
+    - 哪种感觉活动最能让孩子安定或开心？
+    - 是否有强迫接触导致更抗拒的情况？
+    - 感觉反应是否已经影响日常生活？
 ---
 
 # 感觉统合

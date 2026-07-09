@@ -12,6 +12,47 @@ references:
   - Dennis, C. L., & Dowswell, T. (2013). Interventions for preventing postpartum depression. Cochrane Database of Systematic Reviews.
   - Howard, L. M., et al. (2014). Non-psychotic mental disorders in the perinatal period. The Lancet, 384(9956), 1775-1788.
 tags: [产后抑郁, 心理健康, 早期识别, 父亲产后抑郁]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-12m
+    stage: 产后心理风险识别期
+  intent_triggers:
+    - 用户怀疑自己或伴侣产后抑郁
+    - 用户连续两周以上情绪低落、绝望或空虚
+    - 用户出现伤害自己或宝宝的想法
+    - 用户完全不想照顾宝宝或无法正常生活
+  growth_tasks:
+    - 快速识别产后抑郁和危机信号
+    - 鼓励尽早寻求专业帮助
+    - 让伴侣理解这不是矫情或不够坚强
+  observable_signals:
+    - 情绪低落持续时间
+    - 对宝宝或日常事物失去兴趣
+    - 失眠、食欲变化或极度疲惫
+    - 自伤或伤害宝宝的念头
+    - 幻觉、妄想或无法照顾自己
+  measurable_indicators:
+    - 情绪低落持续天数
+    - 是否有自伤或伤害宝宝想法
+    - 是否能完成基本照护和自我照顾
+    - 是否已联系专业帮助
+  suggested_actions:
+    - 立即告诉伴侣、家人或可信任的人当前状态
+    - 联系精神科、心理科、产检医生或心理援助热线
+    - 就医前记录症状持续时间、睡眠、食欲、功能和是否哺乳
+    - 伴侣协助预约并承担更多照护
+  red_flags:
+    - 有伤害自己或宝宝的想法
+    - 持续 2 周以上情绪低落
+    - 无法照顾孩子或自己
+    - 出现幻觉或妄想
+    - 对宝宝完全没有感情并伴随功能受损
+  review_questions:
+    - 情绪低落或绝望持续了多久？
+    - 是否出现过伤害自己或宝宝的念头？
+    - 今天是否能联系一个现实中的支持者？
+    - 是否已经预约或准备预约专业帮助？
 ---
 
 # 产后抑郁识别与应对
