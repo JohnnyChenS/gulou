@@ -13,6 +13,45 @@ references:
   - Daelemans, S., et al. (2020). Management of infant colic. Acta Paediatrica, 109(9), 1716-1725.
 tags: [肠胀气, 新生儿, 飞机抱, 排气操, 哭闹]
 related_prompts: [0-3-dailycare-newborn-sleep-01, 0-3-dailycare-feeding-01]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-4m
+    stage: 新生儿肠道适应期
+  intent_triggers:
+    - 用户报告宝宝喂后哭闹、蜷腿、肚子硬或放屁后缓解
+    - 用户怀疑肠胀气或肠绞痛
+    - 用户想知道飞机抱、排气操什么时候用
+  growth_tasks:
+    - 区分常见肠胀气和危险哭闹信号
+    - 建立喂后拍嗝和排气观察习惯
+    - 通过记录找到哭闹和胀气规律
+  observable_signals:
+    - 喂后 20-30 分钟哭闹
+    - 双腿往肚子蜷
+    - 肚子摸起来硬或鼓
+    - 放屁或排便后安静
+  measurable_indicators:
+    - 每天胀气哭闹发生时间
+    - 单次哭闹持续时长
+    - 上次喂奶到哭闹间隔
+    - 哪种安抚方式有效
+  suggested_actions:
+    - 喂后做好拍嗝并保持竖抱
+    - 胀气时尝试飞机抱或排气操
+    - 连续记录 3 天哭闹时间和缓解方式
+    - 刚喂完奶避免立刻飞机抱
+  red_flags:
+    - 持续无法安抚超过 3 小时且哭声异常
+    - 喷射状呕吐
+    - 大便带血、白色或新生儿期超过 24 小时无大便
+    - 体重增长不良或拒绝吃奶超过 6 小时
+    - 体温超过 38°C
+  review_questions:
+    - 这周哭闹是否集中在固定时间？
+    - 哪个动作最能缓解胀气？
+    - 胀气是否与喂奶速度、拍嗝或奶瓶有关？
+    - 是否出现任何需要就医的红旗信号？
 ---
 
 # 肠胀气应对

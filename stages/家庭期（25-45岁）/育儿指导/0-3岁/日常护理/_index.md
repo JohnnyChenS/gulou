@@ -6,15 +6,19 @@ section: 日常护理
 
 # 新生儿日常护理指南
 
-新生儿期的四大实操技能：肠胀气应对、睡眠引导、科学喂养、洗澡与脐带护理。每篇都按「真实场景 → 快速判断 → 分步骤操作 → 实战经验」组织，跟着做就行。
+新生儿期的基础实操技能：哭闹排查、抱娃、喂养、拍嗝、换尿不湿、肠胀气应对、睡眠引导、洗澡与脐带护理。每篇都按「真实场景 → 快速判断 → 分步骤操作 → 警惕信号」组织，跟着做就行。
 
 ## 护理主题
 
 | 主题 | 一句话 | 详情 |
 |------|--------|------|
+| 哭闹快速排查 | 先排危险，再按顺序排查 | [crying-checklist-01](crying-checklist-01.md) |
+| 抱新生儿 | 头颈、背部、臀部三点稳定 | [holding-newborn-01](holding-newborn-01.md) |
 | 肠胀气应对 | 找规律比学技巧更重要 | [colic-relief-01](colic-relief-01.md) |
 | 新生儿睡眠 | 帮宝宝找到入睡的节奏 | [newborn-sleep-01](newborn-sleep-01.md) |
 | 喂养实操 | 判断吃饱的唯一标准：尿量+体重 | [feeding-guide-01](feeding-guide-01.md) |
+| 拍嗝 | 给胃里的空气一个出来的机会 | [burping-guide-01](burping-guide-01.md) |
+| 换尿不湿 | 固定流程，同时观察健康信号 | [diaper-changing-01](diaper-changing-01.md) |
 | 洗澡与脐带护理 | 脐带脱落前只擦浴，保持干燥 | [bathing-care-01](bathing-care-01.md) |
 
 ## 图片资源

@@ -13,6 +13,55 @@ references:
   - Galland, B. C., et al. (2012). Normal sleep patterns in infants and children. Sleep Medicine Reviews, 16(3), 213-222.
 tags: [睡眠, 新生儿, 哄睡, 安全睡眠, 作息]
 related_prompts: [0-3-dailycare-colic-01, 0-3-dailycare-feeding-01, parenting-sleep-deprivation-01]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-6m
+    stage: 新生儿期
+  intent_triggers:
+    - 用户担心宝宝睡眠太短或放下就醒
+    - 用户报告昼夜颠倒、夜醒频繁或哄睡困难
+    - 用户因睡眠问题感到崩溃
+  growth_tasks:
+    - 建立安全睡眠环境
+    - 识别清醒窗口和睡眠信号
+    - 初步建立昼夜节律
+  observable_signals:
+    - 放下就醒
+    - 每次只睡 30-50 分钟
+    - 白天睡得多、晚上清醒
+    - 需要抱睡或摇睡
+  measurable_indicators:
+    - 每天总睡眠时长
+    - 夜间最长连续睡眠时长
+    - 白天清醒窗口是否超过 90 分钟
+    - 父母夜间连续睡眠时长
+  suggested_actions:
+    - 从睁眼开始记录清醒窗口，45-90 分钟内尝试哄睡
+    - 夜间喂奶保持低光、低互动、低刺激
+    - 睡眠环境保持仰卧、硬床垫、床上无物
+  red_flags:
+    - 睡觉时嘴唇或指甲发青
+    - 呼吸停顿超过 20 秒
+    - 连续清醒超过 4 小时且无法安抚
+    - 体重增长不良并伴随持续睡眠困难
+  review_questions:
+    - 这周宝宝最长连续睡眠有多久？
+    - 最容易错过的睡眠信号是什么？
+    - 夜间流程中哪一步最难坚持？
+    - 父母是否获得过连续 4 小时以上睡眠？
+  four_week_goals:
+    - 在四周内建立可重复的安全睡眠观察与响应节奏
+  weekly_actions:
+    - 从睁眼开始记录清醒窗口，在 45-90 分钟内尝试哄睡
+    - 每次入睡前检查仰卧、硬床垫和床上无物
+    - 夜间喂奶保持低光、低互动和低刺激
+    - 汇总四周记录，保留最容易执行且最有帮助的睡眠步骤
+  weekly_metrics:
+    - 记录从睁眼到开始哄睡的分钟数
+    - 记录当天符合安全睡眠检查的入睡次数
+    - 记录夜间最长连续睡眠时长
+    - 记录最有效步骤及父母获得的最长连续睡眠时长
 ---
 
 # 新生儿睡眠

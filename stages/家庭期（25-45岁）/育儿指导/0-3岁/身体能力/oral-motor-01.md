@@ -13,6 +13,45 @@ references:
   - Locke, J. L. (1993). The child's path to spoken language. Harvard University Press.
 tags: [口部运动, 咀嚼, 辅食添加, 语言发展基础]
 related_prompts: [0-3-core-sensory-integration-01, 0-3-core-attachment-01]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-24m
+    stage: 口部运动和辅食质地过渡期
+  intent_triggers:
+    - 用户担心宝宝只吃泥糊、不接受颗粒或固体食物
+    - 用户询问辅食质地如何升级
+    - 用户担心干呕、呛咳或说话含糊与口部能力有关
+  growth_tasks:
+    - 支持吸吮、吞咽、咀嚼和口腔协调发展
+    - 从泥糊逐步过渡到颗粒和软固体
+    - 区分正常干呕、质地适应和危险吞咽问题
+  observable_signals:
+    - 是否能接受不同食物质地
+    - 是否咀嚼软食
+    - 是否频繁干呕或呛咳
+    - 是否能用杯子或吸管喝水
+    - 发音清晰度和有意义词汇
+  measurable_indicators:
+    - 本周尝试的食物质地层级
+    - 每天手指食物尝试次数
+    - 干呕、呛咳或拒食次数
+    - 是否能咀嚼压即碎软食
+  suggested_actions:
+    - 从泥糊中少量加入细颗粒，逐步增加比例
+    - 9 个月后尝试安全的软手指食物
+    - 用杯子喝水、吹泡泡、咂嘴等游戏练口唇协调
+    - 对曾被噎到的孩子从极软食物重建信心
+  red_flags:
+    - 12 个月以上仍不能咀嚼软食
+    - 频繁呛到或吞咽困难
+    - 24 个月以上完全没有有意义的词汇
+    - 36 个月以上大部分发音不清楚
+  review_questions:
+    - 这周宝宝能接受的最高食物质地是什么？
+    - 干呕发生在新质地、进食太快还是特定食物？
+    - 是否出现真正呛咳、呼吸异常或吞咽困难？
+    - 家人是否因为怕噎长期停留在泥糊？
 ---
 
 # 口部运动

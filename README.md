@@ -184,7 +184,7 @@ tags: [语言发展, 早期教育, 敏感期]
 
 ## 内容质量
 
-- 核心内容经专家审核
+- 核心内容优先基于权威来源整理；专业审核状态以后续可追溯记录为准
 - 社区贡献内容标记为 `community-contributed`，待审核内容标记为 `review-pending`
 - 所有内容基于权威来源，无学术包装的伪科学
 - 引用格式参见 [references/citation-guide.md](references/citation-guide.md)

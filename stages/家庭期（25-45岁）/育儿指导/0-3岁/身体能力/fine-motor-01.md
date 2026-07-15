@@ -12,6 +12,44 @@ references:
   - Butterworth, G., & Hopkins, B. (1993). Hand-mouth coordination in the newborn. British Journal of Developmental Psychology, 11(1), 29-40.
 tags: [精细动作, 抓握, 捏, 工具使用, 手眼协调]
 related_prompts: [0-3-core-gross-motor-01, 0-3-core-sensory-integration-01]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-36m
+    stage: 手部精细动作发展期
+  intent_triggers:
+    - 用户担心宝宝抓握、传递、对捏或用勺能力落后
+    - 用户询问如何练习精细动作
+    - 用户因宝宝自己吃饭弄脏而犹豫是否放手
+  growth_tasks:
+    - 支持抓握、传递和对捏发展
+    - 增加手眼协调机会
+    - 通过自主进食和日常操作练习精细动作
+  observable_signals:
+    - 全掌抓握
+    - 左右手传递物品
+    - 拇指食指对捏
+    - 有意识放开物品
+    - 用勺或翻书
+  measurable_indicators:
+    - 每天自主抓握或操作物品次数
+    - 每餐自主进食尝试时长
+    - 是否能用拇指食指捏起小软食物
+    - 是否双手使用大致对称
+  suggested_actions:
+    - 每天提供安全的不同形状玩具让宝宝抓握
+    - 8 个月后用少量入口即化手指食物练习对捏
+    - 12 个月后允许宝宝尝试自己用勺进食
+    - 用积木、翻书、容器投放练习有意识释放
+  red_flags:
+    - 12 个月仍不能抓握物品
+    - 18 个月仍不能用拇指食指对捏
+    - 一侧手明显比另一侧弱
+  review_questions:
+    - 这周宝宝最常用哪种方式抓东西？
+    - 是否有每天自主进食或手部操作机会？
+    - 有没有明显偏用一侧手或一侧无力？
+    - 哪个活动最能让宝宝愿意反复练习？
 ---
 
 # 精细动作

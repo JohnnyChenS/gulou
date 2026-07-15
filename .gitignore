@@ -21,8 +21,11 @@ word/docx/
 .ll
 
 CLAUDE.md
+AGENTS.md
 .claude/
 
 # Superpowers (brainstorming/planning artifacts)
 .superpowers/
 docs/superpowers/
+docs/
+.idea/*

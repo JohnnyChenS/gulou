@@ -12,6 +12,46 @@ references:
   - Dennis, C. L., & Dowswell, T. (2013). Interventions for preventing postpartum depression. Cochrane Database of Systematic Reviews.
   - Nelson, S. K., et al. (2014). The pains and pleasures of parenting. Psychological Bulletin, 140(3), 846-895.
 tags: [产后抑郁, 父亲心理健康, 夫妻关系, 自我照顾]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-12m
+    stage: 新手父母心理适应期
+  intent_triggers:
+    - 用户觉得自己不适合当父母
+    - 用户经常想哭、发火、逃离或崩溃
+    - 用户因睡眠不足和育儿压力感到无法承受
+    - 用户询问新手爸爸或伴侣的心理状态
+  growth_tasks:
+    - 区分正常过渡压力和需要专业帮助的信号
+    - 降低完美父母标准
+    - 建立最低限度睡眠和分工支持
+    - 鼓励父母表达需求并获得支持
+  observable_signals:
+    - 想哭、易怒或情绪波动
+    - 逃离感、无力感或自责
+    - 连续睡眠不足
+    - 与伴侣冲突增加
+  measurable_indicators:
+    - 情绪低落持续天数
+    - 每晚最长连续睡眠时长
+    - 每周获得实际支持的次数
+    - 父母压力自评 1-5 分
+  suggested_actions:
+    - 每天只保留一个够好的父母标准
+    - 把育儿和家务任务写出来并分工
+    - 优先安排连续 3-4 小时睡眠
+    - 向一个可信任的人表达当前状态
+  red_flags:
+    - 持续 2 周以上感到绝望或空虚
+    - 有伤害自己或宝宝的想法
+    - 完全不想碰宝宝或无法照顾自己
+    - 出现幻觉、妄想或严重认知混乱
+  review_questions:
+    - 这周最消耗你的一个具体场景是什么？
+    - 你是否获得过连续 3-4 小时睡眠？
+    - 哪个标准可以先降到够好即可？
+    - 有没有一个人知道你现在真实的状态？
 ---
 
 # 新手父母心理调适

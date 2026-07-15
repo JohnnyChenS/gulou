@@ -12,6 +12,43 @@ references:
   - Dennis, C. L., & Ross, L. (2005). Relationships among infant sleep patterns, maternal fatigue, and development of depressive symptomatology. Birth, 32(3), 187-193.
   - Hiscock, H., et al. (2007). Improving infant sleep and maternal mental health. Archives of Disease in Childhood, 92(11), 952-958.
 tags: [睡眠剥夺, 睡眠训练, 婴儿睡眠, 疲劳管理, 轮班制]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-24m
+    stage: 新手父母适应期
+  intent_triggers:
+    - 用户报告长期睡眠不足
+    - 用户因夜间照料与伴侣冲突
+    - 用户感到疲惫、怨恨、孤独或情绪失控
+  growth_tasks:
+    - 保护父母最低睡眠需求
+    - 建立夜间照料分工
+    - 降低睡眠剥夺对情绪和亲子关系的影响
+  observable_signals:
+    - 父母连续睡眠不足 4 小时
+    - 夜间分工频繁争吵
+    - 白天无法恢复精力
+    - 出现明显怨恨或崩溃感
+  measurable_indicators:
+    - 父母每晚最长连续睡眠时长
+    - 每周获得补觉的次数
+    - 夜间分工是否明确
+    - 情绪低落持续天数
+  suggested_actions:
+    - 与伴侣建立至少 4 小时连续睡眠的轮班制
+    - 宝宝白天小睡时优先休息而非做家务
+    - 夜间流程提前准备尿布、湿巾、水和小夜灯
+    - 白天清醒时讨论分工，不在凌晨争吵
+  red_flags:
+    - 持续 2 周以上情绪低落且无法正常生活
+    - 对宝宝或自己有伤害想法
+    - 出现幻觉或严重认知混乱
+  review_questions:
+    - 这周每位照料者最长连续睡眠有多久？
+    - 夜间分工是否写清楚并执行？
+    - 哪些家务可以暂时降低标准？
+    - 情绪低落或崩溃感持续了几天？
 ---
 
 # 睡眠剥夺应对

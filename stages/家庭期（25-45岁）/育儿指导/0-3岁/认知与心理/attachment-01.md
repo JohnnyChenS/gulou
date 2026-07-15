@@ -13,6 +13,44 @@ references:
   - Erikson, E. H. (1950). Childhood and Society. W. W. Norton.
 tags: [依恋, 安全感, 亲子关系, 分离焦虑, 信任]
 related_prompts: [0-3-core-object-permanence-01, 0-3-core-empathy-01]
+agent_use:
+  primary_user: parent
+  applies_to:
+    age_range: 0-18m
+    stage: 依恋建立期
+  intent_triggers:
+    - 用户担心一哭就抱会宠坏宝宝
+    - 用户报告宝宝认人、分离焦虑或只要主要照料者
+    - 用户想建立稳定亲子关系
+  growth_tasks:
+    - 建立回应性照料模式
+    - 帮助宝宝形成安全基地
+    - 用告别和回来建立可预测性
+  observable_signals:
+    - 哭闹后被抱起能逐渐安静
+    - 对熟悉面孔有偏好
+    - 离开主要照料者时哭
+    - 探索时会回头确认照料者位置
+  measurable_indicators:
+    - 照料者是否能稳定回应哭声
+    - 每天高质量互动时长
+    - 告别和回来是否保持一致
+    - 分离后重新安抚所需时间
+  suggested_actions:
+    - 0-6 个月及时回应哭声
+    - 每天进行眼神、语言和身体接触互动
+    - 离开前明确告别，回来后明确回应
+    - 跟随宝宝关注的物品并用语言描述
+  red_flags:
+    - 12 个月以上对主要照料者离开和回来都没有明显反应
+    - 对陌生人不加区分地亲近
+    - 持续回避眼神接触
+    - 18 个月以上仍完全不寻求安慰
+  review_questions:
+    - 这周宝宝最常因什么情境寻求安慰？
+    - 你们是否形成了稳定的告别和回来方式？
+    - 哪个照料者最需要增加日常照料参与？
+    - 父母当前情绪是否影响了回应质量？
 ---
 
 # 安全依恋
