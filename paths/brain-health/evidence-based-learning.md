@@ -6,6 +6,7 @@ domain: learning-science
 description: 用检索、间隔、反馈和主动生成提高具体知识与技能的掌握
 estimated_duration: 持续实践
 review_status: draft
+review_date: 2026-07-19
 ---
 
 # 循证学习方法

@@ -6,6 +6,7 @@ domain: brain-health
 description: 以健康、关系、游戏、运动和有效学习支持儿童与青少年发展
 estimated_duration: 按年龄持续实践
 review_status: draft
+review_date: 2026-07-19
 ---
 
 # 0–18 岁大脑发育与学习支持
@@ -112,8 +113,8 @@ review_status: draft
 ## 跨年龄的营养与补水边界
 
 - **饮食基础**：以充足、均衡、适量和多样为原则，结合年龄、生长、活动、文化与家庭可及食物调整。婴幼儿喂养、食物过敏、生长不良、进食困难、慢性病、用药或进食障碍风险需要个体化专业建议。
-- **不设“补脑配方”**：不给所有儿童设定固定宏量营养素百分比，也不普遍推荐 omega-3 补充剂。已确认的营养素缺乏、限制性饮食或特定疾病，由儿科医生或合格营养专业人员评估后处理。
-- **正常补水**：根据口渴、年龄、气候、身体活动和健康状况安排可及的安全饮水；婴儿和特定健康状况按专业建议。补水是基本健康需要，不会为大脑“排毒”，也不能带来可预测的分数增益。
+- **不设“补脑配方”**：不给所有儿童设定固定宏量营养素百分比。[NIH ODS omega-3 资料](https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/)区分植物油等食物中的 ALA 与主要来自鱼和海产品的 EPA、DHA，也显示不同健康结局的摄入与补充研究仍有不确定性；这些资料不能推出适合所有儿童的 EPA／DHA 补充剂处方。已确认的营养素缺乏、限制性饮食或特定疾病，由儿科医生或合格营养专业人员评估食物与补充剂选择。
+- **正常补水**：[AAP HealthyChildren 补水建议](https://www.healthychildren.org/English/healthy-living/nutrition/Pages/Choose-Water-for-Healthy-Hydration.aspx)说明需要会随年龄、活动和炎热环境变化。约 6 个月以下婴儿应以母乳或配方奶满足液体需要，不额外喂水，除非临床专业人员明确指导；需要限制液体或有其他医疗情况者按专业建议。其他儿童根据口渴、活动、天气和健康状况安排可及的安全饮水。补水是基本健康需要，不会为大脑“排毒”，也不能带来可预测的分数增益。
 
 ## 训练可以期待什么
 
@@ -156,6 +157,8 @@ review_status: draft
 - [WHO：Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age（2019）](https://www.who.int/publications/i/item/9789241550536)
 - [WHO：Physical activity](https://www.who.int/news-room/fact-sheets/detail/physical-activity)
 - [WHO：Healthy diet（2026）](https://www.who.int/news-room/fact-sheets/detail/healthy-diet)
+- [AAP HealthyChildren：Choose Water for Healthy Hydration](https://www.healthychildren.org/English/healthy-living/nutrition/Pages/Choose-Water-for-Healthy-Hydration.aspx)
+- [NIH ODS：Omega-3 Fatty Acids](https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/)
 - [CDC：Developmental Milestones Matter!](https://www.cdc.gov/act-early/families/milestones-matter.html)
 - [American Academy of Sleep Medicine：Child Sleep Duration Health Advisory](https://aasm.org/advocacy/position-statements/child-sleep-duration-health-advisory/)
 - [National Academies：Supporting Adolescent Health and Development](https://nap.nationalacademies.org/resource/25388/2%20Adolescent%20reports.pdf)
