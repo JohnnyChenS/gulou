@@ -9,6 +9,8 @@
 | developmental-psychology.md | 发展心理学核心文献 |
 | motor-development.md | 动作发展核心文献 |
 | chinese-education-standards.md | 中国教育标准与指南 |
+| brain-health-evidence-framework.md | 脑健康内容的证据分级、因果判断与安全表述规范 |
+| brain-science-interview-audit-2026.md | 两期公开脑科学访谈的逐条证据核查 |
 
 ## 引用规范
 
