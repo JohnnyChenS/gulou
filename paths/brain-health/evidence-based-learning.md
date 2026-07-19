@@ -54,7 +54,7 @@ review_status: draft
 
 - **睡眠**：给睡眠保留正常且足够的机会，不用通宵换取额外浏览时间。睡眠支持健康和此前学习，但某一晚的做法不能保证成绩。
 - **饮食**：维持平常能耐受的正常餐食。不要为了考试临时尝试空腹、极端饮食、补充剂或陌生的兴奋剂；有疾病、用药、进食困难或进食障碍风险时按专业建议处理。
-- **饮水**：让安全饮水可及，按口渴、天气、活动和个人健康需要正常补水。一项小型观察性研究发现，带饮料进入大学考场与高约 4.8% 的成绩相关，但它没有随机分配饮水，也不是“一口水”实验，不能证明喝一口水会让某个学生提高 4.8%。
+- **饮水**：让安全饮水可及，按口渴、天气、活动和个人健康需要正常补水。一项大学考试观察性研究比较了带水、带其他饮料和未带饮料的学生，但它没有随机分配饮水，也没有直接检验“喝水就能提分”的因果效果。
 - **活动**：规律身体活动支持整体健康，并可能对部分认知结局有小幅帮助；它不保证分数提高，也不要求运动后立即学习才能“保留新神经元”。按精力、课程和个人感受安排即可。
 
 ## 先问“练好了什么”：训练与迁移
@@ -111,11 +111,11 @@ review_status: draft
 - [Agarwal 等：课堂与学校中的检索练习系统综述（2021）](https://eric.ed.gov/?id=EJ1319572)
 - [Yang 等：课堂测验效应系统综述与元分析（2021）](https://pubmed.ncbi.nlm.nih.gov/33683913/)
 - [Simons 等：Do “Brain-Training” Programs Work?（2016）](https://pubmed.ncbi.nlm.nih.gov/27697851/)
-- [Sala 等：认知训练与学业技能元分析综述（2021）](https://pubmed.ncbi.nlm.nih.gov/34251578/)
+- [Nguyen、Murphy 与 Andrews：A Game a Day Keeps Cognitive Decline Away? A Systematic Review and Meta-Analysis of Commercially-Available Brain Training Programs in Healthy and Cognitively Impaired Older Adults.（2022）](https://pubmed.ncbi.nlm.nih.gov/34251578/)
 - [Pawson 等：饮料可及性与成人考试表现的观察性研究（2013）](https://eric.ed.gov/?id=EJ1013601)
 - [Kosmyna 等：MIT LLM 辅助短文写作 EEG 预印本（2025，2025 年末修订）](https://arxiv.org/abs/2506.08872)
 - [Kestin 等：哈佛结构化 AI 辅导随机试验（2025）](https://www.nature.com/articles/s41598-025-97652-6)
 - [Deci 等：外在奖励与内在动机元分析（1999）](https://pubmed.ncbi.nlm.nih.gov/10589297/)
-- [Mueller 与 Dweck：过程赞扬与人格／能力赞扬实验（1998）](https://pubmed.ncbi.nlm.nih.gov/10380873/)
+- [Kamins 与 Dweck：Person versus process praise and criticism: implications for contingent self-worth and coping.（1999）](https://pubmed.ncbi.nlm.nih.gov/10380873/)
 - [脑健康内容证据与安全框架](../../references/brain-health-evidence-framework.md)
 - [两期脑科学访谈证据核查（2026）](../../references/brain-science-interview-audit-2026.md)
