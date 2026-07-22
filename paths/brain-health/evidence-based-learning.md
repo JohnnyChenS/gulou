@@ -119,4 +119,3 @@ review_date: 2026-07-19
 - [Deci 等：外在奖励与内在动机元分析（1999）](https://pubmed.ncbi.nlm.nih.gov/10589297/)
 - [Kamins 与 Dweck：Person versus process praise and criticism: implications for contingent self-worth and coping.（1999）](https://pubmed.ncbi.nlm.nih.gov/10380873/)
 - [脑健康内容证据与安全框架](../../references/brain-health-evidence-framework.md)
-- [两期脑科学访谈证据核查（2026）](../../references/brain-science-interview-audit-2026.md)
