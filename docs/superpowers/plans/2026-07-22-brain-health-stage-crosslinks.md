@@ -68,7 +68,7 @@ Expected: `test` 退出码为 0；`rg` 无输出并以 1 退出。
 - Modify: `stages/老年期（60+岁）/_index.md`
 
 **Interfaces:**
-- Consumes: `paths/brain-health/lifespan-brain-health.md`、`0-18-brain-development-guide.md`、`evidence-based-learning.md`、`60-plus-brain-health.md`。
+- Consumes: `paths/brain-health/_index.md`、`0-18-development-and-learning.md`、`evidence-based-learning.md`，以及老年期本地专题 `认知保持/brain-health-01.md`。
 - Produces: 七个阶段入口中的适龄导航卡片。
 
 - [ ] **Step 1: 添加七张卡片**
@@ -78,10 +78,9 @@ Expected: `test` 退出码为 0；`rg` 无输出并以 1 退出。
 链接严格采用：
 
 ```markdown
-[0–18 岁大脑发展与支持指南](../../paths/brain-health/0-18-brain-development-guide.md)
+[0–18 岁大脑发育与学习支持](../../paths/brain-health/0-18-development-and-learning.md)
 [循证学习与能力培养](../../paths/brain-health/evidence-based-learning.md)
-[终身脑健康总纲](../../paths/brain-health/lifespan-brain-health.md)
-[60 岁后脑健康行动指南](../../paths/brain-health/60-plus-brain-health.md)
+[终身脑健康总纲](../../paths/brain-health/_index.md)
 ```
 
 - [ ] **Step 2: 验证顶层覆盖和相对链接**
@@ -105,7 +104,7 @@ Expected: 输出本任务指定的七个顶层阶段入口。
 - Modify: `stages/家庭期（25-45岁）/育儿指导/14-18岁/_index.md`
 
 **Interfaces:**
-- Consumes: `paths/brain-health/0-18-brain-development-guide.md`、`evidence-based-learning.md`、`lifespan-brain-health.md`。
+- Consumes: `paths/brain-health/0-18-development-and-learning.md`、`evidence-based-learning.md`、`_index.md`。
 - Produces: 六个育儿年龄入口中的适龄导航卡片。
 
 - [ ] **Step 1: 添加六张卡片**
@@ -115,9 +114,9 @@ Expected: 输出本任务指定的七个顶层阶段入口。
 链接严格采用：
 
 ```markdown
-[0–18 岁大脑发展与支持指南](../../../../paths/brain-health/0-18-brain-development-guide.md)
+[0–18 岁大脑发育与学习支持](../../../../paths/brain-health/0-18-development-and-learning.md)
 [循证学习与能力培养](../../../../paths/brain-health/evidence-based-learning.md)
-[终身脑健康总纲](../../../../paths/brain-health/lifespan-brain-health.md)
+[终身脑健康总纲](../../../../paths/brain-health/_index.md)
 ```
 
 - [ ] **Step 2: 验证育儿覆盖及排除项**

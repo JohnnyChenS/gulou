@@ -90,4 +90,3 @@ review_date: 2026-07-19
 - [WHO：Physical activity](https://www.who.int/news-room/fact-sheets/detail/physical-activity)
 - [WHO：Healthy diet](https://www.who.int/news-room/fact-sheets/detail/healthy-diet)
 - [脑健康内容证据与安全框架](../../references/brain-health-evidence-framework.md)
-- [两期脑科学访谈证据核查（2026）](../../references/brain-science-interview-audit-2026.md)
