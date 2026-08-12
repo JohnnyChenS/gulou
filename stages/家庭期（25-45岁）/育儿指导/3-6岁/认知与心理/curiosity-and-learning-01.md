@@ -103,4 +103,4 @@ related_prompts: [3-6-core-executive-function-01, 3-6-core-attention-focus-01, 3
 - [早期阅读习惯培养](reading-habits-01.md)
 - [前阅读与前数学](pre-literacy-math-01.md)
 - [学习与探索路径](../../../../../paths/learning/_index.md)
-- [兴趣发现与拓展](../../../../../paths/learning/interest-discovery.md)
+- [兴趣发现与拓展](../../../../../paths/learning/questions/interest-discovery.md)

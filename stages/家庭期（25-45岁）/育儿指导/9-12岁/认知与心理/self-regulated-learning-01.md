@@ -101,5 +101,5 @@ related_prompts: [9-12-core-innovative-thinking-01, evidence-based-learning, 12-
 - [了解过去和不同文化](historical-worldview-01.md)
 - [循证学习方法](../../../../../paths/brain-health/evidence-based-learning.md)
 - [学习与探索路径](../../../../../paths/learning/_index.md)
-- [兴趣发现与拓展](../../../../../paths/learning/interest-discovery.md)
+- [兴趣发现与拓展](../../../../../paths/learning/questions/interest-discovery.md)
 

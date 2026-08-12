@@ -111,7 +111,7 @@ route_group: learning-age
 route_key: 0-3
 route_order: 1
 route_label: 0–3 岁
-route_next: ../3-6.md
+route_next: 3-6.md
 ```
 
 问题路线使用 `route_group: learning-question`，并保留问题名称作为 `route_label`。元数据只描述路线身份和相邻关系，不把所有推荐逻辑塞进 YAML；具体步骤、动作和判断仍写在 Markdown 中，便于人阅读和审阅。

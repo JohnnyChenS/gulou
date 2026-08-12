@@ -10,7 +10,7 @@
 |---------|------|---------|------|
 | [语言学习](language/_index.md) | 母语发展（0-12 岁）+ 英语学习（入门→进阶→高阶） | 母语终身发展 + 英语 CEFR A1-C2 | draft |
 | [登山](mountaineering/_index.md) | 户外登山从入门到自主攀登 | 入门→进阶→高阶 | draft |
-| [兴趣发现与拓展](../paths/learning/interest-discovery.md) | 跨年龄的试用、复盘与方向调整方法 | 观察→试用→深入或退出 | draft |
+| [兴趣发现与拓展](../paths/learning/questions/interest-discovery.md) | 跨年龄的试用、复盘与方向调整方法 | 观察→试用→深入或退出 | draft |
 | （待贡献） | | | |
 
 ## 兴趣目录结构
@@ -45,4 +45,4 @@ interests/<兴趣名>/
 5. 在适合开始该兴趣的阶段 `_index.md` 中，添加指向该兴趣的链接
 6. 提交 Pull Request
 
-如果还不确定要不要进入某个具体兴趣，先读[兴趣发现与拓展](../paths/learning/interest-discovery.md)。它不是一个具体兴趣课程，而是选择和调整兴趣路径的通用入口。
+如果还不确定要不要进入某个具体兴趣，先读[兴趣发现与拓展](../paths/learning/questions/interest-discovery.md)。它不是一个具体兴趣课程，而是选择和调整兴趣路径的通用入口。

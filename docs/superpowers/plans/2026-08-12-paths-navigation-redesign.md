@@ -62,7 +62,7 @@
   route_key: 0-3
   route_order: 1
   route_label: 0–3 岁
-  route_next: ../3-6.md
+  route_next: 3-6.md
   ```
 
   The body must contain `先判断`, `阅读顺序`, `本周只做一件事`, `什么时候进入下一步`, and `补充阅读`. Choose 2–4 main links from the already-authored age-specific learning articles, and make every main step state one action and one observation. Do not turn age into a diagnostic cutoff; include the existing normal-variation language.

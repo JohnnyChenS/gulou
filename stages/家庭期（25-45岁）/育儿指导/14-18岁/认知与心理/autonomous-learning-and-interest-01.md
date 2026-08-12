@@ -101,5 +101,5 @@ related_prompts: [14-18-core-academic-pressure-01, 14-18-core-digital-life-01, e
 - [数字设备与网络管理](digital-life-01.md)
 - [青少年心理健康危机识别](adolescent-mental-health-01.md)
 - [循证学习方法](../../../../../paths/brain-health/evidence-based-learning.md)
-- [兴趣发现与拓展](../../../../../paths/learning/interest-discovery.md)
+- [兴趣发现与拓展](../../../../../paths/learning/questions/interest-discovery.md)
 
