@@ -5,6 +5,7 @@ const path = require('path');
 const matter = require('gray-matter');
 const { marked } = require('marked');
 const { resolvePath, resolveSlug, SLUG_MAP } = require('./slug-map');
+const { getRouteContext, validateRoutes } = require('./route-registry');
 
 // ─── Safe YAML Parse ──────────────────────────────────────────────────────
 
@@ -28,6 +29,11 @@ const TEMPLATE_DIR = path.join(WEBSITE, 'site-template');
 // Base path for GitHub Pages (e.g., '/gulou/' for https://user.github.io/gulou/)
 // Set via environment variable or defaults to '/' for local dev
 const BASE_PATH = process.env.BASE_PATH || '/';
+
+function siteUrl(rel) {
+  const base = BASE_PATH === '/' ? '' : BASE_PATH.replace(/\/$/, '');
+  return `${base}/${String(rel).replace(/^\/+/, '')}`;
+}
 
 const CONTENT_DIRS = ['stages', 'interests', 'paths', 'references'];
 
@@ -78,7 +84,7 @@ function collectMdFiles(dir, base) {
 function rewriteLinks(html, sourceRelPath) {
   // 匹配 href="xxx.md" 或 href="xxx/yyy.md" 形式的相对链接
   // marked 会 URL 编码中文字符，所以需要先解码
-  return html.replace(/href="([^"]*\.md)"/g, (match, href) => {
+  const rewrittenMarkdown = html.replace(/href="([^"]*\.md)(#[^"]*)?"/g, (match, href, anchor = '') => {
     // 跳过绝对 URL 和锚点
     if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
       return match;
@@ -98,7 +104,13 @@ function rewriteLinks(html, sourceRelPath) {
 
     // 应用 slug 映射
     const htmlPath = resolvePath(resolved);
-    return `href="/${htmlPath}"`;
+    return `href="${siteUrl(htmlPath)}${anchor}"`;
+  });
+
+  return rewrittenMarkdown.replace(/href="\/(?!\/)([^"]*)"/g, (match, href) => {
+    const base = BASE_PATH === '/' ? '' : BASE_PATH.replace(/\/$/, '').replace(/^\//, '');
+    if (base && (href === base || href.startsWith(`${base}/`))) return match;
+    return `href="${siteUrl(href)}"`;
   });
 }
 
@@ -161,9 +173,17 @@ function renderReferences(fm) {
 }
 
 /** 构建侧边栏导航 HTML */
-function buildSidebar(currentRelPath, allFiles) {
+function pageLabel(page) {
+  if (!page) return '';
+  if (page.fm && (page.fm.topic || page.fm.name || page.fm.stage_name)) {
+    return page.fm.topic || page.fm.name || page.fm.stage_name;
+  }
+  const baseName = path.basename(page.rel, '.md');
+  return baseName === '_index' ? '概述' : baseName.replace(/[-_]+/g, ' ');
+}
+
+function buildFallbackSidebar(currentRelPath, allFiles) {
   const currentDir = path.dirname(currentRelPath);
-  const currentFile = path.basename(currentRelPath);
 
   // 找到同目录的兄弟文件
   const siblings = allFiles
@@ -178,25 +198,86 @@ function buildSidebar(currentRelPath, allFiles) {
   if (siblings.length <= 1) return '';
 
   const links = siblings.map(f => {
-    const baseName = path.basename(f.rel, '.md');
     const slug = resolvePath(f.rel);
     const isActive = f.rel === currentRelPath ? ' class="active"' : '';
-    const label = baseName === '_index' ? '概述' : baseName;
-    return `<a href="/${slug}"${isActive}>${label}</a>`;
+    return `<a href="${siteUrl(slug)}"${isActive}>${pageLabel(f)}</a>`;
   }).join('\n');
 
   // 上级目录链接
   const parentSlug = resolvePath(currentDir + '/_index.md').replace('index.html', '');
   const backLink = currentDir.includes('/')
-    ? `<a href="/${parentSlug}" class="back-link">← 返回上级</a>`
+    ? `<a href="${siteUrl(parentSlug)}" class="back-link">← 返回上级</a>`
     : '';
 
   return `${backLink}\n<nav class="sidebar-nav">\n${links}\n</nav>`;
 }
 
+function buildSidebar(currentRelPath, registry) {
+  const context = getRouteContext(currentRelPath, registry);
+  if (context) {
+    const route = context.route || (context.referencedBy[0] && context.referencedBy[0].route);
+    if (route) {
+      const steps = context.steps.length ? context.steps : [route];
+      const links = steps.map(step => {
+        const active = step.rel === currentRelPath ? ' class="active"' : '';
+        return `<a href="${siteUrl(resolvePath(step.rel))}"${active}>${pageLabel(step)}</a>`;
+      }).join('\n');
+      const routeIndex = route.rel.replace(/\/[^/]+$/, '/_index.md');
+      const backLink = registry.byRel.has(routeIndex)
+        ? `<a href="${siteUrl(resolvePath(routeIndex))}" class="back-link">← 返回路线</a>`
+        : '';
+      return `${backLink}\n<div class="nav-section">${route.fm.route_label || pageLabel(route)}</div>\n<nav class="sidebar-nav route-steps">\n${links}\n</nav>`;
+    }
+  }
+  return buildFallbackSidebar(currentRelPath, Array.from(registry.byRel.values()));
+}
+
+function renderTopNav() {
+  return `<nav class="top-nav">
+    <a href="${siteUrl('')}" class="logo">
+      <img src="${siteUrl('assets/logo.png')}" alt="鼓楼" class="logo-img">
+      <span>鼓楼</span>
+    </a>
+    <a href="${siteUrl('paths/')}">开始使用</a>
+    <a href="${siteUrl('paths/learning/ages/')}">按年龄</a>
+    <a href="${siteUrl('paths/learning/questions/')}">按问题</a>
+    <a href="${siteUrl('paths/learning/')}">主题路径</a>
+    <a href="${siteUrl('references/')}">知识参考</a>
+  </nav>`;
+}
+
+function renderRouteNav(context) {
+  if (!context) return '';
+  const route = context.route;
+  const activeRoute = route || (context.referencedBy[0] && context.referencedBy[0].route);
+  if (!activeRoute) return '';
+  const steps = context.steps.length ? context.steps : [activeRoute];
+  const currentIndex = route ? steps.findIndex(step => step.rel === route.rel) : context.articleIndex;
+  const stepText = currentIndex >= 0 ? `第 ${currentIndex + 1} 步 / 共 ${steps.length} 步` : '从这条路线开始';
+  const stepLinks = steps.map((step, index) => {
+    const active = step.rel === (route && route.rel) || step.rel === context.currentRel
+      ? ' class="route-step active"' : ' class="route-step"';
+    return `<a href="${siteUrl(resolvePath(step.rel))}"${active}><span>${index + 1}</span>${pageLabel(step)}</a>`;
+  }).join('');
+  const previousPage = route ? context.previous : context.articlePrevious;
+  const nextPage = route ? context.next : context.articleNext;
+  const previous = previousPage
+    ? `<a class="route-prev" href="${siteUrl(resolvePath(previousPage.rel))}">← 上一步：${pageLabel(previousPage)}</a>`
+    : '';
+  const next = nextPage
+    ? `<a class="route-next" href="${siteUrl(resolvePath(nextPage.rel))}">下一步：${pageLabel(nextPage)} →</a>`
+    : '<span class="route-end">这条路线到这里，可以回到路线首页选择下一步。</span>';
+  const back = `<a class="route-back" href="${siteUrl(resolvePath(activeRoute.rel))}">返回当前路线</a>`;
+  return `<section class="route-nav" aria-label="阅读路线">
+    <div class="route-summary"><span>${activeRoute.fm.route_label || pageLabel(activeRoute)}</span><small>${stepText}</small></div>
+    <div class="route-steps mobile-route-nav">${stepLinks}</div>
+    <div class="route-actions">${route ? previous : back}${next}</div>
+  </section>`;
+}
+
 // ─── HTML Template ─────────────────────────────────────────────────────────
 
-function renderPage({ title, description, sidebar, metaCard, content, references, isHome }) {
+function renderPage({ title, description, sidebar, routeNav, metaCard, content, references, isHome }) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -204,21 +285,11 @@ function renderPage({ title, description, sidebar, metaCard, content, references
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title} - 鼓楼</title>
   <meta name="description" content="${description}">
-  <link rel="icon" type="image/png" href="${BASE_PATH}assets/favicon.png">
-  <link rel="stylesheet" href="${BASE_PATH}assets/style.css">
+  <link rel="icon" type="image/png" href="${siteUrl('assets/favicon.png')}">
+  <link rel="stylesheet" href="${siteUrl('assets/style.css')}">
 </head>
 <body>
-  <nav class="top-nav">
-    <a href="${BASE_PATH}" class="logo">
-      <img src="${BASE_PATH}assets/logo.png" alt="鼓楼" class="logo-img">
-      <span>鼓楼</span>
-    </a>
-    <a href="${BASE_PATH}stages/">阶段主线</a>
-    <a href="${BASE_PATH}interests/">兴趣副线</a>
-    <a href="${BASE_PATH}paths/">学习路径</a>
-    <a href="${BASE_PATH}references/">理论依据</a>
-    <a href="${BASE_PATH}roadmap.html">教育图谱</a>
-  </nav>
+  ${renderTopNav()}
 
   <div class="layout">
     ${sidebar ? `<aside class="sidebar">${sidebar}</aside>` : ''}
@@ -226,6 +297,7 @@ function renderPage({ title, description, sidebar, metaCard, content, references
     <main class="content">
       <div class="content-inner">
         ${metaCard}
+        ${routeNav || ''}
         ${content}
         ${references}
         <div class="ad-slot">广告位</div>
@@ -236,7 +308,7 @@ function renderPage({ title, description, sidebar, metaCard, content, references
   <footer class="site-footer">
     <p>内容基于 <a href="https://github.com/JohnnyChenS/gulou">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
   </footer>
-  <script src="/assets/nav.js"></script>
+  <script src="${siteUrl('assets/nav.js')}"></script>
 </body>
 </html>`;
 }
@@ -361,6 +433,54 @@ function renderHomePage() {
 </html>`;
 }
 
+function renderHomePageWithRoutes(registry) {
+  const ages = registry.routesByGroup.get('learning-age') || [];
+  const questions = registry.routesByGroup.get('learning-question') || [];
+  const cards = (items) => items.map(route => `<a href="${siteUrl(resolvePath(route.rel))}" class="stage-card">
+      <h3>${route.fm.route_label || pageLabel(route)}</h3>
+      <p class="age">${route.fm.description || extractDescription(route.fm, '')}</p>
+    </a>`).join('\n');
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鼓楼 — 从这里开始</title>
+  <meta name="description" content="从孩子的年龄或眼前的问题开始，找到一条可以照着走的成长与学习路线。">
+  <link rel="icon" type="image/png" href="${siteUrl('assets/favicon.png')}">
+  <link rel="stylesheet" href="${siteUrl('assets/style.css')}">
+</head>
+<body>
+  ${renderTopNav()}
+  <div class="hero home-hero">
+    <img src="${siteUrl('assets/logo.png')}" alt="鼓楼" class="hero-logo">
+    <h1>从这里开始</h1>
+    <p class="subtitle">不用读完整个知识库。先选一个入口，做一件小事，再决定下一步。</p>
+  </div>
+
+  <section class="home-section entry-section">
+    <h2>孩子现在多大？</h2>
+    <div class="stage-grid entry-grid">${cards(ages)}</div>
+  </section>
+
+  <section class="home-section entry-section">
+    <h2>我现在想解决什么？</h2>
+    <div class="stage-grid entry-grid">${cards(questions)}</div>
+  </section>
+
+  <section class="home-section home-secondary">
+    <h2>想直接查资料？</h2>
+    <p><a class="secondary-link" href="${siteUrl('stages/')}">浏览阶段主线</a> · <a class="secondary-link" href="${siteUrl('interests/')}">浏览兴趣副线</a> · <a class="secondary-link" href="${siteUrl('references/')}">查看知识参考</a></p>
+    <p>鼓楼是一个开放的成长知识库。路线页负责帮你选择顺序，知识页负责提供完整背景和具体方法。</p>
+  </section>
+
+  <footer class="site-footer" style="margin-left:0;">
+    <p>内容基于 <a href="https://github.com/JohnnyChenS/gulou">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
+  </footer>
+</body>
+</html>`;
+}
+
 // ─── Main Build ────────────────────────────────────────────────────────────
 
 function build() {
@@ -397,17 +517,28 @@ function build() {
     console.log('  ✓ CNAME');
   }
 
-  // 写首页
-  fs.writeFileSync(path.join(OUT, 'index.html'), renderHomePage());
-  console.log('  ✓ index.html');
-
   // 收集所有内容文件
   const allFiles = [];
   for (const dir of CONTENT_DIRS) {
     const fullDir = path.join(ROOT, dir);
     const files = collectMdFiles(fullDir, ROOT);
-    allFiles.push(...files);
+    for (const file of files) {
+      const raw = fs.readFileSync(file.full, 'utf-8');
+      const parsed = safeMatter(raw);
+      allFiles.push({ ...file, fm: parsed.data, content: parsed.content });
+    }
   }
+
+  const { registry, errors, warnings } = validateRoutes(allFiles);
+  if (errors.length > 0) {
+    errors.forEach(error => console.error(`  ✗ ${error}`));
+    throw new Error(`Route validation failed with ${errors.length} error(s)`);
+  }
+  if (warnings.length > 0) console.log(`  ⚠ ${warnings.length} unreferenced knowledge pages (available for direct browsing)`);
+
+  // 写首页
+  fs.writeFileSync(path.join(OUT, 'index.html'), renderHomePageWithRoutes(registry));
+  console.log('  ✓ index.html');
 
   // 转换 roadmap.md
   const roadmapPath = path.join(ROOT, 'roadmap.md');
@@ -417,11 +548,12 @@ function build() {
     const bodyHtml = marked(content);
     const title = extractTitle(fm, bodyHtml);
     const desc = extractDescription(fm, bodyHtml);
-    const sidebar = buildSidebar('roadmap.md', allFiles);
+    const sidebar = buildFallbackSidebar('roadmap.md', allFiles);
     const html = renderPage({
       title,
       description: desc,
       sidebar,
+      routeNav: '',
       metaCard: '',
       content: rewriteLinks(bodyHtml, 'roadmap.md'),
       references: '',
@@ -432,14 +564,14 @@ function build() {
 
   // 转换每个内容文件
   let count = 0;
-  for (const { full, rel } of allFiles) {
+  for (const { full, rel, fm: parsedFm, content: parsedContent } of allFiles) {
     // 跳过空目录对应的 _index.md（如果目录下没有其他 md 文件）
     const dir = path.dirname(rel);
     const siblings = allFiles.filter(f => path.dirname(f.rel) === dir && f.rel !== rel);
     const isIndex = path.basename(rel) === '_index.md';
 
-    const raw = fs.readFileSync(full, 'utf-8');
-    const { data: fm, content } = safeMatter(raw);
+    const fm = parsedFm;
+    const content = parsedContent;
 
     // 检查正文是否为空（只有 frontmatter 没有内容）
     if (content.trim().length === 0 && isIndex) {
@@ -449,11 +581,13 @@ function build() {
       fs.mkdirSync(path.dirname(outPath), { recursive: true });
 
       const title = extractTitle(fm, '');
-      const sidebar = buildSidebar(rel, allFiles);
+      const sidebar = buildSidebar(rel, registry);
+      const routeNav = renderRouteNav(getRouteContext(rel, registry));
       const html = renderPage({
         title,
         description: `${title} — 鼓楼`,
         sidebar,
+        routeNav,
         metaCard: renderMetaCard(fm),
         content: '<p><em>此部分内容正在编写中，敬请期待。</em></p>',
         references: '',
@@ -476,7 +610,8 @@ function build() {
     const references = isIndex ? '' : renderReferences(fm);
 
     // 构建侧边栏
-    const sidebar = buildSidebar(rel, allFiles);
+    const sidebar = buildSidebar(rel, registry);
+    const routeNav = renderRouteNav(getRouteContext(rel, registry));
 
     // 重写链接
     const rewritten = rewriteLinks(bodyHtml, rel);
@@ -486,6 +621,7 @@ function build() {
       title,
       description: desc,
       sidebar,
+      routeNav,
       metaCard,
       content: rewritten,
       references,
@@ -538,13 +674,14 @@ function build() {
 
       const links = entries.map(e => {
         const slug = resolveSlug(e.name);
-        return `<a href="/${dir}/${slug}/" class="stage-card"><h3>${e.name}</h3></a>`;
+        return `<a href="${siteUrl(`${dir}/${slug}/`)}" class="stage-card"><h3>${e.name}</h3></a>`;
       }).join('\n');
 
       const html = renderPage({
         title: dir === 'stages' ? '阶段主线' : dir === 'interests' ? '兴趣副线' : dir,
         description: `鼓楼 — ${dir}`,
         sidebar: '',
+        routeNav: '',
         metaCard: '',
         content: `<h1>${dir === 'stages' ? '阶段主线' : dir === 'interests' ? '兴趣副线' : dir}</h1>\n<div class="stage-grid">${links}</div>`,
         references: '',
