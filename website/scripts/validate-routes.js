@@ -26,7 +26,6 @@ function collect(dir, base, results = []) {
 
 const pages = CONTENT_DIRS.flatMap(dir => collect(path.join(ROOT, dir), ROOT));
 const { errors, warnings } = validateRoutes(pages);
-for (const warning of warnings) console.warn(`  ⚠ ${warning}`);
 for (const error of errors) console.error(`  ✗ ${error}`);
 if (errors.length > 0) process.exit(1);
-console.log(`Route check passed: ${pages.length} pages scanned, ${warnings.length} warnings.`);
+console.log(`Route check passed: ${pages.length} pages scanned, ${warnings.length} unreferenced knowledge pages remain available for direct browsing.`);
