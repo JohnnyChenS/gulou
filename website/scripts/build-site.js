@@ -84,7 +84,7 @@ function collectMdFiles(dir, base) {
 function rewriteLinks(html, sourceRelPath) {
   // 匹配 href="xxx.md" 或 href="xxx/yyy.md" 形式的相对链接
   // marked 会 URL 编码中文字符，所以需要先解码
-  return html.replace(/href="([^"]*\.md)"/g, (match, href) => {
+  const rewrittenMarkdown = html.replace(/href="([^"]*\.md)"/g, (match, href) => {
     // 跳过绝对 URL 和锚点
     if (href.startsWith('http') || href.startsWith('#') || href.startsWith('mailto:')) {
       return match;
@@ -105,6 +105,12 @@ function rewriteLinks(html, sourceRelPath) {
     // 应用 slug 映射
     const htmlPath = resolvePath(resolved);
     return `href="${siteUrl(htmlPath)}"`;
+  });
+
+  return rewrittenMarkdown.replace(/href="\/(?!\/)([^"]*)"/g, (match, href) => {
+    const base = BASE_PATH === '/' ? '' : BASE_PATH.replace(/\/$/, '').replace(/^\//, '');
+    if (base && (href === base || href.startsWith(`${base}/`))) return match;
+    return `href="${siteUrl(href)}"`;
   });
 }
 
