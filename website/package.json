@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node scripts/build-site.js",
+    "check:routes": "node scripts/validate-routes.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
