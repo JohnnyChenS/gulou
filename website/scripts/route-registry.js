@@ -1,5 +1,4 @@
 const path = require('path');
-const { resolvePath } = require('./slug-map');
 
 function normalizeTarget(sourceRel, target) {
   const decoded = decodeURIComponent(target.split('#')[0]);
@@ -74,14 +73,25 @@ function getRouteContext(rel, registry) {
   let steps = [];
   let previous = null;
   let next = null;
+  let articleRoute = null;
+  let articleIndex = -1;
+  let articlePrevious = null;
+  let articleNext = null;
   if (currentRoute) {
     steps = registry.routesByGroup.get(currentRoute.fm.route_group) || [];
     const index = steps.findIndex(route => route.rel === rel);
     previous = index > 0 ? steps[index - 1] : null;
     next = routeTarget(currentRoute, registry) || (index >= 0 ? steps[index + 1] || null : null);
+  } else if (refs.length > 0) {
+    articleRoute = refs[0].route;
+    const articleLinks = articleRoute.mainStepLinks || [];
+    steps = articleLinks.map(link => registry.byRel.get(link.target)).filter(Boolean);
+    articleIndex = articleLinks.findIndex(link => link.target === rel);
+    articlePrevious = articleIndex > 0 ? registry.byRel.get(articleLinks[articleIndex - 1].target) || null : null;
+    articleNext = articleIndex >= 0 ? registry.byRel.get(articleLinks[articleIndex + 1] && articleLinks[articleIndex + 1].target) || null : null;
   }
 
-  return { route: currentRoute, steps, previous, next, referencedBy: refs };
+  return { currentRel: rel, route: currentRoute, steps, previous, next, referencedBy: refs, articleRoute, articleIndex, articlePrevious, articleNext };
 }
 
 function validateRoutes(pages) {
@@ -112,6 +122,14 @@ function validateRoutes(pages) {
     }
   }
 
+  for (const index of pages.filter(page => page.fm.page_type === 'route-index')) {
+    const expected = (registry.routesByGroup.get(index.fm.route_group) || []).map(route => route.rel);
+    const linked = new Set(extractMarkdownLinks(index.content, index.rel).map(link => link.target));
+    for (const target of expected) {
+      if (!linked.has(target)) errors.push(`${index.rel}: route index does not link to ${target}`);
+    }
+  }
+
   for (const page of pages) {
     if (page.fm.page_type === 'route' || registry.routeRefsByPage.has(page.rel)) continue;
     warnings.push(`${page.rel}: no route reference`);
@@ -123,6 +141,7 @@ function validateRoutes(pages) {
 module.exports = {
   buildPageRegistry,
   extractMainStepLinks,
+  extractMarkdownLinks,
   getRouteContext,
   normalizeTarget,
   validateRoutes,
