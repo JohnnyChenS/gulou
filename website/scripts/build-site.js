@@ -474,6 +474,29 @@ function renderHomePageWithRoutes(registry) {
     <p>鼓楼是一个开放的成长知识库。路线页负责帮你选择顺序，知识页负责提供完整背景和具体方法。</p>
   </section>
 
+  <section class="home-section home-about">
+    <h2>关于鼓楼</h2>
+    <p>鼓楼整理和成长有关的知识，覆盖从出生到老年的不同阶段。内容来自发展心理学、教育学、儿科医学和其他专业领域，尽量写成普通家庭可以读懂、用得上的文字。</p>
+    <p>你可以把它当作一份查资料的知识库，也可以沿着路线慢慢阅读。路线页帮你决定先看什么，知识页提供背景、方法和需要留意的信号。</p>
+  </section>
+
+  <section class="home-section">
+    <h2>为什么从育儿开始</h2>
+    <p>鼓楼先从育儿做起，是因为新手父母常常需要在睡眠不足和信息过多的情况下做决定：孩子哭了怎么办，哪些变化属于正常范围，什么时候该找专业人士。</p>
+    <p>这些问题并不缺少研究，只是相关内容分散在论文、专业书和不同机构的指南里。这里先把 0–18 岁的成长内容，以及父母自身的状态整理出来，方便在具体时刻找到合适的起点。</p>
+  </section>
+
+  <section class="home-section">
+    <h2>接下来会做什么</h2>
+    <p>育儿是目前最先整理的部分，之后会逐步补充语言、运动、职业发展和健康管理等跨阶段主题。完整的长期规划可以查看<a href="${siteUrl('roadmap.html')}">教育图谱</a>。</p>
+  </section>
+
+  <section class="home-section">
+    <h2>参与贡献</h2>
+    <p>鼓楼是开源项目。如果你熟悉教育、心理、医学或某个兴趣领域，可以帮助补充内容、检查引用，或者把它翻译成其他语言。</p>
+    <p>参与前请阅读 <a href="https://github.com/JohnnyChenS/gulou/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>。</p>
+  </section>
+
   <footer class="site-footer" style="margin-left:0;">
     <p>内容基于 <a href="https://github.com/JohnnyChenS/gulou">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
   </footer>
