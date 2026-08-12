@@ -458,6 +458,11 @@ function renderHomePageWithRoutes(registry) {
     <p class="subtitle">不用读完整个知识库。先选一个入口，做一件小事，再决定下一步。</p>
   </div>
 
+  <section class="home-section home-name">
+    <h2>为什么叫鼓楼</h2>
+    <p><strong>鼓楼 = grow。</strong> grow 是成长，也是这个项目想整理的事情；“鼓楼”则是作者长大的地方。首页的拨浪鼓图标，来自童年的声音。</p>
+  </section>
+
   <section class="home-section entry-section">
     <h2>孩子现在多大？</h2>
     <div class="stage-grid entry-grid">${cards(ages)}</div>
