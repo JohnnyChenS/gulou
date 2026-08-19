@@ -28,6 +28,25 @@ assert(hub.includes('href="/paths/brain-health/evidence-based-learning.html"'), 
 assert(!routeNav(ageRoute).includes('evidence-based-learning'), '9-12 岁路线主步骤不应绑定全局循证文章');
 assert(!routeNav(questionRoute).includes('evidence-based-learning'), '学校学习路线主步骤不应绑定全局循证文章');
 
+const ageEntries = {
+  '0–3 岁': '/stages/family/parenting/0-3/index.html',
+  '3–6 岁': '/stages/family/parenting/3-6/index.html',
+  '6–9 岁': '/stages/family/parenting/6-9/index.html',
+  '9–12 岁': '/stages/family/parenting/9-12/index.html',
+  '12–14 岁': '/stages/family/parenting/12-14/index.html',
+  '14–18 岁': '/stages/family/parenting/14-18/index.html',
+  '大学期（18–22 岁）': '/stages/18-22/index.html',
+  '职场开始（22–28 岁）': '/stages/22-28/index.html',
+  '职场发展（28–40 岁）': '/stages/28-40/index.html',
+  '家庭期（25–45 岁）': '/stages/family/index.html',
+  '中年期（40–60 岁）': '/stages/40-60/index.html',
+  '老年期（60+ 岁）': '/stages/60-plus/index.html',
+};
+
+for (const [label, href] of Object.entries(ageEntries)) {
+  assert(hub.includes(`href="${href}"`), `脑健康总页应提供${label}入口`);
+}
+
 for (const age of ['0-3', '3-6', '6-9', '9-12', '12-14', '14-18']) {
   const page = read(`stages/family/parenting/${age}/index.html`);
   assert(page.includes('href="/paths/brain-health/index.html"'), `${age} 岁页面应提供脑健康总页入口`);
