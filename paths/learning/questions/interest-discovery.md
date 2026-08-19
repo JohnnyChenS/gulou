@@ -115,6 +115,7 @@ review_status: draft
 
 - [学习与探索路径](../_index.md)
 - [按年龄开始](../ages/_index.md)
+- [终身脑健康与循证学习路径](../../brain-health/_index.md)
 - [循证学习方法](../../brain-health/evidence-based-learning.md)
 - [英语学习路径](../../language/english.md)
 - [母语发展路径](../../language/mother-tongue.md)

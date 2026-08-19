@@ -19,7 +19,7 @@ stage_name: 学龄中
 
 ## 脑健康与学习
 
-可以帮助孩子练习设定小目标、主动检索、检查错误和安排复习，同时重视同伴关系、运动、睡眠与可持续的屏幕习惯。学习策略需要与已有知识和具体任务结合，短期表现变化不应被包装成智力提升，也不能用单一测验定义整体发展。参见[0–18 岁大脑发育与学习支持](../../../../paths/brain-health/0-18-development-and-learning.md)和[循证学习与能力培养](../../../../paths/brain-health/evidence-based-learning.md)。
+可以帮助孩子练习设定小目标、主动检索、检查错误和安排复习，同时重视同伴关系、运动、睡眠与可持续的屏幕习惯。学习策略需要与已有知识和具体任务结合，短期表现变化不应被包装成智力提升，也不能用单一测验定义整体发展。参见[终身脑健康总纲](../../../../paths/brain-health/_index.md)、[0–18 岁大脑发育与学习支持](../../../../paths/brain-health/0-18-development-and-learning.md)和其中的[循证学习方法](../../../../paths/brain-health/evidence-based-learning.md)。
 
 ## 发展评估
 
