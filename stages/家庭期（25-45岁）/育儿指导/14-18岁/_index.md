@@ -21,7 +21,7 @@ stage_name: 青春期
 
 ## 脑健康与学习
 
-心理健康、可信任的关系、自主性、睡眠和学业压力管理应与成绩同等受到重视，数字生活和 AI 使用也需要共同商定边界。检索、间隔与反馈可以支持学习，但不能保证提分；AI 更适合用于解释、提问和反馈，而不应替代独立回忆、推理和表达。参见[0–18 岁大脑发育与学习支持](../../../../paths/brain-health/0-18-development-and-learning.md)和[循证学习与能力培养](../../../../paths/brain-health/evidence-based-learning.md)。
+心理健康、可信任的关系、自主性、睡眠和学业压力管理应与成绩同等受到重视，数字生活和 AI 使用也需要共同商定边界。检索、间隔与反馈可以支持学习，但不能保证提分；AI 更适合用于解释、提问和反馈，而不应替代独立回忆、推理和表达。参见[终身脑健康总纲](../../../../paths/brain-health/_index.md)、[0–18 岁大脑发育与学习支持](../../../../paths/brain-health/0-18-development-and-learning.md)和其中的[循证学习方法](../../../../paths/brain-health/evidence-based-learning.md)。
 
 ## 发展评估
 

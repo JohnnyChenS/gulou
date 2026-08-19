@@ -19,7 +19,7 @@ stage_name: 学龄初
 
 ## 脑健康与学习
 
-充足睡眠、规律运动、持续阅读和安全的同伴关系构成学习基础；学习时可逐步使用主动回忆、间隔复习和具体反馈。策略是否有效要看孩子能否理解、记住并迁移到相近任务，不能承诺某种食物、补充剂或技巧直接提分。参见[0–18 岁大脑发育与学习支持](../../../../paths/brain-health/0-18-development-and-learning.md)和[循证学习与能力培养](../../../../paths/brain-health/evidence-based-learning.md)。
+充足睡眠、规律运动、持续阅读和安全的同伴关系构成学习基础；学习时可逐步使用主动回忆、间隔复习和具体反馈。策略是否有效要看孩子能否理解、记住并迁移到相近任务，不能承诺某种食物、补充剂或技巧直接提分。参见[终身脑健康总纲](../../../../paths/brain-health/_index.md)、[0–18 岁大脑发育与学习支持](../../../../paths/brain-health/0-18-development-and-learning.md)和其中的[循证学习方法](../../../../paths/brain-health/evidence-based-learning.md)。
 
 ## 发展评估
 

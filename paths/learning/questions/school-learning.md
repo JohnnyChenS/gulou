@@ -33,7 +33,7 @@ stage: 6-14
 
 ### 步骤 3：选择适合当前任务的方法
 
-- **阅读**：[循证学习方法](../../brain-health/evidence-based-learning.md)和[自我调节学习](../../../stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/self-regulated-learning-01.md)
+- **阅读**：[自我调节学习](../../../stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/self-regulated-learning-01.md)
 - **动作**：为一个知识点选择回忆、解释、练习或间隔复习中的一种，结束后检查效果。
 - **观察**：孩子是否能说出方法为什么适合这个任务，而不是只追求做题数量。
 
@@ -50,3 +50,5 @@ stage: 6-14
 - [口头表达](../../../stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/oral-expression-01.md)
 - [元认知与学习策略](../../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/metacognition-learning-strategies-01.md)
 - [学业压力与时间管理](../../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/academic-time-management-01.md)
+- [终身脑健康与循证学习路径](../../brain-health/_index.md)
+- [循证学习方法](../../brain-health/evidence-based-learning.md)

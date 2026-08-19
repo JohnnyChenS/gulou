@@ -5,6 +5,7 @@ stage: lifecourse
 domain: brain-health
 description: 从婴幼儿到老年，以现代证据保护脑健康并培养可迁移的学习能力
 estimated_duration: 持续实践
+page_type: route-hub
 review_status: draft
 review_date: 2026-07-19
 ---
