@@ -36,6 +36,15 @@ function siteUrl(rel) {
 }
 
 const CONTENT_DIRS = ['stages', 'interests', 'paths', 'references'];
+const STAGE_ORDER = [
+  '青春期（14-18岁）',
+  '大学期（18-22岁）',
+  '职场开始（22-28岁）',
+  '职场发展（28-40岁）',
+  '家庭期（25-45岁）',
+  '中年期（40-60岁）',
+  '老年期（60+岁）',
+];
 
 // 跳过的文件/目录
 const SKIP = new Set(['.git', '.claude', '.sisyphus', 'node_modules', 'CLAUDE.md', 'CONTRIBUTING.md']);
@@ -184,6 +193,7 @@ function pageLabel(page) {
 
 function buildFallbackSidebar(currentRelPath, allFiles) {
   const currentDir = path.dirname(currentRelPath);
+  const isIndex = path.basename(currentRelPath) === '_index.md';
 
   // 找到同目录的兄弟文件
   const siblings = allFiles
@@ -203,9 +213,12 @@ function buildFallbackSidebar(currentRelPath, allFiles) {
     return `<a href="${siteUrl(slug)}"${isActive}>${pageLabel(f)}</a>`;
   }).join('\n');
 
-  // 上级目录链接
-  const parentSlug = resolvePath(currentDir + '/_index.md').replace('index.html', '');
-  const backLink = currentDir.includes('/')
+  // 索引页返回其父目录；普通文章返回当前目录索引。
+  const parentDir = isIndex ? path.dirname(currentDir) : currentDir;
+  const parentSlug = parentDir === '.'
+    ? ''
+    : resolvePath(parentDir + '/_index.md').replace('index.html', '');
+  const backLink = parentSlug
     ? `<a href="${siteUrl(parentSlug)}" class="back-link">← 返回上级</a>`
     : '';
 
@@ -433,15 +446,6 @@ function renderHomePage() {
 }
 
 function renderHomePageWithRoutes(registry) {
-  const stageOrder = [
-    '青春期（14-18岁）',
-    '大学期（18-22岁）',
-    '职场开始（22-28岁）',
-    '职场发展（28-40岁）',
-    '家庭期（25-45岁）',
-    '中年期（40-60岁）',
-    '老年期（60+岁）',
-  ];
   const incompleteStages = new Set([
     '青春期（14-18岁）',
     '大学期（18-22岁）',
@@ -450,7 +454,7 @@ function renderHomePageWithRoutes(registry) {
     '中年期（40-60岁）',
     '老年期（60+岁）',
   ]);
-  const stagePages = stageOrder
+  const stagePages = STAGE_ORDER
     .map(name => ({ name, page: registry.byRel.get(`stages/${name}/_index.md`) }))
     .filter(({ page }) => page);
   const stageCards = stagePages.map(({ name, page }) => {
@@ -715,6 +719,18 @@ function build() {
       // 收集子目录
       const entries = fs.readdirSync(fullDir, { withFileTypes: true })
         .filter(e => e.isDirectory() && !SKIP.has(e.name));
+
+      if (dir === 'stages') {
+        const stagePosition = new Map(STAGE_ORDER.map((name, index) => [name, index]));
+        entries.sort((a, b) => {
+          const aPosition = stagePosition.get(a.name);
+          const bPosition = stagePosition.get(b.name);
+          if (aPosition !== undefined && bPosition !== undefined) return aPosition - bPosition;
+          if (aPosition !== undefined) return -1;
+          if (bPosition !== undefined) return 1;
+          return a.name.localeCompare(b.name);
+        });
+      }
 
       const links = entries.map(e => {
         const slug = resolveSlug(e.name);

@@ -25,7 +25,7 @@
 | 方向 | 路径 |
 |---|---|
 | 认知与心理发展 | [0–3 岁](0-3/cognitive-psychological.md)、[3–6 岁](3-6/cognitive-psychological.md)、[6–9 岁](6-9/cognitive-psychological.md)、[9–12 岁](9-12/cognitive-psychological.md)、[12–14 岁](12-14/cognitive-psychological.md)、[青春期父母指导](parenting/parent-adolescent.md) |
-| 身体能力发展 | [0–3 岁](0-3/physical.md)、[3–6 岁](3-6/physical.md)、[6–9 岁](6-9/physical.md)、[9–12 岁](9-12/physical.md) |
+| 身体能力发展 | [0–3 岁](0-3/physical.md)、[3–6 岁](3-6/physical.md)、[6–9 岁](6-9/physical.md)、[9–12 岁](9-12/physical.md)、[12–14 岁（规划中）](12-14/physical.md) |
 | 脑健康与循证学习 | [终身脑健康](brain-health/_index.md) |
 | 语言学习 | [英语](language/english.md)、[母语发展](language/mother-tongue.md) |
 | 父母支持 | [父母状态](parenting/parent-wellbeing.md) |

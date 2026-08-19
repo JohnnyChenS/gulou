@@ -28,15 +28,9 @@ age_range: 25-45岁
 - [按年龄进入育儿指导](育儿指导/_index.md)：各年龄页保留发展路线图与评估框架入口。
 - [父母自身支持主题](育儿指导/父母自身/_index.md)：产前准备、产后调适、育儿压力、自我照顾和关系维护的文章索引。
 
-### 学习路径
+### 兼容索引
 
-- 0–3 岁：[认知与心理路径](../../paths/0-3/cognitive-psychological.md) · [身体能力路径](../../paths/0-3/physical.md)
-- 3–6 岁：[认知与心理路径](../../paths/3-6/cognitive-psychological.md) · [身体能力路径](../../paths/3-6/physical.md)
-- 6–9 岁：[认知与心理路径](../../paths/6-9/cognitive-psychological.md) · [身体能力路径](../../paths/6-9/physical.md)
-- 9–12 岁：[认知与心理路径](../../paths/9-12/cognitive-psychological.md) · [身体能力路径](../../paths/9-12/physical.md)
-- 12–14 岁：[认知与心理路径](../../paths/12-14/cognitive-psychological.md)
-- 14–18 岁：[父母指导路径](../../paths/parenting/parent-adolescent.md)
-- [父母心理健康路径](../../paths/parenting/parent-wellbeing.md)
+已收藏旧学习路径时，可以继续从[深入阅读和辅助索引](../../paths/_index.md)进入；首次浏览请优先按上方年龄入口进入。
 
 ---
 
