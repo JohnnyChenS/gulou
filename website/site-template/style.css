@@ -236,6 +236,42 @@ body {
   max-width: var(--max-content-width);
 }
 
+/* Breadcrumbs */
+.breadcrumbs {
+  margin-bottom: 20px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  overflow-x: auto;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  content: '→';
+  margin: 0 8px;
+  color: var(--color-border);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover { text-decoration: underline; }
+
+.breadcrumbs [aria-current="page"] { color: var(--color-text-secondary); }
+
 /* Typography */
 .content h1 {
   font-size: 28px;

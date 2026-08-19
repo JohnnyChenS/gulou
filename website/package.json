@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node scripts/build-site.js",
     "check:routes": "node scripts/validate-routes.js",
+    "check:breadcrumbs": "node scripts/check-breadcrumbs.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
