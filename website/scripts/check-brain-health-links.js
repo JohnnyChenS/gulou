@@ -52,4 +52,19 @@ for (const age of ['0-3', '3-6', '6-9', '9-12', '12-14', '14-18']) {
   assert(page.includes('href="/paths/brain-health/index.html"'), `${age} 岁页面应提供脑健康总页入口`);
 }
 
+const learningRoutes = {
+  '0-3': '/paths/learning/ages/0-3.html',
+  '3-6': '/paths/learning/ages/3-6.html',
+  '6-9': '/paths/learning/ages/6-9.html',
+  '9-12': '/paths/learning/ages/9-12.html',
+  '12-14': '/paths/learning/ages/12-14.html',
+  '14-18': '/paths/learning/ages/14-18.html',
+};
+
+for (const [age, href] of Object.entries(learningRoutes)) {
+  const page = read(`stages/family/parenting/${age}/index.html`);
+  assert(page.includes(`href="${href}"`), `${age} 岁页面应提供对应的按年龄学习路线`);
+  assert(page.includes('href="/paths/learning/index.html"'), `${age} 岁页面应提供学习路径总览入口`);
+}
+
 console.log('Brain health link checks passed');
