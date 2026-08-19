@@ -287,9 +287,61 @@ function renderRouteNav(context) {
   </section>`;
 }
 
+const BREADCRUMB_ROOT_LABELS = {
+  stages: '阶段主线',
+  interests: '兴趣副线',
+  paths: '学习路径',
+  references: '知识参考',
+};
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function renderBreadcrumbs(currentRelPath, registry, title) {
+  if (!currentRelPath) return '';
+
+  const parts = currentRelPath.split('/');
+  const isIndex = path.basename(currentRelPath) === '_index.md';
+  const directoryParts = parts.slice(0, -1);
+  const items = [{ label: '首页', href: siteUrl('') }];
+  const prefix = [];
+
+  directoryParts.forEach((segment, index) => {
+    prefix.push(segment);
+    const directoryRel = prefix.join('/');
+    const indexRel = `${directoryRel}/_index.md`;
+    const indexPage = registry && registry.byRel.get(indexRel);
+    const label = index === 0
+      ? BREADCRUMB_ROOT_LABELS[segment] || segment
+      : indexPage ? pageLabel(indexPage) : SLUG_MAP[segment] || segment;
+    const isCurrentDirectory = isIndex && index === directoryParts.length - 1;
+    const href = siteUrl(resolvePath(indexRel)).replace(/index\.html$/, '');
+    items.push({ label, href: isCurrentDirectory ? null : href });
+  });
+
+  if (!isIndex) items.push({ label: title || path.basename(currentRelPath, '.md'), href: null });
+
+  const links = items.map((item, index) => {
+    const current = index === items.length - 1;
+    const label = escapeHtml(item.label);
+    const content = item.href && !current
+      ? `<a href="${item.href}">${label}</a>`
+      : `<span${current ? ' aria-current="page"' : ''}>${label}</span>`;
+    return `<li>${content}</li>`;
+  }).join('\n');
+
+  return `<nav class="breadcrumbs" aria-label="当前位置"><ol>\n${links}\n</ol></nav>`;
+}
+
 // ─── HTML Template ─────────────────────────────────────────────────────────
 
-function renderPage({ title, description, sidebar, routeNav, metaCard, content, references, isHome }) {
+function renderPage({ title, description, sidebar, routeNav, metaCard, breadcrumb, content, references, isHome }) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -308,6 +360,7 @@ function renderPage({ title, description, sidebar, routeNav, metaCard, content, 
 
     <main class="content">
       <div class="content-inner">
+        ${breadcrumb || ''}
         ${metaCard}
         ${routeNav || ''}
         ${content}
@@ -603,6 +656,7 @@ function build() {
       sidebar,
       routeNav: '',
       metaCard: '',
+      breadcrumb: renderBreadcrumbs('roadmap.md', registry, title),
       content: rewriteLinks(bodyHtml, 'roadmap.md'),
       references: '',
     });
@@ -637,6 +691,7 @@ function build() {
         sidebar,
         routeNav,
         metaCard: renderMetaCard(fm),
+        breadcrumb: renderBreadcrumbs(rel, registry, title),
         content: '<p><em>此部分内容正在编写中，敬请期待。</em></p>',
         references: '',
       });
@@ -671,6 +726,7 @@ function build() {
       sidebar,
       routeNav,
       metaCard,
+      breadcrumb: renderBreadcrumbs(rel, registry, title),
       content: rewritten,
       references,
     });
@@ -743,6 +799,7 @@ function build() {
         sidebar: '',
         routeNav: '',
         metaCard: '',
+        breadcrumb: renderBreadcrumbs(`${dir}/_index.md`, registry, dir === 'stages' ? '阶段主线' : dir === 'interests' ? '兴趣副线' : dir),
         content: `<h1>${dir === 'stages' ? '阶段主线' : dir === 'interests' ? '兴趣副线' : dir}</h1>\n<div class="stage-grid">${links}</div>`,
         references: '',
       });
