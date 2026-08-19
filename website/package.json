@@ -8,6 +8,7 @@
     "check:routes": "node scripts/validate-routes.js",
     "check:breadcrumbs": "node scripts/check-breadcrumbs.js",
     "check:brain-health": "node scripts/check-brain-health-links.js",
+    "check:0-3": "node scripts/check-0-3-month-tables.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
