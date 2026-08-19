@@ -1,5 +1,7 @@
 # 从这里开始
 
+> 这是深入阅读和辅助索引。第一次使用时，建议从[人生阶段](../stages/)进入，再选择[家庭期的育儿指导](../stages/家庭期（25-45岁）/育儿指导/_index.md)或父母自身支持。
+
 这里的内容不是一张需要从头读完的百科目录。先选一个入口，读一小段，做一个动作，再决定是否继续。
 
 ## 先选入口
@@ -23,7 +25,7 @@
 | 方向 | 路径 |
 |---|---|
 | 认知与心理发展 | [0–3 岁](0-3/cognitive-psychological.md)、[3–6 岁](3-6/cognitive-psychological.md)、[6–9 岁](6-9/cognitive-psychological.md)、[9–12 岁](9-12/cognitive-psychological.md)、[12–14 岁](12-14/cognitive-psychological.md)、[青春期父母指导](parenting/parent-adolescent.md) |
-| 身体能力发展 | [0–3 岁](0-3/physical.md)、[3–6 岁](3-6/physical.md)、[6–9 岁](6-9/physical.md)、[9–12 岁](9-12/physical.md) |
+| 身体能力发展 | [0–3 岁](0-3/physical.md)、[3–6 岁](3-6/physical.md)、[6–9 岁](6-9/physical.md)、[9–12 岁](9-12/physical.md)、[12–14 岁（规划中）](12-14/physical.md) |
 | 脑健康与循证学习 | [终身脑健康](brain-health/_index.md) |
 | 语言学习 | [英语](language/english.md)、[母语发展](language/mother-tongue.md) |
 | 父母支持 | [父母状态](parenting/parent-wellbeing.md) |
