@@ -333,10 +333,13 @@ function renderBreadcrumbs(currentRelPath, registry, title) {
     const content = item.href && !current
       ? `<a href="${item.href}">${label}</a>`
       : `<span${current ? ' aria-current="page"' : ''}>${label}</span>`;
-    return `<li>${content}</li>`;
+    const separator = current
+      ? ''
+      : '<span class="breadcrumbs-separator" aria-hidden="true">→</span>';
+    return `<span class="breadcrumbs-item">${content}</span>${separator}`;
   }).join('\n');
 
-  return `<nav class="breadcrumbs" aria-label="当前位置"><ol>\n${links}\n</ol></nav>`;
+  return `<nav class="breadcrumbs" aria-label="当前位置"><div class="breadcrumbs-list">\n${links}\n</div></nav>`;
 }
 
 // ─── HTML Template ─────────────────────────────────────────────────────────

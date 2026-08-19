@@ -244,21 +244,22 @@ body {
   overflow-x: auto;
 }
 
-.breadcrumbs ol {
+.breadcrumbs-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0;
-  list-style: none;
+  line-height: 1.6;
 }
 
-.breadcrumbs li {
+.breadcrumbs-item {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
 }
 
-.breadcrumbs li:not(:last-child)::after {
-  content: '→';
+.breadcrumbs-separator {
+  flex: 0 0 auto;
   margin: 0 8px;
   color: var(--color-border);
 }
