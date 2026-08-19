@@ -238,11 +238,10 @@ function renderTopNav() {
       <img src="${siteUrl('assets/logo.png')}" alt="鼓楼" class="logo-img">
       <span>鼓楼</span>
     </a>
-    <a href="${siteUrl('paths/')}">开始使用</a>
-    <a href="${siteUrl('paths/learning/ages/')}">按年龄</a>
-    <a href="${siteUrl('paths/learning/questions/')}">按问题</a>
-    <a href="${siteUrl('paths/learning/')}">主题路径</a>
+    <a href="${siteUrl('stages/')}">人生阶段</a>
     <a href="${siteUrl('references/')}">知识参考</a>
+    <a href="https://github.com/JohnnyChenS/gulou/blob/main/CONTRIBUTING.md">参与贡献</a>
+    <a href="https://github.com/JohnnyChenS/gulou">GitHub</a>
   </nav>`;
 }
 
@@ -434,19 +433,33 @@ function renderHomePage() {
 }
 
 function renderHomePageWithRoutes(registry) {
-  const ages = registry.routesByGroup.get('learning-age') || [];
-  const questions = registry.routesByGroup.get('learning-question') || [];
-  const cards = (items) => items.map(route => `<a href="${siteUrl(resolvePath(route.rel))}" class="stage-card">
-      <h3>${route.fm.route_label || pageLabel(route)}</h3>
-      <p class="age">${route.fm.description || extractDescription(route.fm, '')}</p>
-    </a>`).join('\n');
+  const stageOrder = [
+    '青春期（14-18岁）',
+    '大学期（18-22岁）',
+    '职场开始（22-28岁）',
+    '职场发展（28-40岁）',
+    '家庭期（25-45岁）',
+    '中年期（40-60岁）',
+    '老年期（60+岁）',
+  ];
+  const incompleteStages = new Set(['中年期（40-60岁）', '老年期（60+岁）']);
+  const stagePages = stageOrder
+    .map(name => ({ name, page: registry.byRel.get(`stages/${name}/_index.md`) }))
+    .filter(({ page }) => page);
+  const stageCards = stagePages.map(({ name, page }) => {
+    const incomplete = incompleteStages.has(name) ? '（未完善）' : '';
+    return `<a href="${siteUrl(resolvePath(page.rel))}" class="stage-card">
+      <h3>${page.fm.stage_name || name}${incomplete}</h3>
+      <p class="age">${page.fm.age_range || ''}</p>
+    </a>`;
+  }).join('\n');
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>鼓楼 — 从这里开始</title>
-  <meta name="description" content="从孩子的年龄或眼前的问题开始，找到一条可以照着走的成长与学习路线。">
+  <title>鼓楼 — 陪你走过人生每个阶段</title>
+  <meta name="description" content="一个开放的成长知识库，帮助你理解当前人生阶段，找到下一步行动。">
   <link rel="icon" type="image/png" href="${siteUrl('assets/favicon.png')}">
   <link rel="stylesheet" href="${siteUrl('assets/style.css')}">
 </head>
@@ -454,8 +467,8 @@ function renderHomePageWithRoutes(registry) {
   ${renderTopNav()}
   <div class="hero home-hero">
     <img src="${siteUrl('assets/logo.png')}" alt="鼓楼" class="hero-logo">
-    <h1>从这里开始</h1>
-    <p class="subtitle">不用读完整个知识库。先选一个入口，做一件小事，再决定下一步。</p>
+    <h1>鼓楼：陪你走过人生每个阶段</h1>
+    <p class="subtitle">一个开放的成长知识库，帮助你理解当前阶段，找到下一步行动。</p>
   </div>
 
   <section class="home-section home-name">
@@ -463,37 +476,33 @@ function renderHomePageWithRoutes(registry) {
     <p><strong>鼓楼 = grow。</strong> grow 是成长，也是这个项目想整理的事情；“鼓楼”则是作者长大的地方。首页的拨浪鼓图标，来自童年的声音。</p>
   </section>
 
-  <section class="home-section entry-section">
-    <h2>孩子现在多大？</h2>
-    <div class="stage-grid entry-grid">${cards(ages)}</div>
-  </section>
-
-  <section class="home-section entry-section">
-    <h2>我现在想解决什么？</h2>
-    <div class="stage-grid entry-grid">${cards(questions)}</div>
-  </section>
-
-  <section class="home-section home-secondary">
-    <h2>想直接查资料？</h2>
-    <p><a class="secondary-link" href="${siteUrl('stages/')}">浏览阶段主线</a> · <a class="secondary-link" href="${siteUrl('interests/')}">浏览兴趣副线</a> · <a class="secondary-link" href="${siteUrl('references/')}">查看知识参考</a></p>
-    <p>鼓楼是一个开放的成长知识库。路线页负责帮你选择顺序，知识页负责提供完整背景和具体方法。</p>
-  </section>
-
-  <section class="home-section home-about">
-    <h2>关于鼓楼</h2>
-    <p>鼓楼整理和成长有关的知识，覆盖从出生到老年的不同阶段。内容来自发展心理学、教育学、儿科医学和其他专业领域，尽量写成普通家庭可以读懂、用得上的文字。</p>
-    <p>你可以把它当作一份查资料的知识库，也可以沿着路线慢慢阅读。路线页帮你决定先看什么，知识页提供背景、方法和需要留意的信号。</p>
+  <section class="home-section">
+    <h2>鼓楼是什么</h2>
+    <p>鼓楼是一个开放的成长知识库，整理从出生到老年不同人生阶段中值得理解、练习和持续关注的主题。</p>
+    <p>这里的内容来自发展心理学、教育学、儿科医学和其他专业领域，尽量写成普通家庭可以读懂、用得上的文字。</p>
   </section>
 
   <section class="home-section">
-    <h2>为什么从育儿开始</h2>
-    <p>鼓楼先从育儿做起，是因为新手父母常常需要在睡眠不足和信息过多的情况下做决定：孩子哭了怎么办，哪些变化属于正常范围，什么时候该找专业人士。</p>
-    <p>这些问题并不缺少研究，只是相关内容分散在论文、专业书和不同机构的指南里。这里先把 0–18 岁的成长内容，以及父母自身的状态整理出来，方便在具体时刻找到合适的起点。</p>
+    <h2>项目动机</h2>
+    <p>成长相关的问题常常分散在论文、专业书和不同机构的指南里。鼓楼希望把这些知识整理成清晰的阶段框架，让人在具体时刻更容易找到合适的起点。</p>
+    <p>我们尤其关注那些需要在信息过多、时间有限或压力较大时做出的日常决定。</p>
   </section>
 
   <section class="home-section">
-    <h2>接下来会做什么</h2>
-    <p>育儿是目前最先整理的部分，之后会逐步补充语言、运动、职业发展和健康管理等跨阶段主题。完整的长期规划可以查看<a href="${siteUrl('roadmap.html')}">教育图谱</a>。</p>
+    <h2>项目规划</h2>
+    <p>鼓楼会逐步完善人生阶段、兴趣学习和跨阶段主题的内容，并持续补充参考来源、实践方法和需要留意的信号。</p>
+    <p>长期目标是帮助每个人在不同阶段理解自己的任务，形成可执行、可复盘的成长路径。</p>
+  </section>
+
+  <section class="home-section">
+    <h2>现阶段目标</h2>
+    <p>当前优先服务对象是 <strong>0–3 岁新手父母</strong>，帮助他们应对早期照护中的不确定和焦虑。</p>
+    <p>使用方式很简单：从<strong>观察问题</strong>出发，理解它属于哪个阶段或主题，再<strong>找到下一步行动</strong>，而不是一次读完所有内容。</p>
+  </section>
+
+  <section class="home-section">
+    <h2>按人生阶段探索</h2>
+    <div class="stage-grid entry-grid">${stageCards}</div>
   </section>
 
   <section class="home-section">
