@@ -442,7 +442,14 @@ function renderHomePageWithRoutes(registry) {
     '中年期（40-60岁）',
     '老年期（60+岁）',
   ];
-  const incompleteStages = new Set(['中年期（40-60岁）', '老年期（60+岁）']);
+  const incompleteStages = new Set([
+    '青春期（14-18岁）',
+    '大学期（18-22岁）',
+    '职场开始（22-28岁）',
+    '职场发展（28-40岁）',
+    '中年期（40-60岁）',
+    '老年期（60+岁）',
+  ]);
   const stagePages = stageOrder
     .map(name => ({ name, page: registry.byRel.get(`stages/${name}/_index.md`) }))
     .filter(({ page }) => page);
