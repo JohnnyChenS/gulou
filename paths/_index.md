@@ -18,17 +18,19 @@
 
 了解学习习惯、好奇心、学校学习、学习能力和兴趣拓展之间怎样衔接。
 
-## 想深入某个领域
+## 专题延伸
 
-这些页面适合已经确定主题、希望系统阅读的人。它们是深入路线，不要求从第一篇开始读。
+这些页面适合已经从年龄阶段或问题路线进入、希望进一步理解某个主题的人。它们不是新的主入口，也不要求从第一篇开始。
 
 | 方向 | 路径 |
 |---|---|
-| 认知与心理发展 | [0–3 岁](0-3/cognitive-psychological.md)、[3–6 岁](3-6/cognitive-psychological.md)、[6–9 岁](6-9/cognitive-psychological.md)、[9–12 岁](9-12/cognitive-psychological.md)、[12–14 岁](12-14/cognitive-psychological.md)、[青春期父母指导](parenting/parent-adolescent.md) |
-| 身体能力发展 | [0–3 岁](0-3/physical.md)、[3–6 岁](3-6/physical.md)、[6–9 岁](6-9/physical.md)、[9–12 岁](9-12/physical.md)、[12–14 岁（规划中）](12-14/physical.md) |
+| 0–3 岁认知与心理 | [专题路径](0-3/cognitive-psychological.md) |
+| 12–14 岁认知与心理 | [专题路径](12-14/cognitive-psychological.md) |
+| 12–14 岁身体发展 | [规划入口](12-14/physical.md) |
+| 青春期父母支持 | [专题路径](parenting/parent-adolescent.md) |
+| 父母自身调适 | [专题路径](parenting/parent-wellbeing.md) |
 | 脑健康与循证学习 | [终身脑健康](brain-health/_index.md) |
 | 语言学习 | [英语](language/english.md)、[母语发展](language/mother-tongue.md) |
-| 父母支持 | [父母状态](parenting/parent-wellbeing.md) |
 
 ## 直接浏览知识
 
