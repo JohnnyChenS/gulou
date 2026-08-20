@@ -163,7 +163,7 @@ function renderMetaCard(fm) {
     items.push(`<span class="meta-item"><strong>主线：</strong>${fm.track}</span>`);
   }
   if (fm.review_status) {
-    const statusMap = { draft: '草稿', reviewed: '已审核', published: '已发布' };
+    const statusMap = { draft: '草稿', planned: '规划中', reviewed: '已审核', published: '已发布' };
     items.push(`<span class="meta-item"><strong>状态：</strong>${statusMap[fm.review_status] || fm.review_status}</span>`);
   }
   if (fm.tags && fm.tags.length) {
@@ -215,9 +215,10 @@ function buildFallbackSidebar(currentRelPath, allFiles) {
 
   // 索引页返回其父目录；普通文章返回当前目录索引。
   const parentDir = isIndex ? path.dirname(currentDir) : currentDir;
-  const parentSlug = parentDir === '.'
-    ? ''
-    : resolvePath(parentDir + '/_index.md').replace('index.html', '');
+  const parentIndexRel = parentDir === '.' ? '' : parentDir + '/_index.md';
+  const parentSlug = parentIndexRel && allFiles.some(f => f.rel === parentIndexRel)
+    ? resolvePath(parentIndexRel).replace('index.html', '')
+    : '';
   const backLink = parentSlug
     ? `<a href="${siteUrl(parentSlug)}" class="back-link">← 返回上级</a>`
     : '';
