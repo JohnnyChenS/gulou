@@ -194,9 +194,11 @@ function pageLabel(page) {
 function buildFallbackSidebar(currentRelPath, allFiles) {
   const currentDir = path.dirname(currentRelPath);
   const isIndex = path.basename(currentRelPath) === '_index.md';
+  const currentPage = allFiles.find(f => f.rel === currentRelPath);
+  const isRouteIndex = currentPage && currentPage.fm && currentPage.fm.page_type === 'route-index';
 
   // 找到同目录的兄弟文件
-  const siblings = allFiles
+  const siblingCandidates = allFiles
     .filter(f => path.dirname(f.rel) === currentDir)
     .sort((a, b) => {
       // _index.md 排最前
@@ -204,8 +206,11 @@ function buildFallbackSidebar(currentRelPath, allFiles) {
       if (b.rel.endsWith('_index.md')) return 1;
       return path.basename(a.rel).localeCompare(path.basename(b.rel));
     });
+  const siblings = isRouteIndex
+    ? siblingCandidates.filter(f => f.fm && f.fm.page_type !== 'route')
+    : siblingCandidates;
 
-  if (siblings.length <= 1) return '';
+  if (siblings.length <= 1 && !isRouteIndex) return '';
 
   const links = siblings.map(f => {
     const slug = resolvePath(f.rel);
@@ -223,7 +228,8 @@ function buildFallbackSidebar(currentRelPath, allFiles) {
     ? `<a href="${siteUrl(parentSlug)}" class="back-link">← 返回上级</a>`
     : '';
 
-  return `${backLink}\n<nav class="sidebar-nav">\n${links}\n</nav>`;
+  const sidebarNav = links ? `\n<nav class="sidebar-nav">\n${links}\n</nav>` : '';
+  return `${backLink}${sidebarNav}`;
 }
 
 function buildSidebar(currentRelPath, registry) {

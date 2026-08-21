@@ -36,4 +36,4 @@ review_status: planned
 
 - [12–14 岁育儿指导主页面](../../stages/家庭期（25-45岁）/育儿指导/12-14岁/_index.md)
 - [12–14 岁认知与心理专题路径](cognitive-psychological.md)
-- [14–18 岁按年龄学习路线](../learning/ages/14-18.md)
+- [14–18 岁按行动阅读路线（辅助）](../learning/ages/14-18.md)
