@@ -12,7 +12,7 @@ references:
   - Zimmerman, B. J. (2002). Becoming a self-regulated learner. Theory Into Practice, 41(2), 64-70.
   - Hidi, S., & Renninger, K. A. (2006). The four-phase model of interest development.
 tags: [自主学习, 兴趣深入, 学科选择, 项目实践, 方向探索, 青少年]
-related_prompts: [14-18-core-academic-pressure-01, 14-18-core-digital-life-01, evidence-based-learning]
+related_prompts: [14-18-core-academic-pressure-01, 14-18-core-digital-life-01]
 ---
 
 # 自主学习与兴趣深入
@@ -100,6 +100,4 @@ related_prompts: [14-18-core-academic-pressure-01, 14-18-core-digital-life-01, e
 - [升学压力与学业焦虑](academic-pressure-01.md)
 - [数字设备与网络管理](digital-life-01.md)
 - [青少年心理健康危机识别](adolescent-mental-health-01.md)
-- [循证学习方法](../../../../../paths/brain-health/evidence-based-learning.md)
 - [兴趣发现与拓展](../../../../../paths/learning/questions/interest-discovery.md)
-

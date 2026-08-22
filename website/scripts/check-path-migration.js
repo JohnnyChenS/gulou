@@ -22,6 +22,9 @@ const removedPages = [
   'paths/9-12/cognitive-psychological.html',
   'paths/9-12/physical.html',
   'paths/parenting/adolescent-physical.html',
+  'paths/brain-health/index.html',
+  'paths/brain-health/0-18-development-and-learning.html',
+  'paths/brain-health/evidence-based-learning.html',
 ];
 
 for (const page of removedPages) {
@@ -60,7 +63,13 @@ for (const page of removedPages) {
 }
 
 assert(index.includes('/paths/learning/ages/index.html'), '路径索引应保留新的按年龄学习路线入口');
-assert(index.includes('/paths/brain-health/index.html'), '路径索引应保留脑健康入口');
+assert(!index.includes('/paths/brain-health/'), '路径索引不应链接已移除的脑健康入口');
+
+const framework = path.resolve(__dirname, '../../references/brain-health-evidence-framework.md');
+assert(fs.existsSync(framework), '编辑用脑健康证据框架应保留');
+
+const elderBrainHealth = 'stages/60-plus/cognitive-maintenance/brain-health-01.html';
+assert(fs.existsSync(path.join(site, elderBrainHealth)), '60+ 岁阶段应保留本地脑健康与认知保持文章');
 
 const stage12to14 = read('stages/family/parenting/12-14/index.html');
 assert(!stage12to14.includes('/paths/12-14/cognitive-psychological.html'), '12–14 岁页面不应链接旧认知路径');

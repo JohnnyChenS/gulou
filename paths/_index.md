@@ -29,7 +29,6 @@
 | 12–14 岁身体发展 | [规划入口](12-14/physical.md) |
 | 青春期父母支持 | [专题路径](parenting/parent-adolescent.md) |
 | 父母自身调适 | [专题路径](parenting/parent-wellbeing.md) |
-| 脑健康与循证学习 | [终身脑健康](brain-health/_index.md) |
 | 语言学习 | [英语](language/english.md)、[母语发展](language/mother-tongue.md) |
 
 ## 直接浏览知识
