@@ -41,6 +41,5 @@ review_status: draft
 
 ## 继续阅读
 
-- [终身脑健康与循证学习](../brain-health/_index.md)
 - [按年龄开始](ages/_index.md)
 - [按问题开始](questions/_index.md)

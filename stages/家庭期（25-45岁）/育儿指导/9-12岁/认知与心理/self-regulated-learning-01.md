@@ -12,7 +12,7 @@ references:
   - Dunlosky, J., et al. (2013). Improving students’ learning with effective learning techniques. Psychological Science in the Public Interest, 14(1), 4-58.
   - Karpicke, J. D., & Roediger, H. L. (2008). The critical importance of retrieval for learning. Science, 319(5865), 966-968.
 tags: [自我调节学习, 学习策略, 检索, 错误修正, 知识组织, 小项目]
-related_prompts: [9-12-core-innovative-thinking-01, evidence-based-learning, 12-14-core-academic-time-management-01]
+related_prompts: [9-12-core-innovative-thinking-01, 12-14-core-academic-time-management-01]
 ---
 
 # 自我调节学习
@@ -51,7 +51,7 @@ related_prompts: [9-12-core-innovative-thinking-01, evidence-based-learning, 12-
 
 当天连续看答案会让人觉得熟悉，却不一定能在第二天想起来。把一小部分内容留到第二天或几天后重新回忆，根据表现调整间隔。间隔长短没有适合所有人的固定公式，重要的是有延迟后的检验。
 
-具体方法可参考[循证学习方法](../../../../../paths/brain-health/evidence-based-learning.md)。
+不要把某一种方法当成固定配方：先看孩子能否在延迟后回忆、解释并完成相近任务，再决定是否调整间隔、提示或练习量。
 
 ### 5. 换一个情境使用
 
@@ -99,7 +99,5 @@ related_prompts: [9-12-core-innovative-thinking-01, evidence-based-learning, 12-
 
 - [创新思维](innovative-thinking-01.md)
 - [了解过去和不同文化](historical-worldview-01.md)
-- [循证学习方法](../../../../../paths/brain-health/evidence-based-learning.md)
 - [学习与探索路径](../../../../../paths/learning/_index.md)
 - [兴趣发现与拓展](../../../../../paths/learning/questions/interest-discovery.md)
-

@@ -12,7 +12,7 @@ references:
   - Zimmerman, B. J. (2002). Becoming a self-regulated learner. Theory Into Practice, 41(2), 64-70.
   - Dunlosky, J., et al. (2013). Improving students’ learning with effective learning techniques. Psychological Science in the Public Interest, 14(1), 4-58.
 tags: [元认知, 学习策略, 自我监控, 时间规划, 信息判断, 青春期]
-related_prompts: [12-14-core-academic-time-management-01, evidence-based-learning, 12-14-core-digital-literacy-01]
+related_prompts: [12-14-core-academic-time-management-01, 12-14-core-digital-literacy-01]
 ---
 
 # 元认知与学习策略
@@ -55,7 +55,7 @@ related_prompts: [12-14-core-academic-time-management-01, evidence-based-learnin
 
 ### 学习后做一次延迟检索
 
-不要只用“看过几遍”判断掌握。第二天拿一张空白纸写出要点，或在不看示例时完成一题，再核对和订正。检索、间隔和反馈的详细边界见[循证学习方法](../../../../../paths/brain-health/evidence-based-learning.md)。
+不要只用“看过几遍”判断掌握。第二天拿一张空白纸写出要点，或在不看示例时完成一题，再核对和订正。若延迟后仍然想不起，就缩小内容、补一个提示，再隔一段时间重试；根据具体任务调整间隔和反馈，不追求固定公式。
 
 ## 学会使用反馈
 
@@ -103,6 +103,4 @@ AI 可以帮忙提问、生成练习或指出步骤，但不能替代独立尝�
 
 - [学业压力与时间管理](academic-time-management-01.md)
 - [网络素养启蒙](digital-literacy-01.md)
-- [循证学习方法](../../../../../paths/brain-health/evidence-based-learning.md)
 - [学习与探索路径](../../../../../paths/learning/_index.md)
-

@@ -12,7 +12,7 @@ references:
   - National Reading Panel. (2000). Teaching children to read.
   - Carpenter, S. K., et al. (2012). Using spacing to enhance diverse forms of learning.
 tags: [学校适应, 学习习惯, 作业, 提问, 阅读理解, 基础知识]
-related_prompts: [6-9-core-independent-reading-01, 6-9-core-oral-expression-01, evidence-based-learning]
+related_prompts: [6-9-core-independent-reading-01, 6-9-core-oral-expression-01]
 ---
 
 # 学校学习习惯
@@ -73,7 +73,7 @@ related_prompts: [6-9-core-independent-reading-01, 6-9-core-oral-expression-01, 
 
 学校课本提供共同的基础知识，家庭阅读可以让孩子接触更多主题。允许漫画、科普图册、故事和重复阅读，也可以和孩子聊“这页讲了什么”“你从哪里看出来的”。具体的独立阅读过渡见[从亲子阅读到独立阅读](independent-reading-01.md)。
 
-读完材料后，偶尔合上书让孩子说两个要点，比立刻再读一遍更能看出是否理解。对需要长期记忆的内容，可参考[循证学习方法](../../../../../paths/brain-health/evidence-based-learning.md)里的检索、间隔和反馈，但不必把所有方法同时用上。
+读完材料后，偶尔合上书让孩子说两个要点，这种主动回忆比立刻再读一遍更能看出是否理解。需要长期记忆时，可以隔一天再让孩子回忆一次，并根据回忆中遗漏的部分安排下一次练习；不必把所有方法同时用上。
 
 ## 家庭和学校怎样分工
 
@@ -98,6 +98,4 @@ related_prompts: [6-9-core-independent-reading-01, 6-9-core-oral-expression-01, 
 - [独立阅读过渡](independent-reading-01.md)
 - [口头表达能力](oral-expression-01.md)
 - [创造性思维](creative-thinking-01.md)
-- [循证学习方法](../../../../../paths/brain-health/evidence-based-learning.md)
 - [学习与探索路径](../../../../../paths/learning/_index.md)
-

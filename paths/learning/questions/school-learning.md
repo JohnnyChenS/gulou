@@ -50,5 +50,3 @@ stage: 6-14
 - [口头表达](../../../stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/oral-expression-01.md)
 - [元认知与学习策略](../../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/metacognition-learning-strategies-01.md)
 - [学业压力与时间管理](../../../stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/academic-time-management-01.md)
-- [终身脑健康与循证学习路径](../../brain-health/_index.md)
-- [循证学习方法](../../brain-health/evidence-based-learning.md)
