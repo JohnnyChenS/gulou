@@ -12,7 +12,7 @@ references:
   - Dweck, C. S. (2006). Mindset. Random House.
   - Cropley, A. (2006). In praise of convergent thinking. Creativity Research Journal, 18(3), 391-404.
 tags: [创新思维, 设计思维, 成长型思维]
-related_prompts: [6-9-core-creative-thinking-01, 9-12-core-critical-thinking-01]
+related_prompts: [6-9-core-creative-thinking-01, 9-12-core-self-regulated-learning-01]
 ---
 
 # 创新思维

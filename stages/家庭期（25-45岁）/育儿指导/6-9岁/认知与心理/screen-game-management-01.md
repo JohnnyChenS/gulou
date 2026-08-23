@@ -12,7 +12,7 @@ references:
   - Przybylski, A. K., & Weinstein, N. (2019). Digital screen time limits and young children's psychological well-being. Child Development, 90(1), e56-e65.
   - Gentile, D. A., et al. (2017). Internet gaming disorder in children. Pediatrics, 140(Supplement 2), S81-S85.
 tags: [屏幕时间, 电子游戏, 小学, 数字习惯, 自我管理, 游戏成瘾]
-related_prompts: [6-9-core-independent-reading-01, 6-9-core-friendship-skills-01, 6-9-core-sports-habits-01]
+related_prompts: [6-9-core-independent-reading-01, 6-9-core-friendship-skills-01, 6-9-physical-sports-habits-01]
 ---
 
 # 屏幕与电子游戏管理：从"我来管"到"你自己管"
