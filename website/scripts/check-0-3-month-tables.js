@@ -5,6 +5,8 @@ const path = require('path');
 
 const pagePath = path.resolve(__dirname, '../site/stages/family/parenting/0-3/index.html');
 const page = fs.readFileSync(pagePath, 'utf8');
+const quickStartPath = path.resolve(__dirname, '../site/stages/family/parenting/quick-start.html');
+const quickStart = fs.readFileSync(quickStartPath, 'utf8');
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -23,4 +25,12 @@ for (const label of ['产前准备与迎接新生儿', '新手父母心理调适
   assert(related.includes(label), `月龄相关内容应保留${label}入口`);
 }
 
-console.log('0–3 month table checks passed');
+assert(quickStart.includes('先处理安全问题'), '快速入口应先提供安全分流');
+assert(quickStart.includes('按孩子当前阶段进入'), '快速入口应按阶段导航，而不是按固定达标项导航');
+assert(quickStart.includes('/stages/family/parenting/0-3/日常护理/newborn-sleep-01.html'), '快速入口应链接到新生儿睡眠正文');
+assert(!quickStart.includes('按月龄速查'), '快速入口不应传播旧的月龄速查框架');
+for (const legacyPhrase of ['200-300 词', '自主意志', '符号思维', '共情萌芽', '400-161-9995']) {
+  assert(!quickStart.includes(legacyPhrase), `快速入口不应保留旧表述：${legacyPhrase}`);
+}
+
+console.log('0–3 entry checks passed');
