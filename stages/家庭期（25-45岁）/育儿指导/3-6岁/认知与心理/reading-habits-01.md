@@ -12,7 +12,7 @@ references:
   - Mol, S. E., & Bus, A. G. (2011). To read or not to read: A meta-analysis of print exposure. Psychological Bulletin, 137(2), 267-296.
   - Dickinson, D. K., & Tabors, P. O. (2001). Beginning Literacy with Language. Brookes Publishing.
 tags: [阅读, 绘本, 亲子阅读, 早期识字, 语言发展]
-related_prompts: [3-6-core-pre-literacy-math-01, 0-3-core-language-01]
+related_prompts: [3-6-core-pre-literacy-math-01, 0-3-core-early-reading-01]
 ---
 
 # 早期阅读习惯培养
