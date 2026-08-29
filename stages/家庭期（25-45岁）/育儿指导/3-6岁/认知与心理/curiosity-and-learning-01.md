@@ -11,6 +11,8 @@ references:
   - Vygotsky, L. S. (1978). Mind in Society.
   - Diamond, A. (2013). Executive functions. Annual Review of Psychology, 64, 135-168.
   - Whitehurst, G. J., & Lonigan, C. J. (1998). Child development and emergent literacy.
+  - Harvard Center on the Developing Child. Serve and Return.
+  - NAEYC. Developmentally Appropriate Practice.
 tags: [好奇心, 学习准备, 游戏, 提问, 执行功能, 前阅读]
 related_prompts: [3-6-core-executive-function-01, 3-6-core-attention-focus-01, 3-6-core-reading-habits-01, 3-6-core-pre-literacy-math-01]
 ---
