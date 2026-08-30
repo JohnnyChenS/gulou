@@ -19,6 +19,7 @@ route_next: ../04-data-systems/_index.md
 
 ## 核心单元
 
+- [Replicated Log：副本、提交与选主](replicated-log.md)：把本地日志、当前 ISR 的提交边界和故障后的选主资格分开建模。
 - 分布式时间、状态、故障模型、Partition、Sharding、Hash、Range、Consistent Hashing、Hot Partition、Data Skew 与 Rebalance。
 - Replication、Leader、Follower、Quorum、Failover、Split Brain、Fencing、Strong/Eventual/Read-after-write/Linearizable Consistency、CAP 与 PACELC。
 - Consensus、Raft、Paxos、Term、Log Replication、Leader Election、Logical Clock、Ordering 与因果关系。
