@@ -38,4 +38,4 @@ Linux、JVM、Netty、Kafka 和数据库存储引擎。
 
 ## 阅读顺序
 
-以阶段 0 的需求与容量假设为进入条件；完成单机观察和阶段挑战后进入 Network。
+以阶段 0 的需求与容量假设为进入条件；先阅读[Page Cache、写入确认与持久化边界](page-cache-and-durable-io.md)，建立单机写入、可见、落盘与恢复的术语边界；完成单机观察和阶段挑战后进入 Network。
