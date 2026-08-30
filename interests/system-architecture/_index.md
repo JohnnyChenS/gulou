@@ -53,3 +53,7 @@ review_status: draft
 ## 综合架构评审
 
 完成十个阶段后进入[综合项目入口](capstone/_index.md)，以最终架构、容量估算、SLO、故障模型、数据正确性、成本和演进路线证明判断能力。
+
+## 参与编写
+
+以下是作者材料，不是学习阶段：[作者规范](authoring-guide.md)与[第一批来源矩阵](references/source-matrix.md)。

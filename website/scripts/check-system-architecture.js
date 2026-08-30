@@ -60,6 +60,12 @@ if (rootIndex.fm.page_type !== 'route-index') fail('课程总入口必须是 rou
 if (rootIndex.fm.route_group !== ROUTE_GROUP) fail('课程总入口 route_group 不正确');
 if (rootIndex.fm.domain !== 'system-architecture') fail('课程总入口 domain 不正确');
 
+const requiredGuides = ['authoring-guide.md', 'references/source-matrix.md'];
+for (const rel of requiredGuides) {
+  readMarkdown(path.join(COURSE, rel));
+  if (!rootIndex.content.includes(`](${rel})`)) fail(`课程总入口未链接 ${rel}`);
+}
+
 PHASES.forEach(([dir, key, label], index) => {
   const rel = `${dir}/_index.md`;
   const page = readMarkdown(path.join(COURSE, rel));
