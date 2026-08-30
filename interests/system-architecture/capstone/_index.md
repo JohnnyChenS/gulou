@@ -6,7 +6,7 @@ track: interests
 domain: system-architecture
 description: AI 内容推荐平台的综合架构评审入口
 age_range: 18y+
-review_status: planned
+review_status: draft
 ---
 
 # 系统架构综合项目
