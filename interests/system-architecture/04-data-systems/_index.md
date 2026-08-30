@@ -23,6 +23,8 @@ route_next: ../05-data-architecture/_index.md
 - Compression、Compaction、Write Amplification、Vectorized Execution、Partition、Shard、Replica。
 - 倒排索引、全文检索与分布式存储。
 
+- [Write-Ahead Log：从提交确认到崩溃恢复](write-ahead-log.md)
+
 ## 组件映射
 
 MySQL、PostgreSQL、Redis、RocksDB、HBase、Cassandra、Lucene、Elasticsearch、ClickHouse 和 Doris；用于比较，不要求逐一部署和精通。
