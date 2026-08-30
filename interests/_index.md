@@ -10,6 +10,7 @@
 |---------|------|---------|------|
 | [语言学习](language/_index.md) | 母语发展（0-12 岁）+ 英语学习（入门→进阶→高阶） | 母语终身发展 + 英语 CEFR A1-C2 | draft |
 | [登山](mountaineering/_index.md) | 户外登山从入门到自主攀登 | 入门→进阶→高阶 | draft |
+| [系统架构与 AI 工程](system-architecture/_index.md) | 面向资深开发者，从底层系统思想走向数据、云原生、推荐与 AI 工程 | 原理→组件→生产→验证 | draft |
 | [兴趣发现与拓展](../paths/learning/questions/interest-discovery.md) | 跨年龄的试用、复盘与方向调整方法 | 观察→试用→深入或退出 | draft |
 | （待贡献） | | | |
 

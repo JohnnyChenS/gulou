@@ -11,6 +11,7 @@
     "check:0-3": "node scripts/check-0-3-month-tables.js",
     "check:3-6": "node scripts/check-3-6-entry.js",
     "check:path-migration": "node scripts/check-path-migration.js",
+    "check:system-architecture": "node scripts/check-system-architecture.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
