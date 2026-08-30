@@ -77,7 +77,7 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 - **环境：** 具有 Docker 的本机；仅使用本活动固定名称为 `gulou-wal-lab` 的 PostgreSQL 18 容器和主机端口 `55432`。开始前执行 `docker ps -a --filter 'name=^/gulou-wal-lab$'`；若已有同名容器，停止活动并先确认其归属，不要删除或复用它。
 - **步骤：**
 
-  1. 启动隔离实例：`docker run --name gulou-wal-lab --label gulou.wal-lab=true -e POSTGRES_PASSWORD=gulou-wal-lab-only -p 55432:5432 -d postgres:18`。等待 `docker logs gulou-wal-lab` 显示可接受连接后再继续。
+  1. 启动隔离实例：`docker run --name gulou-wal-lab --label gulou.wal-lab=true -e POSTGRES_PASSWORD=gulou-wal-lab-only -p 127.0.0.1:55432:5432 -d postgres:18`。固定端口只绑定本机 loopback；等待 `docker logs gulou-wal-lab` 显示可接受连接后再继续。
   2. 在容器内创建表并执行一个事务：
 
      ```bash
@@ -134,11 +134,11 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 **上下文：** 用户行为元数据可用于推荐特征、分析和重放；不同类别对最近数据丢失的容忍度不同。将 PostgreSQL WAL 的本地崩溃恢复误写成“已有备份和复制”会使产品的 RPO 承诺失真。
 
-**决策：** 对可由上游按幂等事件 ID 重放、且不直接触发不可撤销动作的普通点击/曝光元数据，选择 **RPO 为 30 秒**，采用 PostgreSQL 异步提交；成功响应只表示该事务已逻辑完成，不能表示已跨过 WAL 持久化边界。为这类数据记录提交策略、提交时间和上游事件 ID。对会影响用户可见状态、结算或不可撤销动作的元数据，RPO 为 0，使用 PostgreSQL 同步提交。WAL 只承担 PostgreSQL 本地 REDO 证据；备份/恢复、跨节点副本、领域事件与审计另立契约和验收。
+**决策：** 对可由上游按幂等事件 ID 重放、且不直接触发不可撤销动作的普通点击/曝光元数据，选择 **RPO 为 30 秒**，采用 PostgreSQL 18 异步提交。该目标的配置契约为 `wal_writer_delay <= 10s`：PostgreSQL 18 文档给出的异步提交最大风险窗口是 `3 × wal_writer_delay`，因此配置上限对应不超过 30 秒的该窗口。成功响应只表示该事务已逻辑完成，不能表示已跨过 WAL 持久化边界。为这类数据记录提交策略、提交时间、上游事件 ID、实际 `wal_writer_delay` 与计算出的 `3 × wal_writer_delay` 风险窗口；上线配置校验和配置漂移告警必须在 `wal_writer_delay > 10s` 时失败或告警，验收须确认此窗口不超过 30 秒且恢复演练能由上游补齐缺口。对会影响用户可见状态、结算或不可撤销动作的元数据，RPO 为 0，使用 PostgreSQL 同步提交；这个 RPO 只针对已定义的本地 PostgreSQL 崩溃模型。节点或可用区丢失仍须由已验证的复制与独立备份恢复契约覆盖，不能由本地同步提交承诺。WAL 只承担 PostgreSQL 本地 REDO 证据；备份/恢复、跨节点副本、领域事件与审计另立契约和验收。
 
 **后果：** 同步提交通常增加提交等待，但让该 PostgreSQL 提交成功与 WAL 刷新边界一致；异步提交可降低等待，却需要把实际 RPO、重放和补偿成本放进产品协议。checkpoint 参数只在恢复时间与写出 I/O 的整体评审中调整，不以单一指标决策。
 
-**验证与回滚：** 对每个数据类保存提交时间、提交策略、上游事件 ID、恢复结果、恢复耗时、WAL 生成速率和 checkpoint 频率；定期从独立备份执行恢复演练，并分别验证复制与事件/审计链路。若演练不能在声明的 RPO 内补齐数据、上游无法可靠重放，或成功响应被下游用作不可撤销依据，则停止异步提交策略，改用同步提交或降低该响应的承诺级别。
+**验证与回滚：** 对每个数据类保存提交时间、提交策略、上游事件 ID、实际 `wal_writer_delay`、`3 × wal_writer_delay` 风险窗口、恢复结果、恢复耗时、WAL 生成速率和 checkpoint 频率；定期从独立备份执行恢复演练，并分别验证复制与事件/审计链路。异步提交验收要求实际配置不大于 10 秒、计算窗口不大于 30 秒、配置漂移告警有效，且演练能在声明的 RPO 内补齐数据。任一条件不满足、上游无法可靠重放，或成功响应被下游用作不可撤销依据时，停止异步提交策略，改用同步提交或降低该响应的承诺级别。
 
 ## 权威来源与延伸阅读
 
