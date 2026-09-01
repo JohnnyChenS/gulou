@@ -95,17 +95,19 @@ Kubernetes 官方的 [Force Delete StatefulSet Pods](https://kubernetes.io/docs/
   3. 在旧实例已被 fenced 的前提下，画出下列时序，并在每一步旁写下所有者和它不能替代的下一步：
 
      ```text
-     t3 StatefulSet/调度器：创建 broker-0 replacement
-        -> t4 存储/CSI：将 data-broker-0 对应卷挂载给新 Pod
-        -> t5 应用进程：从本地日志、checkpoint 或副本同步执行恢复
-        -> t6 应用副本协议：核验 epoch/leader/日志前缀后接纳成员
-        -> t7 应用 + SRE：核对 D42、重放/副本和业务校验，再解除降级
+     t3 StatefulSet controller：按 desired state 创建 broker-0 的 Pod 对象
+        -> t4 scheduler：选择并绑定目标节点
+        -> t5 存储控制面 + 节点侧 CSI：按实际 driver/后端处理卷 attach/mount，并以事件核验
+        -> t6 目标节点 kubelet：在节点上启动 Pod 的 init/app 容器
+        -> t7 应用进程：从本地日志、checkpoint 或副本同步执行恢复
+        -> t8 应用副本协议：核验 epoch/leader/日志前缀后接纳成员
+        -> t9 应用 + SRE：核对 D42、重放/副本和业务校验，再解除降级
      ```
 
-  4. 分别让两名学习者扮演“只看到 t3 Pod 已创建的 SRE”和“拿到 t0–t7 证据的应用负责人”。前者只能声明控制面开始重建；后者才可判断是否满足恢复条件。最后删除时间线和全部模拟记录。
+  4. 分别让两名学习者扮演“只看到 t3 Pod 对象已创建的 SRE”和“拿到 t0–t9 证据的应用负责人”。前者只能声明控制器已创建对象，不能声称已调度、已挂卷、已启动、已恢复或已加入副本组；后者才可判断是否满足恢复条件。最后删除时间线和全部模拟记录。
 
-- **预期观察：** `Unknown` 本身不能在 A/B 假设之间裁决；fencing 在 Pod 重建之前。t3 到 t7 每一步都有不同所有者，且 PV 重挂载不替代应用日志/状态恢复，应用恢复也不替代副本组接纳和数据校验。
-- **成功条件：** 时间线明确画出“Pod 重建 → 卷重新挂载 → 应用日志恢复 → 重新加入副本组”，每步标出所有者；写出 `D42` 作为最后 durable point；对“旧实例仍运行”的分支明确写出不重建可写成员；RTO 至少分解到 t1、t2（fencing）、t3、t4、t5、t6、t7。
+- **预期观察：** `Unknown` 本身不能在 A/B 假设之间裁决；fencing 在 Pod 重建之前。t3 的 Pod 对象创建、t4 的调度绑定、t5 的卷 attach/mount、t6 的 kubelet 启动、t7 的应用日志/状态恢复、t8 的副本组接纳和 t9 的数据校验都有不同所有者；PV 重挂载不替代应用恢复，应用恢复也不替代副本组接纳和数据校验。
+- **成功条件：** 时间线明确画出“Pod 重建 → 卷重新挂载 → 应用日志恢复 → 重新加入副本组”，每步标出所有者；写出 `D42` 作为最后 durable point；对“旧实例仍运行”的分支明确写出不重建可写成员；RTO 至少分解到 t1、t2（fencing）、t3（controller）、t4（scheduler）、t5（CSI/存储）、t6（kubelet）、t7（应用恢复）、t8（副本组）、t9（数据验证）。
 - **清理方式：** 删除本活动创建的纸面/文本时间线和模拟 member/volume 记录。活动未创建集群、卷、Pod 或应用数据，因此不得运行任何删除命令。
 
 该活动只检验恢复所有权和证据链的推理，不能验证 Kubernetes/CSI 的真实 attach 时延、Kafka/Flink 的协议实现、物理断电、网络隔离可靠性或生产 RPO/RTO。
