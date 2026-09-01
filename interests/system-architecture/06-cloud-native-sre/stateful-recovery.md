@@ -90,7 +90,7 @@ Kubernetes 官方的 [Force Delete StatefulSet Pods](https://kubernetes.io/docs/
 - **环境：** 一张可删除的纸面/文本时间线；不连接 Kubernetes、Kafka、Flink、云卷或任何生产系统。设 `broker-0` 曾在 `node-a` 上运行，其 PVC 为 `data-broker-0`；设最后可证明的应用 durable point 为 `D42`。输入包括：Pod `Unknown`、节点隔离证据、PVC/PV 状态、应用 leader/epoch 记录和一个可验证数据校验结果。
 - **步骤：**
 
-  1. 画出 `t0` 到 `t8`，先在 `t1` 标记 `broker-0=Unknown`，并写下两条互斥假设：A“节点已死”、B“旧进程仍运行但与控制面失联”。在没有额外证据时，两条都保持为未决。
+  1. 画出 `t0` 到 `t9`，先在 `t1` 标记 `broker-0=Unknown`，并写下两条互斥假设：A“节点已死”、B“旧进程仍运行但与控制面失联”。在没有额外证据时，两条都保持为未决。
   2. 仅为假设 A 补入“基础设施负责人确认节点断电或完成网络隔离”的证据；为假设 B 写出结论“禁止重建可写成员”。再由应用负责人记录 `D42` 和旧 epoch，由存储负责人记录 PVC/PV 绑定及当前 attach 状态。
   3. 在旧实例已被 fenced 的前提下，画出下列时序，并在每一步旁写下所有者和它不能替代的下一步：
 
