@@ -79,12 +79,12 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 - **步骤：**
 
   1. 写下初始状态 `S0`，并在 A 上依次写 `A1, BA(n), A2, BA(n+1), A3`，在 B 上依次写 `B1, B2, BB(n), B3, BB(n+1)`。假设 `Join` 先收到 `BA(n)`，因此暂停 A 的 `A2` 及之后记录，继续处理 B 的 `B1, B2`，直到收到 `BB(n)`。
-  2. 在两个 `n` barrier 都到达的时刻，画出 checkpoint `n`：列出其 state 所包含的输入影响，并在图上标出 `A2`、`B3` 不属于该 checkpoint。解除 A 的暂停后，继续处理可处理的记录；对 `n+1` 重复同一规则。
-  3. 宣布“checkpoint `n` 已完成、`n+1` 尚未完成”，再宣布 TaskManager 故障。把 operator state 和两路 source position 都恢复到 `n`；从位置后的第一条记录重新列出会被 replay 的事件。
+  2. 在两个 `n` barrier 都到达的时刻，画出 checkpoint `n`：列出其 state 所包含的输入影响，并在图上标出 `A2`、`B3` 不属于该 checkpoint。解除 A 的暂停后，只继续到 `BA(n+1)` 到达；此时暂停 A 的 `A3`，但不要让 `BB(n+1)` 到达 `Join`。
+  3. 宣布“checkpoint `n` 已完成，只有 `BA(n+1)` 到达，`BB(n+1)` 仍留在故障后的 replay，因此 `n+1` 未完成”，并立即注入 TaskManager 故障。把 operator state 和两路 source position 都恢复到 `n`；从位置后的第一条记录重新列出会被 replay 的事件，判断未完成的 `n+1` 不能作为恢复点且其切面不包含哪些输入影响。
   4. 将每个逻辑输出写成 `(key, value)`。分别按两种 sink 规则计算恢复后的结果：规则 X 按 key 覆盖/去重（幂等）；规则 Y 每到一条都做 `counter += value`（非幂等）。
 
-- **预期观察：** `n` 的切面只包含两个 `n` barrier 之前已被该 operator 纳入的一致输入影响；`A2` 和 `B3` 以及其后的数据会在从 `n` 恢复后再出现。规则 X 的最终逻辑 key/value 与无故障运行一致；规则 Y 因 replay 对相同逻辑输出再次累加而可能不同。barrier 的先后到达说明 alignment 的必要性，不是某一输入的事件已永久消失。
-- **成功条件：** 时间线明确标出两个 barrier 的到达顺序、checkpoint `n` 包含/不包含的事件、恢复使用的 state 与两路位置，以及两种 sink 的最终结果差异；结论明确写出“端到端结果 exactly-once 还依赖 transactional 或幂等 sink”。
+- **预期观察：** `n` 的切面只包含两个 `n` barrier 之前已被该 operator 纳入的一致输入影响；`n+1` 仅收到 A 侧 barrier，B 侧 barrier 尚在故障后的 replay 中，因而没有可用的 `n+1` checkpoint。`A2`、`B3` 以及其后的数据会在从 `n` 恢复后再出现。规则 X 的最终逻辑 key/value 与无故障运行一致；规则 Y 因 replay 对相同逻辑输出再次累加而可能不同。barrier 的先后到达说明 alignment 的必要性，不是某一输入的事件已永久消失。
+- **成功条件：** 时间线明确标出两个 `n` barrier 和仅有 `BA(n+1)` 的到达顺序、checkpoint `n` 包含/不包含的事件、`n+1` 因缺少 `BB(n+1)` 而不可恢复的边界、恢复使用的 state 与两路位置，以及两种 sink 的最终结果差异；结论明确写出“端到端结果 exactly-once 还依赖 transactional 或幂等 sink”。
 - **清理方式：** 删除本活动创建的时间线、示例 state、示例 key 和 counter；未创建外部 topic、checkpoint 或 sink 资源，因此无需清理共享系统。
 
 该活动验证的是一致切面、alignment 和 replay 与 sink 语义之间的推理关系；它不测量 Flink 的吞吐、Kafka 的真实 offset 提交、外部存储事务、网络分区或生产恢复时间。
