@@ -23,6 +23,10 @@ route_next: ../07-ml-systems/_index.md
 - Logs、Metrics、Tracing、OpenTelemetry、Prometheus、Grafana、RED、USE、SLI、SLO、SLA、Error Budget。
 - RPO、RTO、备份、恢复演练、容量规划、自动扩缩容、资源隔离、灰度发布、回滚、混沌工程、事故响应、复盘与云资源成本。
 
+### 正式单元
+
+- [有状态服务恢复：编排、数据与一致性的边界](stateful-recovery.md)：把控制器重建、稳定身份、PV/PVC、fencing 与应用级恢复分层；以节点失联和强制删除风险训练恢复证据链。
+
 ## 组件映射
 
 Kubernetes、OpenTelemetry、Prometheus、Grafana，以及控制面、工作负载、服务和发布相关组件。
