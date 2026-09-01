@@ -52,7 +52,7 @@ review_status: draft
 
 ## 综合架构评审
 
-完成十个阶段后进入[综合项目入口](capstone/_index.md)，以最终架构、容量估算、SLO、故障模型、数据正确性、成本和演进路线证明判断能力。
+先完成[日志、状态与恢复纵向切片综合评审](capstone/log-state-recovery-review.md)，并使用[真实学习者验证协议](capstone/validation-protocol.md)记录逐页耗时、实验证据与独立评审结果。后续完成十个阶段后进入[综合项目入口](capstone/_index.md)，以最终架构、容量估算、SLO、故障模型、数据正确性、成本和演进路线证明判断能力。
 
 ## 参与编写
 

@@ -11,6 +11,13 @@ review_status: draft
 
 # 系统架构综合项目
 
+## 第一批纵向切片
+
+- [日志、状态与恢复纵向切片综合评审](log-state-recovery-review.md)
+- [真实学习者验证协议](validation-protocol.md)
+
+第一批只验证 Page Cache、PostgreSQL WAL、Kafka replicated log、Flink checkpoint/replay 与 Kubernetes stateful recovery 的贯通能力；模型、Prompt 和索引仅以版本字段进入 replay/rollback，不在本批新增后续阶段正式正文。
+
 ## 系统边界
 
 以 AI 内容推荐平台为验证载体，明确用户、内容、事件、训练、在线服务、运营与外部依赖的边界；项目不规定唯一技术栈。

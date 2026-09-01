@@ -164,6 +164,8 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 ## 在综合项目中的应用
 
+[进入日志、状态与恢复纵向切片综合评审](../capstone/log-state-recovery-review.md)，把 Kafka 的 partition 提交与本地 WAL、Flink replay 和 Kubernetes fencing 放进同一故障时间线。
+
 ### ADR：支付通知事件的确认契约与故障降级
 
 **状态：** 建议采用，须经实际 Kafka 4.2 版本、topic 有效配置、replica placement 与故障演练核验后生效。

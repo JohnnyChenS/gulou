@@ -110,6 +110,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 
 ## 在综合项目中的应用
 
+[进入日志、状态与恢复纵向切片综合评审](../capstone/log-state-recovery-review.md)，把 Flink 的一致切面与 Kafka source、幂等 sink、容量追赶和 Kubernetes 恢复串联。
+
 ### ADR：推荐特征流水线的恢复窗口与 sink 幂等策略
 
 **状态：** 建议采用；仅在目标 Apache Flink 2.3.0、Kafka 保留策略、checkpoint storage 可读性和 feature sink 幂等行为均已演练验证后生效。

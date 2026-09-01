@@ -8,6 +8,14 @@ const ROOT = path.resolve(__dirname, '../..');
 const COURSE = path.join(ROOT, 'interests/system-architecture');
 const ROUTE_GROUP = 'system-architecture-core';
 const NON_UNIT_FILES = new Set(['validation-protocol.md']);
+const REQUIRED_SLICE = [
+  '01-computer-systems/page-cache-and-durable-io.md',
+  '03-distributed-systems/replicated-log.md',
+  '04-data-systems/write-ahead-log.md',
+  '05-data-architecture/checkpoint-and-replay.md',
+  '06-cloud-native-sre/stateful-recovery.md',
+  'capstone/log-state-recovery-review.md',
+];
 const PHASES = [
   ['00-architecture-method', 'architecture-method', '架构方法与基线诊断'],
   ['01-computer-systems', 'computer-systems', 'Computer Systems'],
@@ -56,6 +64,8 @@ function collectFormalUnits(dir, results = []) {
 }
 
 const rootIndex = readMarkdown(path.join(COURSE, '_index.md'));
+for (const rel of REQUIRED_SLICE) readMarkdown(path.join(COURSE, rel));
+readMarkdown(path.join(COURSE, 'capstone/validation-protocol.md'));
 if (rootIndex.fm.page_type !== 'route-index') fail('课程总入口必须是 route-index');
 if (rootIndex.fm.route_group !== ROUTE_GROUP) fail('课程总入口 route_group 不正确');
 if (rootIndex.fm.domain !== 'system-architecture') fail('课程总入口 domain 不正确');

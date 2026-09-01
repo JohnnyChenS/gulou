@@ -133,6 +133,8 @@ Kubernetes 官方的 [Force Delete StatefulSet Pods](https://kubernetes.io/docs/
 
 ## 在综合项目中的应用
 
+[进入日志、状态与恢复纵向切片综合评审](../capstone/log-state-recovery-review.md)，把 Kubernetes 编排、fencing、应用日志恢复和端到端数据校验放进同一 runbook。
+
 ### ADR：状态服务的恢复边界与演练准入
 
 **状态：** 建议采用；仅在目标 Kubernetes 版本、存储后端、应用版本和隔离/fencing 机制均经演练验证后生效。

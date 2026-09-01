@@ -160,6 +160,8 @@ try {
 
 ## 在综合项目中的应用
 
+[进入日志、状态与恢复纵向切片综合评审](../capstone/log-state-recovery-review.md)，将本地写入确认边界与 WAL、replicated log、checkpoint/replay 及有状态服务恢复串联。
+
 ### ADR：推荐事件接入层的本地确认与恢复窗口
 
 **状态：** 建议采用，待以目标部署环境压测和恢复演练验证。

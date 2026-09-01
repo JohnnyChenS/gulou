@@ -128,6 +128,8 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 ## 在综合项目中的应用
 
+[进入日志、状态与恢复纵向切片综合评审](../capstone/log-state-recovery-review.md)，把 PostgreSQL WAL 的本地 REDO 边界与副本提交、流处理 replay 和编排恢复串联。
+
 ### ADR：推荐平台用户行为元数据的 RPO 与提交策略
 
 **状态：** 建议采用，须经目标部署环境的恢复演练和业务所有者确认后生效。
