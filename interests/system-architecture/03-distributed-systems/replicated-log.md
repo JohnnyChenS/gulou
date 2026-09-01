@@ -36,11 +36,11 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 **顺序不是全局顺序，而是一个日志实例的顺序。** Replicated log 为某个状态序列建立单调位置：leader 决定追加次序，follower 复制该顺序。Kafka 4.2 把 topic 划为全序的 partition；因此顺序、leader、ISR 和确认均须以 `topic-partition` 为单位讨论，不能把“topic 有三副本”误作一个跨所有 partition 的单一日志。[Kafka 4.2 Design](../references/source-matrix.md)将 partition 描述为 replicated log。
 
-**复制进度必须进入模型。** 对某条记录 `r`，仅知道 `B1` 的本地日志含有 `r`，只说明 B1 的本地进度；它没有说明 B2、B3 是否也含有 `r`。设 `R(r)` 是已应用 `r` 的副本集合，`E` 是故障后允许参加选主的集合。可靠的提交规则必须使 `R(r)` 与任何可能赢得选主的 `E` 有受约束的重叠；否则旧 leader 可以确认 `r`，新 leader 却从一个不含 `r` 的日志继续。
+**复制进度必须进入模型。** 对某条记录 `r`，仅知道 `B1` 的本地日志含有 `r`，只说明 B1 的本地进度；它没有说明 B2、B3 是否也含有 `r`。设 `R(r)` 是已应用 `r` 的副本集合，`E` 是故障后参与一次选主判断的副本集合。`R(r)` 与 `E` 相交只提供让已提交前缀被选主过程看见的必要保留机会；若选主仍允许一个缺少该前缀的候选者获胜，相交本身不能阻止记录消失。可靠规则还必须比较日志进度并拒绝缺少已提交前缀、日志不够新的候选者，或施加等价的 committed-prefix 约束。
 
 **commit point 是协议点，不是某台机器上的写入点。** 本地 WAL、Page Cache 或一次 `fsync` 可以给一个 broker 的崩溃恢复提供证据，却不能自行建立多个节点的共同前缀。在 replicated log 中，提交点应同时回答：哪些副本已纳入确认、这些副本的进度如何被判定、leader 故障时谁能接任，以及接任者为何包含已确认前缀。只要其中任何一项没写进契约，“已提交”就是模糊词。
 
-**quorum overlap 是一种性质，不是一句口号。** 固定多数派的常见思路是使提交集合与选主比较集合相交：在 `2f+1` 副本中，至少收 `f+1` 个确认并从至少 `f+1` 个副本比较最新日志，可使它们共享一个含已提交记录的副本。Kafka 4.2 的 partition replication 采用不同机制：动态维护已追上 leader 的 ISR；当前 ISR 的成员才有资格成为 leader，提交等待当前 ISR 的全部副本。这是 ISR 规则，不应简写为“Kafka partition replication 就是 Raft”。相同的目标是 leader 完整性：客户被告知已提交的记录不能在可接受的新 leader 上消失；实现该目标的集合、进度判定和成员变化规则则不同。
+**quorum overlap 是必要保留条件，不单独推出 leader completeness。** 在一种泛化的固定多数派模型里，`2f+1` 个副本中的提交集合和选主比较集合若都至少含 `f+1` 个成员，两集合必相交；这只保证选主比较集合里至少有成员见过已提交前缀。要推出新 leader 保留该前缀，选主规则还必须利用这份证据，拒绝缺少已提交前缀或日志不够新的候选者，并对成员变化施加不会绕开此前提交集合的约束；否则一个同样位于比较集合、但日志陈旧的候选者仍可能获胜。这里讨论的是 replicated log 的泛化审查模型，不是 Kafka partition 的具体共识实现。Kafka 4.2 的 partition replication 采用动态 ISR：当前 ISR 的成员才有资格成为 leader，提交等待当前 ISR 的全部副本；不得把前述固定多数派规则套成“Kafka partition replication 就是 Raft”。二者都要审查 leader completeness，证明链却必须分别来自各自的复制进度、提交、成员变化和选主规则。
 
 **leader 完整性也需要拒绝陈旧领导者。** 故障检测可能误判，网络恢复后旧 leader 可能仍认为自己可写。**fencing** 是通用设计要求：领导权应带可单调推进的世代或等价权威，接收写入的一方只接受当前权威，阻止过期 leader 继续形成冲突历史。本单元用它来审查“选主后谁还能写”的必要条件；不把它替代为对 Kafka 4.2 任一未在来源中列明的具体协议字段的断言。
 
@@ -76,32 +76,41 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 采用 `acks=all, min.insync.replicas=2`，初始 assignments 为 `B1/B2/B3`，leader=`B1`。
 
-1. **B3 落后：** `B3` 不再满足 ISR 进度条件，当前 ISR 缩为 `{B1,B2}`。新写入仍可用，因为 ISR 大小为 2；`E-42` 的成功表示 B1、B2 都在当前 ISR 中确认它，不表示 B3 有它。
-2. **B1 在成功响应后故障：** `B2` 是仍在 ISR 的候选者，接任后含有 `E-42`。这里的结论来自“确认集合 `{B1,B2}` 与可选 leader 集合的受控重叠”，而非 B1 曾经本地落盘或 topic 有 RF=3。
+1. **B3 落后但仍可达：** `B3` 不再满足 ISR 进度条件，当前 ISR 缩为 `{B1,B2}`。新写入仍可用，因为 ISR 大小为 2；`E-42` 的成功表示 B1、B2 都在当前 ISR 中确认它，不表示 B3 有它。这里保留 B3 的可达条件，后续才可能讨论把它作为非 ISR 候选的不干净选主；若 B3 已故障不可达，则不存在该候选路径。
+2. **B1 在成功响应后故障：** `B2` 是仍在 ISR 的候选者，接任后含有 `E-42`。这里的结论同时依赖 `E-42` 已由当前 ISR `{B1,B2}` 全部确认，以及 Kafka 的 clean election 将可选 leader 限于 ISR；不能只用两个集合“有重叠”代替复制进度和选主资格，也不能从 B1 曾经本地落盘或 topic 有 RF=3 推出。
 3. **B2 在完成接任前也不可用：** 此时 B3 是已分配却非 ISR 的副本。默认不干净选主关闭时，partition 不可写，等待具备前缀的副本恢复；这牺牲可用性以避免让 B3 的缺失前缀成为真相。若明确启用 unclean election 并由 B3 接任，则 `E-42` 存在潜在丢失窗口，不能再宣称它一定在新 leader 上。
 
 这个模拟的判定只覆盖给定的 ISR、确认和选主条件；它没有证明 B1/B2 的介质对断电、机架级同时丢失或区域灾难的耐久性，也没有证明 producer 没有在网络错误后重试造成业务重复。
 
 ### 三 broker × `acks` × `min.insync.replicas` × follower 状态故障矩阵
 
-固定 assignment 为 `B1` leader、`B2/B3` follower、RF=3。状态 A 的 ISR 是 `{B1,B2,B3}`；状态 B 中 B3 落后或故障而 ISR 为 `{B1,B2}`。每一格均假设写入后 B1 立刻故障，并回答该格的**写入可用性 / 成功确认含义 / 潜在丢失窗口**。`min.insync.replicas` 仅影响 `acks=all` 的写入闸门；表中对其他 `acks` 保留该事实，而不伪造其保护作用。此矩阵假设未启用 ELR：Kafka 4.2 官方配置页说明，启用 Eligible Leader Replicas 时 `min.insync.replicas` 的语义会变化，必须另按该功能的官方文档和实际配置复核。
+固定 assignment 为 `B1` leader、`B2/B3` follower、RF=3。状态 A 的 ISR 是 `{B1,B2,B3}`；状态 B-r 中 `B3` 落后但可达、已离开 ISR；状态 B-d 中 `B3` 已故障、不可达，后二者的 ISR 都是 `{B1,B2}`，但 unclean 候选不同。每一格均假设该次发送之后 B1 立刻故障，并回答**准入或失败阶段 / producer 是否收到 broker 成功 ack、消息能否已局部写入 / B1 故障后的候选与窗口**。表中“成功 ack”特指 broker 对该次 produce 的成功响应；`acks=0` 根本不等待这种 ack。Kafka 4.2 官方配置页列出 `NotEnoughReplicas` 与 `NotEnoughReplicasAfterAppend`：本表用前者标记 append 前已发现 ISR 不足，用后者标记准入后、append 后才发现条件不足。后者意味着消息可能已在 leader 或部分副本的 log 中，producer 没有成功 ack 也不能据此断言消息最终不存在；超时、重试和重复仍须靠幂等与结果核验处理。
 
-| follower 状态（B1/B2/B3） | `acks` | `min.insync.replicas` | 写入可用性 | 成功确认语义 | B1 随后故障的潜在丢失窗口 |
+| follower 状态（B1/B2/B3） | `acks` | `min.insync.replicas` | 写入可用性与失败阶段 | producer ack / 局部写入 | B1 随后故障：可选 leader 集合与潜在窗口 |
 |---|---:|---:|---|---|---|
-| A：B2、B3 均在 ISR，ISR=3 | 0 | 1 | 客户端不等待 broker；调用可立即返回。 | 只表示客户端视为已发送；未知 B1 是否收到。 | 记录可在到达 B1 前丢失；即使 B2/B3 正常，也不能从该调用结果断言记录存在。 |
-| A：B2、B3 均在 ISR，ISR=3 | 0 | 2 | 同左；此设置不把 `acks=0` 变为 ISR 确认。 | 同左。 | 同左；`min.insync.replicas=2` 不覆盖无确认发送。 |
-| A：B2、B3 均在 ISR，ISR=3 | 1 | 1 | B1 可写时可确认。 | B1 已写本地 log；未等待 B2/B3。 | B1 在 follower 复制前故障时，成功记录可能不在新 leader。 |
-| A：B2、B3 均在 ISR，ISR=3 | 1 | 2 | B1 可写时可确认；该下限不升级 `acks=1`。 | 同上。 | 同上；不可把该配置当作两副本确认。 |
-| A：B2、B3 均在 ISR，ISR=3 | all | 1 | 可写，且当前三个 ISR 都能确认。 | B1、B2、B3 都确认；并非仅等 1 个。 | 在给定的 B1 单点故障后，B2/B3 仍有该记录并可作为 ISR leader；若后续所有 ISR 副本都不再存活，保证条件失效。 |
-| A：B2、B3 均在 ISR，ISR=3 | all | 2 | 可写，且仍等待当前三个 ISR。 | B1、B2、B3 都确认；下限 2 是准入闸门。 | 对 B1 单点故障同左；该格不承诺任意两 broker 同时故障或跨故障域存活。 |
-| B：B2 在 ISR，B3 落后/故障，ISR=2 | 0 | 1 | 客户端不等待 broker；调用可立即返回。 | 只表示客户端视为已发送。 | B1 接收前或复制给 B2 前均可能丢失；B3 的 assignment 不提供确认证据。 |
-| B：B2 在 ISR，B3 落后/故障，ISR=2 | 0 | 2 | 同左；下限不约束 `acks=0` 的返回。 | 同左。 | 同左。 |
-| B：B2 在 ISR，B3 落后/故障，ISR=2 | 1 | 1 | B1 可写时可确认。 | B1 本地 log 已写；未等 B2。 | B1 在 B2 复制前故障时，成功记录可能丢失；B3 不是可用于此推断的 ISR 副本。 |
-| B：B2 在 ISR，B3 落后/故障，ISR=2 | 1 | 2 | B1 可写时可确认；下限不约束 `acks=1`。 | 同上。 | 同上。 |
-| B：B2 在 ISR，B3 落后/故障，ISR=2 | all | 1 | 可写；等待当前两个 ISR 的全部确认。 | B1 与 B2 确认；不等待 B3。 | B1 故障后 B2 可接任且含记录。若 B2 随后也失去，B3 作为非 ISR 接任仅在显式 unclean 选择下可能发生，记录可丢。 |
-| B：B2 在 ISR，B3 落后/故障，ISR=2 | all | 2 | 可写；ISR 恰好达到下限，等待 B1 与 B2。 | B1 与 B2 确认；这是该矩阵中关闭单副本 `acks=all` 窗口的设置。 | B1 故障后 B2 含记录并可接任；若 B2 在接任前也失效，默认保持不可用，unclean 接任则记录可能丢。 |
+| A：B2、B3 均在 ISR，ISR=3 | 0 | 1 | 客户端不等待 broker；发送调用可立即返回。 | 无 broker 成功 ack；未知 B1 是否收到或局部写入。 | clean 候选 `{B2,B3}`；记录可在到达 B1 前丢失，不能从调用结果断言任一候选含有它。 |
+| A：B2、B3 均在 ISR，ISR=3 | 0 | 2 | 同左；下限不约束 `acks=0`。 | 无 broker 成功 ack；可能尚未写入，也可能已在部分副本。 | clean 候选 `{B2,B3}`；`min.insync.replicas=2` 不提供该发送的副本保证证据。 |
+| A：B2、B3 均在 ISR，ISR=3 | 1 | 1 | B1 可写时可确认。 | 收到成功 ack 表示 B1 已写本地 log；未等待 B2/B3。 | clean 候选 `{B2,B3}`；若两者尚未复制，成功记录可能不在新 leader。 |
+| A：B2、B3 均在 ISR，ISR=3 | 1 | 2 | B1 可写时可确认；下限不升级 `acks=1`。 | 收到成功 ack 仍只证明 B1 已写；消息可能尚未到 follower。 | clean 候选 `{B2,B3}`；不可把该配置当作两副本确认。 |
+| A：B2、B3 均在 ISR，ISR=3 | all | 1 | 可写；等待当前三个 ISR。 | 成功 ack 表示 B1、B2、B3 均确认，并非只等 1 个。 | clean 候选 `{B2,B3}`，两者均含记录；后续所有 ISR 都失效时保证条件不再成立。 |
+| A：B2、B3 均在 ISR，ISR=3 | all | 2 | 可写；仍等待当前三个 ISR。 | 成功 ack 表示 B1、B2、B3 均确认；下限 2 只是准入闸门。 | clean 候选 `{B2,B3}`，两者均含记录；不承诺共同故障域或未列明的后续故障。 |
+| B-r：B2 在 ISR；B3 落后但可达、已离开 ISR；ISR=2 | 0 | 1 | 客户端不等待 broker；发送调用可立即返回。 | 无 broker 成功 ack；未知是否已有局部写入。 | clean 候选 `{B2}`；若 B2 随后也不可用，unclean 候选 `{B3}`，但它不保证含记录。 |
+| B-r：B2 在 ISR；B3 落后但可达、已离开 ISR；ISR=2 | 0 | 2 | 同左；下限不约束 `acks=0`。 | 无 broker 成功 ack；可能尚未写入，也可能已在部分副本。 | clean 候选 `{B2}`；之后只有显式 unclean 才可选 `{B3}`，仍无记录保证。 |
+| B-r：B2 在 ISR；B3 落后但可达、已离开 ISR；ISR=2 | 1 | 1 | B1 可写时可确认。 | 成功 ack 只表示 B1 已写；未等 B2，B3 也不是确认证据。 | clean 候选 `{B2}`，它可能尚无记录；若 B2 再失效，unclean 候选 `{B3}` 同样可能缺记录。 |
+| B-r：B2 在 ISR；B3 落后但可达、已离开 ISR；ISR=2 | 1 | 2 | B1 可写时可确认；下限不约束 `acks=1`。 | 成功 ack 仍只证明 B1 的局部写入。 | clean 候选 `{B2}`；B2 再失效时 unclean 候选 `{B3}`，不可把下限当两副本确认。 |
+| B-r：B2 在 ISR；B3 落后但可达、已离开 ISR；ISR=2 | all | 1 | 可写；等待当前 ISR `{B1,B2}`。 | 成功 ack 表示 B1、B2 都确认；不等待 B3。 | clean 候选 `{B2}` 且含记录；若 B2 再失效，unclean 候选 `{B3}` 可能缺记录。 |
+| B-r：B2 在 ISR；B3 落后但可达、已离开 ISR；ISR=2 | all | 2 | 可写；ISR 恰好达到下限，等待 B1、B2。 | 成功 ack 表示 B1、B2 都确认。 | clean 候选 `{B2}` 且含记录；若 B2 再失效，默认停用，显式 unclean 才可选可能缺记录的 `{B3}`。 |
+| **B-r 边界：ISR=2，min ISR=3** | all | 3 | append 前已知 ISR 不足，拒写并报告 `NotEnoughReplicas`。 | producer 不收到成功 ack；该次请求未获准 append，不能用失败概括其他重试的最终状态。 | B1 故障后的 clean 候选 `{B2}`；若 B2 再失效，unclean 候选 `{B3}`，但本次无成功记录可承诺。 |
+| B-d：B2 在 ISR；B3 已故障、不可达；ISR=2 | 0 | 1 | 客户端不等待 broker；发送调用可立即返回。 | 无 broker 成功 ack；未知是否已有局部写入。 | clean 候选 `{B2}`；B3 不可达，unclean 候选集合为空，B2 再失效后无 leader 路径。 |
+| B-d：B2 在 ISR；B3 已故障、不可达；ISR=2 | 0 | 2 | 同左；下限不约束 `acks=0`。 | 无 broker 成功 ack；可能尚未写入，也可能已在部分副本。 | clean 候选 `{B2}`；B3 不可达，unclean 候选集合为空。 |
+| B-d：B2 在 ISR；B3 已故障、不可达；ISR=2 | 1 | 1 | B1 可写时可确认。 | 成功 ack 只表示 B1 已写；未等待 B2。 | clean 候选 `{B2}`，它可能尚无记录；B3 不可达，没有 unclean 接任路径。 |
+| B-d：B2 在 ISR；B3 已故障、不可达；ISR=2 | 1 | 2 | B1 可写时可确认；下限不约束 `acks=1`。 | 成功 ack 仍只证明 B1 的局部写入。 | clean 候选 `{B2}`；B3 不可达，不能以开启 unclean election 恢复可用性。 |
+| B-d：B2 在 ISR；B3 已故障、不可达；ISR=2 | all | 1 | 可写；等待当前 ISR `{B1,B2}`。 | 成功 ack 表示 B1、B2 都确认。 | clean 候选 `{B2}` 且含记录；B3 不可达，unclean 候选集合为空。 |
+| B-d：B2 在 ISR；B3 已故障、不可达；ISR=2 | all | 2 | 可写；ISR 恰好达到下限，等待 B1、B2。 | 成功 ack 表示 B1、B2 都确认。 | clean 候选 `{B2}` 且含记录；若 B2 再失效则无可达候选，unclean election 也不能产生 leader。 |
+| **B-d 边界：ISR=2，min ISR=3** | all | 3 | append 前已知 ISR 不足，拒写并报告 `NotEnoughReplicas`。 | producer 不收到成功 ack；该次请求未获准 append，客户端失败仍不总结其他尝试的最终状态。 | B1 故障后的 clean 候选 `{B2}`；B3 不可达，unclean 候选集合为空。 |
+| **C 动态边界：append 开始时 ISR=3/min ISR=3；随后 B3 落后但可达并离开 ISR，ISR=2** | all | 3 | 准入时满足下限；append 后副本条件不足时报告 `NotEnoughReplicasAfterAppend`。 | producer 不收到成功 ack；B1 或部分副本可能已经局部写入，不能把错误/超时当作消息必然不存在。 | B1 故障后的 clean 候选 `{B2}`，但不能仅凭 producer 结果断言 B2 含记录；B2 再失效时 unclean 候选 `{B3}`。 |
 
-**如何读表。** A/B 状态的差异说明 assignment 数量不是确认集合的数量；`acks=all` 的差异说明下限不等于实际等待数量；最后一列说明“写入成功”无法脱离紧接着的选主和第二次故障。观察时必须记录实际 `acks`、topic override 与 broker 默认的有效 `min.insync.replicas`、leader/ISR 变化时间、producer 成功或失败时间，以及 unclean election 的有效配置。仅查看 RF、topic 名或一次 send 成功不足以复盘。
+**如何读表。** A、B-r、B-d 的差异说明 assignment、ISR、可达集合和 unclean 候选不是同一集合；两个边界格与动态格把 append 前拒绝和 append 后失败分开。`acks=all` 的下限不等于实际等待数量，`acks=0/1` 也不被该下限升级。观察时必须记录实际 `acks`、topic override 与 broker 默认的有效 `min.insync.replicas`、请求及 append 阶段、leader/ISR/可达性变化时间、producer 成功、错误或超时时间，以及 unclean election 的有效配置。producer 未获成功 ack 是重试与核验信号，不是消息最终不存在的证明；仅查看 RF、topic 名或一次 send 结果不足以复盘。
 
 ## 第四层：动手验证与架构判断
 
@@ -119,7 +128,7 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 - **成功条件：** 记录了 B3 移出 ISR 的证据、`E-42` 的成功响应及 offset、B1 故障后的新 leader 与对 `E-42` 的读取证据；实验结束后所有专用 topic、group、故障注入和实验资源均已清理或按团队实验规范恢复。
 - **清理方式：** 仅删除在开始时列明且确认归属本活动的专用 topic/group；撤销活动专用的网络隔离或 replication 限流；恢复 B1/B2/B3 到实验基线。不得删除共享 topic、broker 数据目录、controller metadata 或任何生产资源。
 
-该活动验证的是“当前 ISR 的确认与可选新 leader 的重叠”这一可观察假设；它不模拟机架/可用区毁损、磁盘掉电、KRaft controller 多数派失效、跨集群恢复或真实业务 exactly-once。
+该活动验证的是“当前 ISR 已确认该记录，且 clean election 只从含该前缀的 ISR 选出新 leader”这一组合假设；集合相交只是保留证据的机会，不能替代复制进度和选主资格。它不模拟机架/可用区毁损、磁盘掉电、KRaft controller 多数派失效、跨集群恢复或真实业务 exactly-once。
 
 ### 架构评审活动：修正一份看似乐观的 AI 建议
 
@@ -150,7 +159,7 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 1. **解释：** 为什么“B1 的本地 WAL 已同步”不能证明 `E-42` 会在 B1 故障后的新 leader 上？用复制进度、提交集合、leader 完整性和 fencing 各说明一个不可省略的条件。
 2. **应用：** 某 RF=3 partition 当前 ISR 为 `{B1,B2}`，B3 落后。业务无法接受单副本成功后丢失，但可以接受 ISR 少于 2 时暂停写入。请给出 `acks`、`min.insync.replicas`、unclean election 的选择，说明 B1 故障及 B1/B2 都不可用时的预期行为和所需观测证据。
-3. **迁移：** 将“提交集合必须与可选新 leader 集合产生受控重叠”的模型迁移到固定多数派 replicated log。指出与 Kafka ISR 的两项不同，并解释为何不能只凭“它们都叫 quorum”断言协议相同。
+3. **迁移：** 将“提交集合与选主比较集合相交只提供保留机会，选主还须拒绝缺少已提交前缀或日志不够新的候选者”的模型迁移到固定多数派 replicated log。指出与 Kafka ISR 的两项不同，并解释为何不能只凭“它们都叫 quorum”断言协议相同。
 4. **不使用：** 某审计命令要求跨可用区灾难恢复、长期可验证留存且不得接受未知提交结果。何时不应只依赖单个 Kafka partition 的 `acks=all`？提出跨集群/备份、幂等/审计和故障域验证的替代或补充方案，并说明各自解决的边界。
 
 ## 在综合项目中的应用
@@ -174,4 +183,5 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 - [Apache Kafka 4.2 Design：Availability and Durability Guarantees](https://kafka.apache.org/42/design/design/#availability-and-durability-guarantees)（组件版本：Apache Kafka 4.2；官方页面；访问日期：2026-08-30）
 - [Apache Kafka 4.2 Producer Configs：`acks`](https://kafka.apache.org/42/configuration/producer-configs/#acks)（组件版本：Apache Kafka 4.2；官方页面；访问日期：2026-08-30）
 - [Apache Kafka 4.2 Topic Configs：`min.insync.replicas` 与 `unclean.leader.election.enable`](https://kafka.apache.org/42/configuration/topic-configs/)（组件版本：Apache Kafka 4.2；官方页面；访问日期：2026-08-30）
+- [Apache Kafka 4.2 Javadoc：`NotEnoughReplicasAfterAppendException`](https://kafka.apache.org/42/javadoc/org/apache/kafka/common/errors/NotEnoughReplicasAfterAppendException.html)（组件版本：Apache Kafka 4.2.0；官方页面；访问日期：2026-09-01）
 - [Apache Kafka 4.2 KRaft：Controllers](https://kafka.apache.org/42/operations/kraft/#controllers)（组件版本：Apache Kafka 4.2；官方页面；访问日期：2026-08-30）
