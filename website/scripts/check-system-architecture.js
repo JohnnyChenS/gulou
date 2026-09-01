@@ -41,6 +41,29 @@ const REQUIRED_HEADINGS = [
   '## 在综合项目中的应用',
   '## 权威来源与延伸阅读',
 ];
+const REQUIRED_FORMAL_UNIT_FIELDS = [
+  'id',
+  'stage',
+  'track',
+  'domain',
+  'topic',
+  'age_range',
+  'difficulty',
+  'review_status',
+  'references',
+  'tags',
+  'learning_paths',
+  'related_prompts',
+];
+const REQUIRED_PROTOCOL_HEADINGS = [
+  '## 验证批次',
+  '## 逐页耗时、术语与活动证据',
+  '## 四层有效性',
+  '## 综合评审独立完成记录',
+  '## AI 评审缺陷记录',
+  '## 内容调整建议',
+  '## 验证结论',
+];
 
 function fail(message) {
   throw new Error(message);
@@ -63,9 +86,63 @@ function collectFormalUnits(dir, results = []) {
   return results;
 }
 
+function escapeRegex(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function validateHeadingsInOrder(content, headings, rel) {
+  let previousIndex = -1;
+  for (const heading of headings) {
+    const match = new RegExp(`^${escapeRegex(heading)}\\s*$`, 'gm').exec(content);
+    if (!match) fail(`${rel}: 缺少 ${heading}`);
+    if (match.index <= previousIndex) fail(`${rel}: 标题顺序错误：${heading}`);
+    previousIndex = match.index;
+  }
+}
+
+function validateStringField(fm, field, rel) {
+  if (typeof fm[field] !== 'string' || !fm[field].trim()) {
+    fail(`${rel}: ${field} 必须是非空字符串`);
+  }
+}
+
+function validateStringArrayField(fm, field, rel) {
+  if (!Array.isArray(fm[field]) || !fm[field].every(item => typeof item === 'string' && item.trim())) {
+    fail(`${rel}: ${field} 必须是字符串数组`);
+  }
+}
+
+function validateFormalUnitFrontmatter(fm, rel) {
+  for (const field of REQUIRED_FORMAL_UNIT_FIELDS) {
+    if (!Object.hasOwn(fm, field)) fail(`${rel}: 缺少 frontmatter 字段 ${field}`);
+  }
+  for (const field of ['id', 'stage', 'track', 'domain', 'topic', 'age_range', 'difficulty', 'review_status']) {
+    validateStringField(fm, field, rel);
+  }
+  for (const field of ['references', 'tags', 'learning_paths', 'related_prompts']) {
+    validateStringArrayField(fm, field, rel);
+  }
+}
+
+function assertExactSet(actual, expected, label) {
+  const sortedActual = [...actual].sort();
+  const sortedExpected = [...expected].sort();
+  if (JSON.stringify(sortedActual) !== JSON.stringify(sortedExpected)) {
+    fail(`${label}不匹配。\n期望：${JSON.stringify(sortedExpected)}\n实际：${JSON.stringify(sortedActual)}`);
+  }
+}
+
 const rootIndex = readMarkdown(path.join(COURSE, '_index.md'));
 for (const rel of REQUIRED_SLICE) readMarkdown(path.join(COURSE, rel));
-readMarkdown(path.join(COURSE, 'capstone/validation-protocol.md'));
+const validationProtocolRel = 'capstone/validation-protocol.md';
+const validationProtocol = readMarkdown(path.join(COURSE, validationProtocolRel));
+if (validationProtocol.fm.page_type !== 'learning-validation-protocol') {
+  fail(`${validationProtocolRel}: page_type 必须是 learning-validation-protocol`);
+}
+if (validationProtocol.fm.review_status !== 'draft') {
+  fail(`${validationProtocolRel}: review_status 必须是 draft`);
+}
+validateHeadingsInOrder(validationProtocol.content, REQUIRED_PROTOCOL_HEADINGS, validationProtocolRel);
 if (rootIndex.fm.page_type !== 'route-index') fail('课程总入口必须是 route-index');
 if (rootIndex.fm.route_group !== ROUTE_GROUP) fail('课程总入口 route_group 不正确');
 if (rootIndex.fm.domain !== 'system-architecture') fail('课程总入口 domain 不正确');
@@ -99,18 +176,22 @@ if (!interestIndex.includes('system-architecture/_index.md')) fail('兴趣总索
 const formalRoots = PHASES.map(([dir]) => path.join(COURSE, dir));
 formalRoots.push(path.join(COURSE, 'capstone'));
 const formalUnits = formalRoots.flatMap(dir => collectFormalUnits(dir));
+assertExactSet(
+  formalUnits.map(file => path.relative(COURSE, file)),
+  REQUIRED_SLICE,
+  '正式知识单元集合',
+);
 for (const file of formalUnits) {
   const page = readMarkdown(file);
   const rel = path.relative(ROOT, file);
+  validateFormalUnitFrontmatter(page.fm, rel);
   if (page.fm.track !== 'interests') fail(`${rel}: track 必须是 interests`);
   if (page.fm.domain !== 'system-architecture') fail(`${rel}: domain 必须是 system-architecture`);
   if (page.fm.review_status !== 'draft') fail(`${rel}: review_status 必须是 draft`);
   if (!Array.isArray(page.fm.learning_paths) || !page.fm.learning_paths.includes('system-architecture')) {
     fail(`${rel}: learning_paths 必须包含 system-architecture`);
   }
-  for (const heading of REQUIRED_HEADINGS) {
-    if (!page.content.includes(heading)) fail(`${rel}: 缺少 ${heading}`);
-  }
+  validateHeadingsInOrder(page.content, REQUIRED_HEADINGS, rel);
   if (/\b(TODO|TBD)\b|待补充|稍后补充/i.test(page.raw)) fail(`${rel}: 含占位文本`);
   if (page.raw.includes('gulou-agent')) fail(`${rel}: 公开课程正文不得依赖 gulou-agent`);
 }

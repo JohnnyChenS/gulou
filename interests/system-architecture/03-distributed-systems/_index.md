@@ -39,4 +39,6 @@ Kafka、etcd、ZooKeeper、Redis Cluster、MySQL 集群和分布式数据库。
 
 ## 阅读顺序
 
-以已拆分远程服务并可观测超时为进入条件；完成消息与恢复挑战后进入 Data Systems。
+以已拆分远程服务并可观测超时为进入条件。首批“日志、状态与恢复”纵向切片只有一次跨阶段学习跳转：先完成 [Page Cache、写入确认与持久化边界](../01-computer-systems/page-cache-and-durable-io.md)，再临时前往 Data Systems 完成 [Write-Ahead Log：从提交确认到崩溃恢复](../04-data-systems/write-ahead-log.md)，返回本页完成 [Replicated Log：副本、提交与选主](replicated-log.md)，然后进入 Data Architecture 的 Checkpoint 与 Replay。
+
+这次跳转只让首批纵向切片在消费 WAL 模型后继续验证恢复链路；它不改变宏观阶段 route 的顺序（Distributed Systems → Data Systems → Data Architecture），也不改变后续主干学习的顺序。
