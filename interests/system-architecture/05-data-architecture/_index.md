@@ -23,6 +23,8 @@ route_next: ../06-cloud-native-sre/_index.md
 - Event Time、Processing Time、Window、Watermark、Late Event、Stateful Processing、Checkpoint 与恢复。
 - Exactly-once 的系统边界、数据湖、数据仓库、Lakehouse、Lambda/Kappa Architecture、实时数仓、特征管道、Serving Layer、数据质量、血缘、重放与 Schema 演进。
 
+- [Checkpoint 与 Replay：有状态流作业的恢复边界](checkpoint-and-replay.md)
+
 ## 组件映射
 
 Kafka、Flink、Spark、Iceberg、ClickHouse 和 Doris。
