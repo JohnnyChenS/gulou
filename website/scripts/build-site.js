@@ -259,6 +259,7 @@ function renderTopNav() {
       <span>鼓楼</span>
     </a>
     <a href="${siteUrl('stages/')}">人生阶段</a>
+    <a href="${siteUrl('interests/')}">兴趣副线</a>
     <a href="${siteUrl('references/')}">知识参考</a>
     <a href="https://github.com/JohnnyChenS/gulou/blob/main/CONTRIBUTING.md">参与贡献</a>
     <a href="https://github.com/JohnnyChenS/gulou">GitHub</a>
@@ -508,6 +509,35 @@ function renderHomePage() {
 </html>`;
 }
 
+function collectInterestRouteIndexes(registry) {
+  return Array.from(registry.byRel.values())
+    .filter(page => page.rel.startsWith('interests/')
+      && page.rel.endsWith('/_index.md')
+      && page.fm.page_type === 'route-index')
+    .sort((a, b) => {
+      if (a.rel === 'interests/system-architecture/_index.md') return -1;
+      if (b.rel === 'interests/system-architecture/_index.md') return 1;
+      return String(a.fm.name || a.rel).localeCompare(String(b.fm.name || b.rel));
+    });
+}
+
+function renderInterestCards(registry) {
+  const cards = collectInterestRouteIndexes(registry).map(page => {
+    const slug = resolvePath(page.rel);
+    const name = page.fm.name || page.fm.topic || page.rel;
+    const description = page.fm.description || '跨阶段兴趣学习路径';
+    return '<a href="' + siteUrl(slug) + '" class="stage-card">'
+      + '<h3>' + name + '</h3>'
+      + '<p class="age">' + description + '</p>'
+      + '</a>';
+  }).join('\\n');
+  return '<section class="home-section">'
+    + '<h2>按兴趣探索</h2>'
+    + '<p>兴趣副线把一个主题从入门连接到进阶和生产实践；选择一条路线后，从它的总入口开始。</p>'
+    + '<div class="stage-grid entry-grid">' + cards + '</div>'
+    + '</section>';
+}
+
 function renderHomePageWithRoutes(registry) {
   const incompleteStages = new Set([
     '青春期（14-18岁）',
@@ -578,6 +608,8 @@ function renderHomePageWithRoutes(registry) {
     <h2>按人生阶段探索</h2>
     <div class="stage-grid entry-grid">${stageCards}</div>
   </section>
+
+  ${renderInterestCards(registry)}
 
   <section class="home-section">
     <h2>参与贡献</h2>
