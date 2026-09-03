@@ -20,6 +20,35 @@ review_status: draft
 
 ## 一张图看懂路线
 
+### 知识依赖关系
+
+```text
+                    Computer Systems
+                           |
+                        Network
+                           |
+                 Distributed Systems
+                    /              \
+             Data Systems       Cloud Native
+                    |                 |
+             Data Architecture       SRE
+                    \                 /
+                     \               /
+                       ML -----------+
+                        |             |
+                  Recommender      LLM
+                        \             |
+                         \           RAG
+                          \           /
+                            AI/Agent
+                                |
+                              Agent
+```
+
+这张图表示知识之间的概念依赖与汇聚关系：前置能力会在后续主题中被反复调用，但它不是要求每一页都按图中连线阅读的唯一顺序。
+
+### 十阶段阅读顺序
+
 | 分区 | 阶段 | 这一段要回答的问题 |
 |---|---|---|
 | 基础与方法 | [0 架构方法](00-architecture-method/_index.md) → [1 计算机系统](01-computer-systems/_index.md) → [2 网络](02-network/_index.md) | 如何从需求和约束开始，解释单机行为，再判断远程调用的延迟、超时和部分失败？ |
