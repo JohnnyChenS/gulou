@@ -14,7 +14,32 @@ learning_paths: [system-architecture]
 related_prompts: [system-architecture-wal-01, system-architecture-replicated-log-01]
 ---
 
-# Checkpoint 与 Replay：有状态流作业的恢复边界
+# 检查点与重放（Checkpoint and Replay）：有状态流作业的恢复边界
+
+## 一句话理解
+
+检查点把算子状态与输入位置保存在同一个一致边界，故障后作业才知道应从哪里继续并重放哪些输入。
+
+## 本页要解决的问题
+
+当检查点 `n` 已完成、`n+1` 尚未完成时作业故障，有状态计算应从哪个可验证的一致边界继续，又如何防止重放改变下游结果？
+
+## 本页词汇
+
+| 中文 | English | 在本页中的含义 |
+|---|---|---|
+| 检查点 | Checkpoint | 已完成后可作为故障恢复起点的受控工件 |
+| 状态快照 | State Snapshot | 某个一致切面上的算子状态记录 |
+| 输入位置 | Source Position | 与状态快照配套、重启后继续读取的位置 |
+| 一致切面 | Consistent Cut | 所有参与者对已纳入和未纳入历史共同同意的边界 |
+| 检查点屏障 | Checkpoint Barrier | 在数据流中标记检查点切面的协调标记 |
+| 屏障对齐 | Barrier Alignment | 多输入算子等待同一检查点屏障齐备的过程 |
+| 重放 | Replay | 恢复后从已验证位置重新读取并处理输入 |
+| 端到端恰好一次 | End-to-End Exactly-Once | 在已声明边界内由可重放输入、一致状态与事务或幂等输出共同支撑的逻辑结果语义 |
+
+## 在路线中的位置
+
+这是纵向切片的第四步，上一页是[复制日志（Replicated Log）](../03-distributed-systems/replicated-log.md)，下一页是[有状态服务恢复](../06-cloud-native-sre/stateful-recovery.md)，完整地图见[系统架构与 AI 工程](../_index.md)。
 
 ## 学习目标
 
@@ -34,6 +59,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 
 ## 第一层：底层思想
 
+读完这一层，你应能回答：算子状态与输入位置如何组成一个故障后可继续的一致切面？
+
 **恢复点由状态和输入位置共同构成。** 对有状态流作业，只保存算子状态而不保存输入位置，会不知道从哪里继续读；只保存 source position 而不保存状态，则新输入会叠加到错误的历史。一个可恢复的 checkpoint 因而需要把每个相关 operator 的 state 与 source 的读取位置放到同一恢复契约中。这里的“位置”是可重放 source 的读取边界，不是业务事件 ID，也不替代 Kafka 的保留、权限或可读性配置。
 
 **consistent cut 是恢复时应当看到的共同历史前缀。** 对 checkpoint `n`，每个参与者都需要能说明自己已把哪一段输入的影响包含进状态、哪一段尚未包含。Flink 用 checkpoint barrier 在数据流中标记这条切面。barrier 不是业务数据，也不是“事件已交付到所有外部系统”的确认；它协调的是作业内部 state snapshot 与 source position 的一致性。
@@ -46,6 +73,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 
 ## 第二层：组件设计落地
 
+读完这一层，你应能回答：Apache Flink 的检查点、状态后端、存储与 sink 各自承担哪段恢复责任？
+
 **Apache Flink 2.3.0：checkpoint。** Flink 的容错机制以 state snapshot 为恢复依据；在可重放 source 的条件下，恢复会从相应位置重新消费。官方说明将 checkpoint barrier 和多输入对齐作为取得一致 snapshot 的机制。一个 checkpoint 只有完成后才可成为本题场景的恢复点；`n+1` 未完成时，不能用它覆盖 `n`。作业内的一次一致恢复不自动说明 Kafka、外部 API 或 sink 都具有相同语义。
 
 **状态、backend 与 checkpoint storage。** operator state 包括业务聚合、窗口、去重等作业状态；state backend 决定状态如何管理，checkpoint storage 保存可用于恢复的 checkpoint 工件。应把 state backend 的本地/远端特性、checkpoint storage 的独立性、访问权限、保留策略和恢复吞吐作为部署评审对象。它们不是单靠“开启 checkpoint”就自动获得的跨区域备份或固定 RTO 承诺。
@@ -57,6 +86,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 **不使用场景。** 对无可重放输入、不可读取历史位置、或下游不可事务也不可幂等且不允许补偿的流程，不能仅依赖 Flink checkpoint 宣称端到端 exactly-once；需要先改变 source 的可重放/保留协议，或引入可去重的结果存储、事务 sink、outbox/补偿流程。对长期灾难恢复、合规归档或跨地域 RPO，应另建经过校验与恢复演练的备份、复制和数据保留契约，而不是把运行 checkpoint 当成唯一方案。
 
 ## 第三层：生产实践与真实案例
+
+读完这一层，你应能回答：如何从检查点完成、对齐、背压、恢复与 sink 结果证据判读一次故障？
 
 案例类型：模拟案例（假设：一个 Apache Flink 2.3.0 作业从 Kafka 消费推荐特征事件；每 60 秒触发 checkpoint；每个 TaskManager 维护较大的用户窗口状态；Kafka 允许从 checkpoint position 重放；下游 feature sink 以 `user_id + feature_window_end + feature_version` 为幂等 key。故障发生在 checkpoint `n` 已完成、`n+1` 未完成时，且没有真实客户、流量或事故主张。）
 
@@ -72,6 +103,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 **处置与权衡。** 不应先把 checkpoint 间隔盲目调短。团队应用“完成率、持续时间/间隔比、alignment 延迟、state 大小、重启恢复时间、Kafka lag 和 sink 去重结果”评审：更短间隔降低未 checkpoint 记录的理论重放窗口，却增加协调和存储压力；更长间隔相反。对恢复后追赶，先验证 Kafka 中所需 offset 仍在保留期、checkpoint storage 可读、sink 幂等键在重放窗口内仍有效，再调整 state 结构、吞吐或资源。该案例是模拟，不代表任何真实 Flink 集群的默认设置或性能。
 
 ## 第四层：动手验证与架构判断
+
+读完这一层，你应能回答：如何手工画出多输入屏障的一致切面，并判断哪些输出会被重放？
 
 ### 活动：手工追踪双输入 operator 的 barrier 切面
 
@@ -130,3 +163,7 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 - [Apache Flink 2.3.0：Fault Tolerance](https://nightlies.apache.org/flink/flink-docs-stable/docs/learn-flink/fault_tolerance/)（组件版本：Apache Flink 2.3.0；官方页面；访问日期：2026-08-30）
 - [Apache Flink 2.3.0：Tuning Checkpoints and Large State](https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/state/large_state_tuning/)（组件版本：Apache Flink 2.3.0；官方页面；访问日期：2026-08-30）
 - [PostgreSQL 18：Write-Ahead Logging](https://www.postgresql.org/docs/current/wal-intro.html)（用于限量对照数据库 checkpoint；PostgreSQL 18；访问日期：2026-08-30）
+
+## 下一步
+
+按主路线进入[云原生 / SRE](../06-cloud-native-sre/_index.md)；沿本纵向切片继续学习[有状态服务恢复：编排、数据与一致性的边界](../06-cloud-native-sre/stateful-recovery.md)，把作业内的一致恢复推进到容器、卷和应用协议的联合恢复。本切片暂不展开无对齐检查点与大状态深度调优，待核心恢复证据链掌握后再延伸。
