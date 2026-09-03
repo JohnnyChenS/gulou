@@ -488,3 +488,30 @@ Do not claim human validation is complete; keep the PR in Draft until the reader
 - [ ] **Step 4: Commit only final checker corrections and report evidence**
 
 If verification finds a missing assertion, make the smallest apply_patch correction, rerun the complete command set, and commit it with test(architecture): Tighten navigation regression check. Do not alter unrelated files. Report the final branch commit, command results, generated-page paths, and remaining human-validation items.
+
+### Task 9: Add the conceptual architecture dependency map
+
+**Files:**
+- Modify: interests/system-architecture/_index.md
+- Test: npm run check:system-architecture, npm run check:routes, npm run build, generated course-root inspection
+
+**Interfaces:**
+- Consumes: the existing course-root route map and ten-stage main-route table.
+- Produces: a learner-facing conceptual dependency diagram that complements, but does not replace, the linear reading order.
+
+- [ ] **Step 1: Add the diagram under the existing route-map heading**
+
+Keep the existing `## 一张图看懂路线` heading so the checker contract remains stable. Insert a `### 知识依赖关系` subsection immediately before the three-arc table and place the supplied architecture map in a fenced `text` block so monospace alignment is preserved. Keep the labels `Computer Systems`, `Distributed Systems`, `Data Systems`, `Cloud Native`, `SRE`, `ML`, `AI/Agent`, `Recommender`, `LLM`, `RAG`, and `Agent` visible because they are the terms readers will encounter in the phase pages.
+
+- [ ] **Step 2: Explain diagram semantics and preserve the reading table**
+
+Immediately after the diagram, add a Chinese paragraph stating that the diagram shows conceptual dependency and convergence, not the order in which every page must be read. Add a `### 十阶段阅读顺序` subsection before the existing three-arc table, and keep all existing phase links and the stable `00 → 01 → … → 09` statement below it.
+
+- [ ] **Step 3: Verify and commit the diagram-only content change**
+
+Run `npm run check:system-architecture`, `npm run check:routes`, `npm run build`, and `git diff --check`. Inspect `website/site/interests/system-architecture/index.html` to confirm the diagram appears before the route table and remains readable as a fenced block. Commit only the course-root change:
+
+~~~
+git add interests/system-architecture/_index.md
+git commit -m "docs(architecture): Add conceptual dependency map"
+~~~
