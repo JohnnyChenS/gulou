@@ -222,7 +222,7 @@ for (const file of formalUnits) {
     fail(`${rel}: learning_paths 必须包含 system-architecture`);
   }
   validateHeadingsInOrder(page.content, REQUIRED_HEADINGS, rel);
-  validateSourceContains(page.content, REQUIRED_FORMAL_ORIENTATION_HEADINGS, rel);
+  validateHeadingsInOrder(page.content, REQUIRED_FORMAL_ORIENTATION_HEADINGS, rel);
   if (/\b(TODO|TBD)\b|待补充|稍后补充/i.test(page.raw)) fail(`${rel}: 含占位文本`);
   if (page.raw.includes('gulou-agent')) fail(`${rel}: 公开课程正文不得依赖 gulou-agent`);
 }
