@@ -64,6 +64,29 @@ const REQUIRED_PROTOCOL_HEADINGS = [
   '## 内容调整建议',
   '## 验证结论',
 ];
+const REQUIRED_ROOT_MARKERS = [
+  '## 这条路线解决什么问题',
+  '## 一张图看懂路线',
+  '## 两种阅读方式',
+  '## 四层学习法',
+  '## 如何判断完成',
+];
+const REQUIRED_PHASE_HEADINGS = [
+  '## 阶段目标',
+  '## 进入条件',
+  '## 这一阶段先把什么讲清楚',
+  '## 组件如何承载这些思想',
+  '## 综合项目产物',
+  '## 阶段挑战',
+  '## 阅读顺序',
+];
+const REQUIRED_FORMAL_ORIENTATION_HEADINGS = [
+  '## 一句话理解',
+  '## 本页要解决的问题',
+  '## 本页词汇',
+  '## 在路线中的位置',
+  '## 下一步',
+];
 
 function fail(message) {
   throw new Error(message);
@@ -112,6 +135,12 @@ function validateStringArrayField(fm, field, rel) {
   }
 }
 
+function validateSourceContains(content, markers, rel) {
+  for (const marker of markers) {
+    if (!content.includes(marker)) fail(rel + ': 缺少 ' + marker);
+  }
+}
+
 function validateFormalUnitFrontmatter(fm, rel) {
   for (const field of REQUIRED_FORMAL_UNIT_FIELDS) {
     if (!Object.hasOwn(fm, field)) fail(`${rel}: 缺少 frontmatter 字段 ${field}`);
@@ -146,6 +175,7 @@ validateHeadingsInOrder(validationProtocol.content, REQUIRED_PROTOCOL_HEADINGS, 
 if (rootIndex.fm.page_type !== 'route-index') fail('课程总入口必须是 route-index');
 if (rootIndex.fm.route_group !== ROUTE_GROUP) fail('课程总入口 route_group 不正确');
 if (rootIndex.fm.domain !== 'system-architecture') fail('课程总入口 domain 不正确');
+validateSourceContains(rootIndex.content, REQUIRED_ROOT_MARKERS, 'interests/system-architecture/_index.md');
 
 const requiredGuides = ['authoring-guide.md', 'references/source-matrix.md'];
 for (const rel of requiredGuides) {
@@ -165,13 +195,13 @@ PHASES.forEach(([dir, key, label], index) => {
   const next = PHASES[index + 1];
   const expectedNext = next ? `../${next[0]}/_index.md` : undefined;
   if (page.fm.route_next !== expectedNext) fail(`${rel}: route_next 应为 ${expectedNext || '空'}`);
-  for (const heading of ['## 阶段目标', '## 核心单元', '## 组件映射', '## 综合项目演进', '## 阶段挑战', '## 阅读顺序']) {
-    if (!page.content.includes(heading)) fail(`${rel}: 缺少 ${heading}`);
-  }
+  validateSourceContains(page.content, REQUIRED_PHASE_HEADINGS, rel);
 });
 
 const interestIndex = fs.readFileSync(path.join(ROOT, 'interests/_index.md'), 'utf8');
 if (!interestIndex.includes('system-architecture/_index.md')) fail('兴趣总索引未链接系统架构课程');
+const siteBuilder = fs.readFileSync(path.join(ROOT, 'website/scripts/build-site.js'), 'utf8');
+validateSourceContains(siteBuilder, ["siteUrl('interests/')", '按兴趣探索'], 'website/scripts/build-site.js');
 
 const formalRoots = PHASES.map(([dir]) => path.join(COURSE, dir));
 formalRoots.push(path.join(COURSE, 'capstone'));
@@ -192,6 +222,7 @@ for (const file of formalUnits) {
     fail(`${rel}: learning_paths 必须包含 system-architecture`);
   }
   validateHeadingsInOrder(page.content, REQUIRED_HEADINGS, rel);
+  validateHeadingsInOrder(page.content, REQUIRED_FORMAL_ORIENTATION_HEADINGS, rel);
   if (/\b(TODO|TBD)\b|待补充|稍后补充/i.test(page.raw)) fail(`${rel}: 含占位文本`);
   if (page.raw.includes('gulou-agent')) fail(`${rel}: 公开课程正文不得依赖 gulou-agent`);
 }

@@ -14,7 +14,36 @@ learning_paths: [system-architecture]
 related_prompts: [system-architecture-wal-01, system-architecture-replicated-log-01]
 ---
 
-# Page Cache、写入确认与持久化边界
+# 页缓存（Page Cache）、写入确认与持久化边界
+
+## 一句话理解
+
+一次写入会依次经过应用缓冲区、系统调用、页缓存、写回、设备缓存和稳定介质；“调用成功”只说明其中一个边界被跨过。
+
+## 本页要解决的问题
+
+当事件接入服务在 `write()` 返回后就回复成功，机器随后异常重启时，哪些事件可以被证明已经满足业务确认？
+
+## 本页词汇
+
+| 中文 | English | 在本页中的含义 |
+|---|---|---|
+| 应用缓冲区 | Application Buffer | 应用进程尚未交给内核的待写数据区域 |
+| 页缓存 | Page Cache | 内核暂存文件页、合并读写的缓存层 |
+| 脏页 | Dirty Page | 内存内容已更新但尚未完成后续写回的页 |
+| 写回 | Writeback | 把脏页推进到文件系统和块设备的过程 |
+| 设备缓存 | Device Cache | 设备或控制器接收写入后可能使用的缓存层 |
+| 稳定介质 | Stable Storage | 在当前故障模型下可恢复的数据边界 |
+| 同步 | Sync | 请求存储栈推进并报告相应写入状态的操作 |
+| 业务确认 | Business Acknowledgement | 系统按已声明故障模型向调用方承担的承诺 |
+
+## 在路线中的位置
+
+这是纵向切片起点，先修是[架构方法与基线诊断](../00-architecture-method/_index.md)，下一步是[预写日志（Write-Ahead Log，WAL）](../04-data-systems/write-ahead-log.md)，完整地图见[系统架构与 AI 工程](../_index.md)。
+
+## 在全景业务链中的深入落点
+
+本页负责业务链里的本地 I/O 分支：应用把事件交给 `write()` 后，数据如何经过应用缓冲区、页缓存、回写、设备缓存和稳定介质，以及应用日志在 HTTP 响应前后可能跨过哪些确认边界。它不负责解释线程如何被调度、Kafka 如何完成副本提交、数据库 Buffer Pool 如何执行查询，或日志采集系统如何形成 SLO；这些内容分别由 Network、Replicated Log、Data Systems 和 SRE 页面承接。
 
 ## 学习目标
 
@@ -32,7 +61,24 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 
 ## 第一层：底层思想
 
-文件 I/O 不是一个单点动作，而是一条状态推进链。**页（page）**是内核按页粒度管理内存和文件内容的基本单位。Linux 的 buffered I/O 通常经由 **Page Cache**：读可以命中缓存页，写可以先更新缓存页；文件 `mmap` 也由这些文件页提供映射。[Linux iomap 文档](../references/source-matrix.md)将 buffered I/O 描述为默认使用 page cache，脏缓存随后会被回写。
+读完这一层，你应能回答：一次写入依次跨过哪些状态边界，为什么任何单个 API 返回值都不能自动代表业务耐久？
+
+### 先用一条记录走一遍
+
+下面跟踪推荐事件 `E-42`，只讨论常见的 Linux buffered I/O 路径。它是帮助读者建立顺序感的最小例子，不是对所有文件系统、挂载选项或设备的固定承诺；每一步都要以实际观测和故障模型校准。
+
+| 时刻 | 发生的事 | 线程与状态 | 这一步能证明什么 | 还不能证明什么 |
+|---|---|---|---|---|
+| `t0` | 应用把 `E-42` 放入自己的 buffer | 当前线程仍在用户态，记录只由应用持有 | 应用准备好了待写数据 | 内核、其他进程或设备已经看到它 |
+| `t1` | 调用 `write()` 并返回成功 | 线程完成一次系统调用；在常见 buffered I/O 中，指定字节已交给文件 I/O 路径并通常更新页缓存 | 该系统调用按接口接受了指定字节 | 稳定介质已有数据，或业务可以承诺恢复 |
+| `t2` | 对应文件页成为脏页 | 内核内存中的文件视图已改变，后续回写仍可能尚未发生 | 内核暂存了新内容 | 设备缓存已刷新，掉电后仍可恢复 |
+| `t3` | writeback 把脏页推进到更低层 I/O | 应用线程可能早已继续处理其他请求；写回由内核或同步请求推进 | 数据已离开某个内存缓存边界 | 所有设备缓存、电源保护和故障域都满足耐久要求 |
+| `t4` | 应用调用 `fsync()` 并返回成功 | 线程等待文件系统报告同步请求结果；实际含义依赖文件系统、驱动和设备兑现 flush/FUA | 文件系统报告该同步请求成功 | 远端副本、备份、下游消费或任意硬件掉电保证已经成立 |
+| `t5` | 应用记录确认并返回 HTTP 响应 | 响应可以与日志写入、Kafka 消费等后台分支并行；日志 `write()` 可能仍在缓冲 | 业务按自己声明的契约承担了某个确认 | 业务链其余组件都已完成或所有状态都已持久化 |
+
+这个例子解释了为什么后文要分别讨论应用 buffer、Page Cache、writeback、`fsync` 和业务确认。若 `E-42` 在 `t1` 后立即得到成功响应，故障调查应先定位 `t1` 到实际确认点之间的窗口；若协议在 `t4` 后才确认，还要写清设备和故障模型的前提。不能因为恢复后看见文件尾部缺失，就反推出具体哪一层一定丢失了数据。
+
+文件 I/O 不是一个单点动作，而是一条状态推进链。**页（page）**是内核按页粒度管理内存和文件内容的基本单位。Linux 的缓冲 I/O（buffered I/O）通常经由**页缓存（Page Cache）**：读可以命中缓存页，写可以先更新缓存页；文件 `mmap` 也由这些文件页提供映射。[Linux iomap 文档](../references/source-matrix.md)将 buffered I/O 描述为默认使用 page cache，脏缓存随后会被回写。
 
 被写过但尚未完成后续回写的缓存页称为 **脏页（dirty page）**。**writeback** 是内核或显式同步请求把脏页提交给更低层文件系统/块层的过程。它使缓存可继续服务更多 I/O，并不自动定义“业务上现在可以承诺不丢”。writeback 完成更不能与最终介质状态混为一层：设备可以先接受写入并向操作系统报告完成，却仍把数据放在**易失设备缓存**中；只有设备把缓存刷新到非易失区域，或在有足够电源保护的缓存中可靠保存，才跨过该设备的稳定介质边界。Linux 的 flush/FUA 机制让文件系统能够要求这一推进，但 `fsync` 的实际耐久仍依赖文件系统、驱动和设备正确兑现相应刷新语义。应用必须把这些条件、电源保护、挂载与部署方式，以及可接受恢复窗口写入自己的确认契约。
 
@@ -57,6 +103,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 
 ## 第二层：组件设计落地
 
+读完这一层，你应能回答：在缓冲 I/O、直接 I/O、`mmap` 与同步 API 之间，哪个组件选择符合当前确认契约和工作负载？
+
 **Linux buffered I/O。** 默认路径适合让内核利用 Page Cache 合并读取与写入，应用可配合追加、批量、观测脏页/写回压力和有界同步策略。其代价是 `write()` 的返回与后续 writeback 解耦；如果业务确认依赖落盘，协议必须在恰当位置等待同步，并把失败纳入响应语义。
 
 **Linux direct I/O。** `O_DIRECT` 等路径可绕过 Page Cache；只有当工作负载证据表明应用愿意自己承担缓存、缓冲与一致性协调责任时，才把它作为一个待验证的组件选择。它改变的是数据经过哪一层，而不是确认的含义：直接 I/O 的完成仍不自动成为业务耐久、复制提交或可恢复确认。若依赖 Page Cache 的复用或 `mmap`，尚未量化瓶颈，或无法承担应用侧缓存与 I/O 边界管理，就不应以“更快”为由采用它。
@@ -72,6 +120,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 **数据库与 Kafka 的自定义确认。** 两者都不能把内核 API 原样暴露成业务协议：数据库必须把日志、数据页、事务提交和恢复规则连在一起；Kafka 还必须把副本、leader、生产者确认和故障条件连在一起。此处不比较谁“更耐久”，而是问：确认对应的是哪份状态、哪个恢复算法、哪些成员或介质、在何种失败下仍可证明。后续 WAL 与 replicated log 单元会继续给出各自的具体契约。
 
 ## 第三层：生产实践与真实案例
+
+读完这一层，你应能回答：面对“已确认但重启后文件尾缺失”，应收集什么证据来定位尚未跨过的持久化边界？
 
 案例类型：模拟案例（假设：推荐平台事件接入进程把每条事件追加到单个本地文件；应用在 `write()` 返回后立即记录“写入成功”；未对每条或每批调用 `fsync`；机器在最后一批确认后异常掉电并重启。）
 
@@ -91,6 +141,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 **预防。** ADR 明确确认点和最大允许丢失窗口；以逐条或有界批量同步实现这一窗口；同时监控批大小、批龄、同步耗时、同步失败、确认滞后和恢复尾部差异。演练应使用可丢弃环境和明确注入的进程/主机故障，不能把普通 `kill` 测试宣传成掉电耐久证明。
 
 ## 第四层：动手验证与架构判断
+
+读完这一层，你应能回答：如何用可控实验比较同步策略，并把批龄、批大小和失败响应写成可验证的业务确认协议？
 
 ### 活动：比较逐条同步与批量同步
 
@@ -181,3 +233,7 @@ try {
 - [Linux Kernel Documentation: iomap buffered I/O](https://docs.kernel.org/filesystems/iomap/operations.html)（访问日期：2026-08-30）
 - [Node.js File system API: `fs.fsyncSync`](https://nodejs.org/api/fs.html#fsfsyncsyncfd)（Node.js v26.8.1；访问日期：2026-08-30）
 - [Java SE 25: `FileChannel.force`](https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/nio/channels/FileChannel.html#force(boolean))（Java SE 25；访问日期：2026-08-30）
+
+## 下一步
+
+继续学习[预写日志（Write-Ahead Log，WAL）：从提交确认到崩溃恢复](../04-data-systems/write-ahead-log.md)，把单次写入的持久化边界推进为“日志先行、主状态延后、崩溃后重放”的恢复协议。

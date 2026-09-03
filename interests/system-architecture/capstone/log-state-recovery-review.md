@@ -16,6 +16,32 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 # 日志、状态与恢复纵向切片综合评审
 
+## 一句话理解
+
+综合评审把六页中的确认、日志、状态、副本、重放和隔离证据放进同一条故障时间线，再对持久性、可用性、恢复时间与实施成本做可复核取舍。
+
+## 本页要解决的问题
+
+如何把前五个正式单元与本页的六页证据放进同一条端到端故障时间线，找出证据缺口，并在 RPO、RTO、重复副作用和恢复复杂度之间做取舍？
+
+## 本页词汇
+
+| 中文 | English | 在本页中的含义 |
+|---|---|---|
+| 证据链 | Evidence Chain | 从业务确认连到持久点、恢复算法与结果校验的可追溯记录 |
+| 最后持久点 | Last Durable Point | 故障后能用证据证明可恢复的最新边界 |
+| 状态清单 | State Inventory | 列出状态所有者、位置、写入者、恢复源和责任人的清单 |
+| 持久性矩阵 | Durability Matrix | 逐故障对照持久点、易失窗口、重放源与证据的表格 |
+| 故障矩阵 | Failure Matrix | 记录检测、降级、数据影响、恢复和剩余风险的对照表 |
+| 恢复操作手册 | Recovery Runbook | 按证据、所有者、停止条件和回滚路径组织的恢复步骤 |
+| 幂等键 | Idempotency Key | 让同一逻辑事件重放后仍得到相同结果的稳定标识 |
+| 隔离旧写入者 | Fencing | 阻止过期成员继续写出冲突历史的机制或证据 |
+| 重放窗口 | Replay Window | 从最后已验证恢复点到故障位置之间需重新处理的输入区间 |
+
+## 在路线中的位置
+
+这是第一条“日志—状态—恢复”纵向切片的终点；上一页是[有状态服务恢复](../06-cloud-native-sre/stateful-recovery.md)。完成评审后回到[系统架构与 AI 工程课程根页](../_index.md)，按需选择主路线的后续阶段或其他综合项目。
+
 ## 学习目标
 
 完成本单元后，你能把一条推荐事件从 API 接入到在线特征更新画成状态与证据链；区分本地 I/O、数据库提交、分区复制、流作业 checkpoint 和 Kubernetes 编排各自的恢复边界；并用容量估算、故障矩阵和 runbook 证明 RPO/RTO，而不是把若干组件名拼成“不会丢也不会重复”的承诺。
@@ -24,10 +50,10 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 按依赖顺序完成并保留各单元的活动证据与 ADR：
 
-1. [Page Cache、写入确认与持久化边界](../01-computer-systems/page-cache-and-durable-io.md)
-2. [Write-Ahead Log：从提交确认到崩溃恢复](../04-data-systems/write-ahead-log.md)
-3. [Replicated Log：副本、提交与选主](../03-distributed-systems/replicated-log.md)
-4. [Checkpoint 与 Replay：有状态流作业的恢复边界](../05-data-architecture/checkpoint-and-replay.md)
+1. [页缓存（Page Cache）、写入确认与持久化边界](../01-computer-systems/page-cache-and-durable-io.md)
+2. [预写日志（Write-Ahead Log，WAL）：从提交确认到崩溃恢复](../04-data-systems/write-ahead-log.md)
+3. [复制日志（Replicated Log）：副本、提交与选主](../03-distributed-systems/replicated-log.md)
+4. [检查点与重放（Checkpoint and Replay）：有状态流作业的恢复边界](../05-data-architecture/checkpoint-and-replay.md)
 5. [有状态服务恢复：编排、数据与一致性的边界](../06-cloud-native-sre/stateful-recovery.md)
 
 本综合评审不要求新增 ML Systems、Recommendation Systems 或 AI Engineering 正文，也不以真实用户、生产流量或真实事故作为练习材料。
@@ -39,6 +65,8 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 产品要求把“API 已接受”“可在本机恢复”“Kafka 已提交”“Flink 可从一致切面重放”“在线特征结果正确”“Pod 已重建”分别说明。评审者要回答：每个确认点依赖哪份 state、哪段 log 或 snapshot、哪些 replica、哪个 replay 起点和 fencing 证据；发生连续故障时，实际 RPO/RTO 如何从记录算出。
 
 ## 第一层：底层思想
+
+读完这一层，你应能回答：如何用统一对象把每层的业务确认连到可验证的恢复边界？
 
 统一模型不是把所有组件称为日志，而是给每一层写出七个对象：
 
@@ -58,6 +86,8 @@ RPO 和 RTO 不能互相代替。减少未同步批龄、等待更多 ISR 或缩
 
 ## 第二层：组件设计落地
 
+读完这一层，你应能回答：本地 I/O、数据库、复制日志、流处理和编排层的接口如何衔接，哪些承诺不能跨层外推？
+
 按数据流逐层声明接口与非承诺：
 
 | 层 | 对外确认或恢复接口 | 必须保存的证据 | 不能向下一层外推 |
@@ -71,6 +101,8 @@ RPO 和 RTO 不能互相代替。减少未同步批龄、等待更多 ISR 或缩
 接口之间使用同一个 `event_id` 和可关联的时间线：API 请求 ID → 本地批次 → PostgreSQL 事务 ID/LSN → Kafka partition/offset → Flink checkpoint/source position → feature key/version。映射记录是复盘证据，不是新增一次分布式事务；若某层无法提供映射，应明确其未知结果、重试和补偿策略。
 
 ## 第三层：生产实践与真实案例
+
+读完这一层，你应能回答：如何让同一个 `event_id` 穿过 F1–F7，并对每个故障点区分已知、未知、承诺与补偿？
 
 ### 从 API 到在线特征的连续故障时序
 
@@ -93,6 +125,8 @@ RPO 和 RTO 不能互相代替。减少未同步批龄、等待更多 ISR 或缩
 本批只整合 Page Cache、PostgreSQL WAL、Kafka replicated log、Flink checkpoint/replay 与 Kubernetes stateful recovery。模型、Prompt 和索引只作为可版本化状态轻触：重放事件时记录 `model_version`、`prompt_version`、`index_version`，避免新版本静默改写历史结果；需要回滚时选择已验证版本并重新计算可重放区间。模型训练、推荐算法、Prompt 工程和索引构建不在本批展开，也不新增相应阶段的正式文章。
 
 ## 第四层：动手验证与架构判断
+
+读完这一层，你应能回答：如何交付六份可复核产物，并用容量、时间线与故障证据驳回跨层乐观承诺？
 
 ### 活动：提交一次纸面端到端恢复评审
 
@@ -143,3 +177,7 @@ RPO 和 RTO 不能互相代替。减少未同步批龄、等待更多 ISR 或缩
 - [Kubernetes Documentation v1.37：StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)（访问日期：2026-09-01）
 
 外部课程（包括 Khan Academy）只作为链接或按其许可使用，不复制受限制的正文、视频或题目；AI 对话可生成待评审建议，不能作为事实来源。
+
+## 下一步
+
+本页是这条纵向切片的终点，没有下一个切片单元；请回到[系统架构与 AI 工程课程根页](../_index.md)检查产物，若继续主路线，下一阶段是[ML 系统](../07-ml-systems/_index.md)。模型训练、推荐算法、Prompt 工程与索引构建在本切片中有意延后，不应在完成本页时被冒充为已验证的恢复能力。

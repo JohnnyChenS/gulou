@@ -16,6 +16,32 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 
 # 有状态服务恢复：编排、数据与一致性的边界
 
+## 一句话理解
+
+控制器重建 Pod 只是让编排状态向期望状态推进；应用数据恢复还必须另行验证旧写入者隔离、卷、日志或快照、成员资格与数据结果。
+
+## 本页要解决的问题
+
+当有状态 Pod 长时间 `Unknown` 时，如何证明控制器重建与应用数据恢复不是同一个动作，并在创建替代写入者前排除双写与错误恢复？
+
+## 本页词汇
+
+| 中文 | English | 在本页中的含义 |
+|---|---|---|
+| 调和 | Reconciliation | 控制器反复比较并推进当前状态接近期望状态的过程 |
+| 期望状态 | Desired State | 资源声明中希望控制面维持的结果 |
+| 当前状态 | Current State | 控制面当前能观察到的资源状态 |
+| 稳定身份 | Stable Identity | StatefulSet 为成员保留的序号、名称与存储关联 |
+| 持久卷 | Persistent Volume (PV) | 与单个 Pod 生命周期分离的集群存储资源 |
+| 持久卷声明 | Persistent Volume Claim (PVC) | 工作负载对持久存储提出并与卷绑定的声明 |
+| 隔离旧写入者 | Fencing | 使过期实例失去成员身份、卷或写入能力的证据化机制 |
+| 应用恢复 | Application Recovery | 应用按自身日志、快照、副本与成员协议恢复服务和数据的过程 |
+| 恢复点目标 / 恢复时间目标 | RPO / RTO | 允许回到的最后持久点 / 从故障判定到恢复可接受服务的时长 |
+
+## 在路线中的位置
+
+这是纵向切片的第五步，上一页是[检查点与重放（Checkpoint and Replay）](../05-data-architecture/checkpoint-and-replay.md)，下一页是[日志、状态与恢复纵向切片综合评审](../capstone/log-state-recovery-review.md)，完整地图见[系统架构与 AI 工程](../_index.md)。
+
 ## 学习目标
 
 完成本单元后，你能把“Pod 又起来了”拆成四个必须分别验证的结果：控制器是否已把声明状态推进到当前状态、同一成员身份是否只由一个可写实例持有、PV/PVC 与应用数据是否处于可恢复状态、以及应用副本协议是否重新接受该成员。你还能为一次恢复演练分别记录 RPO 和 RTO 的证据，而不把 Kubernetes 的重建动作写成数据恢复或分布式一致性保证。
@@ -24,7 +50,7 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 
 - 已完成 [Page Cache、写入确认与持久化边界](../01-computer-systems/page-cache-and-durable-io.md)，能区分本地 I/O 完成与可称为 durable 的确认点。
 - 已完成 [Write-Ahead Log：从提交确认到崩溃恢复](../04-data-systems/write-ahead-log.md)，理解日志恢复不等于独立备份。
-- 已完成 [分区复制与提交边界](../03-distributed-systems/replicated-log.md) 与 [Checkpoint 与 Replay](../05-data-architecture/checkpoint-and-replay.md)，能区分副本提交、可重放输入、completed checkpoint 与下游结果。
+- 已完成 [复制日志（Replicated Log）：副本、提交与选主](../03-distributed-systems/replicated-log.md) 与 [检查点与重放（Checkpoint and Replay）](../05-data-architecture/checkpoint-and-replay.md)，能区分副本提交、可重放输入、已完成检查点与下游结果。
 - 熟悉 Kubernetes 的 Pod、Service、PVC 与基本告警；能读懂集群事件和应用日志。这里不要求把 Kubernetes API 当作 Kafka 或 Flink 的一致性协议。
 
 ## 问题场景
@@ -35,6 +61,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 
 ## 第一层：底层思想
 
+读完这一层，你应能回答：为什么控制器观察到的编排状态不能替代应用的唯一写入者与恢复证据？
+
 **编排状态不是应用事实。** Kubernetes 控制器不断尝试让资源的当前状态趋近其期望状态；这是一条控制面 reconciliation 链路，而不是对节点上进程、磁盘内容或应用协议的全知观察。网络分区会使控制面无法可靠区分“节点已死”与“旧进程仍在运行但失联”。因此 desired/current state 只能用来陈述控制器看见并期望什么，不能直接推出旧实例不可能写入或数据已经恢复。
 
 **身份必须是排他的，fencing 才能把“不确定”变成可操作边界。** StatefulSet 可为 Pod 提供稳定 ordinal、网络身份和与之关联的持久存储；例如 `broker-0` 的名字可重现。但稳定名字不等于唯一活实例。fencing 是在重建前使旧实例无法继续使用成员身份、卷或写入路径的外部证明与动作：例如确认节点已经断电/隔离，或由应用自己的 epoch、lease、quorum/leader 规则拒绝旧 epoch 的写入。哪种机制有效由目标存储和应用协议决定；Kubernetes 不自动为 Kafka、Flink 或任意状态服务提供正确 fencing。
@@ -44,6 +72,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 **RPO 与 RTO 属于应用恢复合同。** RPO 问“故障后允许回到哪个最后 durable point”；它可能是 Kafka 当前 ISR 已提交前缀、数据库可 REDO 的记录，或 Flink 最后一个 completed checkpoint 的 state 与 source position，取决于应用。RTO 问“从宣布故障到恢复出可接受服务需要多久”；它至少包含判定、fencing、调度、卷处理、应用恢复、追赶/replay、重新加入副本组和数据验证。较快删除 API 对象也许缩短其中一个控制面等待，却不能跳过任何所有权或数据验证步骤；故不能由此承诺固定 RPO/RTO。
 
 ## 第二层：组件设计落地
+
+读完这一层，你应能回答：Deployment、StatefulSet、PV/PVC 和应用协议各自承担什么，又明确不承诺什么？
 
 | 层或组件 | 适合承载的责任 | 明确不承诺的责任 | 恢复时必须观察的证据 |
 |---|---|---|---|
@@ -59,6 +89,8 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 **不使用场景。** 当服务不需要稳定成员身份和每个成员自己的稳定卷，或它的状态可安全地从外部、可验证的数据源重建时，不应为了“看起来更可靠”而把它迁到 StatefulSet；使用 Deployment 并把真正的数据合同放在外部系统。若需求包含跨地域灾难恢复、合规留存或特定 RPO，亦不应只依赖 PV/PVC 或运行 checkpoint；另立独立备份、复制、保留和定期还原演练的合同。
 
 ## 第三层：生产实践与真实案例
+
+读完这一层，你应能回答：遇到 `Unknown` 成员时，哪些隔离、卷、应用和数据证据齐备后才能受控重建？
 
 ### 可核验风险案例：强制删除 StatefulSet Pod
 
@@ -84,6 +116,8 @@ Kubernetes 官方的 [Force Delete StatefulSet Pods](https://kubernetes.io/docs/
 8. **记录时间：** 保存检测、节点判定、fencing 完成、Pod 创建、卷可用、应用恢复、加入副本组、数据验证和解除降级的时间，以分解实际 RTO，且记录实际 RPO 证据。
 
 ## 第四层：动手验证与架构判断
+
+读完这一层，你应能回答：如何用一条可审查时间线区分 Pod 对象重建、卷挂载、应用恢复、成员接纳和数据校验？
 
 ### 活动：在纸面时间线验证“重建不等于恢复”
 
@@ -154,4 +188,8 @@ Kubernetes 官方的 [Force Delete StatefulSet Pods](https://kubernetes.io/docs/
 - [Kubernetes Documentation v1.37：StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)（官方页面；访问日期：2026-09-01）
 - [Kubernetes Documentation v1.37：Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)（官方页面；访问日期：2026-09-01）
 - [Kubernetes Documentation v1.37：Force Delete StatefulSet Pods](https://kubernetes.io/docs/tasks/run-application/force-delete-stateful-set-pod/)（官方页面；访问日期：2026-09-01）
-- [Kafka 4.2 的 partition 复制与提交边界](../03-distributed-systems/replicated-log.md)；[Flink checkpoint 与 replay 边界](../05-data-architecture/checkpoint-and-replay.md)
+- [Kafka 4.2 的分区（partition）复制与提交边界](../03-distributed-systems/replicated-log.md)；[Flink 检查点与重放边界](../05-data-architecture/checkpoint-and-replay.md)
+
+## 下一步
+
+按主路线进入[ML 系统](../07-ml-systems/_index.md)；沿本纵向切片进入[日志、状态与恢复纵向切片综合评审](../capstone/log-state-recovery-review.md)，把前五页的确认、持久化、复制、重放和隔离证据放进同一条故障时间线。本切片暂不展开跨地域卷灾备与生产集群强制删除演练，它们需要独立的风险授权和恢复设计。
