@@ -11,7 +11,7 @@ route_label: Data Architecture
 route_next: ../06-cloud-native-sre/_index.md
 ---
 
-# Data Architecture
+# 数据架构（Data Architecture）
 
 ## 阶段目标
 

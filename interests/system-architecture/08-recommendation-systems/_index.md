@@ -11,7 +11,7 @@ route_label: Recommendation Systems
 route_next: ../09-ai-engineering/_index.md
 ---
 
-# Recommendation Systems
+# 推荐系统（Recommendation Systems）
 
 ## 阶段目标
 
