@@ -41,6 +41,10 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 这是纵向切片的第二步，先修是[页缓存（Page Cache）、写入确认与持久化边界](../01-computer-systems/page-cache-and-durable-io.md)，下一步是[复制日志（Replicated Log）](../03-distributed-systems/replicated-log.md)，完整地图见[系统架构与 AI 工程](../_index.md)。
 
+## 在全景业务链中的深入落点
+
+本页负责数据库写入分支：事务写入先形成 WAL/redo 记录，以 LSN 记录位置，再由提交策略、日志刷新和 checkpoint 共同决定本地崩溃恢复边界。课程的贯穿案例以 PostgreSQL 18 为主，MySQL 8.4 的 InnoDB redo log 只用于比较共同模型和专属差异；数据库读路径的 Buffer Pool 命中、查询计划和物理读取不在本页假定为同一条固定链。
+
 ## 学习目标
 
 完成本单元后，你能用“先记录变化、再更新主状态、通过重放恢复”解释本地数据库的崩溃恢复链路；把事务成功、WAL 刷新和数据页写回分成不同事件；并在恢复时间、写入 I/O 与允许丢失窗口之间作出有证据的选择。这里的具体实现以 PostgreSQL 18 为主，不把它的行为当作所有数据库的保证。

@@ -41,6 +41,10 @@ related_prompts: [system-architecture-wal-01, system-architecture-replicated-log
 
 这是纵向切片起点，先修是[架构方法与基线诊断](../00-architecture-method/_index.md)，下一步是[预写日志（Write-Ahead Log，WAL）](../04-data-systems/write-ahead-log.md)，完整地图见[系统架构与 AI 工程](../_index.md)。
 
+## 在全景业务链中的深入落点
+
+本页负责业务链里的本地 I/O 分支：应用把事件交给 `write()` 后，数据如何经过应用缓冲区、页缓存、回写、设备缓存和稳定介质，以及应用日志在 HTTP 响应前后可能跨过哪些确认边界。它不负责解释线程如何被调度、Kafka 如何完成副本提交、数据库 Buffer Pool 如何执行查询，或日志采集系统如何形成 SLO；这些内容分别由 Network、Replicated Log、Data Systems 和 SRE 页面承接。
+
 ## 学习目标
 
 完成本单元后，你能把一次“写入成功”拆成可观察的阶段：应用 buffer 接收、系统调用返回、其他进程可见、Page Cache 变脏、文件系统 writeback、设备缓存接受，以及在给定故障模型下可称为稳定介质的时刻。你还能据此为日志、状态和恢复链路定义业务确认点，而不是把某个 API 返回值当成全部承诺。

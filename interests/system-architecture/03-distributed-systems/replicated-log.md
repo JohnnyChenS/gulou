@@ -43,6 +43,10 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 这是纵向切片的第三步，先修是[预写日志（Write-Ahead Log，WAL）](../04-data-systems/write-ahead-log.md)，下一步是[检查点与重放（Checkpoint and Replay）](../05-data-architecture/checkpoint-and-replay.md)，完整地图见[系统架构与 AI 工程](../_index.md)。
 
+## 在全景业务链中的深入落点
+
+本页负责异步事件分支里的 Kafka 段：`producer client buffer → leader append → follower replication → commit → consumer fetch`。`acks`、ISR 和选主回答的是记录何时被复制日志接受；high watermark 在本路线中作为消费者可见性的协议边界来观察，不是 broker 物理磁盘 flush 或业务下游处理成功的同义词。阅读本页时要把 partition、offset、提交点、消费者进度和故障时间线连起来，再回看 Network 的超时/重试和 Data Architecture 的事件时间水位线。
+
 ## 学习目标
 
 完成本单元后，你能把“本地日志已写入”与“分布式记录已提交”区分为不同命题；用副本集合、复制进度、提交规则、选主资格和故障时序回答一条已确认记录会不会出现在新 leader 上。你还能以 Kafka 4.2 的 partition replication 为例，解释 `acks`、ISR、`min.insync.replicas` 与 unclean leader election 的组合边界，而不会把 Kafka 数据分区复制误称为“就是 Raft”。
