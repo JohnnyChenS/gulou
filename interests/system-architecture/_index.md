@@ -23,26 +23,28 @@ review_status: draft
 ### 知识依赖关系
 
 ```text
-                    Computer Systems
-                           |
-                        Network
-                           |
-                 Distributed Systems
-                    /              \
-             Data Systems       Cloud Native
-                    |                 |
-             Data Architecture       SRE
-                    \                 /
-                     \               /
-                       ML -----------+
-                        |             |
-                  Recommender      LLM
-                        \             |
-                         \           RAG
-                          \           /
-                            AI/Agent
-                                |
-                              Agent
+                      超大型系统架构
+                          │
+        ┌─────────────────┼──────────────────┐
+        │                 │                  │
+    Computer          Distributed           Data
+    Systems            Systems             Systems
+        │                 │                  │
+   OS / Network       Consistency       Storage / Compute
+   Concurrency        Replication       Stream / Batch
+        │                 │                  │
+        └────────────┬────┴──────────────────┘
+                     │
+                 Cloud Native
+                Docker / K8s
+                     │
+        ┌────────────┼────────────┐
+        │            │            │
+       SRE           ML         AI/Agent
+        │            │            │
+ Observability   Recommender     LLM
+ Reliability    Ranking          RAG
+ Capacity       Training         Agent
 ```
 
 这张图表示知识之间的概念依赖与汇聚关系：前置能力会在后续主题中被反复调用，但它不是要求每一页都按图中连线阅读的唯一顺序。

@@ -515,3 +515,34 @@ Run `npm run check:system-architecture`, `npm run check:routes`, `npm run build`
 git add interests/system-architecture/_index.md
 git commit -m "docs(architecture): Add conceptual dependency map"
 ~~~
+
+### Task 10: Record the graph-to-content coverage matrix
+
+**Files:**
+- Add: docs/architecture/system-architecture-coverage-matrix.md
+- Test: git diff --check and a manual consistency check against the current course files
+
+**Interfaces:**
+- Consumes: the supplied conceptual architecture diagram, the current ten-stage route, and the six existing formal units.
+- Produces: an author/maintenance baseline that maps every diagram block to knowledge topics, formal units, component examples, production cases, experiments, current status, and the next content action.
+
+- [ ] **Step 1: Define the matrix scope and status vocabulary**
+
+State that the diagram is the authoritative coverage taxonomy for this follow-up. Keep the current course decomposition as a pedagogical implementation detail and explicitly explain the mappings for Phase 0, Network, Cloud Native/SRE, and Recommendation Systems. Define exact status labels: `已完成正式单元`, `已有阶段提纲`, and `尚未开始`; do not invent percentage coverage.
+
+- [ ] **Step 2: Map every top-level diagram block**
+
+Add rows for Computer Systems, Distributed Systems, Data Systems, Cloud Native, SRE, ML, and AI/Agent. For each row record the concepts that still need explanation, current Markdown coverage, the target formal-unit set, representative components, a production-case shape, a minimum experiment/evidence artifact, current status, and the next action. Distinguish the five domain formal units plus the capstone review from phase-index prose.
+
+- [ ] **Step 3: Add reading and scope guardrails**
+
+Explain that the matrix is not a learner page and is not rendered into the website. Add a current-state summary, the six formal-unit inventory, a “do not expand prose yet” gate, and the next decision needed before resuming content expansion. Preserve the user's diagram labels and the four-layer method: bottom-layer idea → component design → production case → hands-on verification.
+
+- [ ] **Step 4: Verify and commit the matrix-only artifact**
+
+Run `git diff --check`, inspect every matrix row against the current course files, and ensure no course page or checker is changed. Force-add the ignored `docs/architecture/system-architecture-coverage-matrix.md` and commit:
+
+~~~
+git add -f docs/architecture/system-architecture-coverage-matrix.md
+git commit -m "docs(architecture): Add graph coverage matrix"
+~~~
