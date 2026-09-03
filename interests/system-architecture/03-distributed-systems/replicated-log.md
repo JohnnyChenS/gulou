@@ -14,7 +14,34 @@ learning_paths: [system-architecture]
 related_prompts: [system-architecture-page-cache-durable-io-01, system-architecture-wal-01]
 ---
 
-# Replicated Log：副本、提交与选主
+# 复制日志（Replicated Log）：副本、提交与选主
+
+## 一句话理解
+
+复制日志把一条记录从 leader 的本地追加推进为多个合格副本共有的已提交前缀，并要求新 leader 保留这段前缀。
+
+## 本页要解决的问题
+
+当 Kafka producer 在 `acks=all` 下收到成功响应后 leader 立即故障，怎样根据 ISR、复制进度和选主规则证明该记录会不会出现在新 leader 上？
+
+## 本页词汇
+
+| 中文 | English | 在本页中的含义 |
+|---|---|---|
+| 复制日志 | Replicated Log | 由 leader 排序并由 follower 复制的日志实例 |
+| 领导者 | Leader | 决定当前日志追加顺序并处理写入的副本 |
+| 跟随者 | Follower | 从 leader 复制日志顺序的副本 |
+| 同步副本集合 | In-Sync Replicas (ISR) | Kafka 中达到进度条件、可参与确认与干净选主的动态集合 |
+| 提交点 | Commit Point | 协议认定某段日志已满足确认条件的位置 |
+| 提交索引 | Commit Index | 复制协议中标记已提交日志最高位置的单调索引概念 |
+| 法定人数交集 | Quorum Overlap | 两个多数集合必有共同成员的保留条件 |
+| 领导者完整性 | Leader Completeness | 新 leader 必须包含已提交前缀的安全要求 |
+| 隔离旧领导者 | Fencing | 阻止过期 leader 继续写出冲突历史的机制 |
+| 不干净选主 | Unclean Leader Election | 允许非 ISR 副本接任、可能丢失已确认前缀的选择 |
+
+## 在路线中的位置
+
+这是纵向切片的第三步，先修是[预写日志（Write-Ahead Log，WAL）](../04-data-systems/write-ahead-log.md)，下一步是[检查点与重放（Checkpoint and Replay）](../05-data-architecture/checkpoint-and-replay.md)，完整地图见[系统架构与 AI 工程](../_index.md)。
 
 ## 学习目标
 
@@ -34,11 +61,13 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 ## 第一层：底层思想
 
-**顺序不是全局顺序，而是一个日志实例的顺序。** Replicated log 为某个状态序列建立单调位置：leader 决定追加次序，follower 复制该顺序。Kafka 4.2 把 topic 划为全序的 partition；因此顺序、leader、ISR 和确认均须以 `topic-partition` 为单位讨论，不能把“topic 有三副本”误作一个跨所有 partition 的单一日志。[Kafka 4.2 Design](../references/source-matrix.md)将 partition 描述为 replicated log。
+读完这一层，你应能回答：一条本地日志记录需要哪些复制进度、提交与选主条件，才能成为故障后仍保留的已提交前缀？
+
+**顺序不是全局顺序，而是一个日志实例的顺序。** 复制日志（Replicated Log）为某个状态序列建立单调位置：leader 决定追加次序，follower 复制该顺序。Kafka 4.2 把 topic 划为全序的 partition；因此顺序、leader、ISR 和确认均须以 `topic-partition` 为单位讨论，不能把“topic 有三副本”误作一个跨所有 partition 的单一日志。[Kafka 4.2 Design](../references/source-matrix.md)将 partition 描述为 replicated log。
 
 **复制进度必须进入模型。** 对某条记录 `r`，仅知道 `B1` 的本地日志含有 `r`，只说明 B1 的本地进度；它没有说明 B2、B3 是否也含有 `r`。设 `R(r)` 是已应用 `r` 的副本集合，`E` 是故障后参与一次选主判断的副本集合。`R(r)` 与 `E` 相交只提供让已提交前缀被选主过程看见的必要保留机会；若选主仍允许一个缺少该前缀的候选者获胜，相交本身不能阻止记录消失。可靠规则还必须比较日志进度并拒绝缺少已提交前缀、日志不够新的候选者，或施加等价的 committed-prefix 约束。
 
-**commit point 是协议点，不是某台机器上的写入点。** 本地 WAL、Page Cache 或一次 `fsync` 可以给一个 broker 的崩溃恢复提供证据，却不能自行建立多个节点的共同前缀。在 replicated log 中，提交点应同时回答：哪些副本已纳入确认、这些副本的进度如何被判定、leader 故障时谁能接任，以及接任者为何包含已确认前缀。只要其中任何一项没写进契约，“已提交”就是模糊词。
+**提交点（commit point）是协议点，不是某台机器上的写入点。** 本地 WAL、Page Cache 或一次 `fsync` 可以给一个 broker 的崩溃恢复提供证据，却不能自行建立多个节点的共同前缀。在复制日志中，提交索引（commit index）用于表达协议已经认定的最高提交位置；无论具体实现是否使用这个字段名，提交判断都应同时回答：哪些副本已纳入确认、这些副本的进度如何被判定、leader 故障时谁能接任，以及接任者为何包含已确认前缀。只要其中任何一项没写进契约，“已提交”就是模糊词。
 
 **quorum overlap 是必要保留条件，不单独推出 leader completeness。** 在一种泛化的固定多数派模型里，`2f+1` 个副本中的提交集合和选主比较集合若都至少含 `f+1` 个成员，两集合必相交；这只保证选主比较集合里至少有成员见过已提交前缀。要推出新 leader 保留该前缀，选主规则还必须利用这份证据，拒绝缺少已提交前缀或日志不够新的候选者，并对成员变化施加不会绕开此前提交集合的约束；否则一个同样位于比较集合、但日志陈旧的候选者仍可能获胜。这里讨论的是 replicated log 的泛化审查模型，不是 Kafka partition 的具体共识实现。Kafka 4.2 的 partition replication 采用动态 ISR：当前 ISR 的成员才有资格成为 leader，提交等待当前 ISR 的全部副本；不得把前述固定多数派规则套成“Kafka partition replication 就是 Raft”。二者都要审查 leader completeness，证明链却必须分别来自各自的复制进度、提交、成员变化和选主规则。
 
@@ -47,6 +76,8 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 **失败模型先于耐久承诺。** 本地磁盘故障、broker 进程故障、整机丢失、网络分区、两个 broker 同时故障和同一可用区失效不是同一个事件。`RF=3` 只给出三个 replica assignment，不说明它们是否跨主机、机架、可用区或独立电源域。即便一条记录已由当前 ISR 覆盖，保证也以至少一个合格副本在故障链中持续存活为条件；持久化设置、故障域与选主策略仍决定可恢复范围。
 
 ## 第二层：组件设计落地
+
+读完这一层，你应能回答：Kafka 4.2 的 `acks`、ISR、`min.insync.replicas` 与选主配置组合起来实际承诺什么？
 
 **Kafka 4.2 的数据面：partition 是复制单位。** 以下版本性事实均指 Apache Kafka 4.2，访问日期 2026-08-30。[官方 Design 的 replicated-log 段](https://kafka.apache.org/42/design/design/#replicated-logs-quorums-isrs-and-state-machines-oh-my)说明，一个 partition 有 leader 与 follower；leader 选择顺序，follower 复制；ISR 是跟上 leader 的动态集合，只有 ISR 成员可被选为 leader。因而一个 topic 的不同 partition 可以有不同 leader、ISR 缩减和可用性，事故评审应精确到 topic、partition、offset 与副本 broker。
 
@@ -69,6 +100,8 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 **不使用场景。** 若业务需要跨区域灾难恢复、可验证的长期恢复点或第三方系统上的同一业务状态，单个 Kafka partition 的复制确认不是完整方案；需另设跨集群复制、备份、演练和业务补偿契约。若命令不能容忍未知提交结果或重复投递，也不能只提高 `acks`；还需幂等键、去重和业务级确认。如果写多读少且只有单机本地恢复需求，直接引入三副本日志会增加运维与尾延迟；一个经演练的本地 WAL 或数据库可能更合适，前提是其故障域符合需求。
 
 ## 第三层：生产实践与真实案例
+
+读完这一层，你应能回答：给定副本状态与故障时序，如何判定 producer 响应、局部写入和新 leader 上记录的关系？
 
 案例类型：模拟案例（假设：一个三 broker Kafka 4.2 集群，`payment-notices` 的目标 partition 为 RF=3，`B1` 为 leader、`B2`/`B3` 为 follower；生产者所用 `acks` 和 topic 的 `min.insync.replicas` 均按下表给定。broker 的本地持久化、网络、故障域、controller 与真实业务流量不作未验证的额外承诺。）
 
@@ -113,6 +146,8 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 **如何读表。** A、B-r、B-d 的差异说明 assignment、ISR、可达集合和 unclean 候选不是同一集合；两个边界格与动态格把 append 前拒绝和 append 后失败分开。`acks=all` 的下限不等于实际等待数量，`acks=0/1` 也不被该下限升级。观察时必须记录实际 `acks`、topic override 与 broker 默认的有效 `min.insync.replicas`、请求及 append 阶段、leader/ISR/可达性变化时间、producer 成功、错误或超时时间，以及 unclean election 的有效配置。producer 未获成功 ack 是重试与核验信号，不是消息最终不存在的证明；仅查看 RF、topic 名或一次 send 结果不足以复盘。
 
 ## 第四层：动手验证与架构判断
+
+读完这一层，你应能回答：如何在隔离环境保留复制与选主证据，并修正“RF=3 就能容忍任意两机故障”的乐观结论？
 
 ### 活动：以状态证据复盘 B1 故障后的提交边界
 
@@ -187,3 +222,7 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 - [Apache Kafka 4.2 Topic Configs：`min.insync.replicas` 与 `unclean.leader.election.enable`](https://kafka.apache.org/42/configuration/topic-configs/)（组件版本：Apache Kafka 4.2；官方页面；访问日期：2026-08-30）
 - [Apache Kafka 4.2 Javadoc：`NotEnoughReplicasAfterAppendException`](https://kafka.apache.org/42/javadoc/org/apache/kafka/common/errors/NotEnoughReplicasAfterAppendException.html)（组件版本：Apache Kafka 4.2.0；官方页面；访问日期：2026-09-01）
 - [Apache Kafka 4.2 KRaft：Controllers](https://kafka.apache.org/42/operations/kraft/#controllers)（组件版本：Apache Kafka 4.2；官方页面；访问日期：2026-08-30）
+
+## 下一步
+
+继续学习[检查点与重放（Checkpoint and Replay）：有状态流作业的恢复边界](../05-data-architecture/checkpoint-and-replay.md)，把已提交输入推进为可恢复的状态切面、来源位置与幂等输出。

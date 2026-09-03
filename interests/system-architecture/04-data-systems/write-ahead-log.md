@@ -14,7 +14,32 @@ learning_paths: [system-architecture]
 related_prompts: [system-architecture-page-cache-durable-io-01, system-architecture-replicated-log-01]
 ---
 
-# Write-Ahead Log：从提交确认到崩溃恢复
+# 预写日志（Write-Ahead Log，WAL）：从提交确认到崩溃恢复
+
+## 一句话理解
+
+预写日志先把状态变化追加并刷新到可恢复边界，再允许主数据页延后写回；崩溃后由日志重放补齐已提交变化。
+
+## 本页要解决的问题
+
+当 PostgreSQL 事务已经返回成功、对应数据页却尚未写回时，数据库进程异常退出后凭什么恢复这笔事务，又有哪些状态不在这个保证内？
+
+## 本页词汇
+
+| 中文 | English | 在本页中的含义 |
+|---|---|---|
+| 预写日志 | Write-Ahead Log (WAL) | 在主数据页写出前先记录状态变化的追加日志 |
+| 日志序列号 | Log Sequence Number (LSN) | 标识日志推进位置的单调坐标 |
+| 重做 | REDO | 恢复时向前重放日志中尚未反映到数据页的变化 |
+| 检查点 | Checkpoint | 限定恢复起点并协调此前脏页写出的记录点 |
+| 数据页 | Data Page | 保存表或索引主状态、可晚于日志写回的页面 |
+| 同步提交 | Synchronous Commit | 成功响应等待相应日志刷新边界的提交策略 |
+| 异步提交 | Asynchronous Commit | 允许成功响应早于日志实际持久化的提交策略 |
+| 恢复点目标 | Recovery Point Objective (RPO) | 业务允许恢复后丢失数据的最大窗口 |
+
+## 在路线中的位置
+
+这是纵向切片的第二步，先修是[页缓存（Page Cache）、写入确认与持久化边界](../01-computer-systems/page-cache-and-durable-io.md)，下一步是[复制日志（Replicated Log）](../03-distributed-systems/replicated-log.md)，完整地图见[系统架构与 AI 工程](../_index.md)。
 
 ## 学习目标
 
@@ -32,17 +57,21 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 
 ## 第一层：底层思想
 
-**WAL（Write-Ahead Log）** 把对主状态的变化先编码为按顺序追加的日志记录。基本约束不是“只要写日志就安全”，而是：在 PostgreSQL 18 中，数据文件（表和索引所在处）的变更只能在描述该变更的 WAL 记录已刷新到永久存储之后写入数据文件。[PostgreSQL WAL 介绍](../references/source-matrix.md)由此允许提交时优先同步顺序写的 WAL，而不要求把该事务触及的每个数据页立即写回。
+读完这一层，你应能回答：预写日志如何把提交确认与数据页写回解耦，并由重做和检查点建立本地恢复链路？
 
-**LSN（Log Sequence Number）** 是日志位置的单调推进坐标。它让“变化已被记录到哪里”“恢复应从哪里开始”成为可交流、可观察的问题，而不是一个模糊的“已经写了”。LSN 本身不是业务事件 ID，也不能证明外部系统、备份或副本已经收到同一变化。
+**预写日志（Write-Ahead Log，WAL）**把对主状态的变化先编码为按顺序追加的日志记录。基本约束不是“只要写日志就安全”，而是：在 PostgreSQL 18 中，数据文件（表和索引所在处）的变更只能在描述该变更的 WAL 记录已刷新到永久存储之后写入数据文件。[PostgreSQL WAL 介绍](../references/source-matrix.md)由此允许提交时优先同步顺序写的 WAL，而不要求把该事务触及的每个数据页立即写回。
 
-**REDO** 是崩溃后的前滚：若某个已记录的变化尚未更新到数据页，恢复读取 WAL 并重做该变化。这个模型解释了“提交成功但数据页尚未落盘”仍可能恢复：关键证据是相应 WAL 已跨过该实现定义的刷新边界，而不是页面已立即写回。反过来，若成功在 WAL 刷新之前报告，恢复可得到自洽状态，却可能没有最近的那些事务；PostgreSQL 的异步提交正把这段风险窗口暴露为吞吐与耐久的取舍。
+**日志序列号（Log Sequence Number，LSN）**是日志位置的单调推进坐标。它让“变化已被记录到哪里”“恢复应从哪里开始”成为可交流、可观察的问题，而不是一个模糊的“已经写了”。LSN 本身不是业务事件 ID，也不能证明外部系统、备份或副本已经收到同一变化。
 
-**checkpoint** 是让恢复不必从无限久远日志开始的协调点。在 PostgreSQL 18 中，checkpoint 会把此前脏数据页写出并在 WAL 中写入 checkpoint 记录；崩溃恢复据最近 checkpoint 的 redo record 确定 REDO 起点。更频繁的 checkpoint 可减少恢复要重做的工作，却会更频繁地推动脏页 I/O，并可能增加后续 WAL 工作。它不是“已经备份完成”的同义词。
+**重做（REDO）**是崩溃后的前滚：若某个已记录的变化尚未更新到数据页，恢复读取 WAL 并重做该变化。这个模型解释了“提交成功但数据页尚未落盘”仍可能恢复：关键证据是相应 WAL 已跨过该实现定义的刷新边界，而不是页面已立即写回。反过来，若成功在 WAL 刷新之前报告，恢复可得到自洽状态，却可能没有最近的那些事务；PostgreSQL 的异步提交正把这段风险窗口暴露为吞吐与耐久的取舍。
+
+**检查点（checkpoint）**是让恢复不必从无限久远日志开始的协调点。在 PostgreSQL 18 中，checkpoint 会把此前脏数据页写出并在 WAL 中写入 checkpoint 记录；崩溃恢复据最近 checkpoint 的 redo record 确定 REDO 起点。更频繁的 checkpoint 可减少恢复要重做的工作，却会更频繁地推动脏页 I/O，并可能增加后续 WAL 工作。它不是“已经备份完成”的同义词。
 
 这条链路的失败模型应明确为：进程或服务器崩溃发生在数据页写回之前、但已被 WAL 覆盖之后。WAL 处理的是此模型下的**本地崩溃恢复**，不自动产生远端副本，不替代可独立保存和恢复的备份，也不自动实现跨服务业务一致性。它同样不等于业务事件日志（面向领域消费者的语义记录）或审计日志（面向责任追溯的记录）；这三类日志可以相互关联，却服务不同的读者、保留策略与正确性问题。
 
 ## 第二层：组件设计落地
+
+读完这一层，你应能回答：PostgreSQL 的提交与检查点配置怎样改变确认窗口、恢复成本和 I/O 压力？
 
 **PostgreSQL 18：提交与页写回分离。** PostgreSQL WAL 的顺序写使提交无需同步每个受影响的数据页；崩溃时可 REDO 未反映到页上的 WAL 变更。通常的同步提交会在向客户端报告成功前等待该事务的 WAL 记录刷新到永久存储。它回答的是 PostgreSQL 在其配置与故障模型下的本地提交边界，并不声称调用方的下游 HTTP 请求、消息投递或另一台机器也已完成。
 
@@ -55,6 +84,8 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 **不使用场景。** 若需求是跨可用区 RPO、长期可恢复副本、业务事件分发或合规审计，不能把单机 WAL 当作所需组件；应分别采用经过恢复演练的备份/归档与复制方案、具有幂等与消费语义的事件日志、或满足保留和访问控制要求的审计系统。若业务不能接受异步提交窗口中的最近事务丢失，也不应为了吞吐把成功响应提前到 WAL 刷新前；保留同步提交或选择明确的上游重试/补偿协议。
 
 ## 第三层：生产实践与真实案例
+
+读完这一层，你应能回答：如何用提交时间、日志位置、检查点与恢复证据区分性能现象、允许的数据窗口和错误的备份假设？
 
 案例类型：模拟案例（假设：推荐平台的 PostgreSQL 18 实例持续写入用户行为元数据；应用启用异步提交以降低提交等待；写入负载使 WAL 快速增长，并因配置边界频繁触发 checkpoint；该团队另有周期性备份，但误把 WAL 当作备份本身。）
 
@@ -71,6 +102,8 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 **处置与判断。** 团队应从事务 ID、成功响应时间、提交延迟、WAL 生成速率、checkpoint 频率和实际恢复时长建立同一时间线；将丢失窗口与已声明 RPO 对照。若用户行为允许有限重放，可由上游幂等事件 ID 补齐缺口；若外部动作依赖“数据库已记住”，该路径应切回同步提交或先引入可撤销/补偿设计。调整 checkpoint 前必须以目标工作负载验证对恢复时间和 I/O 的合计影响。该模拟不声称发生过真实客户事故，也不把任一指标当成唯一根因。
 
 ## 第四层：动手验证与架构判断
+
+读完这一层，你应能回答：如何观察日志位置和检查点推进，并据此为不同数据类别选择同步或异步提交？
 
 ### 活动：观察 WAL LSN 前进与 checkpoint
 
@@ -149,3 +182,7 @@ related_prompts: [system-architecture-page-cache-durable-io-01, system-architect
 - [PostgreSQL 18：Asynchronous Commit](https://www.postgresql.org/docs/current/wal-async-commit.html)（PostgreSQL 18；访问日期：2026-08-30）
 - [PostgreSQL 18：WAL Configuration](https://www.postgresql.org/docs/current/wal-configuration.html)（PostgreSQL 18；访问日期：2026-08-30）
 - [MySQL 8.4：InnoDB Redo Log](https://dev.mysql.com/doc/refman/8.4/en/innodb-redo-log.html)（MySQL 8.4；访问日期：2026-08-30）
+
+## 下一步
+
+继续学习[复制日志（Replicated Log）：副本、提交与选主](../03-distributed-systems/replicated-log.md)，把单节点的日志恢复边界扩展到副本进度、提交规则和新 leader 资格。
