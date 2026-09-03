@@ -91,7 +91,7 @@ Read website/scripts/build-site.js and assert that it contains the shared intere
 
 ~~~
 const siteBuilder = fs.readFileSync(path.join(ROOT, 'website/scripts/build-site.js'), 'utf8');
-validateSourceContains(siteBuilder, ['siteUrl("interests/")', '按兴趣探索'], 'website/scripts/build-site.js');
+validateSourceContains(siteBuilder, ["siteUrl('interests/')", '按兴趣探索'], 'website/scripts/build-site.js');
 ~~~
 
 Keep the existing interest-index link assertion.
