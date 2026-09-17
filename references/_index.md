@@ -10,6 +10,7 @@
 | motor-development.md | 动作发展核心文献 |
 | chinese-education-standards.md | 中国教育标准与指南 |
 | brain-health-evidence-framework.md | 脑健康内容的证据分级、因果判断与安全表述规范 |
+| [early-parenthood-care.md](early-parenthood-care.md) | 产前两个月至宝宝六个月教程的孕产、护理、喂养与发展资料 |
 
 ## 引用规范
 
