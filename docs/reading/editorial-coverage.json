@@ -1,0 +1,2503 @@
+{
+  "version": 1,
+  "reviewed_at": "2026-10-05",
+  "complete": true,
+  "scope": "现有公开内容；不含尚未编写的未来课程、私有Agent产品、专业审定或真实学习者验证",
+  "counts": {
+    "rewritten": 74,
+    "integrated": 77,
+    "retained": 42
+  },
+  "files": [
+    {
+      "path": "interests/_index.md",
+      "status": "retained",
+      "note": "全文编辑检查；目录层次、语言/登山/系统架构入口和系统路线定位与当前课程契约一致，没有为覆盖率强行改写。",
+      "sources_checked": [],
+      "title": "兴趣领域索引",
+      "role": "独立兴趣路线入口",
+      "reading_note": "选择语言、登山或系统架构后，沿各自写明的进入条件和顺序阅读。",
+      "entry": "interests/_index.md",
+      "entry_label": "兴趣路线入口",
+      "sha256": "6b753ca0a8a88139db9240afb66a57fa1bc4a38c9f4988d248d7db54ba555ea5"
+    },
+    {
+      "path": "interests/language/_index.md",
+      "status": "rewritten",
+      "note": "全文重写；母语与英语分路，按当前能力、材料和任务选择；日历仅作可调整示例。最终走读修正双语家庭必须先稳固母语、按年龄自动升英语等级的残留，并明确母语专题目前覆盖至 12 岁；核对 ASHA 多语言家庭交流建议，没有把语言学和 CEFR 全库标为已验证。",
+      "sources_checked": [
+        "https://www.asha.org/public/speech/development/learning-more-than-one-language/"
+      ],
+      "title": "语言学习",
+      "role": "独立兴趣课程 · 语言",
+      "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度；示例日历不作为毕业门槛。",
+      "entry": "interests/language/_index.md",
+      "entry_label": "语言路线入口",
+      "sha256": "cb81625e3da6f152ff1d875513e43ddc4533a555a3a3347fdfc8e76b5c4c8931"
+    },
+    {
+      "path": "interests/language/母语发展/0-3岁.md",
+      "status": "integrated",
+      "note": "保留成熟正文，补充局部解释与承接；从共同注意、理解、手势和早期表达场景进入，说明何时转读3–6岁并保留专业咨询边界；频率和短时动作仅作可调整示例，并补回旧路径所需的对话指南兼容锚点；未独立核验医学或发展筛查事实。",
+      "sources_checked": [],
+      "title": "母语与多语言互动",
+      "role": "独立兴趣课程 · 语言",
+      "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度；示例日历不作为毕业门槛。",
+      "entry": "interests/language/_index.md",
+      "entry_label": "语言路线入口",
+      "sha256": "1e549e804beb403c73fffb8e436b8832c489552610f46cf0804cdcb15b1184ae"
+    },
+    {
+      "path": "interests/language/母语发展/3-6岁.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以叙事、对话、音韵意识和早期读写任务承接0–3岁，移除年龄作为掌握门槛并说明进入学龄期的能力信号；短时安排保留为可调整示例；未独立核验语言学事实。",
+      "sources_checked": [],
+      "title": "母语发展（3-6岁）",
+      "role": "独立兴趣课程 · 语言",
+      "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度；示例日历不作为毕业门槛。",
+      "entry": "interests/language/_index.md",
+      "entry_label": "语言路线入口",
+      "sha256": "07192647b72198160833f5e9188b19767ed13973c8d128499f6007195fc80232"
+    },
+    {
+      "path": "interests/language/母语发展/学龄期（6-12岁）.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以阅读理解、组织表达和根据听众修改文本承接3–6岁，年龄仅作学校情境线索并给出下一阶段入口；频次、读写任务量和短时安排改为可调整示例；未独立核验语言学事实。",
+      "sources_checked": [],
+      "title": "母语发展（6-12岁）",
+      "role": "独立兴趣课程 · 语言",
+      "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度；示例日历不作为毕业门槛。",
+      "entry": "interests/language/_index.md",
+      "entry_label": "语言路线入口",
+      "sha256": "d1fbe8578e11441d1d32f28f0414fafc6eb4ff56aa8967da73aab488a2941cc4"
+    },
+    {
+      "path": "interests/language/英语学习/advanced.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以复杂材料综合、论证和根据受众改写承接 intermediate，删除固定 C1/C2 用时承诺，将 CEFR 和日历定位为可调整参考而非毕业标准；未独立核验 CEFR 事实。",
+      "sources_checked": [],
+      "title": "英语高阶",
+      "role": "独立兴趣课程 · 语言",
+      "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度；示例日历不作为毕业门槛。",
+      "entry": "interests/language/_index.md",
+      "entry_label": "语言路线入口",
+      "sha256": "8875a88713ed1eb387edc56290afebc3fc95f2154ececcaff2f26d7342b72c9c"
+    },
+    {
+      "path": "interests/language/英语学习/beginner.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以能否理解熟悉信息、完成短互动和说明不懂之处作为入门/进阶信号，删掉固定词汇量和年龄门槛；保留示例日历并标明可暂停、缩短、重排，不是升级或毕业门槛；未独立核验 CEFR 事实。",
+      "sources_checked": [],
+      "title": "英语入门（家长辅导版）",
+      "role": "独立兴趣课程 · 语言",
+      "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度；示例日历不作为毕业门槛。",
+      "entry": "interests/language/_index.md",
+      "entry_label": "语言路线入口",
+      "sha256": "2069df4727d3c10d641a6d121138c56123d9a1079df81e777b306ab501e8d744"
+    },
+    {
+      "path": "interests/language/英语学习/intermediate.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以能否抓住主旨、解释依据和在真实任务中修正表达承接 beginner，弱化固定正确率和年龄标签，明确 advanced 入口；日历与词数/分钟改为可调整示例，并补充未成年外部交流的监护、隐私和退出边界；未独立核验 CEFR 事实。",
+      "sources_checked": [],
+      "title": "英语进阶",
+      "role": "独立兴趣课程 · 语言",
+      "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度；示例日历不作为毕业门槛。",
+      "entry": "interests/language/_index.md",
+      "entry_label": "语言路线入口",
+      "sha256": "31a019eab2cc1d4f9ddfdd05a563df536308387d56c05a09d516a46f0f86b7e0"
+    },
+    {
+      "path": "interests/mountaineering/_index.md",
+      "status": "rewritten",
+      "note": "全文编辑并做有限官方来源核对；按装备、撤退、现场训练和风险承担能力组织入口，年龄不作为资格；保留安全底线并明确文章不能替代向导、急救或救援。",
+      "sources_checked": [
+        "https://www.nps.gov/articles/10essentials.htm",
+        "https://www.nps.gov/subjects/trails/hiking-safety.htm",
+        "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html"
+      ],
+      "title": "登山",
+      "role": "独立兴趣课程 · 登山",
+      "reading_note": "先读安全与进入条件，再准备训练问题；进阶依赖受训能力和现场判断。",
+      "entry": "interests/mountaineering/_index.md",
+      "entry_label": "登山路线入口",
+      "sha256": "adc3a804320b423d582f4278ab6260c76111fc1c899e34c63f6c0277402c8b7e"
+    },
+    {
+      "path": "interests/mountaineering/advanced.md",
+      "status": "rewritten",
+      "note": "全文编辑并做有限官方来源核对；在 Prompt 前新增安全边界，将高海拔/冰川/裂缝/救援内容改为风险识别、撤退条件和向专业人员提问，不输出脱离现场的技术或医疗教程。 root补本地准备知识、概念解释和具体行动，AI提示改为可选准备材料；不称页面提供完整技术教学。",
+      "sources_checked": [
+        "https://www.nps.gov/articles/10essentials.htm",
+        "https://www.nps.gov/subjects/trails/hiking-safety.htm",
+        "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html"
+      ],
+      "title": "登山高阶",
+      "role": "独立兴趣课程 · 登山",
+      "reading_note": "先读安全与进入条件，再准备训练问题；进阶依赖受训能力和现场判断。",
+      "entry": "interests/mountaineering/_index.md",
+      "entry_label": "登山路线入口",
+      "sha256": "a1442cf75835d85cf6ff60359d033babfe3d7c8675ae77a3ed5b17904ffda7ab"
+    },
+    {
+      "path": "interests/mountaineering/beginner.md",
+      "status": "rewritten",
+      "note": "全文编辑并做有限官方来源核对；在 Prompt 前新增安全边界，把 AI 限制为行前准备、风险问题和向教练/向导/医生/管理方确认事项，不输出绳索、救援或医疗处置教程；保留撤退/求助边界。 root补本地准备知识、概念解释和具体行动，AI提示改为可选准备材料；不称页面提供完整技术教学。",
+      "sources_checked": [
+        "https://www.nps.gov/articles/10essentials.htm",
+        "https://www.nps.gov/subjects/trails/hiking-safety.htm",
+        "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html"
+      ],
+      "title": "登山入门",
+      "role": "独立兴趣课程 · 登山",
+      "reading_note": "先读安全与进入条件，再准备训练问题；进阶依赖受训能力和现场判断。",
+      "entry": "interests/mountaineering/_index.md",
+      "entry_label": "登山路线入口",
+      "sha256": "d7c806dc771b661bc8faa7923e61ee1ade08be51bd999a5e5d58df16ffd99578"
+    },
+    {
+      "path": "interests/mountaineering/intermediate.md",
+      "status": "rewritten",
+      "note": "全文编辑并做有限官方来源核对；在 Prompt 前新增安全边界，把 AI 限制为低风险准备和向专业人员确认问题，移除鼓励替代条件评估的表述；不输出绳索、救援或医疗处置教程。 root补本地准备知识、概念解释和具体行动，AI提示改为可选准备材料；不称页面提供完整技术教学。",
+      "sources_checked": [
+        "https://www.nps.gov/articles/10essentials.htm",
+        "https://www.nps.gov/subjects/trails/hiking-safety.htm",
+        "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html"
+      ],
+      "title": "登山进阶",
+      "role": "独立兴趣课程 · 登山",
+      "reading_note": "先读安全与进入条件，再准备训练问题；进阶依赖受训能力和现场判断。",
+      "entry": "interests/mountaineering/_index.md",
+      "entry_label": "登山路线入口",
+      "sha256": "da51274460f6e95167dae6e2e8482f0fb72aa81e642b93725515a6219d6432f2"
+    },
+    {
+      "path": "interests/system-architecture/00-architecture-method/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；先修要求是能描述服务输入输出，实践产物是需求/约束/容量/故障边界基线，验证以阶段挑战和可更新设计基线检查；route_next 已指向01，未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "架构方法与基线诊断",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "317b27e44995c4b88f08aee60a35c29bb472fb9d60c574c9553014dbaabee1b3"
+    },
+    {
+      "path": "interests/system-architecture/01-computer-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以推荐请求业务链引入 OS、页缓存、网络、日志和数据库，实践产物与阶段挑战要求回到可观测资源证据，阅读顺序和 route_next 已检查；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "Computer Systems",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "ab4ce5409f8154614647964b1aa4aacf89c602a201e1cf6f789a1ab7e737885e"
+    },
+    {
+      "path": "interests/system-architecture/01-computer-systems/page-cache-and-durable-io.md",
+      "status": "retained",
+      "note": "全文审阅后保留；先修与问题场景、批量同步实验、清理条件、确认契约 ADR 和综合评审承接完整，明确同步返回不等于业务耐久；相对链接已检查，未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "页缓存（Page Cache）、写入确认与持久化边界",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "f9c51b852c189896d851947926e7718cfdb924d61afe6d39e84ec6b2926f416e"
+    },
+    {
+      "path": "interests/system-architecture/02-network/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；前置来自计算机系统阶段，实践要求把连接、超时、重试和排队放回业务链并提交阶段产物，route_next 指向分布式系统；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "Network",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "a04d71cc09643356ccc6e24e24ba1a1ecf6841d9c583b23a4635904264817af0"
+    },
+    {
+      "path": "interests/system-architecture/03-distributed-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；先修是前序系统边界和网络基础，实践产物围绕副本、提交和故障模型，阶段阅读顺序连接数据系统；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "Distributed Systems",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "914805585c952552fb8242a2ae906afbe80d9a2c2ce23f9676409a246de0d121"
+    },
+    {
+      "path": "interests/system-architecture/03-distributed-systems/replicated-log.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以三 broker 故障时间线和 ISR 矩阵连接 Kafka 提交边界，活动、掌握度检查、ADR 和 capstone 承接完整；相对链接已检查，未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "复制日志（Replicated Log）：副本、提交与选主",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "dc2189318e98df50780c109eb84f3ad25a4e95075de0b51cc6dc59c5e3a15c86"
+    },
+    {
+      "path": "interests/system-architecture/04-data-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；前置是网络/分布式基础，实践要求提交存储决策记录与基准/执行计划证据，阅读顺序连接数据架构；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "Data Systems",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "f286df1a1c1b556b7a5cfc27ba39b8df43a3b610b098489f69de596357046d9a"
+    },
+    {
+      "path": "interests/system-architecture/04-data-systems/write-ahead-log.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以 WAL、RPO 和恢复演练场景连接异步/同步提交，Docker 活动有可逆清理、ADR 有验证与回滚，capstone 链接已检查；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "预写日志（Write-Ahead Log，WAL）：从提交确认到崩溃恢复",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "23cca72cf9fa4d4cf958c4bf5c09ccf4df13d4511db84c61b5098b84abe3ac81"
+    },
+    {
+      "path": "interests/system-architecture/05-data-architecture/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以事件时间、水位线、状态、checkpoint/replay 和 schema 契约作为前置到实践的桥梁，产物要求数据正确性与重放证据包，route_next 已检查；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "数据架构（Data Architecture）",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "6ba4efabc56873ad7653abead16da15f69a78dd7ba5f19f3b402757630a678ce"
+    },
+    {
+      "path": "interests/system-architecture/05-data-architecture/checkpoint-and-replay.md",
+      "status": "retained",
+      "note": "全文审阅后保留；围绕窗口、状态切面、输入位置和幂等副作用提供故障场景、重放实验与架构判断，连接 cloud-native recovery/capstone；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "检查点与重放（Checkpoint and Replay）：有状态流作业的恢复边界",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "17c78add4c2a371120e56f550d9ad9cad1ca74c19d4dc73a94967892d3115328"
+    },
+    {
+      "path": "interests/system-architecture/06-cloud-native-sre/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；前置是数据与恢复边界，实践以 SLO、故障演练和有状态服务恢复为产物，route_next 指向 ML 系统；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "云原生与 SRE（Cloud Native / SRE）",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "fdd553be223cb447c5f3d530e85958a8af54d8111045c50b15d6dffb0a88f989"
+    },
+    {
+      "path": "interests/system-architecture/06-cloud-native-sre/stateful-recovery.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以 Kubernetes StatefulSet、卷、fencing 和恢复证据的模拟故障时间线组织活动，明确 force delete 不等于数据恢复并接 capstone；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "有状态服务恢复：编排、数据与一致性的边界",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "a73ebbdf27b29ba130c2f93be4a10a23488218dc60b438bc6d9eb23a1d7ec97f"
+    },
+    {
+      "path": "interests/system-architecture/07-ml-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以前置数据契约/时间切分/泄漏检查进入训练与服务，实践产物覆盖版本、漂移、发布、降级和回滚证据，route_next 已检查；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "机器学习系统（ML Systems）",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "24ba67d634d41c7ec7f7cfb72bc182b670240d6f144450d27c05b9a4f32415b5"
+    },
+    {
+      "path": "interests/system-architecture/08-recommendation-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；承接 ML 特征和评估，实践产物要求候选到反馈的在线时间线、冷启动和预注册实验记录，route_next 指向 AI 工程；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "推荐系统（Recommendation Systems）",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "50995527a0db98dba9694678ed6b61e0c43319d83cde8133209603dba2c9d2aa"
+    },
+    {
+      "path": "interests/system-architecture/09-ai-engineering/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；承接推荐系统和数据/SLO/权限证据，按 token/context→RAG→workflow/state machine→评估护栏推进，完成后回总入口和 capstone；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "AI 工程（AI Engineering）",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "c5598da6e871b9afc984a3bac9b77403be2050f0819aec0f318f7ba3f9c8dafa"
+    },
+    {
+      "path": "interests/system-architecture/_index.md",
+      "status": "integrated",
+      "note": "整合路线顺序；明确 00→09 是默认主干，日志—状态—恢复纵向切片是读完相关阶段后可选的复盘，capstone 在主干之后；投入时长只是可调整预算，不新增正式单元；内部路径已检查，未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "系统架构与 AI 工程",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "e088b1e7ad515467cd24ad89bd9627122199dd2416cc9cac0f0f5f07d610a336"
+    },
+    {
+      "path": "interests/system-architecture/authoring-guide.md",
+      "status": "retained",
+      "note": "全文审阅后保留；作者契约明确四层结构、概念首次解释、同步/异步边界、可复现实验和清理要求，作为六单元一致性检查依据；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "系统架构课程作者规范",
+      "role": "课程作者与来源材料",
+      "reading_note": "用于编写和核对课程；学习者从课程总入口选择主干或已有的纵向切片。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "2ebf799ec4f37cbfccb1230e724864987fd5e74da9819b80b7c91eab154cfb8f"
+    },
+    {
+      "path": "interests/system-architecture/capstone/_index.md",
+      "status": "integrated",
+      "note": "整合最终项目入口；明确主干 00→09 后进入 capstone，纵向切片可选且不构成全课程先修，六个正式单元按证据链提交最终评审，验证协议独立于正式单元；不再用毕业门禁表述；内部路径已检查，未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "系统架构综合项目",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "57a03aa78834f6db3f7f51fc7e910db8fb79f218a6b51aa1d54326395697104e"
+    },
+    {
+      "path": "interests/system-architecture/capstone/log-state-recovery-review.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以推荐平台端到端模拟故障为综合场景，要求六份产物、fencing、重放、幂等和业务不变量证据，连接五个前置单元与验证协议；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "日志、状态与恢复纵向切片综合评审",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "6c446b0a3e2d1183bc8f7455ca5dcad5ec54b4f8c4011c938ff3e2e9b7b3b524"
+    },
+    {
+      "path": "interests/system-architecture/capstone/validation-protocol.md",
+      "status": "retained",
+      "note": "全文审阅后保留；明确这不是知识单元，要求逐页耗时、四层有效性、活动证据和独立完成记录，限制材料与凭证范围；未做新一轮技术事实核验。",
+      "sources_checked": [],
+      "title": "系统架构第一批真实学习者验证协议",
+      "role": "独立兴趣课程 · 系统架构",
+      "reading_note": "默认沿十阶段主干阅读；纵向切片、实验与综合项目按课程写明的先修条件进入。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "a64a35d7a53538b99e60c1bdc5e6223b433d269ac80a61fcc3e4756a484aaac0"
+    },
+    {
+      "path": "interests/system-architecture/references/source-matrix.md",
+      "status": "retained",
+      "note": "全文审阅后保留；按主题列出官方来源、访问日期、可支持结论及不得外推的边界，作为六单元来源检查入口；本轮仅检查矩阵结构，未重新浏览来源 URL。",
+      "sources_checked": [],
+      "title": "系统架构课程第一批来源矩阵",
+      "role": "课程作者与来源材料",
+      "reading_note": "用于编写和核对课程；学习者从课程总入口选择主干或已有的纵向切片。",
+      "entry": "interests/system-architecture/_index.md",
+      "entry_label": "系统架构课程入口",
+      "sha256": "f09d0aebb89ebe9f4f193b24ed3b1724e81557783c5475b8fc88b231ddd7de66"
+    },
+    {
+      "path": "paths/0-3/cognitive-psychological.md",
+      "status": "rewritten",
+      "note": "保留专题延伸定位，补齐 11 个认知主题的月龄/用途入口，并把连续主线置于专题之前。",
+      "sources_checked": [],
+      "title": "0–3 岁认知与心理专题路径",
+      "role": "按问题查阅的辅助地图",
+      "reading_note": "主线先在本页解释必要知识；这张地图用于额外问题，查完回到当前年龄路线。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "年龄路线入口",
+      "sha256": "9485f385efc67546b45473af293373a4c4c972a4b092cd3d26189ec983f4b636"
+    },
+    {
+      "path": "paths/12-14/cognitive-psychological.md",
+      "status": "rewritten",
+      "note": "改成按问题选择沟通、身体、同伴、数字、身份、学习和元认知的辅助地图，并在表内解释首次出现的术语和求助边界。",
+      "sources_checked": [],
+      "title": "12–14 岁认知与心理专题路径",
+      "role": "按问题查阅的辅助地图",
+      "reading_note": "主线先在本页解释必要知识；这张地图用于额外问题，查完回到当前年龄路线。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "年龄路线入口",
+      "sha256": "b274aac8ae59a1e29cc0557c48864968fe94d884fb74499840f5db069d62abc2"
+    },
+    {
+      "path": "paths/12-14/physical.md",
+      "status": "rewritten",
+      "note": "重写为身体变化的可选支持路径：先讲隐私、差异、观察与何时求助，不用统一青春期时间表把孩子推入自诊或主线进度。",
+      "sources_checked": [],
+      "title": "12–14 岁身体发展专题规划",
+      "role": "按问题查阅的辅助地图",
+      "reading_note": "主线先在本页解释必要知识；这张地图用于额外问题，查完回到当前年龄路线。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "年龄路线入口",
+      "sha256": "9e52566479b91c1a65e76a995f7edd78850da62d6939533d11eb9d212ad94649"
+    },
+    {
+      "path": "paths/_index.md",
+      "status": "rewritten",
+      "note": "将全站入口按新手父母、各年龄、照料者支持、问题查阅和独立兴趣课程组织，首先给读法而非概念目录。",
+      "sources_checked": [],
+      "title": "从这里开始",
+      "role": "全站阅读入口",
+      "reading_note": "先选与你当前生活或问题相关的一条路线，再按需查专题和来源。",
+      "entry": "paths/_index.md",
+      "entry_label": "阅读路线总览",
+      "sha256": "e22568971b5244ef0259014fb2ad10e207f24797a3ab84ee79cb20031f870984"
+    },
+    {
+      "path": "paths/agent-mvp/0-3-parenting-weekly-plan.md",
+      "status": "rewritten",
+      "note": "重编为有输入条件、安全前置、单一行动和九项稳定输出的公开示例；删除统一清醒窗口、趴玩与睡眠剂量，不改变私有产品行为。",
+      "sources_checked": [],
+      "title": "0–3 岁新手父母 Agent 周计划模板",
+      "role": "公开输出结构示例",
+      "reading_note": "理解如何从家庭观察选择一个行动并复盘；个体医疗和安全需要先于计划处理。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "新手父母主线",
+      "sha256": "82d526894f2c99686929dc45400b43bcae6ab4c9196168f59e89e5e7b479080b"
+    },
+    {
+      "path": "paths/language/english.md",
+      "status": "rewritten",
+      "note": "全文编辑整合；将英语路径入口、能力分级和三个阶段的前后承接接到 interests 正文，年龄不再是掌握标准；把周数/词数/频次改为可撤销示例，并修正进阶与高阶日历锚点；未独立核验语言学事实。",
+      "sources_checked": [],
+      "title": "英语学习路径",
+      "role": "独立兴趣课程 · 语言",
+      "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度；示例日历不作为毕业门槛。",
+      "entry": "interests/language/_index.md",
+      "entry_label": "语言路线入口",
+      "sha256": "7f5559ae6fa6c85a65c0d5d98de5bbc3b10dac76ee183130dfe8443fa6cd12c1"
+    },
+    {
+      "path": "paths/language/mother-tongue.md",
+      "status": "rewritten",
+      "note": "全文编辑整合；将母语路径改为能力与互动场景导航，明确年龄是示例背景而非门槛，并指向0–3、3–6、学龄期递进；频次和数量改为可调整示例，并为0–3岁旧对话指南保留兼容锚点；未独立核验语言学事实。",
+      "sources_checked": [],
+      "title": "母语发展路径",
+      "role": "独立兴趣课程 · 语言",
+      "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度；示例日历不作为毕业门槛。",
+      "entry": "interests/language/_index.md",
+      "entry_label": "语言路线入口",
+      "sha256": "0316744da97f294a1312d3acd61ee5a87f6e9a97ab58a7f873e52bfce7356eb0"
+    },
+    {
+      "path": "paths/learning/_index.md",
+      "status": "integrated",
+      "note": "区分新生儿至三岁主线、学龄前与学校连续路线、问题指南；解释睡眠、情绪、任务难度如何影响参与，移除统一观察周期。",
+      "sources_checked": [],
+      "title": "学习与探索",
+      "role": "全站阅读入口",
+      "reading_note": "先选与你当前生活或问题相关的一条路线，再按需查专题和来源。",
+      "entry": "paths/_index.md",
+      "entry_label": "阅读路线总览",
+      "sha256": "b2d7212455b15a2295ffa60de285f84db9b2278e64c0fc26a906a73ff8f57d46"
+    },
+    {
+      "path": "paths/learning/ages/0-3.md",
+      "status": "rewritten",
+      "note": "重编为同一十五章主线的年龄入口与23专题用途地图；chapters留空以避免给每章登记重复路线，首次阅读直接进入统一主线。",
+      "sources_checked": [],
+      "title": "0–3 岁连续阅读路线：从出生照料到三岁探索",
+      "role": "按年龄连续阅读入口",
+      "reading_note": "按孩子当前生活阶段选择路线，沿实际章节读；切换年龄不要求先完成能力考核。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "全部年龄路线",
+      "sha256": "aec781d766049c66d89d8398a26dd4af451c7078f2a50e1d008b428504e944dc"
+    },
+    {
+      "path": "paths/learning/ages/12-14.md",
+      "status": "rewritten",
+      "note": "把青春期路线按沟通、身体、学习、同伴、数字、身份、元认知串起，并把第二篇沟通实战放到发生具体冲突时再打开。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": [],
+      "title": "12–14 岁行动路线：从沟通和身体变化开始",
+      "role": "按年龄连续阅读入口",
+      "reading_note": "按孩子当前生活阶段选择路线，沿实际章节读；切换年龄不要求先完成能力考核。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "全部年龄路线",
+      "sha256": "8fb2766aec13bfa2fd78d54840c5356af5435634da507f3577f2a7a9649da395"
+    },
+    {
+      "path": "paths/learning/ages/14-18.md",
+      "status": "rewritten",
+      "note": "把路线按关系安全、心理、兴趣学习、学业压力、数字生活、冲突理解排列，实战页改成问题触发的辅助阅读并保持安全提示在前。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": [],
+      "title": "14–18 岁行动路线：从关系和安全走向自主",
+      "role": "按年龄连续阅读入口",
+      "reading_note": "按孩子当前生活阶段选择路线，沿实际章节读；切换年龄不要求先完成能力考核。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "全部年龄路线",
+      "sha256": "721ac2760440e82c84ef48b6d25ee30826c94269f62cf53d14ad485d793e6fe1"
+    },
+    {
+      "path": "paths/learning/ages/3-6.md",
+      "status": "rewritten",
+      "note": "按身体—情绪—互动—任务—语言/学习编排显式 chapters；其余专题改为问题查阅入口。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": [],
+      "title": "3–6 岁连续阅读路线：从身体参与到共同学习",
+      "role": "按年龄连续阅读入口",
+      "reading_note": "按孩子当前生活阶段选择路线，沿实际章节读；切换年龄不要求先完成能力考核。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "全部年龄路线",
+      "sha256": "f101c8191ff47d7e450de774b3b3a3dc38c8bf78cf5f42c7d8f59605ac0d09be"
+    },
+    {
+      "path": "paths/learning/ages/6-9.md",
+      "status": "rewritten",
+      "note": "把学习路线改为五章线性阅读并在每章设置停点，明确身体、屏幕、表达和金钱是按问题选读，年龄切换不再像技能通关。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": [],
+      "title": "6–9 岁行动路线：从任务起点到兴趣表达",
+      "role": "按年龄连续阅读入口",
+      "reading_note": "按孩子当前生活阶段选择路线，沿实际章节读；切换年龄不要求先完成能力考核。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "全部年龄路线",
+      "sha256": "a7547ab6fc7430a3a30f1556d2f1b02c6689c7dd874576dc00a2d979864cf923"
+    },
+    {
+      "path": "paths/learning/ages/9-12.md",
+      "status": "rewritten",
+      "note": "把路线顺序固定为自我管理—睡眠—同伴—创新—历史视角，每章说明前后关系和停点，选读入口不再把主题链接伪装成连续能力等级。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": [],
+      "title": "9–12 岁行动路线：从学习反馈到共同探索",
+      "role": "按年龄连续阅读入口",
+      "reading_note": "按孩子当前生活阶段选择路线，沿实际章节读；切换年龄不要求先完成能力考核。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "全部年龄路线",
+      "sha256": "da912d401a6df9c62d33d6f1ba528b0ffe51124e6aeb1f0c02704bb06f2c5a6c"
+    },
+    {
+      "path": "paths/learning/ages/_index.md",
+      "status": "rewritten",
+      "note": "六年龄段均给出实际连续阅读入口和专题用途，年龄切换依据生活阶段，0–3指向同一十五章主线。",
+      "sources_checked": [],
+      "title": "按年龄开始",
+      "role": "按年龄连续阅读入口",
+      "reading_note": "按孩子当前生活阶段选择路线，沿实际章节读；切换年龄不要求先完成能力考核。",
+      "entry": "paths/learning/ages/_index.md",
+      "entry_label": "全部年龄路线",
+      "sha256": "b15b4386e2194e57d9a39026bfd2b4daa75ba64bcbbf8c2b9f4af2ff208c25c2"
+    },
+    {
+      "path": "paths/learning/questions/_index.md",
+      "status": "integrated",
+      "note": "将三个问题入口定位为可在本页读完的行动指南，跨年龄专题不再伪装成进阶等级。",
+      "sources_checked": [],
+      "title": "按问题开始",
+      "role": "具体问题的完整指南",
+      "reading_note": "围绕眼前的任务读完本页，再决定一个调整；跨年龄的补充文章只在适用时查。",
+      "entry": "paths/learning/questions/_index.md",
+      "entry_label": "问题指南入口",
+      "sha256": "8819bde0bd71d485c16006a7675e62908197df72eeb89db46e74b8d460686e64"
+    },
+    {
+      "path": "paths/learning/questions/interest-discovery.md",
+      "status": "integrated",
+      "note": "保留低成本尝试表与具体例子，补上本人选择、预算和活动安全；删除重复决策段、统一一两周周期和十分钟门槛。",
+      "sources_checked": [],
+      "title": "兴趣发现与拓展",
+      "role": "具体问题的完整指南",
+      "reading_note": "围绕眼前的任务读完本页，再决定一个调整；跨年龄的补充文章只在适用时查。",
+      "entry": "paths/learning/questions/_index.md",
+      "entry_label": "问题指南入口",
+      "sha256": "2df76a2dcb6bdc56f5a6bf329b16a699f0217a59ced3c017f69797a7fa069703"
+    },
+    {
+      "path": "paths/learning/questions/learning-habits.md",
+      "status": "rewritten",
+      "note": "从一次生活任务卡住出发，本地解释启动、记住步骤和调整，给情境调整与反馈分支；清空旧跨年龄章节序列。",
+      "sources_checked": [],
+      "title": "学习习惯：先让任务能开始",
+      "role": "具体问题的完整指南",
+      "reading_note": "围绕眼前的任务读完本页，再决定一个调整；跨年龄的补充文章只在适用时查。",
+      "entry": "paths/learning/questions/_index.md",
+      "entry_label": "问题指南入口",
+      "sha256": "6ffadda41f6dc8032ca27bc8ce5dfe7eadc37cdae581737f3d24086d2afc60ea"
+    },
+    {
+      "path": "paths/learning/questions/school-learning.md",
+      "status": "rewritten",
+      "note": "围绕启动、理解、练习、反馈和求助组织完整正文，分清不会、太难和状态不佳；清空旧跨年龄伪进度。",
+      "sources_checked": [],
+      "title": "学校学习：先弄清楚卡在哪里",
+      "role": "具体问题的完整指南",
+      "reading_note": "围绕眼前的任务读完本页，再决定一个调整；跨年龄的补充文章只在适用时查。",
+      "entry": "paths/learning/questions/_index.md",
+      "entry_label": "问题指南入口",
+      "sha256": "be920508e28c5071d04d09c0a326c4709714913923f75911b4cb6ac50e6ccb9b"
+    },
+    {
+      "path": "paths/parenting/new-parent/01-before-birth.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；医院联系方式、三方分工与安全准备都通过产前家庭场景解释，第一次阅读不需先懂产科术语。",
+      "sources_checked": [],
+      "title": "第一章：出生前，把支持准备好",
+      "role": "产前至三岁主线 · 第1章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "27a84d8cf404403702f021f604528c4295d91ce1790fb9230879535b4ed4613d"
+    },
+    {
+      "path": "paths/parenting/new-parent/02-ready-for-hospital.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；待产物品、路线演练和入院信号在本页解释，区别偏好与具体医疗安排。",
+      "sources_checked": [],
+      "title": "第二章：准备去医院，认识临产信号",
+      "role": "产前至三岁主线 · 第2章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "0e0bfee6863f6b282399de37f0c5c65939a2d528106abae1869803c23141bb3d"
+    },
+    {
+      "path": "paths/parenting/new-parent/03-birth-day.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；把到院、检查、产程与陪伴连接为一段经历，开指与胎膜等术语就地解释，不保证一种分娩结果。",
+      "sources_checked": [],
+      "title": "第三章：生产当天，在变化中沟通",
+      "role": "产前至三岁主线 · 第3章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "99dde1421bee085fb5fecdb15a6216e0609ba497523f1d6ef9d82e91c87c1e26"
+    },
+    {
+      "path": "paths/parenting/new-parent/04-first-day.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；从产妇观察到新生儿喂养、筛查和第一次操作顺序完整，接到出院前准备。",
+      "sources_checked": [],
+      "title": "第四章：出生后第一天，先稳定，再学习",
+      "role": "产前至三岁主线 · 第4章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "238cf9b0c589033da5f5c3f58cecbac9e943b0d2ea40d7f23fb24b74f006e25e"
+    },
+    {
+      "path": "paths/parenting/new-parent/05-going-home.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；出院交接与第一晚同页展开，知道谁负责、哪些记录带走、什么情况求助。",
+      "sources_checked": [],
+      "title": "第五章：准备回家，把护理动作接起来",
+      "role": "产前至三岁主线 · 第5章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "115ba92e67f77d6501614a185d91865919724b6209687207d6af18ead3743f9b"
+    },
+    {
+      "path": "paths/parenting/new-parent/06-first-week.md",
+      "status": "integrated",
+      "note": "全文复读并整合；保留吃奶、黄疸、尿布与家庭交班的连续叙述；本轮仅更新返回主线的描述以覆盖三岁。",
+      "sources_checked": [],
+      "title": "第六章：回家第一周，形成可交接的循环",
+      "role": "产前至三岁主线 · 第6章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "4de12b1dfa14c84ca4ab6442c026bcd5c2d367c9ed8226a188225e4bb69d0781"
+    },
+    {
+      "path": "paths/parenting/new-parent/07-recovery-and-rhythm.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；妈妈恢复、营养、盆底、情绪、休息与复查都连接到家庭分工，继承上一轮审慎来源边界。",
+      "sources_checked": [],
+      "title": "第七章：妈妈的恢复与家庭节奏",
+      "role": "产前至三岁主线 · 第7章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "2b799a7801be07b1affe93ed844988032173b169480647f79de9e961fe09bfff"
+    },
+    {
+      "path": "paths/parenting/new-parent/08-reading-baby-signals.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；吃奶过程、尿布、生长、睡眠与哭闹在正文解释不同用途，读完自然进入互动；保留上一轮有限资料核对。",
+      "sources_checked": [],
+      "title": "第八章：怎样读懂宝宝的变化",
+      "role": "产前至三岁主线 · 第8章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "149658efa134ab2e35346f562947c5cadd687b37895ee11aca3f788eed36414d"
+    },
+    {
+      "path": "paths/parenting/new-parent/09-care-and-connection.md",
+      "status": "integrated",
+      "note": "全文复读并整合；保留从护理到回应、等待与暂停的具体互动；本轮将旧的计划延伸入口改为实际第十章。",
+      "sources_checked": [],
+      "title": "第九章：从日常护理走向亲子互动",
+      "role": "产前至三岁主线 · 第9章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "7dc63ac329be6118191be146c09b4bc29f6301b31724b55c2bc51c92217f060c"
+    },
+    {
+      "path": "paths/parenting/new-parent/10-six-weeks-to-three-months.md",
+      "status": "rewritten",
+      "note": "承接 09 的照料循环，把喂养、排泄、体重、睡眠和哭闹放回同一日常观察框架。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/2-months.html",
+        "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/Back-to-Sleep-Tummy-to-Play.aspx"
+      ],
+      "title": "第十章：六周至三个月，把信号接回日常",
+      "role": "产前至三岁主线 · 第10章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "41332c729c74a39ba913edeeaf5eff4ead08b2a29cc2c0127242448a9f389ec6"
+    },
+    {
+      "path": "paths/parenting/new-parent/11-three-to-six-months.md",
+      "status": "rewritten",
+      "note": "从主动探索连接地面与睡眠安全，补齐可观察辅食准备条件和空床面；独立复核后已返修。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/4-months.html",
+        "https://www.cdc.gov/act-early/milestones/6-months.html",
+        "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx",
+        "https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/Starting-Solid-Foods.aspx"
+      ],
+      "title": "第十一章：三至六个月，给主动探索留出安全空间",
+      "role": "产前至三岁主线 · 第11章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "18bb971ee5ab00a35b2580be01c8bcbcf96fae533013ab4e644bc0b241a469be"
+    },
+    {
+      "path": "paths/parenting/new-parent/12-six-to-twelve-months.md",
+      "status": "rewritten",
+      "note": "从奶为主进入共同进餐，本地解释辅食准备、过敏与干呕/窒息的不同处理；独立复核后补上食物底线、立即急救和实操培训入口。",
+      "sources_checked": [
+        "https://www.who.int/health-topics/complementary-feeding",
+        "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding",
+        "https://www.cdc.gov/act-early/milestones/6-months.html",
+        "https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/Starting-Solid-Foods.aspx",
+        "https://www.healthychildren.org/English/healthy-living/nutrition/Pages/when-to-introduce-egg-peanut-butter-and-other-common-food-allergens-to-your-baby-food-allergy-prevention-tips.aspx",
+        "https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/",
+        "https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/choking-and-gagging-on-food/",
+        "https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-and-drinks-to-avoid/",
+        "https://www.nhs.uk/baby/first-aid-and-safety/first-aid/how-to-stop-a-child-from-choking/",
+        "https://www.redcross.org/take-a-class/resources/learn-first-aid/infant-choking"
+      ],
+      "title": "第十二章：六至十二个月，从奶为主走向共同进食",
+      "role": "产前至三岁主线 · 第12章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "86a529346132985aff123c268612aa5231b1c2e6b5223f6310531874d66b4c9c"
+    },
+    {
+      "path": "paths/parenting/new-parent/13-twelve-to-eighteen-months.md",
+      "status": "rewritten",
+      "note": "把移动、表达、边界和进食接在共同生活场景，返修成人暂停与换人条件，移除统一十分钟标准。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/1-year.html",
+        "https://www.cdc.gov/act-early/milestones/15-months.html",
+        "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding"
+      ],
+      "title": "第十三章：十二至十八个月，在移动和表达中保持边界",
+      "role": "产前至三岁主线 · 第13章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "e5886e9beaa0780ce9339ab72ebdaea5fa6a0f6d80637c34f21f0cf12fad778a"
+    },
+    {
+      "path": "paths/parenting/new-parent/14-eighteen-to-twenty-four-months.md",
+      "status": "rewritten",
+      "note": "从自主和情绪场景进入选择、假装、语言和日常任务，强调共同调节与安全边界。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/18-months.html",
+        "https://www.cdc.gov/act-early/milestones/2-years.html"
+      ],
+      "title": "第十四章：十八至二十四个月，把情绪、语言和日常任务接起来",
+      "role": "产前至三岁主线 · 第14章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "a61238430d5ca78f7da71b36d12a6d929df7eadd93cf1bda08a5931879ee039a"
+    },
+    {
+      "path": "paths/parenting/new-parent/15-twenty-four-to-thirty-six-months.md",
+      "status": "rewritten",
+      "note": "连接更长表达、假装游戏、生活任务和照料者支持，并自然过渡到 3–6 岁路线。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/30-months.html",
+        "https://www.cdc.gov/act-early/milestones/3-years.html"
+      ],
+      "title": "第十五章：二十四至三十六个月，走向更长的表达和合作",
+      "role": "产前至三岁主线 · 第15章",
+      "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "d99e68a3fee17717fc7ea39f83325ec91828b784028e24844c204371e1b1d7c2"
+    },
+    {
+      "path": "paths/parenting/new-parent/_index.md",
+      "status": "rewritten",
+      "note": "九章主线扩展为产前至三岁的十五章，章节给明确问题和场景，专题与父母支持可按需查；保留旧九章显式锚点。",
+      "sources_checked": [],
+      "title": "新手父母连续阅读：从准备出生到三岁",
+      "role": "全站阅读入口",
+      "reading_note": "先选与你当前生活或问题相关的一条路线，再按需查专题和来源。",
+      "entry": "paths/_index.md",
+      "entry_label": "阅读路线总览",
+      "sha256": "b860b8dfe1ba5cd000165e67d8152461e85b284b49b4904a4330a7542c112aca"
+    },
+    {
+      "path": "paths/parenting/parent-adolescent.md",
+      "status": "integrated",
+      "note": "明确这是14–18岁主线的专题延伸，不是另一条年龄进度；在沟通文章之前前置自伤、自杀相关表达、暴力威胁、严重混乱和无法保证安全的危机分流，并保留返回阶段入口。；去掉对当前年龄连续路线的“辅助”标签。",
+      "sources_checked": [],
+      "title": "青春期父母支持专题路径",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "9a05edbf1976319204e6aa5e4c3af438c6b6153b10deb11f9e916bcb7ff2b0c3"
+    },
+    {
+      "path": "paths/parenting/parent-wellbeing.md",
+      "status": "rewritten",
+      "note": "轻量专题入口保留，完整目录统一在父母支持主页；孕期、产后与更大孩子父母分开进入，查完返回原章原节，直接打开时选择孩子当前年龄，不再默认返回新生儿主线。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ],
+      "title": "父母自身调适专题路径",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "cd8f8d335e14800d84d3c993210372f4b153e8a2090a2b7a47fbca35f710116f"
+    },
+    {
+      "path": "paths/reading-progress.md",
+      "status": "rewritten",
+      "note": "新增公开逐篇整理记录，分别说明正文重编、入口整合与全文检查后保留；专业审定和未来课程不计入完成范围。",
+      "sources_checked": [],
+      "title": "本轮内容整理记录",
+      "role": "本轮整理记录",
+      "reading_note": "查看各模块的实际动作与逐篇说明；正文编辑完成和专业审定分别记录。",
+      "entry": "paths/_index.md",
+      "entry_label": "阅读入口",
+      "sha256": "729aa62ac071963e867e6388c897821c50208dc0c32878936e9cee799f809ed4"
+    },
+    {
+      "path": "references/_index.md",
+      "status": "rewritten",
+      "note": "从读者遇到证据问题时如何查起，区分经典理论、公开机构资料和具体指南；不再作为正文理解的前置门槛。",
+      "sources_checked": [],
+      "title": "资料与证据查阅",
+      "role": "证据与背景查阅",
+      "reading_note": "在需要核对来源或理解证据边界时查；主线中的必要概念已在正文解释，不要求先读完书目。",
+      "entry": "references/_index.md",
+      "entry_label": "参考资料入口",
+      "sha256": "f403839ae722d81a7ebcc727a553829477e3e9f7ed302f8a0920e446c92c9064"
+    },
+    {
+      "path": "references/brain-health-evidence-framework.md",
+      "status": "integrated",
+      "note": "完整复读既有证据框架，保留来源边界与原日期，增加读者使用方法和返回路线；区分本轮编辑与专业复核。",
+      "sources_checked": [
+        "https://www.who.int/publications/i/item/9789240054561",
+        "https://www.who.int/publications/i/item/9789240123557"
+      ],
+      "title": "脑健康内容证据与安全框架",
+      "role": "证据与背景查阅",
+      "reading_note": "在需要核对来源或理解证据边界时查；主线中的必要概念已在正文解释，不要求先读完书目。",
+      "entry": "references/_index.md",
+      "entry_label": "参考资料入口",
+      "sha256": "2cfa5c661a385c3be8ac29fa30879b853fba0182f96707ab3e9e55f87526a473"
+    },
+    {
+      "path": "references/chinese-education-standards.md",
+      "status": "rewritten",
+      "note": "逐项分辨现行/历史用途，修正义务教育课程方案、自闭症服务、青年规划的年份与发布方；未核对的书目明确为候选。",
+      "sources_checked": [
+        "https://www.moe.gov.cn/srcsite/A26/s8001/202204/t20220420_619921.html",
+        "https://www.moe.gov.cn/srcsite/A06/s3327/201210/t20121009_143254.html",
+        "https://www.nhc.gov.cn/fys/c100078/202209/0cb5cf9dd3964c0ab46beb31c1be312d.shtml",
+        "https://app.www.gov.cn/govdata/gov/201704/14/402865/article.html",
+        "https://www.nhc.gov.cn/lljks/c100157/202203/5e458c7c8fe2432e922a0d07d108d131.shtml"
+      ],
+      "title": "中国教育标准与指南",
+      "role": "证据与背景查阅",
+      "reading_note": "在需要核对来源或理解证据边界时查；主线中的必要概念已在正文解释，不要求先读完书目。",
+      "entry": "references/_index.md",
+      "entry_label": "参考资料入口",
+      "sha256": "56b5c9436d550e7e715a56601bc92c56d93c81b8212b8b83cf1707ccac492ca2"
+    },
+    {
+      "path": "references/developmental-psychology.md",
+      "status": "integrated",
+      "note": "复读经典理论书目并解释背景用途与不可外推边界，纠正Butler 1963书目信息；没有把书目复读当成重读全部原著。",
+      "sources_checked": [
+        "https://pubmed.ncbi.nlm.nih.gov/14017386/"
+      ],
+      "title": "发展心理学核心文献",
+      "role": "证据与背景查阅",
+      "reading_note": "在需要核对来源或理解证据边界时查；主线中的必要概念已在正文解释，不要求先读完书目。",
+      "entry": "references/_index.md",
+      "entry_label": "参考资料入口",
+      "sha256": "a290d607eec41fbd5929ad91d28182c835f1d0b4e804de9184d88c1234bba974"
+    },
+    {
+      "path": "references/early-parenthood-care.md",
+      "status": "integrated",
+      "note": "保留原教程2026-09-17资料目录与有限核对记录，新增十五章阅读角色与返回；不把旧来源日期更新成新医学审核。",
+      "sources_checked": [],
+      "title": "孕产与婴儿早期照护资料",
+      "role": "证据与背景查阅",
+      "reading_note": "在需要核对来源或理解证据边界时查；主线中的必要概念已在正文解释，不要求先读完书目。",
+      "entry": "references/_index.md",
+      "entry_label": "参考资料入口",
+      "sha256": "9cebad3367341758456eaa5d8d499f2042098382907eeb9adc29c21bc1c436ee"
+    },
+    {
+      "path": "references/motor-development.md",
+      "status": "integrated",
+      "note": "复读原有资料，增加动作观察、公共卫生、体育模型及感觉理论的用途区分与返回；既有研究未全部重新打开。",
+      "sources_checked": [
+        "https://www.who.int/news-room/fact-sheets/detail/physical-activity"
+      ],
+      "title": "动作发展与运动科学核心文献",
+      "role": "证据与背景查阅",
+      "reading_note": "在需要核对来源或理解证据边界时查；主线中的必要概念已在正文解释，不要求先读完书目。",
+      "entry": "references/_index.md",
+      "entry_label": "参考资料入口",
+      "sha256": "8001041e7c3d28923540ad28840bde5f892704852e67f4650ed7ea6c59995d7a"
+    },
+    {
+      "path": "roadmap.md",
+      "status": "rewritten",
+      "note": "按实际可读主线、专题、兴趣课程和人生概览呈现现状；未来方向仍保留，删去不成立的完成数量、年龄峰值和统一进度承诺。",
+      "sources_checked": [],
+      "title": "鼓楼内容地图与后续规划",
+      "role": "项目现状与未来方向",
+      "reading_note": "先区分已经可读的内容、阶段概览和未来课程，再选择阅读入口。",
+      "entry": "paths/_index.md",
+      "entry_label": "选择阅读路线",
+      "sha256": "fb17b35282b511d00fa370595edb206a1227c97e6712818b1f6f371876ac1415"
+    },
+    {
+      "path": "stages/_index.md",
+      "status": "rewritten",
+      "note": "新增全人生阶段导航，先区分替孩子阅读与本人阅读；家庭期年龄不再与孩子年龄混在一张能力表里。",
+      "sources_checked": [],
+      "title": "按当前处境开始阅读",
+      "role": "人生阶段入口",
+      "reading_note": "先选择替孩子阅读或本人阅读，再进入相应主线、专题或阶段概览。",
+      "entry": "paths/_index.md",
+      "entry_label": "全站阅读入口",
+      "sha256": "e64af3ea6c007613d3666b6222bdc6638276146fbefcd6a4e4f606f503977610"
+    },
+    {
+      "path": "stages/中年期（40-60岁）/_index.md",
+      "status": "rewritten",
+      "note": "以工作变化、上下代照料和个人恢复为实际任务，避免衰退决定论和强制转型窗口；明确尚属阶段概览。",
+      "sources_checked": [],
+      "title": "中年期（40–60 岁）",
+      "role": "人生阶段概览",
+      "reading_note": "围绕当前生活任务阅读；这里只计现有概览和专题，尚未编成的完整课程留在规划中。",
+      "entry": "stages/_index.md",
+      "entry_label": "人生阶段入口",
+      "sha256": "18a60fd1f6e3b38b12557a50b19eac9e5f4a328be4948028983a4fdab75442bf"
+    },
+    {
+      "path": "stages/大学期（18-22岁）/_index.md",
+      "status": "rewritten",
+      "note": "从新生活安排、课程任务、关系和专业尝试出发，明确概览与独立兴趣课程的边界；明确尚属阶段概览。",
+      "sources_checked": [],
+      "title": "大学期（18–22 岁）",
+      "role": "人生阶段概览",
+      "reading_note": "围绕当前生活任务阅读；这里只计现有概览和专题，尚未编成的完整课程留在规划中。",
+      "entry": "stages/_index.md",
+      "entry_label": "人生阶段入口",
+      "sha256": "e155da0e6813ecad8ab859106784b68e58968c9ef48a36f08bfeb73e0ba4d979"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/_index.md",
+      "status": "rewritten",
+      "note": "围绕分娩与育儿、分工和照料者支持组织本人任务，家庭期年龄与儿童年龄分开；明确尚属阶段概览。",
+      "sources_checked": [],
+      "title": "家庭期（25–45 岁）",
+      "role": "人生阶段概览",
+      "reading_note": "围绕当前生活任务阅读；这里只计现有概览和专题，尚未编成的完整课程留在规划中。",
+      "entry": "stages/_index.md",
+      "entry_label": "人生阶段入口",
+      "sha256": "4043abaa208eefcb53ddc9f81ad50a4cc5b26ca99492f2fa8b83c7d778a32a39"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "status": "rewritten",
+      "note": "全文复读并重编入口，把十五章主线、月龄地图、全部护理/认知/身体专题分层，第一次系统阅读沿主线，具体问题再查专题。",
+      "sources_checked": [],
+      "title": "婴幼儿期（0–3 岁）",
+      "role": "本年龄专题地图",
+      "reading_note": "第一次系统阅读先进入本年龄连续路线；下方专题用于具体问题，不要求按目录逐篇补课。",
+      "entry": "paths/learning/ages/0-3.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "ba852021b95f235913a1c38f1281bf2763aa25562e43e51f25b2a6cba8648339"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/development-assessment.md",
+      "status": "retained",
+      "note": "全文复读；以真实场景记录、情境/状态/成人支持和倒退/安全红旗组织，概念区分家庭观察、监测和筛查，适合作为主线后的评估支点。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html"
+      ],
+      "title": "0-3 岁发展观察框架",
+      "role": "发展观察与求助查阅",
+      "reading_note": "用于整理真实情境、成人支持和功能变化，不作为家庭测试或年龄通关。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "0190bc0ad06da2bc8c937feb69d8f694094258c4f9517b89f0417cf792606fa2"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/_index.md",
+      "status": "retained",
+      "note": "全文复读；明确 8 个护理主题的使用场景和“先安全—观察—低风险行动—决定是否求助”结构，已把连续主线与操作查阅分开。",
+      "sources_checked": [],
+      "title": "新生儿日常护理指南",
+      "role": "本年龄专题地图",
+      "reading_note": "第一次系统阅读先进入本年龄连续路线；下方专题用于具体问题，不要求按目录逐篇补课。",
+      "entry": "paths/learning/ages/0-3.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "3c53bd921edfce2e27b4ab714188c0a77df44e1a9cfd48042218ef08c4d9dc16"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/bathing-care-01.md",
+      "status": "retained",
+      "note": "全文复读；洗澡、擦浴/盆浴、脐带和照料者离开场景均先讲安全，解释脐部护理词语并保留溺水/异常状态求助边界。",
+      "sources_checked": [],
+      "title": "洗澡与脐带护理",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "23566979d65bbd44b649991085d3e977ec67105c88339e6d57ab1a6925bf2a51"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/burping-guide-01.md",
+      "status": "retained",
+      "note": "全文复读；从喂后不适场景区分拍嗝是可选观察动作，给出支撑姿势、停止条件和异常求助，未把拍出声音写成目标。",
+      "sources_checked": [],
+      "title": "拍嗝",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "5ff3e532e100de790b9d4659497dd64d81ffa463854d482279ec665b933070d1"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/colic-relief-01.md",
+      "status": "retained",
+      "note": "全文复读；先区分哭闹与“肠胀气”概念，再给低风险安抚和记录趋势，保留发热、喂养和照料者安全红旗。",
+      "sources_checked": [],
+      "title": "肠胀气应对",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "57efd541aee07fbba34a5953f5c8b0e98a8f000e90ce69db0ac0c07a122848c1"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/crying-checklist-01.md",
+      "status": "retained",
+      "note": "全文复读；从哭闹真实场景按危险—信号—照料者重置编排，具备可执行交接步骤和不延误求助的红旗。",
+      "sources_checked": [],
+      "title": "哭闹快速排查",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "d44e8c82259bf1f4a7276b60f812d0c500f772f4bcf5eddef225f4fec6902bb2"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/diaper-changing-01.md",
+      "status": "retained",
+      "note": "全文复读；把换尿布台/地面、材料准备、单手保护和皮肤观察写在正文，未要求读者外跳补基础安全。",
+      "sources_checked": [],
+      "title": "换尿不湿与尿布区护理",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "197206ffc708f724ee8641fdcf26fe170041b973e59024ab81bfdcd8d3374336"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/feeding-guide-01.md",
+      "status": "retained",
+      "note": "全文复读；先处理喂养求助，再解释饥饿/饱足信号、母乳/配方/混合和趋势记录，保留吞咽与生长异常边界。",
+      "sources_checked": [],
+      "title": "喂养实操",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "46a1a898ce67cbf51ea76463b3b8ae1e1b037487f15638fef1b571977ae8a361"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/holding-newborn-01.md",
+      "status": "retained",
+      "note": "全文复读；从抱起/放下场景解释头颈、躯干、臀部和气道支撑，列出常见错误、呼吸异常和交接安全。",
+      "sources_checked": [],
+      "title": "抱新生儿",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "11ba348b6570744e1848f56a83482c52d935852da15f86a3d5fe4d9103134dc3"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/newborn-sleep-01.md",
+      "status": "retained",
+      "note": "全文复读；先处理就医信号，再解释零碎睡眠、安抚和安全睡眠，固定时长被明确为参考而非训练指标。",
+      "sources_checked": [],
+      "title": "新生儿睡眠",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "17dfcdca8d82a6ffa425e789ce80c829ed294736f1c2a983b62115ed4918c1e3"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/attachment-01.md",
+      "status": "integrated",
+      "note": "保留哭闹、换人、分离重逢和照料者耗竭场景；把“信号”解释为哭声、转开、伸手、看向成人等可见行为，新增从喂养/睡眠主线接入联合注意的承接；保留安全交接和照料者求助红旗。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/infants.html"
+      ],
+      "title": "安全依恋",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "479f48fb8edd7ad77a4452d68d1563188e1dddbf03b2121fc14b6fba23c54967"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/autonomy-01.md",
+      "status": "integrated",
+      "note": "保留穿衣、吃饭、出门和“我自己来”例子；新增身体状态/安全边界先行，以及从回应关系进入自主参与的解释；保留攻击、倒退和照料者失控的求助条件。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-1-2-years.html"
+      ],
+      "title": "自主行动与边界",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "80e0d2bc6e80cf7437f8841516d5ccacdb6890197e9e4d2d5fa924831f1add3d"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/cause-effect-01.md",
+      "status": "integrated",
+      "note": "保留扔勺子、滚动、按钮、容器和水游戏；新增“动作—结果—状态”不能脱离照料场景的解释，以及探索到客体持续的下一步。",
+      "sources_checked": [],
+      "title": "因果探索",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "c49b9c7e6a64300cb6282a65abfd07217ffa3c01f873d6503313e6a841ae6e32"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/early-reading-01.md",
+      "status": "integrated",
+      "note": "保留啃书、跑开、重复页面和按月龄共读例子；新增清醒舒适、回应后再共读的承接，避免把共读写成识字任务。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/infants.html"
+      ],
+      "title": "早期阅读探索",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "349b29ef8e2431bc94e2feffc08e9f34d9759287bd1a4b6af18b82ed355cf77e"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/empathy-01.md",
+      "status": "integrated",
+      "note": "保留哭声感染、递纸巾、冲突修复和绘本例子；新增“先安稳—再连接—后修复”的进入顺序，保留不强迫分享/安慰的边界。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/18-months.html"
+      ],
+      "title": "共情与亲社会行为萌芽",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "7fa53e10e9aa2f4edc24ee2aef51a1aa28dbb63706692f081735bd1a35de6b41"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/joint-attention-01.md",
+      "status": "integrated",
+      "note": "保留指物、递物、拉手和回头看等沟通例子；新增从“想要”到“想分享”的场景承接，明确指物不是唯一表达且红旗不能自诊断。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/18-months.html"
+      ],
+      "title": "联合注意",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "3b474081ce008ee71822def444f5d3b0f168ee5c5440a37fb85e285660ba8673"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/learning-foundations-01.md",
+      "status": "integrated",
+      "note": "保留扔勺子、开关、提问和假装场景；把文章定位为认知主线地基，明确先处理安全/照料状态，再进入因果、共同注意、阅读和假装分支。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/infants.html",
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/"
+      ],
+      "title": "学习与探索的地基",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "10ac7e463b133bf0e154987f1de5f1a2a0bd84a7f8b2e00d1f9551bc09192c30"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/object-permanence-01.md",
+      "status": "integrated",
+      "note": "保留遮挡、藏玩具、找物品和告别场景；把概念解释接回离开—回来经验，保留材料安全和不以寻找结果做测试的边界。",
+      "sources_checked": [],
+      "title": "客体持续与寻找",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "9a79ffc0506ba779f4d0a6d70bff230f9f5eef8fb8cc8f1b24c32058fa93efe0"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/screen-time-01.md",
+      "status": "integrated",
+      "note": "新增动画结束时哭闹的场景，承接睡眠/活动/共读路线，保留内容、陪伴、结束过渡和健康问题求助边界。",
+      "sources_checked": [
+        "https://www.who.int/publications/i/item/9789241550536"
+      ],
+      "title": "婴幼儿屏幕管理",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "d9d5e6918ab2d7fa9eb7a2264b2d7a6080aa5da76cbefe99f9afca8c6b2e433a"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/self-awareness-01.md",
+      "status": "integrated",
+      "note": "保留镜子、照片、“我的”、选择和日常任务例子；把概念接到身体边界、自主和情绪表达，保留不做镜像测试及安全决定由成人承担。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-1-2-years.html",
+        "https://www.cdc.gov/act-early/milestones/18-months.html"
+      ],
+      "title": "自我与自主意识萌芽",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "964f7132c99fcb846159cebdcbffd5a7b6798cd9b09675635c42ee91a4f809ad"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/symbolic-thinking-01.md",
+      "status": "integrated",
+      "note": "保留娃娃、纸盒、容器和生活动作例子；新增从模仿/重复到替代用途的场景解释，保留小物件、药品和工具安全边界。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/18-months.html"
+      ],
+      "title": "假装、替代与生活游戏",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "75513d71581a59cc64e7ebd56875ba7bfc73837eb61327d46da15fc5a595e89f"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/身体能力/fine-motor-01.md",
+      "status": "retained",
+      "note": "全文复读；以抓握/放入/自主进食场景解释精细动作，活动材料和吞咽安全在正文，未把训练次数或单一动作当达标。",
+      "sources_checked": [],
+      "title": "精细动作",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "ef5362858003db869d3afb9c86e6066f66daafe9be0ec53f7d872f11a0d427f1"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/身体能力/gross-motor-01.md",
+      "status": "integrated",
+      "note": "正文原有场景、自由地面活动和倒退/不对称红旗已满足标准，本次保留并修复到 3–6 岁基本动作的有效延伸链接。",
+      "sources_checked": [],
+      "title": "粗大动作",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "67237eef9525ed9539bfbd093079be4b34ab97be7cb236527945bb23e2cf1eb5"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/身体能力/oral-motor-01.md",
+      "status": "retained",
+      "note": "全文复读；把吞咽安全、口部动作和发音评估分开解释，辅食质地与窒息边界在正文，明确家庭游戏不是治疗。",
+      "sources_checked": [],
+      "title": "口部运动与进食",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "5cec6d3e0b42e5df54c2c05a711925d30af3d4aacd198faa69fee2e1756bc60f"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/身体能力/sensory-integration-01.md",
+      "status": "retained",
+      "note": "全文复读；从声音/触感/移动影响日常的场景开始，解释“感觉体验”而非诊断标签，保留环境调整和专业求助条件。",
+      "sources_checked": [],
+      "title": "感觉体验与日常适应",
+      "role": "0–3岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "8a850ee4cc0ccb5201eaf514912aa6f3cb7ca98353d27e49b9a1069bf05c690b"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/_index.md",
+      "status": "rewritten",
+      "note": "入口改为青春期沟通、身体变化、学习时间、同伴、数字、身份和元认知七章；第二篇沟通实战及其他内容明确是遇事选读。",
+      "sources_checked": [],
+      "title": "青春期前期（12-14岁）",
+      "role": "本年龄专题地图",
+      "reading_note": "第一次系统阅读先进入本年龄连续路线；下方专题用于具体问题，不要求按目录逐篇补课。",
+      "entry": "paths/learning/ages/12-14.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "5cb589eb0c4d90abc8f7516b17a405ca17e9abe282a83d35968d2c18fd605f85"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/development-assessment.md",
+      "status": "rewritten",
+      "note": "以身体隐私和沟通为起点，接到学习、同伴、数字与自主判断；记录模板强调孩子的解释和选择权，红旗只导向专业帮助。",
+      "sources_checked": [],
+      "title": "12-14 岁发展观察框架",
+      "role": "发展观察与求助查阅",
+      "reading_note": "用于整理真实情境、成人支持和功能变化，不作为家庭测试或年龄通关。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/12-14岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "6f001fc2fa28adcf66bd6f27fc7548345bd29bcd6fd4d0685aada1208aee27ed"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/academic-time-management-01.md",
+      "status": "integrated",
+      "note": "把学习时间章放在身体支持之后，阅读位置先解释把体力、作业和恢复放进同一张计划，再进入优先级和下一步任务。",
+      "sources_checked": [],
+      "title": "学业压力与时间管理",
+      "role": "12–14岁连续路线 · 第3篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/12-14.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "36416314b4817bf1eb8cdcee4eb412f2c5ff40a45a772f5833bd1d045caea47f"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/body-development-01.md",
+      "status": "integrated",
+      "note": "删除身高、Tanner、初潮和首次遗精的统一年龄表及自诊阈值，改为隐私、个体差异和需要时请医疗专业人员评估。",
+      "sources_checked": [],
+      "title": "身体发育与性教育",
+      "role": "12–14岁连续路线 · 第2篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/12-14.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "b4c94f37bfc0bd631752c1f6f6da0b993ab68214130ee0fe436227191b72e3ed"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/digital-literacy-01.md",
+      "status": "integrated",
+      "note": "删除‘关键期’和必然影响整个青春期的断言，改为从一条信息、一次隐私或骚扰事件练习来源、证据、边界和求助。",
+      "sources_checked": [],
+      "title": "网络素养启蒙",
+      "role": "12–14岁连续路线 · 第5篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/12-14.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "93250b4ae2036fb146370a568ffee9f4506446d757d7e6ad4b9846024879de09"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/identity-exploration-01.md",
+      "status": "integrated",
+      "note": "将身份探索开场从Erikson等理论改成兴趣、关系和选择的日常例子，并保留情绪持续影响功能时的NIMH式求助边界，不把探索排除在心理支持之外。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health"
+      ],
+      "title": "自我认同与价值观探索",
+      "role": "12–14岁连续路线 · 第6篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/12-14.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "ad072cb78a78c1ec447f8acb1b17503ff905192c9c85f1c0eceb4f6d0b527140"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/metacognition-learning-strategies-01.md",
+      "status": "integrated",
+      "note": "补上主线第七章的阅读位置，把前面身体、关系、数字和学习经验收束为一次小复盘；正文仍保留目标、卡点、反馈和下一步四问。",
+      "sources_checked": [],
+      "title": "元认知与学习策略",
+      "role": "12–14岁连续路线 · 第7篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/12-14.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "3bdeed22028402752057666bb6f262f3b69f67d99edb8dc0e3436ad62aaa1e92"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/peer-relationship-deep-01.md",
+      "status": "integrated",
+      "note": "承接沟通和身体隐私，聚焦亲密友谊、边界、排斥与求助；保留孩子自己命名关系经验的空间，不以社交数量判断发展。",
+      "sources_checked": [],
+      "title": "同伴关系深化",
+      "role": "12–14岁连续路线 · 第4篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/12-14.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "7fad6c5b2abc0c8f30922d7bb7c4682704c282b2c5f3f970dac6bc6a2d82c990"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/puberty-communication-01.md",
+      "status": "rewritten",
+      "note": "root在独立返修后完整重编，以回家/隐私的场景区分个人选择、共同安排和安全风险，解释事实—担忧—约定，连到下一篇身体信息与隐私支持。",
+      "sources_checked": [],
+      "title": "青春期前期亲子沟通",
+      "role": "12–14岁连续路线 · 第1篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/12-14.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "192e44396fdf56c9c8b98414639c08577655853e538f48b6fa4f07dbfde7e427"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/puberty-communication-02.md",
+      "status": "rewritten",
+      "note": "返修沟通实战：删除年龄人格脚本、10–11岁等未经本轮核对的年龄结论、6小时网络阈值和预防/效果保证，保留场景示例并改为按功能与安全判断求助。",
+      "sources_checked": [],
+      "title": "青春期前期亲子沟通 · 实战篇",
+      "role": "12–14岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/12-14岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "1a9b002f9c92e33a4f736ca6be99596430d44c782dcd76bbafd427ca53262ef0"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/_index.md",
+      "status": "rewritten",
+      "note": "入口先读沟通、安全心理、学习兴趣、学业压力、数字生活和叛逆冲突六章；实操页按发生的问题打开，紧急安全提示放在入口可见位置。",
+      "sources_checked": [],
+      "title": "青春期（14-18岁）— 父母指导",
+      "role": "本年龄专题地图",
+      "reading_note": "第一次系统阅读先进入本年龄连续路线；下方专题用于具体问题，不要求按目录逐篇补课。",
+      "entry": "paths/learning/ages/14-18.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "2d391ce8e91ddda2b25640a7f3a71d0f8519f625465f4e4cb8183e66d63537b9"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/development-assessment.md",
+      "status": "rewritten",
+      "note": "观察框架按关系安全、心理数字、学习方向组织，加入青少年希望保留的选择权和下次联系谁，明确自伤或无法保持安全时立即求助。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/teen-depression",
+        "https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health"
+      ],
+      "title": "14-18 岁发展观察框架",
+      "role": "发展观察与求助查阅",
+      "reading_note": "用于整理真实情境、成人支持和功能变化，不作为家庭测试或年龄通关。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/14-18岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "68cf104f3e029b0b43ce5d4bb15804d6a5a0fdbf827242de48a45c720c66a214"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/academic-pressure-01.md",
+      "status": "integrated",
+      "note": "删除理论堆叠和‘每天10分钟’固定沟通要求，改成从比较、任务过载和恢复不足的具体迹象进入；压力实战页标为按需打开。",
+      "sources_checked": [],
+      "title": "升学压力与学业焦虑",
+      "role": "14–18岁连续路线 · 第4篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/14-18.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "e506b16fefdbf9a503b9fd8f9e6558e01380a0b10d1b6abe6858ff68ed8664a0"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/academic-pressure-02.md",
+      "status": "integrated",
+      "note": "把家长已经比较或指责后的修复写成条件式选择，删除Dix 80%等无普遍适用依据的数字，并保留先确认安全和当下状态的顺序。",
+      "sources_checked": [],
+      "title": "升学压力与学业焦虑 · 实战篇",
+      "role": "14–18岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/14-18岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "d1be8fe48b6b11eb076b323ebdbb31a16863517cdc04ad76b9ef33bdfac77dff"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/adolescent-mental-health-01.md",
+      "status": "rewritten",
+      "note": "独立返修去掉两周伪阈值与正常标签，root再把颜色表改成按安全和日常功能选择行动，补权威出处与危机不等待预约的分支。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/teen-depression",
+        "https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health"
+      ],
+      "title": "青少年心理健康危机识别",
+      "role": "14–18岁连续路线 · 第2篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/14-18.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "9a9981fbc41c04396a026a440832b046026b01cf150977a7d4a206cc9d41c782"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/adolescent-rebellion-01.md",
+      "status": "rewritten",
+      "note": "返修冲突理论篇：把“叛逆”改为需区分的成人统称，区分个人选择、共同安排和安全底线，移除固定暂停分钟数并补充暴力/威胁时的安全求助。",
+      "sources_checked": [],
+      "title": "青春期叛逆与冲突应对",
+      "role": "14–18岁连续路线 · 第6篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/14-18.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "c26241dc85eb9b7ce96e4b87c399795baf6b0c873be7575a7f658433efa370f5"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/adolescent-rebellion-02.md",
+      "status": "rewritten",
+      "note": "返修冲突实战篇：移除5秒、10分钟、30分钟、唯一方法和倍数保证，保留道歉与重新协商例子，改为安全分开、双方能重新听见对方后再谈。",
+      "sources_checked": [],
+      "title": "青春期叛逆与冲突应对 · 实战篇",
+      "role": "14–18岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/14-18岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "32f0d4332ca57fabfd0ddc186d8440468728264db1a1896dcec3753eaf7b9dc3"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/autonomous-learning-and-interest-01.md",
+      "status": "integrated",
+      "note": "作为心理安全之后的学习方向章，阅读位置强调由青少年说明兴趣和约束，再把兴趣转成小规模尝试，不把升学结果预先写死。",
+      "sources_checked": [],
+      "title": "自主学习与兴趣深入",
+      "role": "14–18岁连续路线 · 第3篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/14-18.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "7f14f90a189d650156b87e4611e188809e15f9f40c31920c94937a1a1792177f"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/digital-life-01.md",
+      "status": "integrated",
+      "note": "用使用功能、睡眠学习影响、隐私与安全场景替代理论综述和青春期必然性，保留共同定规则、出现风险时求助的路径。",
+      "sources_checked": [],
+      "title": "数字设备与网络管理",
+      "role": "14–18岁连续路线 · 第5篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/14-18.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "327eb621788311ff8d1203de727b682c65e3626c2f1db4633d649c4fbd3f2ea7"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/digital-life-02.md",
+      "status": "integrated",
+      "note": "作为数字生活实操补充，阅读位置先要求描述具体平台行为和实际影响，再选择边界或安全动作，避免把所有上网都当作同一种风险。",
+      "sources_checked": [],
+      "title": "数字设备与网络管理 · 实战篇",
+      "role": "14–18岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/14-18岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "17783b7ce1e40ffef936c8fe1b5ac4e231f45bcca28c692538a076842107ecfc"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/parent-teen-communication-01.md",
+      "status": "integrated",
+      "note": "把理论开场换成邀请、隐私和安全边界的具体场景；‘每天10分钟’改为留出短暂对话，暂停改为等双方能重新听见对方。",
+      "sources_checked": [],
+      "title": "青春期亲子沟通",
+      "role": "14–18岁连续路线 · 第1篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/14-18.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "52cda2fc18bfac8cc2eccfbc1ecc0504cfd82db73939bde921e7cad585e43d4f"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/parent-teen-communication-02.md",
+      "status": "integrated",
+      "note": "把修复页改为发生冲突后的条件式入口，保留承认—重新邀请—改变下一次行为，删除2-3周打开、3个月等待等不受支持的保证或阈值。",
+      "sources_checked": [],
+      "title": "青春期亲子沟通 · 实战篇",
+      "role": "14–18岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/14-18岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "5d2faaa6a547a007cae95d72e918d7fef4e8d4a936ddc68e89d37f8fc3a86fb1"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "status": "integrated",
+      "note": "入口现在先指向连续阅读路线；专题地图明确“按需查、不替代路线”，并覆盖全部认知和身体文章及其观察用途。",
+      "sources_checked": [],
+      "title": "学龄前期（3–6岁）",
+      "role": "本年龄专题地图",
+      "reading_note": "第一次系统阅读先进入本年龄连续路线；下方专题用于具体问题，不要求按目录逐篇补课。",
+      "entry": "paths/learning/ages/3-6.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "9fdb60a4f459e2d349d519bc24887cb1f662b033b613234d9630b0eedd316854"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/development-assessment.md",
+      "status": "retained",
+      "note": "全文复读；从出门、同伴、讲故事和生活任务场景解释观察—调整—复盘，区分监测与筛查，红旗和咨询准备完整。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html"
+      ],
+      "title": "3-6 岁发展观察框架",
+      "role": "发展观察与求助查阅",
+      "reading_note": "用于整理真实情境、成人支持和功能变化，不作为家庭测试或年龄通关。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "50038450b8e0bf733f9c1cabd9fc20f7398bfa5d6d2109b2d26fbb53c9ac83b8"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/attention-focus-01.md",
+      "status": "integrated",
+      "note": "保留挖沙、搭建、共读、任务和转场例子；新增主线中的小任务入口，保留环境调整和跨场景求助边界。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/",
+        "https://developingchild.harvard.edu/resources/handouts-tools/activities-guide-enhancing-and-practicing-executive-function-skills/",
+        "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html"
+      ],
+      "title": "学龄前儿童专注力培养",
+      "role": "3–6岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "91e1d07e093826e12328c9699124206a300c96368c8d4010df57bf9dd69ec1b1"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/curiosity-and-learning-01.md",
+      "status": "integrated",
+      "note": "保留挖沙、为什么、拼图和猜—试—说循环；新增承接身体参与/情绪恢复的进入句和回到执行功能、前读写的主线出口。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/",
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ],
+      "title": "好奇心与学习准备",
+      "role": "3–6岁连续路线 · 第5篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/3-6.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "c61caa25d0cd248c6615e321c47331108460e354a3a6761c0da1d64ee2c719f5"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/delay-of-gratification-01.md",
+      "status": "integrated",
+      "note": "保留穿鞋找钥匙、等待顺序和可靠承诺的生活例子；把等待解释为关系与外部支持下的能力，明确疼痛、饥饿、如厕和安全不能延迟。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/resources/handouts-tools/activities-guide-enhancing-and-practicing-executive-function-skills/"
+      ],
+      "title": "延迟满足",
+      "role": "3–6岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "32797ff2c8333d1b999ca6cef6250c604ad98794f16800d15daa99a35b168af9"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/emotion-regulation-01.md",
+      "status": "integrated",
+      "note": "保留收玩具升级和安全处理步骤；新增先从一次场景进入共同调节，保留暂停、回到现场和不在高峰讲道理的边界。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/"
+      ],
+      "title": "情绪管理（情绪调节）",
+      "role": "3–6岁连续路线 · 第2篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/3-6.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "3281793dfe3aaed02c2937ba710a146b46da79d94bfca1acea7ab1ded26b8c1f"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/executive-function-01.md",
+      "status": "integrated",
+      "note": "重排为“出门卡住/规则改变”的场景先行，再用日常语言解释暂停、记住目标、换办法，删除抽象名词开场和重复段落，保留外部支架与不作未来保证。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/resources/handouts-tools/activities-guide-enhancing-and-practicing-executive-function-skills/",
+        "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html"
+      ],
+      "title": "自控力和专注力（执行功能）",
+      "role": "3–6岁连续路线 · 第4篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/3-6.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "79f4be8c84755e758bbf915c74602a8e36cab1468fcd6ccc3406b5dd0fbf8d2d"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/gender-identity-self-concept-01.md",
+      "status": "integrated",
+      "note": "新增孩子关于衣服、角色和称呼的一句话作为入口，再解释兴趣、表达、身份和角色期待，保留安全、尊重和不强迫的边界。",
+      "sources_checked": [],
+      "title": "性别认同与自我概念",
+      "role": "3–6岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "6bd3435fbdbd78516b4d87b0a8e8ff5463524ea11f581486a41a79e65a890830"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/pre-literacy-math-01.md",
+      "status": "integrated",
+      "note": "新增餐桌分水果和共读提问场景，再解释前阅读/前数学，保留多语言、游戏和不刷题原则。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ],
+      "title": "前阅读与前数学",
+      "role": "3–6岁连续路线 · 第6篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/3-6.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "9f46c38806dea8020cc3217be6be0cc89f350c508c7b289ae8c1baeeaa5fb542"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/reading-habits-01.md",
+      "status": "integrated",
+      "note": "新增被打断的共读场景，解释阅读习惯包含看图、讲述和连接生活，保留短暂、重复、多语言和真实文字用途。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ],
+      "title": "早期阅读习惯培养",
+      "role": "3–6岁连续路线 · 第7篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/3-6.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "8da2064fcbe8e885f04c4bcaefe9afda8d95edb1acdb29d8068af361e707c0f6"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/screen-time-01.md",
+      "status": "integrated",
+      "note": "新增动画结束时哭闹的场景，承接睡眠/活动/共读路线，保留内容、陪伴、结束过渡和健康问题求助边界。",
+      "sources_checked": [
+        "https://www.who.int/publications/i/item/9789241550536"
+      ],
+      "title": "数码产品与屏幕时间管理",
+      "role": "3–6岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "ba31ae3cd080299fbb01e5cd2ff296cdf1ea93b2d3a7d37541702f86b425103c"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/social-play-01.md",
+      "status": "integrated",
+      "note": "新增进不去搭积木游戏的场景，再解释平行、共享和合作游戏，保留成人搭桥、冲突安全和不强迫适应。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ],
+      "title": "社会性游戏",
+      "role": "3–6岁连续路线 · 第3篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/3-6.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "65d6ba7a319d8cd8cda039eecd0e626d3daf456f72ce55f648a9460b1f659f1e"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/theory-of-mind-01.md",
+      "status": "integrated",
+      "note": "新增奶奶没看到积木的场景，再解释愿望、信息和错误判断，保留不把观点题当测验以及冲突中先安全后理解。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/",
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ],
+      "title": "理解他人的想法（心理理论）",
+      "role": "3–6岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "1718b87b6405b85470d2054982f954f9c914f1ed02c7d8aa29ed70b9751b960c"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/balance-coordination-01.md",
+      "status": "rewritten",
+      "note": "解释平衡/协调并把活动放入地面游戏，移除秒数表、危险挑战和测试式警告。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/3-years.html",
+        "https://www.cdc.gov/act-early/milestones/4-years.html",
+        "https://www.cdc.gov/act-early/milestones/5-years.html"
+      ],
+      "title": "平衡与协调",
+      "role": "3–6岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "e3c20af64126083adbf39e7db4e12ed654e4be0548684dffe61200cfe0cdb03a"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/basic-movement-01.md",
+      "status": "rewritten",
+      "note": "用游戏场景解释基本动作，移除年龄达标表、固定频率和预测性表述，保留安全观察与转介线索。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/3-years.html",
+        "https://www.cdc.gov/act-early/milestones/4-years.html",
+        "https://www.cdc.gov/act-early/milestones/5-years.html"
+      ],
+      "title": "基本动作技能",
+      "role": "3–6岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "196fefed6612fde8625ce0fec4bd75f884fd70532bbbdd24884e51f840e75ed8"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/hand-eye-coordination-01.md",
+      "status": "retained",
+      "note": "全文复读；以投接、画线、拼搭和工具操作场景解释眼手协调，保留材料安全、成人示范和疼痛/明显不对称求助边界。",
+      "sources_checked": [],
+      "title": "手眼协调",
+      "role": "3–6岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "561b3731533a676dcfc0cdff77eb1bfd49ad1aae4800f5b7e9ee8cb8945b66b4"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/handedness-01.md",
+      "status": "rewritten",
+      "note": "保留不强迫改手的核心，删去固定比例、因果夸张和定龄要求，改为工具适配与异常变化观察。",
+      "sources_checked": [
+        "https://pubmed.ncbi.nlm.nih.gov/32345766/"
+      ],
+      "title": "利手与工具使用",
+      "role": "3–6岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "00e18588ce7974963b166f01785e7628bdd12b84a0e0ba05fdb474266f55ce0f"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/outdoor-habits-01.md",
+      "status": "rewritten",
+      "note": "以真实出门场景开篇，移除户外两小时硬性要求和未经支持的视力/心理效果承诺，保留监督、天气和求助边界。",
+      "sources_checked": [
+        "https://www.who.int/publications/i/item/9789241550536"
+      ],
+      "title": "户外活动习惯",
+      "role": "3–6岁连续路线 · 第1篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/3-6.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "d02d3deb8e2ee8fbbedfef8dd7e8ea467c1d0d9185fcebf677b2ef7d458c9713"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/_index.md",
+      "status": "rewritten",
+      "note": "把入口改成先读学校任务、睡眠、同伴、阅读、创造五章；身体、屏幕、金钱等放到按需表，入口先解释阅读顺序和年龄切换。",
+      "sources_checked": [],
+      "title": "学龄初期（6-9岁）",
+      "role": "本年龄专题地图",
+      "reading_note": "第一次系统阅读先进入本年龄连续路线；下方专题用于具体问题，不要求按目录逐篇补课。",
+      "entry": "paths/learning/ages/6-9.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "2d9c0e7f812f4d2b95e2927cc1b503240dc3b8fd1f232514d9c45ebe61271454"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/development-assessment.md",
+      "status": "rewritten",
+      "note": "从固定能力检查改为观察记录：先记任务与支持，再看身体、关系、兴趣和功能变化；明确不把一次表现当诊断，并保留求助边界。",
+      "sources_checked": [],
+      "title": "6-9 岁发展观察框架",
+      "role": "发展观察与求助查阅",
+      "reading_note": "用于整理真实情境、成人支持和功能变化，不作为家庭测试或年龄通关。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/6-9岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "81447198a53c44706153053e74d9a3873a55e6c340c3bdfc96a2862eef7dacda"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/creative-thinking-01.md",
+      "status": "integrated",
+      "note": "主线最后以解释—尝试—反馈—修改收束学习路线，删除理论综述式开场，保留允许多种答案和让孩子说明修改理由的实践。",
+      "sources_checked": [],
+      "title": "创造性思维",
+      "role": "6–9岁连续路线 · 第5篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/6-9.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "9543eaff09fe3b1b5b3d39b87072207bb485e2b20c98e93b0e68a4fed8d6cee5"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/friendship-skills-01.md",
+      "status": "integrated",
+      "note": "把同伴章放在睡眠之后，先用加入游戏、轮流和冲突修复的场景解释关系，不再用理论人物段落作为入门门槛，并区分普通冲突和持续欺凌。",
+      "sources_checked": [],
+      "title": "友谊技能",
+      "role": "6–9岁连续路线 · 第3篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/6-9.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "3cd210277811dc1ffd821368bd309558ff4d4e38c283f7eb34c28e2a9aaf7a50"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/independent-reading-01.md",
+      "status": "integrated",
+      "note": "保留共读、陪读、漫画和重复阅读等例子，删掉识字量百分比、固定页数和阶段时长门槛，改用理解、主动求助和兴趣判断书的难度。",
+      "sources_checked": [],
+      "title": "从亲子阅读到独立阅读",
+      "role": "6–9岁连续路线 · 第4篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/6-9.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "cd6e9e0eb2bbdf9247bcbac17a730efbd958bfebd50842444219ccf1674279bd"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/money-concepts-01.md",
+      "status": "integrated",
+      "note": "放入入口的按需主题区，阅读位置先说明它服务于真实购买、等待和选择场景，保留家庭小额决策例子，不让金钱概念打断主线。",
+      "sources_checked": [],
+      "title": "花钱和存钱（金钱概念）",
+      "role": "6–9岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/6-9岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "52fd73709bd3daf11dc57524acd231792130d6ebb060cf4c462accef355d9d4c"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/oral-expression-01.md",
+      "status": "integrated",
+      "note": "明确口头表达是阅读和同伴章的可选补充，先从复述经历和说明理由开始，不把发音或公开表现当作阶段通关。",
+      "sources_checked": [],
+      "title": "口头表达能力",
+      "role": "6–9岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/6-9岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "be31ac4d8c42e3f1df97cacfc1f21422df288455f8645582a0f331b5acba14ee"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/school-learning-habits-01.md",
+      "status": "integrated",
+      "note": "作为六至九岁第一主线章，阅读位置先说明任务启动、求助和检查的顺序，正文保留把作业拆成下一步的例子。；作业场景加入父母焦虑查阅入口，保留孩子原章返回。",
+      "sources_checked": [],
+      "title": "学校学习习惯",
+      "role": "6–9岁连续路线 · 第1篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/6-9.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "28d449015ef13e13446dc602e83e104dc8e112382da613d4513682867492c2f4"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/screen-game-management-01.md",
+      "status": "integrated",
+      "note": "把屏幕管理从固定年龄分钟表改为观察是否影响睡眠、学习、关系和安全；提醒可以帮助转换活动，但不把倒计时当治疗或达标规则。",
+      "sources_checked": [],
+      "title": "屏幕与电子游戏管理：从\"我来管\"到\"你自己管\"",
+      "role": "6–9岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/6-9岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "7b8f8b2538428d165ecb34ed2dcf6ec05c1897642adeb3f79e57e7bc517e70be"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/sleep-management-01.md",
+      "status": "rewritten",
+      "note": "返修睡眠主线：保留CDC 6–12岁参考范围和睡眠—白天功能观察，移除温度、周末偏移、固定流程分钟数和一月阈值，把屏幕安排改为可尝试的家庭观察。",
+      "sources_checked": [
+        "https://www.cdc.gov/sleep/about/",
+        "https://cdc.gov/physical-activity-education/staying-healthy/sleep.html"
+      ],
+      "title": "睡眠管理",
+      "role": "6–9岁连续路线 · 第2篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/6-9.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "708f428bd762443b52340aeb986d8be3213d44a5b9da217518584ba5a2557e63"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/sports-habits-01.md",
+      "status": "integrated",
+      "note": "作为身体支持的可选阅读，保留游戏化运动和安全场景，避免把某项运动或频次写成认知路线的前置条件。",
+      "sources_checked": [
+        "https://www.who.int/initiatives/behealthy/physical-activity",
+        "https://www.who.int/publications/i/item/9789241599979"
+      ],
+      "title": "运动习惯培养",
+      "role": "6–9岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/6-9岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "c20426e6dfb677929616ff413f9c90c824ec0c55ad70c97620072d402f0a90cc"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/vision-protection-01.md",
+      "status": "integrated",
+      "note": "把视物困难、户外和近距离用眼作为按需观察，删掉普遍适用的户外时长和治疗效果说法，保留验光及眼科随访边界。",
+      "sources_checked": [
+        "https://aao.org/eye-health/tips-prevention/sun",
+        "https://aao.org/eye-health/tips-prevention/blue-light-digital-eye-strain"
+      ],
+      "title": "视力保护",
+      "role": "6–9岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/6-9岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "22c4005cb65e2f0624cd48bf0207f4ac46e713752ae6e0a14a37810ebe54034e"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/_index.md",
+      "status": "rewritten",
+      "note": "入口先给出自我管理、睡眠、同伴、创新、历史视角五章的线性顺序；运动、视力、财务和表达转为按问题选读，并说明何时切换12-14岁。",
+      "sources_checked": [],
+      "title": "学龄中期（9-12岁）",
+      "role": "本年龄专题地图",
+      "reading_note": "第一次系统阅读先进入本年龄连续路线；下方专题用于具体问题，不要求按目录逐篇补课。",
+      "entry": "paths/learning/ages/9-12.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "9c1821b6d69b0e98e2c5f1249f372fcde9e4cf896c9f7f2bad2fe1362363ec7b"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/development-assessment.md",
+      "status": "rewritten",
+      "note": "用目标—策略—反馈的观察框架串起学习、身体、同伴和兴趣，增加记录模板和功能性求助条件，避免把年龄段当统一测试窗口。",
+      "sources_checked": [],
+      "title": "9-12 岁发展观察框架",
+      "role": "发展观察与求助查阅",
+      "reading_note": "用于整理真实情境、成人支持和功能变化，不作为家庭测试或年龄通关。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/9-12岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "c87b22a2be02e93778ba35d40cc55c6821de4da7ebd1b8a5e3a3fa084a4a0047"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/financial-decision-01.md",
+      "status": "integrated",
+      "note": "标为按问题选读的生活决策补充，保留比较需要、愿望和后果的例子，不把金钱判断作为学习主线的能力门槛。",
+      "sources_checked": [],
+      "title": "花钱和存钱进阶（消费决策）",
+      "role": "9–12岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/9-12岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "21b2dc92049fde186a8741d98cf9ad673c9986102a44f749dd4151a052e81581"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/historical-worldview-01.md",
+      "status": "integrated",
+      "note": "作为主线收束章，阅读位置说明它把前几章的提问和证据判断放到更大的时间、因果和多视角中，不要求孩子背完整历史结论。",
+      "sources_checked": [],
+      "title": "了解过去和不同文化（历史观与世界观）",
+      "role": "9–12岁连续路线 · 第5篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/9-12.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "22b0f1651e01bca828e23865a11c0ca9c5a12a315a83e4ac75ad6090f7bbcf23"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/innovative-thinking-01.md",
+      "status": "integrated",
+      "note": "主线第四章改成想法—试做—得到反馈—修改的循环，理论姓名退到参考文献；例子继续允许失败和多种可行答案。",
+      "sources_checked": [],
+      "title": "创新思维",
+      "role": "9–12岁连续路线 · 第4篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/9-12.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "4252fbf4ba8522d83ea46f0df690626c5cd42147ac4e988257d19457523fe130"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/peer-relationships-01.md",
+      "status": "integrated",
+      "note": "把同伴章接到睡眠和自我管理后，以归属、冲突、排斥和欺凌的区别为阅读支点，去掉理论人物堆叠并保留何时求助。",
+      "sources_checked": [],
+      "title": "同伴关系",
+      "role": "9–12岁连续路线 · 第3篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/9-12.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "0dc5c6e7dde22661bcafcb145afd06704d21f74394f6c6d3182ba2a2fdd9a2d2"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/public-speaking-01.md",
+      "status": "integrated",
+      "note": "删除15-20%焦虑比例、黄金窗口和固定2分钟练习，改为从可信任听众和熟悉话题开始，并说明持续影响功能时寻求支持。",
+      "sources_checked": [],
+      "title": "演讲与公众表达",
+      "role": "9–12岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/9-12岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "e1c71bcc1a112ae023aa86189dc45cc24e06526596db680cf2132737fff62989"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/self-regulated-learning-01.md",
+      "status": "integrated",
+      "note": "作为主线第一章，阅读位置先连接6-9岁任务习惯，再引向计划、执行和复盘；保留小步计划而不要求完整自律。",
+      "sources_checked": [],
+      "title": "自我调节学习",
+      "role": "9–12岁连续路线 · 第1篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/9-12.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "e4d4e6576e018b506dd6daeda1a2f105e6c11b4ccbfdfbad82877090b3257b3c"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/身体能力/sleep-management-01.md",
+      "status": "rewritten",
+      "note": "返修睡眠主线：保留CDC 6–12岁参考范围，改写接近青春期作息变化为个体可能性，移除固定温度、周末偏移、固定分钟数和一月阈值。",
+      "sources_checked": [
+        "https://www.cdc.gov/sleep/about/",
+        "https://cdc.gov/physical-activity-education/staying-healthy/sleep.html"
+      ],
+      "title": "睡眠管理",
+      "role": "9–12岁连续路线 · 第2篇",
+      "reading_note": "沿页面的前后篇继续；正文说明这一篇与前后任务的关系，延伸专题按需查。",
+      "entry": "paths/learning/ages/9-12.md",
+      "entry_label": "本年龄连续路线",
+      "sha256": "02976db2a99a41d90935fbee14fd137bc33fe498a0dcda325027260f11ad86e7"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/身体能力/sports-habits-01.md",
+      "status": "integrated",
+      "note": "把运动定位为支持睡眠、情绪和身体参与的选读主题，补充WHO关于儿童青少年活动的一般背景，不写成专项训练剂量。",
+      "sources_checked": [
+        "https://www.who.int/initiatives/behealthy/physical-activity",
+        "https://www.who.int/publications/i/item/9789241599979"
+      ],
+      "title": "运动习惯培养",
+      "role": "9–12岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/9-12岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "b4e37d97e7e1211bd2e3474bb697cf2b02f614937225d7c76b480e8cf8d5343b"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/身体能力/vision-protection-01.md",
+      "status": "integrated",
+      "note": "删掉度数增长、百分比和固定复查周期等容易制造确定感的说法，改为观察视物困难并遵循验光或眼科方案。",
+      "sources_checked": [
+        "https://aao.org/eye-health/tips-prevention/sun",
+        "https://aao.org/eye-health/tips-prevention/blue-light-digital-eye-strain"
+      ],
+      "title": "视力保护",
+      "role": "9–12岁专题查阅",
+      "reading_note": "遇到本主题的具体问题时阅读，读完回到原连续路线；不作为年龄主线的额外作业。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/9-12岁/_index.md",
+      "entry_label": "本年龄专题地图",
+      "sha256": "669d0ff8043bc1d2664b925f1d63924f9dc06c68026fb2863cfdb2c0a6a0d8a6"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/_index.md",
+      "status": "rewritten",
+      "note": "阶段入口以十五章与五个后续年龄的连续路线为主，护理按操作查、父母支持并行，全部专题可从各阶段定位。",
+      "sources_checked": [],
+      "title": "育儿指导（0–18 岁）",
+      "role": "全站阅读入口",
+      "reading_note": "先选与你当前生活或问题相关的一条路线，再按需查专题和来源。",
+      "entry": "paths/_index.md",
+      "entry_label": "阅读路线总览",
+      "sha256": "202aa776682ec58c1418230356a3d70c87d6f54181e7cee3d02a8095ca9bea89"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/quick-start.md",
+      "status": "integrated",
+      "note": "完整复读646行操作与安全正文，保留其成熟步骤和20个显式锚点；入口改为查阅用途，六个月交接指向实际第十二章。",
+      "sources_checked": [],
+      "title": "新手爸妈教程：产前两个月到宝宝六个月",
+      "role": "操作与安全查阅",
+      "reading_note": "按当前时间段或护理操作定位，查完回到十五章主线的原章节；旧段落链接仍可用。",
+      "entry": "paths/parenting/new-parent/_index.md",
+      "entry_label": "十五章主线",
+      "sha256": "604b12dc0819dc1c2568e24d7926244d32d49c0e7056355fb50302c012dbd654"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "status": "rewritten",
+      "note": "root完整重编为危机优先、孕期/已出生/功能变差/后续孩子年龄四种进入方式；四篇短路线只列一次，其他十篇按问题定位，避免多套目录与父母能力清单。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ],
+      "last_editor": "root",
+      "title": "父母与照料者支持",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "74675f9183e6160c8cf7829f439348906c8b38f8ae9097bb089ab4f30ff5eedc"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/parental-role-modeling-01.md",
+      "status": "rewritten",
+      "note": "将“说谎是可以的，只要不被发现”改为孩子可能如何理解，并示范诚实拒答与隐私边界；补充情绪失控时先把孩子交给可信任成人的安全例外，保留手机、修复、阅读和共同生活的具体示范。 跨年龄返航：从主线跳入先用页面返回链接回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": [],
+      "title": "父母以身作则",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "dbce0168c580024d58f4e24f3c9ff2109f4219c9e5edcf76f30689023497b19a"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产前准备/prenatal-preparation-01.md",
+      "status": "integrated",
+      "note": "围绕临近分娩或刚发现分工不清的场景，改为先写三类联系人、非工作时间路径和夜间交接卡；明确宝宝已出生可直接返回当前主线，不必重走产前清单。",
+      "sources_checked": [
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ],
+      "title": "产前准备与迎接新生儿",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "878eca2dadb039c9577060f7533c5e842a9cb2a11dbeb34be415be54adf4288e"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/parental-wellbeing-01.md",
+      "status": "integrated",
+      "note": "将原来的快速判断改成持续、影响和安全三项观察，保留情绪波动/尽快评估/立即危机三路；把具体交接、休息和身体急症分流连接回当前孩子章节。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ],
+      "title": "新手父母心理调适",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "ce58e1b527042f126fe53f348116ae3ed070c5c5df81399eb7bd26b8c9be3ab3"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/postpartum-depression-01.md",
+      "status": "integrated",
+      "note": "在持续低落、无法照料和危机场景之间保留分流，明确两周不是等待期限；补充“孕期–12个月”只是导航背景，已出生数月或非分娩者也不因此排除求助，并保留回到当前孩子章节的路径。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ],
+      "title": "产后抑郁识别与应对",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "60ccbc50f312c79bb109914ec8306bf5954bb9d2449217fdaa6a06cd716b9755"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/sleep-deprivation-01.md",
+      "status": "integrated",
+      "note": "保留今晚困到无法安全照料的场景和安全睡眠交接，去掉固定几分钟的伪阈值，改为短暂离开照护现场清醒；继续区分立即危机、尽快专业评估和一般轮班调整。",
+      "sources_checked": [
+        "https://www.cdc.gov/sleep/about/?CDC_AAref_Val=https%3A%2F%2Fwww.cdc.gov%2Fsleep%2Fabout_sleep%2Fhow_much_sleep.html"
+      ],
+      "title": "睡眠剥夺应对",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "1d5d1ba4de3a784768db5f8efcb964d3999e386c8a8329f0b7cb9b8a7ce17dc1"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/关系维护/couple-adjustment-01.md",
+      "status": "rewritten",
+      "note": "root从夜间交接误会重编完整任务、清醒协商与关系恢复；保留安全睡眠/喂养/药物纠正例外、暴力安全分流和本人亲密意愿。",
+      "sources_checked": [],
+      "last_editor": "root",
+      "title": "夫妻关系产后调适",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "391482b5f0ad317ac6cd6ba7be2267b2bd70e986a08b51361d81f7fed7feebe6"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/关系维护/intergenerational-parenting-01.md",
+      "status": "integrated",
+      "note": "在长辈给药、喂食、抱持或安排睡眠的具体场景中，要求先暂停可能不安全的操作并把孩子放回安全位置；保留非安全偏好可试行、共同目标和第三方资料。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": [],
+      "title": "代际育儿观念冲突",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "639bceead85c416f0da9095db5450d8a96822703b8358bf1a7b75afb6dc461f6"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/关系维护/parenting-support-network-01.md",
+      "status": "integrated",
+      "note": "删除“2–3个支持者”和“线下更有效”的统一标准，改用可联系、能完成具体交接、可靠安全来判断支持；新增线上/电话/线下/专业支持的用途区别和请求时的安全边界。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": [],
+      "title": "育儿社交支持网络",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "53a27241effd3ca5696609322d169ae9661dc95ecdf744b079c84cff6e241127"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/育儿压力/comparison-anxiety-01.md",
+      "status": "rewritten",
+      "note": "把社交媒体比较改为信息片段和待核对线索；补充吃量、吞咽、体重、尿量等担忧不能归结为气质差异的分支；将取关改成可撤销的信息实验，保留回到年龄主线或专业咨询的动作。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": [],
+      "title": "比较与竞争心理",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "0c3771c345c39b246e057d05da3b5d4706ebba343d33018c0cf945688e0002d3"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/育儿压力/parenting-anxiety-01.md",
+      "status": "rewritten",
+      "note": "root用反复搜索和检查场景重编完整正文，解释事实与担忧的区别，先分身体急症和安全风险，再安排可执行支持与当前年龄返航。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ],
+      "last_editor": "root",
+      "title": "育儿焦虑管理",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "9b715930d82d131dbbb34b719ad8fd76e31344918e041e2e620eecacd7d2dd33"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/育儿压力/perfectionism-trap-01.md",
+      "status": "rewritten",
+      "note": "root从重复检查与无法交接的场景重编，区分安全要求/个人标准，按错误类型处理修复与求助，删除泛化安慰和决定论。",
+      "sources_checked": [],
+      "last_editor": "root",
+      "title": "完美主义陷阱",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "6e788cb7ada99336d221a00c7db73848ac0ba822e840b06957b71b560af45764"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/自我照顾/identity-maintenance-01.md",
+      "status": "rewritten",
+      "note": "删除身份单一化必然导致焦虑、抑郁或空巢危机的箭头因果；改为观察兴趣丧失、隔绝、功能和安全变化，并把个人活动写成可交接、可撤销的小尝试，必要时返回心理支持文章和专业求助。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": [],
+      "title": "兴趣与身份保持",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "e3af3d8480fc8d2014d2ac8d69000a527b1422120443c6f65483568cd883cb6f"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/自我照顾/parent-health-01.md",
+      "status": "integrated",
+      "note": "保留产后身体恢复、休息、饮食和活动的场景动作；补充运动遇到疼痛、出血增加、伤口变化、头晕或呼吸困难时停止并联系医疗团队，避免把运动当作急症或持续功能下降的替代。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": [],
+      "title": "父母身心健康",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "f39aea31b8016a55553d30c99ea9b0e32ea22ace3d57c1748fcfd8f4bba88c6b"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/自我照顾/parent-me-time-01.md",
+      "status": "integrated",
+      "note": "把内疚和个人时间放回安全交接语境：个人需要可以纳入家庭分工，但无人能安全接手或照料者已无法保证安全时应先求助；保留可取消的小片段和返回当前孩子主线。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": [],
+      "title": "父母自我时间",
+      "role": "照料者支持 · 与孩子主线并行",
+      "reading_note": "先处理当下安全与照料负担，再按当前问题阅读；查完回到孩子所在年龄的原章节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "entry_label": "父母支持入口",
+      "sha256": "435de8fdcdcdda8dadf9fd4f0d9e624c87a1e8576b14bf3c6daf0b1f24a61b3f"
+    },
+    {
+      "path": "stages/老年期（60+岁）/_index.md",
+      "status": "rewritten",
+      "note": "从本人日常功能、健康与支持安排出发，进入现有脑健康正文而非假装已有完整老年课程；明确尚属阶段概览。",
+      "sources_checked": [],
+      "title": "老年期（60+ 岁）",
+      "role": "人生阶段概览",
+      "reading_note": "围绕当前生活任务阅读；这里只计现有概览和专题，尚未编成的完整课程留在规划中。",
+      "entry": "stages/_index.md",
+      "entry_label": "人生阶段入口",
+      "sha256": "73568b7903dd6302f77c0f41d52727f185e570c0978073fc56c79dfda615f3b4"
+    },
+    {
+      "path": "stages/老年期（60+岁）/认知保持/brain-health-01.md",
+      "status": "integrated",
+      "note": "完整复读既有场景、补偿策略与证据边界，增加阅读承接，撤掉统一四周行为剂量；把突发意识混乱升级为立即就医，保留draft。",
+      "sources_checked": [
+        "https://www.nhs.uk/symptoms/confusion/",
+        "https://www.cdc.gov/stroke/signs-symptoms/index.html",
+        "https://www.who.int/publications/i/item/9789240123557"
+      ],
+      "title": "脑健康与认知保持",
+      "role": "人生阶段概览",
+      "reading_note": "围绕当前生活任务阅读；这里只计现有概览和专题，尚未编成的完整课程留在规划中。",
+      "entry": "stages/_index.md",
+      "entry_label": "人生阶段入口",
+      "sha256": "02ed3d1ed8da5cc8ebb506c41270307f7ecacd18f99bc6e79a876f270740fb6e"
+    },
+    {
+      "path": "stages/职场发展（28-40岁）/_index.md",
+      "status": "rewritten",
+      "note": "围绕职责变化、资源取舍、能力验证和家庭安排组织概览，删除职业和认知巅峰的年龄断言；明确尚属阶段概览。",
+      "sources_checked": [],
+      "title": "职场发展（28–40 岁）",
+      "role": "人生阶段概览",
+      "reading_note": "围绕当前生活任务阅读；这里只计现有概览和专题，尚未编成的完整课程留在规划中。",
+      "entry": "stages/_index.md",
+      "entry_label": "人生阶段入口",
+      "sha256": "6288c3e6b0c85d2e5e1e473c2354b1c1e3d6ca63813c2c858bfc6a2ebc81afb4"
+    },
+    {
+      "path": "stages/职场开始（22-28岁）/_index.md",
+      "status": "rewritten",
+      "note": "以第一份工作的交付、反馈、健康与财务边界为场景，不用年龄预设统一职业进度；明确尚属阶段概览。",
+      "sources_checked": [],
+      "title": "职场开始（22–28 岁）",
+      "role": "人生阶段概览",
+      "reading_note": "围绕当前生活任务阅读；这里只计现有概览和专题，尚未编成的完整课程留在规划中。",
+      "entry": "stages/_index.md",
+      "entry_label": "人生阶段入口",
+      "sha256": "c3f8cbe913ee0262f696e0a159bc7e2299211ad4e6f4d02bc74e6f617e7e4b8f"
+    },
+    {
+      "path": "stages/青春期（14-18岁）/_index.md",
+      "status": "rewritten",
+      "note": "区分青少年本人阅读与父母阅读，用学习、关系、选择和安全实际场景承接大学概览；明确尚属阶段概览。",
+      "sources_checked": [],
+      "title": "青春期（14–18 岁）",
+      "role": "人生阶段概览",
+      "reading_note": "围绕当前生活任务阅读；这里只计现有概览和专题，尚未编成的完整课程留在规划中。",
+      "entry": "stages/_index.md",
+      "entry_label": "人生阶段入口",
+      "sha256": "6d9c568123b6634cf1d73d209eddd02204611ecf8fcb234f5023351fdb793419"
+    }
+  ]
+}

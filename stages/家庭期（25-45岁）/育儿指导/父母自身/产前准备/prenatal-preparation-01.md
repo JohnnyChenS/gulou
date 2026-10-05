@@ -10,7 +10,7 @@ review_status: draft
 references:
   - Centers for Disease Control and Prevention. Urgent Maternal Warning Signs and Symptoms. 2024.
   - National Institute of Mental Health. Perinatal Depression. 2023.
-  - American Academy of Pediatrics. Sleep-Related Infant Deaths: Updated 2022 Recommendations.
+  - "American Academy of Pediatrics. Sleep-Related Infant Deaths: Updated 2022 Recommendations."
   - Cowan, C. P., & Cowan, P. A. (2000). When Partners Become Parents. Lawrence Erlbaum.
   - Palkovitz, R. (2002). Involved Fathering and Child Development. Lawrence Erlbaum.
 tags: [产前准备, 新手父母, 角色转变, 支持网络, 照料分工]
@@ -20,17 +20,21 @@ tags: [产前准备, 新手父母, 角色转变, 支持网络, 照料分工]
 
 > **一句话**：准备不是把所有变量都排除，而是把最初几天的安全、照料和求助路径说清楚。
 
+## 什么时候读，读完返回哪里
+
+在新手父母主线第 1–2 章、临近分娩或刚发现家里还没有明确分工时读。读完回到[新手父母主线目录](../../../../../paths/parenting/new-parent/_index.md)，继续下一章；如果宝宝已经出生，直接回到你正在读的章节，不必按产前清单重来。
+
 ## 先准备四件事
 
 ### 1. 一张“需要找谁”的支持地图
 
-至少写下三类联系人：
+先写下三类联系人，并确认非工作时间怎么联系：
 
 - 产检医院或产科团队，以及非工作时间的联系方法；
 - 儿科或社区医疗服务的联系方法；
-- 可以在家里实际接手两小时、半夜交班或陪同就医的人。
+- 可以在家里实际接手一段照料、参与夜间交班或陪同就医的人。
 
-如果家庭所在地有不同的急救、产科和儿科流程，提前确认应拨打的本地号码和就诊地点。文章里的通用信息不能替代当地医疗团队给你的具体安排。
+如果家庭所在地有不同的急救、产科和儿科流程，提前确认应拨打的本地号码和就诊地点。文章里的通用信息不能替代当地医疗团队给你的具体安排；宝宝已经出生时，把这张卡片放到夜间照料位置，和当前主线一起使用。
 
 ### 2. 支持与分工
 
@@ -109,7 +113,7 @@ tags: [产前准备, 新手父母, 角色转变, 支持网络, 照料分工]
 
 ## 今天就做的一件事
 
-和伴侣或家人花 10 分钟写一张“夜间交接卡”：谁在什么情况下接手、用品放在哪里、遇到什么信号联系谁。先做出能用的版本，宝宝出生后再根据实际情况调整。
+和伴侣或家人用一小段清醒时间写一张“夜间交接卡”：谁在什么情况下接手、用品放在哪里、遇到什么信号联系谁。先做出能用的版本，宝宝出生后再根据实际情况调整。
 
 ## 延伸探索
 

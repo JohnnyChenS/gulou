@@ -28,6 +28,48 @@ function extractMainStepLinks(content, sourceRel) {
   return extractMarkdownLinks(section, sourceRel);
 }
 
+function routeGroupMode(route) {
+  if (route && route.fm && route.fm.route_group_mode) return route.fm.route_group_mode;
+  // The architecture course predates the explicit mode field, but its ten
+  // stages are an intentional sequence. Keep that contract for old content.
+  if (route && route.fm && route.fm.route_group === 'system-architecture-core') return 'sequence';
+  return 'legacy';
+}
+
+function extractChapterLinks(route, byRel) {
+  const explicit = Array.isArray(route.fm.chapters);
+  const items = explicit
+    ? route.fm.chapters.map(target => ({ target: normalizeTarget(route.rel, String(target)), label: String(target) }))
+    : extractMainStepLinks(route.content, route.rel);
+  return items
+    .filter(item => item.target)
+    .map((item, index) => ({
+      ...item,
+      index,
+      page: byRel.get(item.target) || null,
+    }));
+}
+
+function routeChapters(route, byRel) {
+  return extractChapterLinks(route, byRel).filter(chapter => chapter.page);
+}
+
+function routeContextRels(route, byRel) {
+  const chapters = routeChapters(route, byRel);
+  const allowed = new Set(chapters.map(chapter => chapter.target));
+  const queue = [...chapters.map(chapter => chapter.page)];
+  while (queue.length > 0) {
+    const page = queue.shift();
+    if (page.fm && (page.fm.page_type === 'route' || page.fm.page_type === 'route-index')) continue;
+    for (const link of extractMarkdownLinks(page.content || '', page.rel)) {
+      if (!byRel.has(link.target) || allowed.has(link.target)) continue;
+      allowed.add(link.target);
+      queue.push(byRel.get(link.target));
+    }
+  }
+  return Array.from(allowed);
+}
+
 function buildPageRegistry(pages) {
   const byRel = new Map(pages.map(page => [page.rel, page]));
   const routes = pages.filter(page => page.fm && page.fm.page_type === 'route');
@@ -40,11 +82,21 @@ function buildPageRegistry(pages) {
     if (!routesByGroup.has(group)) routesByGroup.set(group, []);
     routesByGroup.get(group).push(route);
 
-    const refs = extractMainStepLinks(route.content, route.rel);
+    route.route_group_mode = routeGroupMode(route);
+    route.chapterLinks = extractChapterLinks(route, byRel);
+    // Only explicit chapter arrays create a reader chapter route. Legacy
+    // "阅读顺序" links remain article references while route groups such as
+    // system-architecture-core continue to use their route-level sequence.
+    route.chapters = Array.isArray(route.fm.chapters)
+      ? route.chapterLinks.filter(chapter => chapter.page)
+      : [];
+    route.legacyChapters = route.chapterLinks.filter(chapter => chapter.page);
+    route.contextRels = routeContextRels(route, byRel);
+    const refs = route.chapterLinks;
     route.mainStepLinks = refs;
     for (const ref of refs) {
       if (!routeRefsByPage.has(ref.target)) routeRefsByPage.set(ref.target, []);
-      routeRefsByPage.get(ref.target).push({ route, label: ref.label });
+      routeRefsByPage.get(ref.target).push({ route, label: ref.label, index: ref.index, kind: 'chapter' });
     }
   }
 
@@ -78,20 +130,41 @@ function getRouteContext(rel, registry) {
   let articlePrevious = null;
   let articleNext = null;
   if (currentRoute) {
-    steps = registry.routesByGroup.get(currentRoute.fm.route_group) || [];
-    const index = steps.findIndex(route => route.rel === rel);
-    previous = index > 0 ? steps[index - 1] : null;
-    next = routeTarget(currentRoute, registry) || (index >= 0 ? steps[index + 1] || null : null);
+    if (currentRoute.route_group_mode === 'sequence' || currentRoute.route_group_mode === 'legacy') {
+      steps = registry.routesByGroup.get(currentRoute.fm.route_group) || [];
+      const index = steps.findIndex(route => route.rel === rel);
+      previous = index > 0 ? steps[index - 1] : null;
+      next = routeTarget(currentRoute, registry) || (index >= 0 ? steps[index + 1] || null : null);
+    } else {
+      steps = currentRoute.chapters || [];
+      next = steps[0] ? steps[0].page : null;
+    }
   } else if (refs.length > 0) {
-    articleRoute = refs[0].route;
-    const articleLinks = articleRoute.mainStepLinks || [];
-    steps = articleLinks.map(link => registry.byRel.get(link.target)).filter(Boolean);
-    articleIndex = articleLinks.findIndex(link => link.target === rel);
-    articlePrevious = articleIndex > 0 ? registry.byRel.get(articleLinks[articleIndex - 1].target) || null : null;
-    articleNext = articleIndex >= 0 ? registry.byRel.get(articleLinks[articleIndex + 1] && articleLinks[articleIndex + 1].target) || null : null;
+    // A direct article open must not silently select refs[0]. The renderer
+    // shows all memberships and nav.js validates an explicit query choice.
+    const chapterRefs = refs.filter(ref => ref.kind === 'chapter');
+    if (chapterRefs.length === 1) {
+      articleRoute = chapterRefs[0].route;
+      steps = articleRoute.chapters.length > 0 ? articleRoute.chapters : articleRoute.legacyChapters;
+      articleIndex = chapterRefs[0].index;
+      articlePrevious = articleIndex > 0 ? steps[articleIndex - 1].page : null;
+      articleNext = articleIndex >= 0 ? (steps[articleIndex + 1] && steps[articleIndex + 1].page) || null : null;
+    }
   }
 
-  return { currentRel: rel, route: currentRoute, steps, previous, next, referencedBy: refs, articleRoute, articleIndex, articlePrevious, articleNext };
+  return {
+    currentRel: rel,
+    readingChapter: Boolean(current && current.fm && current.fm.page_type === 'reading-chapter'),
+    route: currentRoute,
+    steps,
+    previous,
+    next,
+    referencedBy: refs,
+    articleRoute,
+    articleIndex,
+    articlePrevious,
+    articleNext,
+  };
 }
 
 function validateRoutes(pages) {
@@ -105,6 +178,21 @@ function validateRoutes(pages) {
     const key = `${group}:${route.fm.route_key}`;
     if (!group || !route.fm.route_key) errors.push(`${route.rel}: route_group and route_key are required`);
     if (!Number.isFinite(Number(route.fm.route_order))) errors.push(`${route.rel}: route_order must be a number`);
+    if (!['sequence', 'alternatives', 'legacy'].includes(route.route_group_mode)) {
+      errors.push(`${route.rel}: route_group_mode must be sequence, alternatives, or legacy`);
+    }
+    if (Object.hasOwn(route.fm, 'chapters') && !Array.isArray(route.fm.chapters)) {
+      errors.push(`${route.rel}: chapters must be an array when provided`);
+    }
+    const chapterTargets = new Set();
+    for (const chapter of route.chapterLinks || []) {
+      if (chapterTargets.has(chapter.target)) errors.push(`${route.rel}: duplicate chapter ${chapter.target}`);
+      chapterTargets.add(chapter.target);
+      if (!chapter.page) errors.push(`${route.rel}: chapter does not exist: ${chapter.target}`);
+      if (chapter.page && chapter.page.fm.page_type === 'route') {
+        errors.push(`${route.rel}: chapter must be a reading page, not a route: ${chapter.target}`);
+      }
+    }
     if (seenKeys.has(key)) errors.push(`${route.rel}: duplicate route key ${key}`);
     seenKeys.add(key);
 

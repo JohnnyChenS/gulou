@@ -1,0 +1,435 @@
+{
+  "scope": "worker-young-families",
+  "generated_at": "2026-10-05",
+  "mainline_chapter_filenames": [
+    "01-before-birth.md",
+    "02-ready-for-hospital.md",
+    "03-birth-day.md",
+    "04-first-day.md",
+    "05-going-home.md",
+    "06-first-week.md",
+    "07-recovery-and-rhythm.md",
+    "08-reading-baby-signals.md",
+    "09-care-and-connection.md",
+    "10-six-weeks-to-three-months.md",
+    "11-three-to-six-months.md",
+    "12-six-to-twelve-months.md",
+    "13-twelve-to-eighteen-months.md",
+    "14-eighteen-to-twenty-four-months.md",
+    "15-twenty-four-to-thirty-six-months.md"
+  ],
+  "files": [
+    {
+      "path": "paths/0-3/cognitive-psychological.md",
+      "status": "rewritten",
+      "note": "保留专题延伸定位，补齐 11 个认知主题的月龄/用途入口，并把连续主线置于专题之前。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/ages/0-3.md",
+      "status": "rewritten",
+      "note": "重编为同一十五章主线的年龄入口与23专题用途地图；chapters留空以避免给每章登记重复路线，首次阅读直接进入统一主线。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/ages/3-6.md",
+      "status": "rewritten",
+      "note": "按身体—情绪—互动—任务—语言/学习编排显式 chapters；其余专题改为问题查阅入口。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/10-six-weeks-to-three-months.md",
+      "status": "rewritten",
+      "note": "承接 09 的照料循环，把喂养、排泄、体重、睡眠和哭闹放回同一日常观察框架。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/2-months.html",
+        "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/Back-to-Sleep-Tummy-to-Play.aspx"
+      ]
+    },
+    {
+      "path": "paths/parenting/new-parent/11-three-to-six-months.md",
+      "status": "rewritten",
+      "note": "以主动探索和滚动前后的环境变化承接 10，连接安全睡眠、交流和照料者轮班。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/4-months.html",
+        "https://www.cdc.gov/act-early/milestones/6-months.html",
+        "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx"
+      ]
+    },
+    {
+      "path": "paths/parenting/new-parent/12-six-to-twelve-months.md",
+      "status": "rewritten",
+      "note": "解释约六个月起的共同进食准备、回应式喂养、吞咽安全和动作探索，保留个体差异。",
+      "sources_checked": [
+        "https://www.who.int/health-topics/complementary-feeding",
+        "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding",
+        "https://www.cdc.gov/act-early/milestones/6-months.html"
+      ]
+    },
+    {
+      "path": "paths/parenting/new-parent/13-twelve-to-eighteen-months.md",
+      "status": "rewritten",
+      "note": "把移动、表达、边界、进食和照料者支持接在同一场景，避免把里程碑变成训练任务。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/1-year.html",
+        "https://www.cdc.gov/act-early/milestones/15-months.html",
+        "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding"
+      ]
+    },
+    {
+      "path": "paths/parenting/new-parent/14-eighteen-to-twenty-four-months.md",
+      "status": "rewritten",
+      "note": "从自主和情绪场景进入选择、假装、语言和日常任务，强调共同调节与安全边界。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/18-months.html",
+        "https://www.cdc.gov/act-early/milestones/2-years.html"
+      ]
+    },
+    {
+      "path": "paths/parenting/new-parent/15-twenty-four-to-thirty-six-months.md",
+      "status": "rewritten",
+      "note": "连接更长表达、假装游戏、生活任务和照料者支持，并自然过渡到 3–6 岁路线。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/30-months.html",
+        "https://www.cdc.gov/act-early/milestones/3-years.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "status": "rewritten",
+      "note": "全文复读并重编入口，明确先沿十五章系统阅读，再查月龄地图和全部护理/认知/身体主题。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/development-assessment.md",
+      "status": "retained",
+      "note": "全文复读；以真实场景记录、情境/状态/成人支持和倒退/安全红旗组织，概念区分家庭观察、监测和筛查，适合作为主线后的评估支点。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/_index.md",
+      "status": "retained",
+      "note": "全文复读；明确 8 个护理主题的使用场景和“先安全—观察—低风险行动—决定是否求助”结构，已把连续主线与操作查阅分开。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/bathing-care-01.md",
+      "status": "retained",
+      "note": "全文复读；洗澡、擦浴/盆浴、脐带和照料者离开场景均先讲安全，解释脐部护理词语并保留溺水/异常状态求助边界。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/burping-guide-01.md",
+      "status": "retained",
+      "note": "全文复读；从喂后不适场景区分拍嗝是可选观察动作，给出支撑姿势、停止条件和异常求助，未把拍出声音写成目标。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/colic-relief-01.md",
+      "status": "retained",
+      "note": "全文复读；先区分哭闹与“肠胀气”概念，再给低风险安抚和记录趋势，保留发热、喂养和照料者安全红旗。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/crying-checklist-01.md",
+      "status": "retained",
+      "note": "全文复读；从哭闹真实场景按危险—信号—照料者重置编排，具备可执行交接步骤和不延误求助的红旗。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/diaper-changing-01.md",
+      "status": "retained",
+      "note": "全文复读；把换尿布台/地面、材料准备、单手保护和皮肤观察写在正文，未要求读者外跳补基础安全。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/feeding-guide-01.md",
+      "status": "retained",
+      "note": "全文复读；先处理喂养求助，再解释饥饿/饱足信号、母乳/配方/混合和趋势记录，保留吞咽与生长异常边界。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/holding-newborn-01.md",
+      "status": "retained",
+      "note": "全文复读；从抱起/放下场景解释头颈、躯干、臀部和气道支撑，列出常见错误、呼吸异常和交接安全。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/newborn-sleep-01.md",
+      "status": "retained",
+      "note": "全文复读；先处理就医信号，再解释零碎睡眠、安抚和安全睡眠，固定时长被明确为参考而非训练指标。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/attachment-01.md",
+      "status": "integrated",
+      "note": "保留哭闹、换人、分离重逢和照料者耗竭场景；把“信号”解释为哭声、转开、伸手、看向成人等可见行为，新增从喂养/睡眠主线接入联合注意的承接；保留安全交接和照料者求助红旗。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/infants.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/autonomy-01.md",
+      "status": "integrated",
+      "note": "保留穿衣、吃饭、出门和“我自己来”例子；新增身体状态/安全边界先行，以及从回应关系进入自主参与的解释；保留攻击、倒退和照料者失控的求助条件。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-1-2-years.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/cause-effect-01.md",
+      "status": "integrated",
+      "note": "保留扔勺子、滚动、按钮、容器和水游戏；新增“动作—结果—状态”不能脱离照料场景的解释，以及探索到客体持续的下一步。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/early-reading-01.md",
+      "status": "integrated",
+      "note": "保留啃书、跑开、重复页面和按月龄共读例子；新增清醒舒适、回应后再共读的承接，避免把共读写成识字任务。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/infants.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/empathy-01.md",
+      "status": "integrated",
+      "note": "保留哭声感染、递纸巾、冲突修复和绘本例子；新增“先安稳—再连接—后修复”的进入顺序，保留不强迫分享/安慰的边界。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/18-months.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/joint-attention-01.md",
+      "status": "integrated",
+      "note": "保留指物、递物、拉手和回头看等沟通例子；新增从“想要”到“想分享”的场景承接，明确指物不是唯一表达且红旗不能自诊断。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/18-months.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/learning-foundations-01.md",
+      "status": "integrated",
+      "note": "保留扔勺子、开关、提问和假装场景；把文章定位为认知主线地基，明确先处理安全/照料状态，再进入因果、共同注意、阅读和假装分支。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/infants.html",
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/object-permanence-01.md",
+      "status": "integrated",
+      "note": "保留遮挡、藏玩具、找物品和告别场景；把概念解释接回离开—回来经验，保留材料安全和不以寻找结果做测试的边界。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/screen-time-01.md",
+      "status": "integrated",
+      "note": "新增动画结束时哭闹的场景，承接睡眠/活动/共读路线，保留内容、陪伴、结束过渡和健康问题求助边界。",
+      "sources_checked": [
+        "https://www.who.int/publications/i/item/9789241550536"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/self-awareness-01.md",
+      "status": "integrated",
+      "note": "保留镜子、照片、“我的”、选择和日常任务例子；把概念接到身体边界、自主和情绪表达，保留不做镜像测试及安全决定由成人承担。",
+      "sources_checked": [
+        "https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-1-2-years.html",
+        "https://www.cdc.gov/act-early/milestones/18-months.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/symbolic-thinking-01.md",
+      "status": "integrated",
+      "note": "保留娃娃、纸盒、容器和生活动作例子；新增从模仿/重复到替代用途的场景解释，保留小物件、药品和工具安全边界。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/18-months.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/身体能力/fine-motor-01.md",
+      "status": "retained",
+      "note": "全文复读；以抓握/放入/自主进食场景解释精细动作，活动材料和吞咽安全在正文，未把训练次数或单一动作当达标。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/身体能力/gross-motor-01.md",
+      "status": "integrated",
+      "note": "正文原有场景、自由地面活动和倒退/不对称红旗已满足标准，本次保留并修复到 3–6 岁基本动作的有效延伸链接。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/身体能力/oral-motor-01.md",
+      "status": "retained",
+      "note": "全文复读；把吞咽安全、口部动作和发音评估分开解释，辅食质地与窒息边界在正文，明确家庭游戏不是治疗。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/身体能力/sensory-integration-01.md",
+      "status": "retained",
+      "note": "全文复读；从声音/触感/移动影响日常的场景开始，解释“感觉体验”而非诊断标签，保留环境调整和专业求助条件。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md",
+      "status": "integrated",
+      "note": "入口现在先指向连续阅读路线；专题地图明确“按需查、不替代路线”，并覆盖全部认知和身体文章及其观察用途。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/development-assessment.md",
+      "status": "retained",
+      "note": "全文复读；从出门、同伴、讲故事和生活任务场景解释观察—调整—复盘，区分监测与筛查，红旗和咨询准备完整。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/attention-focus-01.md",
+      "status": "integrated",
+      "note": "保留挖沙、搭建、共读、任务和转场例子；新增主线中的小任务入口，保留环境调整和跨场景求助边界。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/",
+        "https://developingchild.harvard.edu/resources/handouts-tools/activities-guide-enhancing-and-practicing-executive-function-skills/",
+        "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/curiosity-and-learning-01.md",
+      "status": "integrated",
+      "note": "保留挖沙、为什么、拼图和猜—试—说循环；新增承接身体参与/情绪恢复的进入句和回到执行功能、前读写的主线出口。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/",
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/delay-of-gratification-01.md",
+      "status": "integrated",
+      "note": "保留穿鞋找钥匙、等待顺序和可靠承诺的生活例子；把等待解释为关系与外部支持下的能力，明确疼痛、饥饿、如厕和安全不能延迟。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/resources/handouts-tools/activities-guide-enhancing-and-practicing-executive-function-skills/"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/emotion-regulation-01.md",
+      "status": "integrated",
+      "note": "保留收玩具升级和安全处理步骤；新增先从一次场景进入共同调节，保留暂停、回到现场和不在高峰讲道理的边界。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/executive-function-01.md",
+      "status": "integrated",
+      "note": "重排为“出门卡住/规则改变”的场景先行，再用日常语言解释暂停、记住目标、换办法，删除抽象名词开场和重复段落，保留外部支架与不作未来保证。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/resources/handouts-tools/activities-guide-enhancing-and-practicing-executive-function-skills/",
+        "https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/gender-identity-self-concept-01.md",
+      "status": "integrated",
+      "note": "新增孩子关于衣服、角色和称呼的一句话作为入口，再解释兴趣、表达、身份和角色期待，保留安全、尊重和不强迫的边界。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/pre-literacy-math-01.md",
+      "status": "integrated",
+      "note": "新增餐桌分水果和共读提问场景，再解释前阅读/前数学，保留多语言、游戏和不刷题原则。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/reading-habits-01.md",
+      "status": "integrated",
+      "note": "新增被打断的共读场景，解释阅读习惯包含看图、讲述和连接生活，保留短暂、重复、多语言和真实文字用途。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/screen-time-01.md",
+      "status": "integrated",
+      "note": "新增动画结束时哭闹的场景，承接睡眠/活动/共读路线，保留内容、陪伴、结束过渡和健康问题求助边界。",
+      "sources_checked": [
+        "https://www.who.int/publications/i/item/9789241550536"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/social-play-01.md",
+      "status": "integrated",
+      "note": "新增进不去搭积木游戏的场景，再解释平行、共享和合作游戏，保留成人搭桥、冲突安全和不强迫适应。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/认知与心理/theory-of-mind-01.md",
+      "status": "integrated",
+      "note": "新增奶奶没看到积木的场景，再解释愿望、信息和错误判断，保留不把观点题当测验以及冲突中先安全后理解。",
+      "sources_checked": [
+        "https://developingchild.harvard.edu/key-concept/serve-and-return/",
+        "https://www.cdc.gov/act-early/milestones/4-years.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/balance-coordination-01.md",
+      "status": "rewritten",
+      "note": "解释平衡/协调并把活动放入地面游戏，移除秒数表、危险挑战和测试式警告。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/3-years.html",
+        "https://www.cdc.gov/act-early/milestones/4-years.html",
+        "https://www.cdc.gov/act-early/milestones/5-years.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/basic-movement-01.md",
+      "status": "rewritten",
+      "note": "用游戏场景解释基本动作，移除年龄达标表、固定频率和预测性表述，保留安全观察与转介线索。",
+      "sources_checked": [
+        "https://www.cdc.gov/act-early/milestones/3-years.html",
+        "https://www.cdc.gov/act-early/milestones/4-years.html",
+        "https://www.cdc.gov/act-early/milestones/5-years.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/hand-eye-coordination-01.md",
+      "status": "retained",
+      "note": "全文复读；以投接、画线、拼搭和工具操作场景解释眼手协调，保留材料安全、成人示范和疼痛/明显不对称求助边界。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/handedness-01.md",
+      "status": "rewritten",
+      "note": "保留不强迫改手的核心，删去固定比例、因果夸张和定龄要求，改为工具适配与异常变化观察。",
+      "sources_checked": [
+        "https://pubmed.ncbi.nlm.nih.gov/32345766/"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/3-6岁/身体能力/outdoor-habits-01.md",
+      "status": "rewritten",
+      "note": "以真实出门场景开篇，移除户外两小时硬性要求和未经支持的视力/心理效果承诺，保留监督、天气和求助边界。",
+      "sources_checked": [
+        "https://www.who.int/publications/i/item/9789241550536"
+      ]
+    }
+  ],
+  "important_unresolved_safety_concerns": [
+    "所有 10–15 章与本次改写仍是 draft，公开资料已列明但未完成逐条专业复核；不能替代当地儿科、儿童保健、急救或喂养专业意见。",
+    "第 12 章涉及辅食准备、吞咽/窒息风险与家庭食物安全；具体质地、过敏处置和当地可得食物仍需由专业人员结合孩子情况复核。",
+    "0–3 日常护理中已有发热、喂养、睡眠和求助阈值；本次保留既有内容，实际测量方式、就医路径和当地急救号码仍需发布前核对。",
+    "3–6 岁动作文章刻意移除固定年龄秒数和频率；持续疼痛、明显不对称、倒退、反复严重跌倒或安全风险仍不能由家庭文章判断，需专业评估。",
+    "CDC/WHO 里程碑和公共卫生建议用于观察与编排，不是诊断、训练达标或未来结果保证；早产、慢性病、残障、多语言和个体医疗背景需个别化解释。"
+  ],
+  "unverified_source_limits": [
+    "本轮实际打开并核对的 URL 仅记录在各文件 sources_checked；空数组表示本轮未打开该文已有参考文献，不能把现有 references 当成本轮来源核验。",
+    "cause-effect、object-permanence、gender-identity-self-concept 等文保留了原有研究/机构 references，但本轮未逐条打开，发布前仍需按正文具体断言完成来源核对。",
+    "本轮打开的 CDC/Harvard/WHO 页面支持发展观察、回应互动、执行功能活动和家庭媒体背景；不等于对每篇文章全文或所有医疗安全细节完成专业审核。"
+  ]
+}

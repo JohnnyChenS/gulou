@@ -31,6 +31,10 @@ related_prompts: [3-6-core-executive-function-01, 3-6-core-delay-of-gratificatio
 
 专注力与执行功能有关，但一场活动的表现不能用来判断孩子的整体能力，更不能据此诊断注意缺陷多动障碍。发展观察要看一段时间、多个场景以及对日常生活的影响。
 
+## 先从主线中的一个任务看专注
+
+在连续路线里，先观察一个孩子每天都会遇到的任务：收玩具、共读、穿鞋或从户外回家。问题不是“他坐了多久”，而是成人怎样把起点、过程和结束变得可理解。
+
 ## 可以观察什么
 
 | 情境 | 可以留意的变化 | 成人可以怎样支持 |
@@ -111,6 +115,10 @@ related_prompts: [3-6-core-executive-function-01, 3-6-core-delay-of-gratificatio
 - [Harvard Center on the Developing Child：Serve and Return](https://developingchild.harvard.edu/key-concept/serve-and-return/)：了解成人如何回应孩子的注意、动作和情绪信号。
 - [Harvard Center on the Developing Child：执行功能活动指南](https://developingchild.harvard.edu/resources/handouts-tools/activities-guide-enhancing-and-practicing-executive-function-skills/)：把游戏作为灵感来源，而不是固定训练处方。
 - [CDC：发展监测与发展筛查](https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html)：了解家庭观察与专业评估的区别。
+
+## 接回连续路线
+
+如果孩子在一个小任务中更容易开始、停下或转向，就把这个支持带回户外、情绪和同伴活动；如果困难跨多个场景持续影响安全或参与，带记录咨询专业人员。
 
 ## 延伸探索
 

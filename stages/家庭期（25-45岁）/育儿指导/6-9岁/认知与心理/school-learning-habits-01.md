@@ -20,6 +20,7 @@ related_prompts: [6-9-core-independent-reading-01, 6-9-core-oral-expression-01]
 > **一句话**：低年级的学习习惯，先从“知道怎么开始、卡住会求助、做完能检查”练起。
 
 ## 进入学校后，家长最容易误判什么
+**阅读位置**：这是 6–9 岁主线的起点。先看具体任务卡在没听懂、不会开始、材料不全、太累还是担心评价；第一步能被说出来，才有机会逐渐交给孩子。
 
 孩子在课堂上能听懂，回家却迟迟不写作业；或者作业写得很快，第二天却说不清自己学了什么。家长常把它归结为粗心、懒或不够自觉。
 
@@ -95,6 +96,7 @@ related_prompts: [6-9-core-independent-reading-01, 6-9-core-oral-expression-01]
 
 ## 延伸阅读
 
+- [育儿焦虑](../../父母自身/育儿压力/parenting-anxiety-01.md)：如果作业问题让成人反复查资料、难以停下监督，先整理自己的事实与担忧，再返回本章的任务起点。
 - [独立阅读过渡](independent-reading-01.md)
 - [口头表达能力](oral-expression-01.md)
 - [创造性思维](creative-thinking-01.md)

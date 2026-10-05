@@ -13,8 +13,8 @@ prerequisites: [0-3-core-attachment-01]
 next_topics: [0-3-core-joint-attention-01, 0-3-core-cause-effect-01, 0-3-core-early-reading-01]
 references:
   - UNICEF. The science of play. https://www.unicef.org/parenting/child-care/science-of-play
-  - ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/
-  - Raising Children Network. Play and learning: babies and toddlers. https://raisingchildren.net.au/babies/play-learning
+  - "ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/"
+  - "Raising Children Network. Play and learning: babies and toddlers. https://raisingchildren.net.au/babies/play-learning"
   - Harvard Center on the Developing Child. Serve and Return. https://developingchild.harvard.edu/science/key-concepts/serve-and-return/
   - CDC. Learn the Signs. Act Early. https://www.cdc.gov/act-early/milestones/index.html
 tags: [学习地基, 探索, 游戏, 共同注意, 语言互动, 早期阅读, 亲子互动]
@@ -81,6 +81,8 @@ agent_use:
 
 婴幼儿的学习常常嵌在关系、游戏和日常照料里。安全、睡眠、进食、身体舒适和成人的可回应性，都是能否继续探索的前提。孩子今天不想玩，不代表他错过了学习窗口；他疲劳时需要的是休息，不是加一轮训练。
 
+所以这篇是认知主线的起点：先沿新手父母主线把安全和照料循环接住，再用“观察—等待—回应”读懂孩子正在尝试什么。后面的因果、共同注意、早期阅读和假装游戏，都从这个日常底座长出来。
+
 ## 按阶段看互动重点
 
 | 大致阶段 | 可以观察的变化 | 成人可以提供的条件 |
@@ -91,6 +93,10 @@ agent_use:
 | 24–36 个月 | 把语言、生活经验和游戏情节连接起来；通过提问和重复继续探索 | 认真接住问题，和孩子一起寻找答案；把任务拆成一小步，不要求持续坐定 |
 
 这些是选互动方式的地图，不是月龄考核表。语言、动作、社交和注意不一定同步；一次没有完成，也不能单独说明孩子缺少某种能力。
+
+## 从照料状态进入探索
+
+当孩子清醒、舒适且环境安全时，再使用下面的动作；如果身体需要或情绪已经超出承受范围，先回到护理和共同调节。
 
 ## 五个支持学习的日常动作
 
@@ -146,6 +152,10 @@ agent_use:
 ## 今天就做一件事
 
 找到孩子已经在关注的一件安全物品，坐到旁边，用一句话描述它，然后安静等几秒。孩子继续看、摸、指、发声或转开，都把它当作有用的信息；今天不安排额外测试。
+
+## 接回主线
+
+下一步按孩子当前场景进入[因果探索](cause-effect-01.md)、[早期阅读探索](early-reading-01.md)或[联合注意](joint-attention-01.md)；这些是地基上的分支查阅，不是必须完成的课程。
 
 ## 延伸探索
 

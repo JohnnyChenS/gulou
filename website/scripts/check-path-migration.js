@@ -13,6 +13,12 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+function linksTo(html, href) {
+  // Route metadata can mention a page without linking the reader to it.
+  return Array.from(html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g))
+    .some(match => match[1].split(/[?#]/)[0] === href);
+}
+
 const removedPages = [
   'paths/0-3/physical.html',
   'paths/3-6/cognitive-psychological.html',
@@ -59,7 +65,7 @@ for (const page of retainedPages) {
 const index = read('paths/index.html');
 for (const page of removedPages) {
   const href = `/${page}`;
-  assert(!index.includes(href), `路径索引不应继续链接已删除页面：${href}`);
+  assert(!linksTo(index, href), `路径索引不应继续链接已删除页面：${href}`);
 }
 
 assert(index.includes('/paths/learning/ages/index.html'), '路径索引应保留新的按年龄学习路线入口');
@@ -72,8 +78,8 @@ const elderBrainHealth = 'stages/60-plus/cognitive-maintenance/brain-health-01.h
 assert(fs.existsSync(path.join(site, elderBrainHealth)), '60+ 岁阶段应保留本地脑健康与认知保持文章');
 
 const stage12to14 = read('stages/family/parenting/12-14/index.html');
-assert(!stage12to14.includes('/paths/12-14/cognitive-psychological.html'), '12–14 岁页面不应链接旧认知路径');
-assert(stage12to14.includes('/paths/12-14/physical.html'), '12–14 岁页面应保留身体能力专题入口');
+assert(!linksTo(stage12to14, '/paths/12-14/cognitive-psychological.html'), '12–14 岁页面不应链接旧认知路径');
+assert(linksTo(stage12to14, '/paths/12-14/physical.html'), '12–14 岁页面应保留身体能力专题入口');
 assert(read('paths/12-14/physical.html').includes('状态：</strong>规划中'), '12–14 岁身体规划页应显示中文规划状态');
 
 console.log('Legacy path migration checks passed');
