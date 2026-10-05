@@ -2,7 +2,9 @@
 
 审阅状态：草案
 
-审阅日期：2026-07-19
+原框架审阅日期：2026-07-19；阅读接入与公开页面核对：2026-10-05。专业状态仍为草案。
+
+需要理解自己的记忆或日常功能变化时，先读[脑健康与认知保持](../stages/老年期（60+岁）/认知保持/brain-health-01.md)。本页供核对证据和编辑边界，不是额外必读的健康课程。
 
 ## 这个框架解决什么问题
 
@@ -98,3 +100,9 @@
 - World Health Organization. (2026). *Risk reduction of cognitive decline and dementia* (second edition). https://www.who.int/publications/i/item/9789240123557
 - World Health Organization. (n.d.). *Healthy diet*. https://www.who.int/news-room/fact-sheets/detail/healthy-diet
 - World Health Organization. (n.d.). *Physical activity*. https://www.who.int/news-room/fact-sheets/detail/physical-activity
+
+## 阅读中的用法
+
+看到“训练有效”时，先问它改善的是练过的任务，还是没有练过的生活能力；看到年龄差异时，问它是群体趋势还是个人预测。带着这个问题回到正文的相邻来源即可，不必为了读懂每章先完成方法学学习。
+
+[返回资料入口](_index.md) · [继续人生阶段阅读](../paths/_index.md)

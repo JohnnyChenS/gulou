@@ -23,6 +23,10 @@ related_prompts: [3-6-core-executive-function-01]
 
 ---
 
+## 先从餐桌和绘本里的一个问题开始
+
+孩子分水果时说“这个多”，共读时指着图问“他去哪儿了”。成人不必马上纠正或出题，可以让他移动物品、回看图画、解释自己的想法；这就是前阅读和前数学在生活里的入口。
+
 ## 你需要知道的
 
 **读写萌芽不只是认字**
@@ -107,6 +111,10 @@ related_prompts: [3-6-core-executive-function-01]
 - [HealthyChildren.org：帮助孩子享受亲子朗读](https://www.healthychildren.org/English/ages-stages/gradeschool/school/Pages/Help-Your-Child-Enjoy-Reading-Aloud-Tips-for-Parents.aspx)：提供选书、重复阅读和围绕图画交流的家庭建议。
 - [NAEYC：发展适宜性实践](https://www.naeyc.org/node/3807)：了解以游戏、关系和儿童兴趣为基础的早期学习原则。
 - 绘本可以按孩子的兴趣选择：生活故事、无字图画书、自然、交通、家庭关系和带有数量或空间元素的故事都可以成为共读材料。
+
+## 接回连续路线
+
+先保留轻松共读和生活比较，再按问题进入阅读习惯或执行功能；不需要因为孩子暂时不认字或数错就跳到密集训练。
 
 ## 延伸探索
 

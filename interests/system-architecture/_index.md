@@ -6,7 +6,7 @@ track: interests
 domain: system-architecture
 description: 面向资深开发者的系统架构、数据系统与 AI 工程学习路径
 age_range: 18y+
-estimated_duration: 12个月（每周6–8小时）
+estimated_duration: 示例投入预算：约12个月、每周6–8小时（可按产物与实验调整）
 page_type: route-index
 route_group: system-architecture-core
 review_status: draft
@@ -80,10 +80,10 @@ review_status: draft
 
 ## 综合项目与学习验证
 
-先完成[日志、状态与恢复纵向切片综合评审](capstone/log-state-recovery-review.md)，并使用[真实学习者验证协议](capstone/validation-protocol.md)记录逐页耗时、实验证据与独立评审结果。完成十个阶段后进入[综合项目入口](capstone/_index.md)，以最终架构、容量估算、SLO、故障模型、数据正确性、成本和演进路线证明判断能力。
+默认先按 00 → 09 走完主干，并留下各阶段产物；[日志、状态与恢复纵向切片综合评审](capstone/log-state-recovery-review.md)是可选复盘，读完它引用的相关阶段后再进入即可，随后仍可回到主干，不构成全课程先修。完成主干和阶段产物后进入[综合项目入口](capstone/_index.md)，以最终架构、容量估算、SLO、故障模型、数据正确性、成本和演进路线证明判断能力；[真实学习者验证协议](capstone/validation-protocol.md)记录学习证据，不增加新的正式单元。
 
 ## 材料边界
 
-本路线面向已有多年开发经验、熟悉至少一种主力语言和常见 Web 基础设施的工程师，不替代零基础编程、通用机器学习算法或单一框架 API 教材。课程按十二个月、每周 6–8 小时设计，其中包括 48 个内容周和 4 个复习、补课或中断缓冲周；AI 内容推荐平台是贯穿验证载体，而不是绑定正文的唯一技术栈。
+本路线面向已有多年开发经验、熟悉至少一种主力语言和常见 Web 基础设施的工程师，不替代零基础编程、通用机器学习算法或单一框架 API 教材。十二个月、每周 6–8 小时以及内容周和缓冲周只是投入预算示例，可按实验、评审和中断调整，不是完成期限或毕业门槛；AI 内容推荐平台是贯穿验证载体，而不是绑定正文的唯一技术栈。
 
 以下是作者材料，不属于学习阶段：[作者规范](authoring-guide.md)与[第一批来源矩阵](references/source-matrix.md)。

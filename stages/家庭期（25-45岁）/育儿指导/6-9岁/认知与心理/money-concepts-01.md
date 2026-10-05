@@ -21,6 +21,7 @@ related_prompts: [3-6-core-delay-of-gratification-01, 9-12-core-financial-decisi
 ---
 
 ## 你需要知道的
+**阅读位置**：这是按问题进入的生活专题。零花钱金额和方式应由家庭根据安全、资源和孩子参与程度决定，不是统一训练剂量；先让孩子说明想买什么、为什么和还有哪些选择。
 
 **为什么重要？** Berti 和 Bombi 的研究发现，6-9 岁是建立金钱概念的关键期。孩子开始理解"钱是有限的""需要选择怎么花""储蓄可以买更大的东西"。Whitebread 和 Bingham 的研究表明，童年时期的金钱习惯会影响成年后的财务行为。
 
@@ -47,7 +48,7 @@ related_prompts: [3-6-core-delay-of-gratification-01, 9-12-core-financial-decisi
 4. 可以准备三个罐子：花、存、捐
 
 **为什么有效**：让孩子在真实场景中学习金钱管理
-**频率**：每周
+**安排提示**：可在一周内找一次合适机会
 
 ### 2. 储蓄目标（6 岁+）
 
@@ -58,7 +59,7 @@ related_prompts: [3-6-core-delay-of-gratification-01, 9-12-core-financial-decisi
 4. 达成目标后一起去买
 
 **为什么有效**：体验"延迟满足→达成目标"的过程
-**频率**：持续
+**安排提示**：在日常安排中保持并观察
 
 ### 3. 超市预算游戏（7 岁+）
 
@@ -69,7 +70,7 @@ related_prompts: [3-6-core-delay-of-gratification-01, 9-12-core-financial-decisi
 4. 讨论"你为什么选这个？""如果多 10 块你会买什么？"
 
 **为什么有效**：在真实场景中练习预算和选择
-**频率**：每次去超市时
+**安排提示**：去超市时按孩子状态安排
 
 ### 4. "需要"和"想要"讨论（6 岁+）
 
@@ -79,7 +80,7 @@ related_prompts: [3-6-core-delay-of-gratification-01, 9-12-core-financial-decisi
 3. 讨论"如果预算有限，先买什么？"
 
 **为什么有效**：帮助孩子理解消费优先级
-**频率**：每次购物时
+**安排提示**：遇到相应购物场景时
 
 ### 5. 价格比较游戏（8 岁+）
 
@@ -89,7 +90,7 @@ related_prompts: [3-6-core-delay-of-gratification-01, 9-12-core-financial-decisi
 3. 让孩子帮你找"最划算"的商品
 
 **为什么有效**：培养价格意识和比较能力
-**频率**：每次购物时
+**安排提示**：遇到相应购物场景时
 
 ---
 

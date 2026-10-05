@@ -23,6 +23,10 @@ related_prompts: [3-6-core-executive-function-01, 3-6-core-theory-of-mind-01]
 
 ---
 
+## 先从一次情绪升级开始
+
+收玩具时孩子把积木扫到地上，成人越催他越大声。先移开危险物、降低声音并保留陪伴，等情绪下降后再讨论下一步；“共同调节”就是成人先提供孩子暂时还没有的稳定。
+
 ## 先理解孩子的情绪
 
 情绪调节包括识别感受、表达需要、降低或承受强烈的情绪，以及在事情结束后慢慢恢复。3–6 岁的孩子正在发展这些能力，但在疲惫、饥饿、疼痛、受挫、转换活动或感官负荷很高时，仍可能一下子被情绪淹没。
@@ -130,6 +134,10 @@ related_prompts: [3-6-core-executive-function-01, 3-6-core-theory-of-mind-01]
 - [ZERO TO THREE：共同调节与自我调节](https://www.zerotothree.org/resource/it-takes-two-the-role-of-co-regulation-in-building-self-regulation-skills/)：理解成人如何通过回应、示范和环境支持陪孩子发展调节能力。
 - [Harvard Center on the Developing Child：Serve and Return](https://developingchild.harvard.edu/key-concept/serve-and-return/)：了解围绕孩子注意和情绪信号的来回回应。
 - [CDC：发展监测与发展筛查](https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html)：当情绪问题与语言、听力或其他发展担忧同时出现时，了解如何寻求进一步评估。
+
+## 接回连续路线
+
+在情绪恢复后，再把一个小的求助信号带回社会性游戏和任务转换；不要把“已经会命名情绪”当成以后不再失控的保证。
 
 ## 延伸探索
 

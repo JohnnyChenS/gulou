@@ -8,18 +8,20 @@ section: 日常护理
 
 新生儿期的基础照护主题：哭闹排查、抱新生儿、喂养、拍嗝、换尿不湿、喂后不适、睡眠、洗澡与脐带护理。每篇都按「先看安全 → 观察现场信号 → 做一个低风险行动 → 复盘并决定是否求助」组织；它们是信息和准备工具，不替代儿科、儿童保健或急救服务。
 
+第一次系统学习，可以先读[新手父母连续阅读](../../../../../paths/parenting/new-parent/_index.md)。下面是遇到问题时的操作查阅；[安全与求助](../../quick-start.md#safety)始终优先。
+
 ## 护理主题
 
 | 主题 | 一句话 | 详情 |
 |------|--------|------|
-| 哭闹快速排查 | 先排危险，再按现场信号排查 | [crying-checklist-01](crying-checklist-01.md) |
-| 抱新生儿 | 支撑头颈、躯干和臀部，保持口鼻通畅 | [holding-newborn-01](holding-newborn-01.md) |
-| 肠胀气应对 | 记录喂后不适线索，不把表现当作诊断 | [colic-relief-01](colic-relief-01.md) |
-| 新生儿睡眠 | 帮宝宝找到入睡的节奏 | [newborn-sleep-01](newborn-sleep-01.md) |
-| 喂养实操 | 结合信号、喂后状态、湿尿布和生长趋势观察 | [feeding-guide-01](feeding-guide-01.md) |
-| 拍嗝 | 按宝宝状态选择，不追求固定时长或声音 | [burping-guide-01](burping-guide-01.md) |
-| 换尿不湿 | 固定流程，同时观察健康信号 | [diaper-changing-01](diaper-changing-01.md) |
-| 洗澡与脐带护理 | 脐带未脱落前优先擦浴，是否盆浴遵循当地专业指导 | [bathing-care-01](bathing-care-01.md) |
+| 哭闹快速排查 | 先排危险，再按现场信号排查 | [哭闹快速排查](crying-checklist-01.md) |
+| 抱新生儿 | 支撑头颈、躯干和臀部，保持口鼻通畅 | [抱新生儿](holding-newborn-01.md) |
+| 肠胀气应对 | 记录喂后不适线索，不把表现当作诊断 | [喂后不适与肠胀气](colic-relief-01.md) |
+| 新生儿睡眠 | 帮宝宝找到入睡的节奏 | [新生儿睡眠](newborn-sleep-01.md) |
+| 喂养实操 | 结合信号、喂后状态、湿尿布和生长趋势观察 | [喂养实操](feeding-guide-01.md) |
+| 拍嗝 | 按宝宝状态选择，不追求固定时长或声音 | [拍嗝](burping-guide-01.md) |
+| 换尿不湿 | 固定流程，同时观察健康信号 | [换尿布](diaper-changing-01.md) |
+| 洗澡与脐带护理 | 脐带未脱落前优先擦浴，是否盆浴遵循当地专业指导 | [洗澡与脐带护理](bathing-care-01.md) |
 
 ## 视觉与参考资源
 

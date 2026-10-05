@@ -20,8 +20,8 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
-const monthly = page.match(/<h3>月龄观察地图<\/h3>[\s\S]*?<h3>月龄相关内容<\/h3>/)?.[0] || '';
-const related = page.match(/<h3>月龄相关内容<\/h3>[\s\S]*?<h3>主题关联，而非学习顺序<\/h3>/)?.[0] || '';
+const monthly = page.match(/<h3\b[^>]*>月龄观察地图<\/h3>[\s\S]*?<h3\b[^>]*>月龄相关内容<\/h3>/)?.[0] || '';
+const related = page.match(/<h3\b[^>]*>月龄相关内容<\/h3>[\s\S]*?<h3\b[^>]*>主题关联，而非学习顺序<\/h3>/)?.[0] || '';
 
 assert(monthly, '0–3 岁页面应包含月龄观察地图区块');
 assert(monthly.includes('不是达标表'), '月龄观察地图应说明其不是达标表');
@@ -41,8 +41,10 @@ for (const legacyPhrase of ['200-300 词', '自主意志', '符号思维', '共�
   assert(!quickStart.includes(legacyPhrase), `快速入口不应保留旧表述：${legacyPhrase}`);
 }
 
-assert(parentSupport.includes('0–3 岁当前重点'), '父母支持入口应明确当前 0–3 岁重点');
-assert(parentSupport.includes('辅助支持路径'), '父母支持入口应说明其从属于年龄阶段主入口');
+assert(parentSupport.includes('/paths/parenting/new-parent/index.html'), '父母支持入口应连接新手父母主线');
+assert(parentSupport.includes('/paths/learning/ages/index.html'), '跨年龄父母支持应能返回孩子当前年龄');
+assert(parentSupport.includes('有立即危险，先求助'), '父母支持入口应先分流危机，再提供阅读路线');
+assert(parentSupport.includes('不把父母文章算作孩子年龄主线的进度'), '父母支持应与孩子主线并行');
 assert(!parentSupport.includes('## 理论依据'), '父母支持入口不应把不同性质的理论平铺为统一依据');
 
 assert(prenatal.includes('支持与分工'), '产前准备应覆盖支持网络与照料分工');

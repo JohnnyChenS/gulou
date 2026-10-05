@@ -29,4 +29,8 @@ AGENTS.md
 .worktrees/
 docs/superpowers/
 docs/
+# Public reading conventions belong with the content; other planning notes stay local.
+!/docs/
+/docs/*
+!/docs/reading/
 .idea/*

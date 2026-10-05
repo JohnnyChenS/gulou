@@ -21,6 +21,10 @@ related_prompts: [3-6-core-executive-function-01, 3-6-core-emotion-regulation-01
 
 ---
 
+## 先从一个必须等待的场景开始
+
+出门前孩子已经穿好鞋，却因为成人还在找钥匙而哭起来；这时他需要的不是一次意志力测试，而是知道“还要发生什么、谁会陪着我、多久可以继续”。先处理饥饿、疼痛和安全需要，再谈等待。
+
 ## 先理解“等待”发生了什么
 
 延迟满足通常指孩子暂时放下眼前的东西或活动，等待之后得到约定的结果。孩子是否愿意等，会受到饥饿、困倦、情绪、等待多久、结果是否重要、成人是否可靠，以及他是否知道怎样度过等待影响。
@@ -109,6 +113,10 @@ related_prompts: [3-6-core-executive-function-01, 3-6-core-emotion-regulation-01
 
 - [Harvard Center on the Developing Child：执行功能活动指南](https://developingchild.harvard.edu/resources/handouts-tools/activities-guide-enhancing-and-practicing-executive-function-skills/)：把等待、规则和转换放回适龄游戏与互动中。
 - 棉花糖实验适合用来理解研究限制，不适合作为家庭测验；前沿研究的局限可以从本文参考文献进一步了解。
+
+## 接回连续路线
+
+把等待练习放回情绪恢复和任务转换：成人先让顺序可见，再看孩子能否在支持下参与一点。若等待时已出现攻击、逃跑或安全风险，停止练习并先调整环境。
 
 ## 延伸探索
 

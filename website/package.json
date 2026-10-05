@@ -12,6 +12,8 @@
     "check:3-6": "node scripts/check-3-6-entry.js",
     "check:path-migration": "node scripts/check-path-migration.js",
     "check:system-architecture": "node scripts/check-system-architecture.js",
+    "check:reading": "node --test test/reading-navigation.test.js test/reading-site.test.js",
+    "check:editorial": "node scripts/check-editorial-coverage.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

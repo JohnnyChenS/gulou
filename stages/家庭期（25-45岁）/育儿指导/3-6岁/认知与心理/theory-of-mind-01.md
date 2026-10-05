@@ -21,6 +21,10 @@ related_prompts: [3-6-core-emotion-regulation-01, 3-6-core-social-play-01]
 
 ---
 
+## 先从“他没有看到”开始
+
+孩子把积木放在桌上，奶奶进来后问“在哪里”，孩子急着指给她看。成人可以说：“奶奶刚才不在这里，她还不知道。”先从生活里看见信息不同，再解释下面的概念，不要求孩子立即答对观点题。
+
 ## 这项能力是什么
 
 心理理论通常指理解“别人心里有自己的想法、感受和知识”。它包括一些彼此相关、但不会同时稳定出现的能力：
@@ -109,6 +113,10 @@ related_prompts: [3-6-core-emotion-regulation-01, 3-6-core-social-play-01]
 
 - [Harvard Center on the Developing Child：Serve and Return](https://developingchild.harvard.edu/key-concept/serve-and-return/)：通过回应孩子正在关注、表达或感受的内容，建立来回互动。
 - [CDC：4 岁发展里程碑](https://www.cdc.gov/act-early/milestones/4-years.html)：可作为观察线索，不能替代专业筛查或用来给孩子评分。
+
+## 接回连续路线
+
+把“别人可能不知道”带回社会性游戏和冲突修复：先处理安全，再问谁看到了什么、谁需要什么。理解他人想法不等于每次都让步或承担照顾别人的义务。
 
 ## 延伸探索
 

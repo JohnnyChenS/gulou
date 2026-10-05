@@ -1,0 +1,246 @@
+{
+  "scope": "worker-root",
+  "generated_at": "2026-10-05",
+  "files": [
+    {
+      "path": "paths/_index.md",
+      "status": "rewritten",
+      "note": "将全站入口按新手父母、各年龄、照料者支持、问题查阅和独立兴趣课程组织，首先给读法而非概念目录。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/agent-mvp/0-3-parenting-weekly-plan.md",
+      "status": "rewritten",
+      "note": "重编为有输入条件、安全前置、单一行动和九项稳定输出的公开示例；删除统一清醒窗口、趴玩与睡眠剂量，不改变私有产品行为。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/_index.md",
+      "status": "integrated",
+      "note": "区分新生儿至三岁主线、学龄前与学校连续路线、问题指南；解释睡眠、情绪、任务难度如何影响参与，移除统一观察周期。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/ages/_index.md",
+      "status": "rewritten",
+      "note": "六年龄段均给出实际连续阅读入口和专题用途，年龄切换依据生活阶段，0–3指向同一十五章主线。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/questions/_index.md",
+      "status": "integrated",
+      "note": "将三个问题入口定位为可在本页读完的行动指南，跨年龄专题不再伪装成进阶等级。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/questions/interest-discovery.md",
+      "status": "integrated",
+      "note": "保留低成本尝试表与具体例子，补上本人选择、预算和活动安全；删除重复决策段、统一一两周周期和十分钟门槛。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/questions/learning-habits.md",
+      "status": "rewritten",
+      "note": "从一次生活任务卡住出发，本地解释启动、记住步骤和调整，给情境调整与反馈分支；清空旧跨年龄章节序列。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/questions/school-learning.md",
+      "status": "rewritten",
+      "note": "围绕启动、理解、练习、反馈和求助组织完整正文，分清不会、太难和状态不佳；清空旧跨年龄伪进度。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/01-before-birth.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；医院联系方式、三方分工与安全准备都通过产前家庭场景解释，第一次阅读不需先懂产科术语。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/02-ready-for-hospital.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；待产物品、路线演练和入院信号在本页解释，区别偏好与具体医疗安排。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/03-birth-day.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；把到院、检查、产程与陪伴连接为一段经历，开指与胎膜等术语就地解释，不保证一种分娩结果。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/04-first-day.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；从产妇观察到新生儿喂养、筛查和第一次操作顺序完整，接到出院前准备。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/05-going-home.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；出院交接与第一晚同页展开，知道谁负责、哪些记录带走、什么情况求助。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/06-first-week.md",
+      "status": "integrated",
+      "note": "全文复读并整合；保留吃奶、黄疸、尿布与家庭交班的连续叙述；本轮仅更新返回主线的描述以覆盖三岁。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/07-recovery-and-rhythm.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；妈妈恢复、营养、盆底、情绪、休息与复查都连接到家庭分工，继承上一轮审慎来源边界。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/08-reading-baby-signals.md",
+      "status": "retained",
+      "note": "正文完整复读后保留；吃奶过程、尿布、生长、睡眠与哭闹在正文解释不同用途，读完自然进入互动；保留上一轮有限资料核对。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/09-care-and-connection.md",
+      "status": "integrated",
+      "note": "全文复读并整合；保留从护理到回应、等待与暂停的具体互动；本轮将旧的计划延伸入口改为实际第十章。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/new-parent/_index.md",
+      "status": "rewritten",
+      "note": "九章主线扩展为产前至三岁的十五章，章节给明确问题和场景，专题与父母支持可按需查；保留旧九章显式锚点。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/reading-progress.md",
+      "status": "rewritten",
+      "note": "新增公开逐篇整理记录，分别说明正文重编、入口整合与全文检查后保留；专业审定和未来课程不计入完成范围。",
+      "sources_checked": []
+    },
+    {
+      "path": "references/_index.md",
+      "status": "rewritten",
+      "note": "从读者遇到证据问题时如何查起，区分经典理论、公开机构资料和具体指南；不再作为正文理解的前置门槛。",
+      "sources_checked": []
+    },
+    {
+      "path": "references/brain-health-evidence-framework.md",
+      "status": "integrated",
+      "note": "完整复读既有证据框架，保留来源边界与原日期，增加读者使用方法和返回路线；区分本轮编辑与专业复核。",
+      "sources_checked": [
+        "https://www.who.int/publications/i/item/9789240054561",
+        "https://www.who.int/publications/i/item/9789240123557"
+      ]
+    },
+    {
+      "path": "references/chinese-education-standards.md",
+      "status": "rewritten",
+      "note": "逐项分辨现行/历史用途，修正义务教育课程方案、自闭症服务、青年规划的年份与发布方；未核对的书目明确为候选。",
+      "sources_checked": [
+        "https://www.moe.gov.cn/srcsite/A26/s8001/202204/t20220420_619921.html",
+        "https://www.moe.gov.cn/srcsite/A06/s3327/201210/t20121009_143254.html",
+        "https://www.nhc.gov.cn/fys/c100078/202209/0cb5cf9dd3964c0ab46beb31c1be312d.shtml",
+        "https://app.www.gov.cn/govdata/gov/201704/14/402865/article.html",
+        "https://www.nhc.gov.cn/lljks/c100157/202203/5e458c7c8fe2432e922a0d07d108d131.shtml"
+      ]
+    },
+    {
+      "path": "references/developmental-psychology.md",
+      "status": "integrated",
+      "note": "复读经典理论书目并解释背景用途与不可外推边界，纠正Butler 1963书目信息；没有把书目复读当成重读全部原著。",
+      "sources_checked": [
+        "https://pubmed.ncbi.nlm.nih.gov/14017386/"
+      ]
+    },
+    {
+      "path": "references/early-parenthood-care.md",
+      "status": "integrated",
+      "note": "保留原教程2026-09-17资料目录与有限核对记录，新增十五章阅读角色与返回；不把旧来源日期更新成新医学审核。",
+      "sources_checked": []
+    },
+    {
+      "path": "references/motor-development.md",
+      "status": "integrated",
+      "note": "复读原有资料，增加动作观察、公共卫生、体育模型及感觉理论的用途区分与返回；既有研究未全部重新打开。",
+      "sources_checked": [
+        "https://www.who.int/news-room/fact-sheets/detail/physical-activity"
+      ]
+    },
+    {
+      "path": "roadmap.md",
+      "status": "rewritten",
+      "note": "按实际可读主线、专题、兴趣课程和人生概览呈现现状；未来方向仍保留，删去不成立的完成数量、年龄峰值和统一进度承诺。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/_index.md",
+      "status": "rewritten",
+      "note": "新增全人生阶段导航，先区分替孩子阅读与本人阅读；家庭期年龄不再与孩子年龄混在一张能力表里。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/_index.md",
+      "status": "rewritten",
+      "note": "阶段入口以十五章与五个后续年龄的连续路线为主，护理按操作查、父母支持并行，全部专题可从各阶段定位。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/quick-start.md",
+      "status": "integrated",
+      "note": "完整复读646行操作与安全正文，保留其成熟步骤和20个显式锚点；入口改为查阅用途，六个月交接指向实际第十二章。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/_index.md",
+      "status": "rewritten",
+      "note": "围绕分娩与育儿、分工和照料者支持组织本人任务，家庭期年龄与儿童年龄分开；明确尚属阶段概览。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/青春期（14-18岁）/_index.md",
+      "status": "rewritten",
+      "note": "区分青少年本人阅读与父母阅读，用学习、关系、选择和安全实际场景承接大学概览；明确尚属阶段概览。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/大学期（18-22岁）/_index.md",
+      "status": "rewritten",
+      "note": "从新生活安排、课程任务、关系和专业尝试出发，明确概览与独立兴趣课程的边界；明确尚属阶段概览。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/职场开始（22-28岁）/_index.md",
+      "status": "rewritten",
+      "note": "以第一份工作的交付、反馈、健康与财务边界为场景，不用年龄预设统一职业进度；明确尚属阶段概览。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/职场发展（28-40岁）/_index.md",
+      "status": "rewritten",
+      "note": "围绕职责变化、资源取舍、能力验证和家庭安排组织概览，删除职业和认知巅峰的年龄断言；明确尚属阶段概览。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/中年期（40-60岁）/_index.md",
+      "status": "rewritten",
+      "note": "以工作变化、上下代照料和个人恢复为实际任务，避免衰退决定论和强制转型窗口；明确尚属阶段概览。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/老年期（60+岁）/_index.md",
+      "status": "rewritten",
+      "note": "从本人日常功能、健康与支持安排出发，进入现有脑健康正文而非假装已有完整老年课程；明确尚属阶段概览。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/老年期（60+岁）/认知保持/brain-health-01.md",
+      "status": "integrated",
+      "note": "完整复读既有场景、补偿策略与证据边界，增加阅读承接，撤掉统一四周行为剂量；把突发意识混乱升级为立即就医，保留draft。",
+      "sources_checked": [
+        "https://www.nhs.uk/symptoms/confusion/",
+        "https://www.cdc.gov/stroke/signs-symptoms/index.html",
+        "https://www.who.int/publications/i/item/9789240123557"
+      ]
+    }
+  ],
+  "source_check_limits": "空数组表示本轮未重新打开既有来源。保留前轮记录不等于本轮重新核对；公开页面元信息核对不等于阅读整本指南或专业审定。"
+}

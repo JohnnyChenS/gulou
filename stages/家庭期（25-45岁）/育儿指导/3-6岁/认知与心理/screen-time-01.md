@@ -22,6 +22,10 @@ related_prompts: [3-6-core-attention-focus-01, 3-6-core-executive-function-01, p
 
 ---
 
+## 先从一个具体屏幕时刻开始
+
+孩子刚关掉动画就哭，晚饭还没吃，成人也已经很累。先保证安全、承认结束很难，再看下次怎样提前约定和提供替代；“屏幕时间”不能脱离睡眠、进食、活动和家庭关系单独计算。
+
 ## 先看屏幕在家庭里扮演什么角色
 
 同样是看屏幕，视频通话、和家长一起查资料、看一段动画、被自动播放的短视频连续吸引，情境并不相同。判断屏幕使用是否合适，可以先问四件事：
@@ -124,6 +128,10 @@ related_prompts: [3-6-core-attention-focus-01, 3-6-core-executive-function-01, p
 - [美国儿科学会：家庭媒体计划](https://www.healthychildren.org/English/family-life/Media/Pages/How-to-Make-a-Family-Media-Use-Plan.aspx)：提供屏幕无关区域、关闭自动播放、内容选择、家长示范和定期复盘等建议。
 - [美国儿科学会：幼儿与学龄前儿童的 5C 媒体问题](https://www.healthychildren.org/English/family-life/Media/Pages/kids-and-screen-time-5-cs-questions-for-toddlers-and-preschoolers.aspx)：帮助家长从孩子、内容、安抚方式和家庭使用情境来思考。
 - [WHO：5 岁以下儿童身体活动、静坐行为与睡眠指南](https://www.who.int/publications/i/item/9789241550536)：将屏幕放在全天 24 小时的睡眠、活动和静坐安排中理解。
+
+## 接回连续路线
+
+先把一条可执行的家庭媒体规则接到睡眠、户外和共读安排里；若屏幕已经成为吃饭、入睡或安抚的唯一方式，先按小步调整并寻求专业支持。
 
 ## 延伸探索
 

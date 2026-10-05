@@ -1,0 +1,357 @@
+{
+  "files": [
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
+      "status": "rewritten",
+      "note": "root完整重编为危机优先、孕期/已出生/功能变差/后续孩子年龄四种进入方式；四篇短路线只列一次，其他十篇按问题定位，避免多套目录与父母能力清单。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ],
+      "last_editor": "root"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/parental-role-modeling-01.md",
+      "status": "rewritten",
+      "note": "将“说谎是可以的，只要不被发现”改为孩子可能如何理解，并示范诚实拒答与隐私边界；补充情绪失控时先把孩子交给可信任成人的安全例外，保留手机、修复、阅读和共同生活的具体示范。 跨年龄返航：从主线跳入先用页面返回链接回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产前准备/prenatal-preparation-01.md",
+      "status": "integrated",
+      "note": "围绕临近分娩或刚发现分工不清的场景，改为先写三类联系人、非工作时间路径和夜间交接卡；明确宝宝已出生可直接返回当前主线，不必重走产前清单。",
+      "sources_checked": [
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/parental-wellbeing-01.md",
+      "status": "integrated",
+      "note": "将原来的快速判断改成持续、影响和安全三项观察，保留情绪波动/尽快评估/立即危机三路；把具体交接、休息和身体急症分流连接回当前孩子章节。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/postpartum-depression-01.md",
+      "status": "integrated",
+      "note": "在持续低落、无法照料和危机场景之间保留分流，明确两周不是等待期限；补充“孕期–12个月”只是导航背景，已出生数月或非分娩者也不因此排除求助，并保留回到当前孩子章节的路径。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/sleep-deprivation-01.md",
+      "status": "integrated",
+      "note": "保留今晚困到无法安全照料的场景和安全睡眠交接，去掉固定几分钟的伪阈值，改为短暂离开照护现场清醒；继续区分立即危机、尽快专业评估和一般轮班调整。",
+      "sources_checked": [
+        "https://www.cdc.gov/sleep/about/?CDC_AAref_Val=https%3A%2F%2Fwww.cdc.gov%2Fsleep%2Fabout_sleep%2Fhow_much_sleep.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/关系维护/couple-adjustment-01.md",
+      "status": "rewritten",
+      "note": "root从夜间交接误会重编完整任务、清醒协商与关系恢复；保留安全睡眠/喂养/药物纠正例外、暴力安全分流和本人亲密意愿。",
+      "sources_checked": [],
+      "last_editor": "root"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/关系维护/intergenerational-parenting-01.md",
+      "status": "integrated",
+      "note": "在长辈给药、喂食、抱持或安排睡眠的具体场景中，要求先暂停可能不安全的操作并把孩子放回安全位置；保留非安全偏好可试行、共同目标和第三方资料。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/关系维护/parenting-support-network-01.md",
+      "status": "integrated",
+      "note": "删除“2–3个支持者”和“线下更有效”的统一标准，改用可联系、能完成具体交接、可靠安全来判断支持；新增线上/电话/线下/专业支持的用途区别和请求时的安全边界。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/育儿压力/comparison-anxiety-01.md",
+      "status": "rewritten",
+      "note": "把社交媒体比较改为信息片段和待核对线索；补充吃量、吞咽、体重、尿量等担忧不能归结为气质差异的分支；将取关改成可撤销的信息实验，保留回到年龄主线或专业咨询的动作。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/育儿压力/parenting-anxiety-01.md",
+      "status": "rewritten",
+      "note": "root用反复搜索和检查场景重编完整正文，解释事实与担忧的区别，先分身体急症和安全风险，再安排可执行支持与当前年龄返航。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ],
+      "last_editor": "root"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/育儿压力/perfectionism-trap-01.md",
+      "status": "rewritten",
+      "note": "root从重复检查与无法交接的场景重编，区分安全要求/个人标准，按错误类型处理修复与求助，删除泛化安慰和决定论。",
+      "sources_checked": [],
+      "last_editor": "root"
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/自我照顾/identity-maintenance-01.md",
+      "status": "rewritten",
+      "note": "删除身份单一化必然导致焦虑、抑郁或空巢危机的箭头因果；改为观察兴趣丧失、隔绝、功能和安全变化，并把个人活动写成可交接、可撤销的小尝试，必要时返回心理支持文章和专业求助。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/自我照顾/parent-health-01.md",
+      "status": "integrated",
+      "note": "保留产后身体恢复、休息、饮食和活动的场景动作；补充运动遇到疼痛、出血增加、伤口变化、头晕或呼吸困难时停止并联系医疗团队，避免把运动当作急症或持续功能下降的替代。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/自我照顾/parent-me-time-01.md",
+      "status": "integrated",
+      "note": "把内疚和个人时间放回安全交接语境：个人需要可以纳入家庭分工，但无人能安全接手或照料者已无法保证安全时应先求助；保留可取消的小片段和返回当前孩子主线。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/parent-wellbeing.md",
+      "status": "rewritten",
+      "note": "轻量专题入口保留，完整目录统一在父母支持主页；孕期、产后与更大孩子父母分开进入，查完返回原章原节，直接打开时选择孩子当前年龄，不再默认返回新生儿主线。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ]
+    },
+    {
+      "path": "paths/parenting/parent-adolescent.md",
+      "status": "integrated",
+      "note": "明确这是14–18岁主线的专题延伸，不是另一条年龄进度；在沟通文章之前前置自伤、自杀相关表达、暴力威胁、严重混乱和无法保证安全的危机分流，并保留返回阶段入口。；去掉对当前年龄连续路线的“辅助”标签。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/language/_index.md",
+      "status": "rewritten",
+      "note": "全文重写；母语与英语分路，按当前能力、材料和任务选择；日历仅作可调整示例。最终走读修正双语家庭必须先稳固母语、按年龄自动升英语等级的残留，并明确母语专题目前覆盖至 12 岁；核对 ASHA 多语言家庭交流建议，没有把语言学和 CEFR 全库标为已验证。",
+      "sources_checked": [
+        "https://www.asha.org/public/speech/development/learning-more-than-one-language/"
+      ]
+    },
+    {
+      "path": "interests/language/母语发展/0-3岁.md",
+      "status": "integrated",
+      "note": "保留成熟正文，补充局部解释与承接；从共同注意、理解、手势和早期表达场景进入，说明何时转读3–6岁并保留专业咨询边界；频率和短时动作仅作可调整示例，并补回旧路径所需的对话指南兼容锚点；未独立核验医学或发展筛查事实。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/language/母语发展/3-6岁.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以叙事、对话、音韵意识和早期读写任务承接0–3岁，移除年龄作为掌握门槛并说明进入学龄期的能力信号；短时安排保留为可调整示例；未独立核验语言学事实。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/language/母语发展/学龄期（6-12岁）.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以阅读理解、组织表达和根据听众修改文本承接3–6岁，年龄仅作学校情境线索并给出下一阶段入口；频次、读写任务量和短时安排改为可调整示例；未独立核验语言学事实。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/language/英语学习/beginner.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以能否理解熟悉信息、完成短互动和说明不懂之处作为入门/进阶信号，删掉固定词汇量和年龄门槛；保留示例日历并标明可暂停、缩短、重排，不是升级或毕业门槛；未独立核验 CEFR 事实。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/language/英语学习/intermediate.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以能否抓住主旨、解释依据和在真实任务中修正表达承接 beginner，弱化固定正确率和年龄标签，明确 advanced 入口；日历与词数/分钟改为可调整示例，并补充未成年外部交流的监护、隐私和退出边界；未独立核验 CEFR 事实。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/language/英语学习/advanced.md",
+      "status": "rewritten",
+      "note": "全文编辑重写；以复杂材料综合、论证和根据受众改写承接 intermediate，删除固定 C1/C2 用时承诺，将 CEFR 和日历定位为可调整参考而非毕业标准；未独立核验 CEFR 事实。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/language/english.md",
+      "status": "rewritten",
+      "note": "全文编辑整合；将英语路径入口、能力分级和三个阶段的前后承接接到 interests 正文，年龄不再是掌握标准；把周数/词数/频次改为可撤销示例，并修正进阶与高阶日历锚点；未独立核验语言学事实。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/language/mother-tongue.md",
+      "status": "rewritten",
+      "note": "全文编辑整合；将母语路径改为能力与互动场景导航，明确年龄是示例背景而非门槛，并指向0–3、3–6、学龄期递进；频次和数量改为可调整示例，并为0–3岁旧对话指南保留兼容锚点；未独立核验语言学事实。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/mountaineering/_index.md",
+      "status": "rewritten",
+      "note": "全文编辑并做有限官方来源核对；按装备、撤退、现场训练和风险承担能力组织入口，年龄不作为资格；保留安全底线并明确文章不能替代向导、急救或救援。",
+      "sources_checked": [
+        "https://www.nps.gov/articles/10essentials.htm",
+        "https://www.nps.gov/subjects/trails/hiking-safety.htm",
+        "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html"
+      ]
+    },
+    {
+      "path": "interests/mountaineering/beginner.md",
+      "status": "rewritten",
+      "note": "全文编辑并做有限官方来源核对；在 Prompt 前新增安全边界，把 AI 限制为行前准备、风险问题和向教练/向导/医生/管理方确认事项，不输出绳索、救援或医疗处置教程；保留撤退/求助边界。 root补本地准备知识、概念解释和具体行动，AI提示改为可选准备材料；不称页面提供完整技术教学。",
+      "sources_checked": [
+        "https://www.nps.gov/articles/10essentials.htm",
+        "https://www.nps.gov/subjects/trails/hiking-safety.htm",
+        "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html"
+      ]
+    },
+    {
+      "path": "interests/mountaineering/intermediate.md",
+      "status": "rewritten",
+      "note": "全文编辑并做有限官方来源核对；在 Prompt 前新增安全边界，把 AI 限制为低风险准备和向专业人员确认问题，移除鼓励替代条件评估的表述；不输出绳索、救援或医疗处置教程。 root补本地准备知识、概念解释和具体行动，AI提示改为可选准备材料；不称页面提供完整技术教学。",
+      "sources_checked": [
+        "https://www.nps.gov/articles/10essentials.htm",
+        "https://www.nps.gov/subjects/trails/hiking-safety.htm",
+        "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html"
+      ]
+    },
+    {
+      "path": "interests/mountaineering/advanced.md",
+      "status": "rewritten",
+      "note": "全文编辑并做有限官方来源核对；在 Prompt 前新增安全边界，将高海拔/冰川/裂缝/救援内容改为风险识别、撤退条件和向专业人员提问，不输出脱离现场的技术或医疗教程。 root补本地准备知识、概念解释和具体行动，AI提示改为可选准备材料；不称页面提供完整技术教学。",
+      "sources_checked": [
+        "https://www.nps.gov/articles/10essentials.htm",
+        "https://www.nps.gov/subjects/trails/hiking-safety.htm",
+        "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html"
+      ]
+    },
+    {
+      "path": "interests/_index.md",
+      "status": "retained",
+      "note": "全文编辑检查；目录层次、语言/登山/系统架构入口和系统路线定位与当前课程契约一致，没有为覆盖率强行改写。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/00-architecture-method/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；先修要求是能描述服务输入输出，实践产物是需求/约束/容量/故障边界基线，验证以阶段挑战和可更新设计基线检查；route_next 已指向01，未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/01-computer-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以推荐请求业务链引入 OS、页缓存、网络、日志和数据库，实践产物与阶段挑战要求回到可观测资源证据，阅读顺序和 route_next 已检查；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/01-computer-systems/page-cache-and-durable-io.md",
+      "status": "retained",
+      "note": "全文审阅后保留；先修与问题场景、批量同步实验、清理条件、确认契约 ADR 和综合评审承接完整，明确同步返回不等于业务耐久；相对链接已检查，未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/02-network/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；前置来自计算机系统阶段，实践要求把连接、超时、重试和排队放回业务链并提交阶段产物，route_next 指向分布式系统；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/03-distributed-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；先修是前序系统边界和网络基础，实践产物围绕副本、提交和故障模型，阶段阅读顺序连接数据系统；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/03-distributed-systems/replicated-log.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以三 broker 故障时间线和 ISR 矩阵连接 Kafka 提交边界，活动、掌握度检查、ADR 和 capstone 承接完整；相对链接已检查，未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/04-data-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；前置是网络/分布式基础，实践要求提交存储决策记录与基准/执行计划证据，阅读顺序连接数据架构；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/04-data-systems/write-ahead-log.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以 WAL、RPO 和恢复演练场景连接异步/同步提交，Docker 活动有可逆清理、ADR 有验证与回滚，capstone 链接已检查；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/05-data-architecture/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以事件时间、水位线、状态、checkpoint/replay 和 schema 契约作为前置到实践的桥梁，产物要求数据正确性与重放证据包，route_next 已检查；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/05-data-architecture/checkpoint-and-replay.md",
+      "status": "retained",
+      "note": "全文审阅后保留；围绕窗口、状态切面、输入位置和幂等副作用提供故障场景、重放实验与架构判断，连接 cloud-native recovery/capstone；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/06-cloud-native-sre/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；前置是数据与恢复边界，实践以 SLO、故障演练和有状态服务恢复为产物，route_next 指向 ML 系统；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/06-cloud-native-sre/stateful-recovery.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以 Kubernetes StatefulSet、卷、fencing 和恢复证据的模拟故障时间线组织活动，明确 force delete 不等于数据恢复并接 capstone；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/07-ml-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以前置数据契约/时间切分/泄漏检查进入训练与服务，实践产物覆盖版本、漂移、发布、降级和回滚证据，route_next 已检查；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/08-recommendation-systems/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；承接 ML 特征和评估，实践产物要求候选到反馈的在线时间线、冷启动和预注册实验记录，route_next 指向 AI 工程；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/09-ai-engineering/_index.md",
+      "status": "retained",
+      "note": "全文审阅后保留；承接推荐系统和数据/SLO/权限证据，按 token/context→RAG→workflow/state machine→评估护栏推进，完成后回总入口和 capstone；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/_index.md",
+      "status": "integrated",
+      "note": "整合路线顺序；明确 00→09 是默认主干，日志—状态—恢复纵向切片是读完相关阶段后可选的复盘，capstone 在主干之后；投入时长只是可调整预算，不新增正式单元；内部路径已检查，未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/authoring-guide.md",
+      "status": "retained",
+      "note": "全文审阅后保留；作者契约明确四层结构、概念首次解释、同步/异步边界、可复现实验和清理要求，作为六单元一致性检查依据；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/capstone/_index.md",
+      "status": "integrated",
+      "note": "整合最终项目入口；明确主干 00→09 后进入 capstone，纵向切片可选且不构成全课程先修，六个正式单元按证据链提交最终评审，验证协议独立于正式单元；不再用毕业门禁表述；内部路径已检查，未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/capstone/log-state-recovery-review.md",
+      "status": "retained",
+      "note": "全文审阅后保留；以推荐平台端到端模拟故障为综合场景，要求六份产物、fencing、重放、幂等和业务不变量证据，连接五个前置单元与验证协议；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/capstone/validation-protocol.md",
+      "status": "retained",
+      "note": "全文审阅后保留；明确这不是知识单元，要求逐页耗时、四层有效性、活动证据和独立完成记录，限制材料与凭证范围；未做新一轮技术事实核验。",
+      "sources_checked": []
+    },
+    {
+      "path": "interests/system-architecture/references/source-matrix.md",
+      "status": "retained",
+      "note": "全文审阅后保留；按主题列出官方来源、访问日期、可支持结论及不得外推的边界，作为六单元来源检查入口；本轮仅检查矩阵结构，未重新浏览来源 URL。",
+      "sources_checked": []
+    }
+  ]
+}

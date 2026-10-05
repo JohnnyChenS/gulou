@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { createHash } = require('crypto');
 const matter = require('gray-matter');
 const { marked } = require('marked');
 const { resolvePath, resolveSlug, SLUG_MAP } = require('./slug-map');
@@ -35,7 +36,21 @@ function siteUrl(rel) {
   return `${base}/${String(rel).replace(/^\/+/, '')}`;
 }
 
+// Keep changed reading behavior and styles together when a browser caches assets.
+const templateVersions = Object.fromEntries(['style.css', 'nav.js'].map(name => [
+  name, createHash('sha256').update(fs.readFileSync(path.join(TEMPLATE_DIR, name))).digest('hex').slice(0, 12),
+]));
+
+function templateUrl(name) {
+  return `${siteUrl(`assets/${name}`)}?v=${templateVersions[name]}`;
+}
+
 const CONTENT_DIRS = ['stages', 'interests', 'paths', 'references'];
+const editorialFile = path.join(ROOT, 'docs/reading/editorial-coverage.json');
+const editorialCoverage = fs.existsSync(editorialFile)
+  ? JSON.parse(fs.readFileSync(editorialFile, 'utf8'))
+  : { complete: false, files: [] };
+const editorialPages = new Map(editorialCoverage.files.map(record => [record.path, record]));
 const STAGE_ORDER = [
   '青春期（14-18岁）',
   '大学期（18-22岁）',
@@ -135,6 +150,46 @@ function extractDescription(fm, bodyHtml) {
   return '鼓楼 — 覆盖全人生阶段的成长知识库';
 }
 
+function headingSlug(text, used) {
+  const base = String(text)
+    .replace(/<[^>]+>/g, '')
+    .replace(/&(?:amp|lt|gt|quot|#39);/g, '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, '-')
+    .replace(/^-+|-+$/g, '') || 'section';
+  let id = base;
+  let suffix = 2;
+  while (used.has(id)) id = `${base}-${suffix++}`;
+  used.add(id);
+  return id;
+}
+
+function markdownHeadingAnchors(content) {
+  const used = new Set();
+  const anchors = [];
+  for (const match of String(content || '').matchAll(/<a\s+[^>]*id=["']([^"']+)["']/gi)) {
+    if (!used.has(match[1])) {
+      used.add(match[1]);
+      anchors.push(match[1]);
+    }
+  }
+  for (const match of String(content || '').matchAll(/^#{1,6}\s+(.+?)\s*#*\s*$/gm)) {
+    const id = headingSlug(match[1].replace(/[`*_\[\]]/g, ''), used);
+    if (!anchors.includes(id)) anchors.push(id);
+  }
+  return anchors;
+}
+
+function addHeadingIds(html) {
+  const used = new Set();
+  for (const match of String(html).matchAll(/\sid="([^"]+)"/g)) used.add(match[1]);
+  return String(html).replace(/<h([1-6])>(.*?)<\/h\1>/g, (match, level, inner) => {
+    const id = headingSlug(inner, used);
+    return `<h${level} id="${id}">${inner}</h${level}>`;
+  });
+}
+
 /** 从 frontmatter 提取标题 */
 function extractTitle(fm, bodyHtml) {
   if (fm.topic) return fm.topic;
@@ -151,20 +206,18 @@ function renderMetaCard(fm) {
   const items = [];
 
   if (fm.age_range) {
-    items.push(`<span class="meta-item"><strong>适用年龄：</strong>${fm.age_range}</span>`);
-  }
-  if (fm.difficulty) {
-    items.push(`<span class="meta-item"><strong>难度：</strong>${fm.difficulty}</span>`);
-  }
-  if (fm.domain) {
-    items.push(`<span class="meta-item"><strong>领域：</strong>${fm.domain}</span>`);
-  }
-  if (fm.track) {
-    items.push(`<span class="meta-item"><strong>主线：</strong>${fm.track}</span>`);
+    const age = String(fm.age_range)
+      .replace(/^prenatal-(\d+)m$/, '产前至$1个月')
+      .replace(/^(\d+)-(\d+)([ym])$/, (_match, start, end, unit) => `${start}–${end}${unit === 'y' ? '岁' : '个月'}`)
+      .replace(/^(\d+)(?:y\+|\+y)$/, '$1岁及以上');
+    items.push(`<span class="meta-item"><strong>适用年龄：</strong>${escapeHtml(age)}</span>`);
   }
   if (fm.review_status) {
     const statusMap = { draft: '草稿', planned: '规划中', reviewed: '已审核', published: '已发布' };
-    items.push(`<span class="meta-item"><strong>状态：</strong>${statusMap[fm.review_status] || fm.review_status}</span>`);
+    items.push(`<span class="meta-item"><strong>状态：</strong>${escapeHtml(statusMap[fm.review_status] || fm.review_status)}</span>`);
+  }
+  if (fm.source_check_note) {
+    items.push(`<span class="meta-item"><strong>来源核对：</strong>${escapeHtml(fm.source_check_note)}</span>`);
   }
   if (fm.tags && fm.tags.length) {
     items.push(fm.tags.map(t => `<span class="tag">${t}</span>`).join(' '));
@@ -189,6 +242,39 @@ function pageLabel(page) {
   }
   const baseName = path.basename(page.rel, '.md');
   return baseName === '_index' ? '概述' : baseName.replace(/[-_]+/g, ' ');
+}
+
+function stepPage(step) {
+  return step && step.page ? step.page : step;
+}
+
+function routeContextQuery(route, chapterIndex, section) {
+  const params = new URLSearchParams({
+    reader_group: String(route.fm.route_group || ''),
+    reader_route: String(route.fm.route_key || ''),
+    reader_chapter: String(chapterIndex),
+  });
+  if (section) params.set('reader_section', section);
+  return params.toString();
+}
+
+function routeData(registry) {
+  return registry.routes.map(route => ({
+    group: String(route.fm.route_group || ''),
+    key: String(route.fm.route_key || ''),
+    label: String(route.fm.route_label || pageLabel(route)),
+    mode: route.route_group_mode,
+    rel: route.rel,
+    path: siteUrl(resolvePath(route.rel)),
+    chapters: (route.chapters.length > 0 ? route.chapters : (route.legacyChapters || [])).map((chapter, index) => ({
+      rel: chapter.page.rel,
+      path: siteUrl(resolvePath(chapter.page.rel)),
+      label: pageLabel(chapter.page),
+      anchors: markdownHeadingAnchors(chapter.page.content),
+      index,
+    })),
+    allowed: (route.contextRels || []).map(rel => siteUrl(resolvePath(rel))),
+  }));
 }
 
 function buildFallbackSidebar(currentRelPath, allFiles) {
@@ -235,18 +321,31 @@ function buildFallbackSidebar(currentRelPath, allFiles) {
 function buildSidebar(currentRelPath, registry) {
   const context = getRouteContext(currentRelPath, registry);
   if (context) {
+    if (!context.route && context.referencedBy.length > 1) {
+      return buildFallbackSidebar(currentRelPath, Array.from(registry.byRel.values()));
+    }
     const route = context.route || (context.referencedBy[0] && context.referencedBy[0].route);
     if (route) {
       const steps = context.steps.length ? context.steps : [route];
       const links = steps.map(step => {
-        const active = step.rel === currentRelPath ? ' class="active"' : '';
-        return `<a href="${siteUrl(resolvePath(step.rel))}"${active}>${pageLabel(step)}</a>`;
+        const page = stepPage(step);
+        const active = page.rel === currentRelPath ? ' class="active"' : '';
+        return `<a href="${siteUrl(resolvePath(page.rel))}"${active}>${pageLabel(page)}</a>`;
       }).join('\n');
       const routeIndex = route.rel.replace(/\/[^/]+$/, '/_index.md');
       const backLink = registry.byRel.has(routeIndex)
         ? `<a href="${siteUrl(resolvePath(routeIndex))}" class="back-link">← 返回路线</a>`
         : '';
-      return `${backLink}\n<div class="nav-section">${route.fm.route_label || pageLabel(route)}</div>\n<nav class="sidebar-nav route-steps">\n${links}\n</nav>`;
+      const alternatives = route.route_group_mode === 'alternatives'
+        ? (registry.routesByGroup.get(route.fm.route_group) || [])
+          .filter(candidate => candidate.rel !== route.rel)
+          .map(candidate => `<a href="${siteUrl(resolvePath(candidate.rel))}">${escapeHtml(candidate.fm.route_label || pageLabel(candidate))}</a>`)
+          .join('\n')
+        : '';
+      const alternativeNav = alternatives
+        ? `\n<div class="nav-section">其他入口</div>\n<nav class="sidebar-nav route-alternatives">\n${alternatives}\n</nav>`
+        : '';
+      return `${backLink}\n<div class="nav-section">${escapeHtml(route.fm.route_label || pageLabel(route))}</div>\n<nav class="sidebar-nav route-steps">\n${links}\n</nav>${alternativeNav}`;
     }
   }
   return buildFallbackSidebar(currentRelPath, Array.from(registry.byRel.values()));
@@ -258,6 +357,7 @@ function renderTopNav() {
       <img src="${siteUrl('assets/logo.png')}" alt="鼓楼" class="logo-img">
       <span>鼓楼</span>
     </a>
+    <a href="${siteUrl('paths/')}">从这里开始</a>
     <a href="${siteUrl('stages/')}">人生阶段</a>
     <a href="${siteUrl('interests/')}">兴趣副线</a>
     <a href="${siteUrl('references/')}">知识参考</a>
@@ -266,32 +366,107 @@ function renderTopNav() {
   </nav>`;
 }
 
-function renderRouteNav(context) {
+function renderReadingGuide(rel) {
+  const record = editorialPages.get(rel);
+  if (!record) return '';
+  const status = {
+    rewritten: '正文已重编',
+    integrated: '正文与路线已整合',
+    retained: '全文检查后保留',
+  }[record.status];
+  const entry = record.entry && record.entry !== rel
+    ? `<a href="${siteUrl(resolvePath(record.entry))}">回到${escapeHtml(record.entry_label || '阅读入口')}</a>`
+    : '';
+  const scope = rel === 'paths/reading-progress.md'
+    ? ''
+    : `<a href="${siteUrl('paths/reading-progress.html')}">查看整理范围</a>`;
+  const links = [entry, scope].filter(Boolean).join(' · ');
+  return `<aside class="reading-guide" aria-label="本篇阅读用途">
+    <p><strong>${escapeHtml(record.role || '阅读资料')}</strong> · ${escapeHtml(status || '整理中')}</p>
+    <p>${escapeHtml(record.reading_note || '')}</p>
+    ${links ? `<p>${links}</p>` : ''}
+  </aside>`;
+}
+
+function renderRouteNav(context, { bottom = false } = {}) {
   if (!context) return '';
   const route = context.route;
-  const activeRoute = route || (context.referencedBy[0] && context.referencedBy[0].route);
+  const activeRoute = route || context.articleRoute;
+
+  // A direct open of a shared page must expose every possible route. The
+  // selected route is made explicit by query parameters and checked by nav.js.
+  if (!activeRoute && context.referencedBy.length > 0) {
+    const choices = context.referencedBy.map(ref => {
+      const routeLabel = escapeHtml(ref.route.fm.route_label || pageLabel(ref.route));
+      const query = routeContextQuery(ref.route, Number.isInteger(ref.index) ? ref.index : 0);
+      return `<a class="route-choice" href="${siteUrl(resolvePath(context.currentRel))}?${query}">${routeLabel}</a>`;
+    }).join('');
+    return `<section class="route-choice-panel" aria-label="选择阅读路线">
+      <strong>这篇内容属于多条阅读路线</strong>
+      <p>请选择你想从哪条路线继续，网站会保留章节位置。</p>
+      <div class="route-choices">${choices}</div>
+    </section>`;
+  }
   if (!activeRoute) return '';
-  const steps = context.steps.length ? context.steps : [activeRoute];
-  const currentIndex = route ? steps.findIndex(step => step.rel === route.rel) : context.articleIndex;
-  const stepText = currentIndex >= 0 ? `第 ${currentIndex + 1} 步 / 共 ${steps.length} 步` : '从这条路线开始';
+  if (bottom && (!context.articleRoute || !context.readingChapter)) return '';
+
+  const chapterSteps = route
+    ? (activeRoute.chapters || [])
+    : (activeRoute.chapters && activeRoute.chapters.length > 0
+      ? activeRoute.chapters
+      : (activeRoute.legacyChapters || []));
+  const routeIsChapter = !route && context.articleIndex >= 0;
+  const steps = chapterSteps.length > 0
+    ? chapterSteps
+    : (route ? context.steps : []);
+  const currentIndex = route
+    ? (chapterSteps.length > 0 ? -1 : context.steps.findIndex(step => step.rel === route.rel))
+    : context.articleIndex;
+  const stepText = currentIndex >= 0
+    ? `第 ${currentIndex + 1} 章 / 共 ${steps.length} 章`
+    : (steps.length > 0 ? '从这里开始' : '路线入口');
   const stepLinks = steps.map((step, index) => {
-    const active = step.rel === (route && route.rel) || step.rel === context.currentRel
-      ? ' class="route-step active"' : ' class="route-step"';
-    return `<a href="${siteUrl(resolvePath(step.rel))}"${active}><span>${index + 1}</span>${pageLabel(step)}</a>`;
+    const page = stepPage(step);
+    const active = page.rel === context.currentRel ? ' class="route-step active"' : ' class="route-step"';
+    const query = routeIsChapter ? `?${routeContextQuery(activeRoute, index)}` : '';
+    return `<a href="${siteUrl(resolvePath(page.rel))}${query}"${active}><span>${index + 1}</span>${escapeHtml(pageLabel(page))}</a>`;
   }).join('');
+  const stepList = context.readingChapter && routeIsChapter
+    ? `<details class="route-chapter-list"><summary>展开章节目录</summary><div class="route-steps mobile-route-nav">${stepLinks}</div></details>`
+    : `<div class="route-steps mobile-route-nav">${stepLinks}</div>`;
   const previousPage = route ? context.previous : context.articlePrevious;
   const nextPage = route ? context.next : context.articleNext;
+  const chapterHref = (page, fallbackIndex) => {
+    if (!page) return '';
+    const index = chapterSteps.findIndex(step => stepPage(step).rel === page.rel);
+    const chapterIndex = index >= 0 ? index : fallbackIndex;
+    const query = chapterIndex >= 0 && chapterSteps.length > 0
+      ? `?${routeContextQuery(activeRoute, chapterIndex)}`
+      : '';
+    return `${siteUrl(resolvePath(page.rel))}${query}`;
+  };
+  const previousIndex = route ? -1 : context.articleIndex - 1;
+  const nextIndex = route ? (nextPage && chapterSteps.findIndex(step => stepPage(step).rel === nextPage.rel)) : context.articleIndex + 1;
   const previous = previousPage
-    ? `<a class="route-prev" href="${siteUrl(resolvePath(previousPage.rel))}">← 上一步：${pageLabel(previousPage)}</a>`
+    ? `<a class="route-prev" href="${chapterHref(stepPage(previousPage), previousIndex)}">← 上一章：${escapeHtml(pageLabel(stepPage(previousPage)))}</a>`
     : '';
   const next = nextPage
-    ? `<a class="route-next" href="${siteUrl(resolvePath(nextPage.rel))}">下一步：${pageLabel(nextPage)} →</a>`
-    : '<span class="route-end">这条路线到这里，可以回到路线首页选择下一步。</span>';
-  const back = `<a class="route-back" href="${siteUrl(resolvePath(activeRoute.rel))}">返回当前路线</a>`;
+    ? `<a class="route-next" href="${chapterHref(stepPage(nextPage), nextIndex)}">下一章：${escapeHtml(pageLabel(stepPage(nextPage)))} →</a>`
+    : (steps.length > 0 ? '<span class="route-end">这条路线到这里，可以回到路线首页选择下一步。</span>' : '');
+  if (bottom) {
+    return `<section class="route-nav route-nav-bottom" aria-label="章节前后导航">
+      <div class="route-summary"><span>${escapeHtml(activeRoute.fm.route_label || pageLabel(activeRoute))}</span><small>${stepText}</small></div>
+      <div class="route-actions">${previous}${next}</div>
+    </section>`;
+  }
+  const back = routeIsChapter
+    ? `<a class="route-back" href="${siteUrl(resolvePath(activeRoute.rel))}">返回当前路线</a>`
+    : '';
+  const topActions = `${route ? '' : back}${previous}${next}`;
   return `<section class="route-nav" aria-label="阅读路线">
-    <div class="route-summary"><span>${activeRoute.fm.route_label || pageLabel(activeRoute)}</span><small>${stepText}</small></div>
-    <div class="route-steps mobile-route-nav">${stepLinks}</div>
-    <div class="route-actions">${route ? previous : back}${next}</div>
+    <div class="route-summary"><span>${escapeHtml(activeRoute.fm.route_label || pageLabel(activeRoute))}</span><small>${stepText}</small></div>
+    ${stepList}
+    <div class="route-actions">${topActions}</div>
   </section>`;
 }
 
@@ -325,6 +500,7 @@ function renderBreadcrumbs(currentRelPath, registry, title) {
     const directoryRel = prefix.join('/');
     const indexRel = `${directoryRel}/_index.md`;
     const indexPage = registry && registry.byRel.get(indexRel);
+    if (index > 0 && !indexPage) return;
     const label = index === 0
       ? BREADCRUMB_ROOT_LABELS[segment] || segment
       : indexPage ? pageLabel(indexPage) : SLUG_MAP[segment] || segment;
@@ -352,7 +528,16 @@ function renderBreadcrumbs(currentRelPath, registry, title) {
 
 // ─── HTML Template ─────────────────────────────────────────────────────────
 
-function renderPage({ title, description, sidebar, routeNav, metaCard, breadcrumb, content, references, isHome }) {
+function safeJson(value) {
+  return JSON.stringify(value)
+    .replace(/</g, '\\u003c')
+    .replace(/>/g, '\\u003e')
+    .replace(/&/g, '\\u0026')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
+}
+
+function renderPage({ title, description, sidebar, routeNav, routeNavBottom, metaCard, breadcrumb, content, references, isHome, currentRel, readerData }) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -361,9 +546,9 @@ function renderPage({ title, description, sidebar, routeNav, metaCard, breadcrum
   <title>${title} - 鼓楼</title>
   <meta name="description" content="${description}">
   <link rel="icon" type="image/png" href="${siteUrl('assets/favicon.png')}">
-  <link rel="stylesheet" href="${siteUrl('assets/style.css')}">
+  <link rel="stylesheet" href="${templateUrl('style.css')}">
 </head>
-<body>
+<body data-page-rel="${escapeHtml(currentRel || '')}">
   ${renderTopNav()}
 
   <div class="layout">
@@ -374,9 +559,10 @@ function renderPage({ title, description, sidebar, routeNav, metaCard, breadcrum
         ${breadcrumb || ''}
         ${metaCard}
         ${routeNav || ''}
+        ${renderReadingGuide(currentRel)}
         ${content}
         ${references}
-        <div class="ad-slot">广告位</div>
+        ${routeNavBottom || ''}
       </div>
     </main>
   </div>
@@ -384,7 +570,8 @@ function renderPage({ title, description, sidebar, routeNav, metaCard, breadcrum
   <footer class="site-footer">
     <p>内容基于 <a href="https://github.com/JohnnyChenS/gulou">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
   </footer>
-  <script src="${siteUrl('assets/nav.js')}"></script>
+  <script src="${templateUrl('nav.js')}"></script>
+  ${readerData ? `<script type="application/json" id="reader-route-data">${safeJson(readerData)}</script>` : ''}
 </body>
 </html>`;
 }
@@ -398,7 +585,7 @@ function renderHomePage() {
   <title>鼓楼 — 覆盖全人生阶段的成长知识库</title>
   <meta name="description" content="鼓楼 = grow，译为“成长”。把权威的成长发展知识，整理成每个人看得懂、用得上的结构化内容。">
   <link rel="icon" type="image/png" href="${BASE_PATH}assets/favicon.png">
-  <link rel="stylesheet" href="${BASE_PATH}assets/style.css">
+  <link rel="stylesheet" href="${templateUrl('style.css')}">
 </head>
 <body>
   <nav class="top-nav">
@@ -500,7 +687,6 @@ function renderHomePage() {
     </a>
   </div>
 
-  <div class="ad-slot" style="max-width:700px; margin:48px auto;">广告位</div>
 
   <footer class="site-footer" style="margin-left:0;">
     <p>内容基于 <a href="https://github.com/JohnnyChenS/gulou">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
@@ -513,7 +699,7 @@ function collectInterestRouteIndexes(registry) {
   return Array.from(registry.byRel.values())
     .filter(page => page.rel.startsWith('interests/')
       && page.rel.endsWith('/_index.md')
-      && page.fm.page_type === 'route-index')
+      && page.rel.split('/').length === 3)
     .sort((a, b) => {
       if (a.rel === 'interests/system-architecture/_index.md') return -1;
       if (b.rel === 'interests/system-architecture/_index.md') return 1;
@@ -530,10 +716,10 @@ function renderInterestCards(registry) {
       + '<h3>' + name + '</h3>'
       + '<p class="age">' + description + '</p>'
       + '</a>';
-  }).join('\\n');
+  }).join('\n');
   return '<section class="home-section">'
     + '<h2>按兴趣探索</h2>'
-    + '<p>兴趣副线把一个主题从入门连接到进阶和生产实践；选择一条路线后，从它的总入口开始。</p>'
+    + '<p>语言、登山与系统架构各有独立路线；从相应总入口了解适用背景、安全条件和阅读顺序。</p>'
     + '<div class="stage-grid entry-grid">' + cards + '</div>'
     + '</section>';
 }
@@ -551,7 +737,7 @@ function renderHomePageWithRoutes(registry) {
     .map(name => ({ name, page: registry.byRel.get(`stages/${name}/_index.md`) }))
     .filter(({ page }) => page);
   const stageCards = stagePages.map(({ name, page }) => {
-    const incomplete = incompleteStages.has(name) ? '（未完善）' : '';
+    const incomplete = incompleteStages.has(name) ? '（概览）' : '';
     return `<a href="${siteUrl(resolvePath(page.rel))}" class="stage-card">
       <h3>${page.fm.stage_name || name}${incomplete}</h3>
       <p class="age">${page.fm.age_range || ''}</p>
@@ -563,45 +749,45 @@ function renderHomePageWithRoutes(registry) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>鼓楼 — 陪你走过人生每个阶段</title>
-  <meta name="description" content="一个开放的成长知识库，帮助你理解当前人生阶段，找到下一步行动。">
+  <meta name="description" content="一个开放的成长知识库。从新手父母连续阅读开始，逐步理解照料与成长，再按需要查阅具体主题。">
   <link rel="icon" type="image/png" href="${siteUrl('assets/favicon.png')}">
-  <link rel="stylesheet" href="${siteUrl('assets/style.css')}">
+  <link rel="stylesheet" href="${templateUrl('style.css')}">
 </head>
 <body>
   ${renderTopNav()}
   <div class="hero home-hero">
     <img src="${siteUrl('assets/logo.png')}" alt="鼓楼" class="hero-logo">
     <h1>鼓楼：陪你走过人生每个阶段</h1>
-    <p class="subtitle">一个开放的成长知识库，帮助你理解当前阶段，找到下一步行动。</p>
+    <p class="subtitle">一个开放的成长知识库，把零散知识编成可以逐步理解的阅读主线。</p>
   </div>
 
-  <section class="home-section home-name">
-    <h2>为什么叫鼓楼</h2>
-    <p><strong>鼓楼 = grow。</strong> grow 是成长，也是这个项目想整理的事情；“鼓楼”则是作者长大的地方。首页的拨浪鼓图标，来自童年的声音。</p>
+  <section class="home-section new-parent-entry" aria-labelledby="new-parent-entry-title">
+    <h2 id="new-parent-entry-title">第一次当父母，从这里读起</h2>
+    <p>沿十五章主线，从出生前的准备读到三岁。照料、身体活动、交流和父母支持随着生活变化接起来；必要词语在正文里解释，查阅资料后可以回到原章原节。</p>
+    <div class="reader-entry-actions">
+      <a class="reader-start" href="${siteUrl('paths/parenting/new-parent/01-before-birth.html')}">从第一章开始 →</a>
+      <a href="${siteUrl('paths/parenting/new-parent/')}">查看十五章目录</a>
+    </div>
+    <p class="reader-lookup">已有具体问题：<a href="${siteUrl('stages/family/parenting/quick-start.html')}#safety">安全信号与求助</a> · <a href="${siteUrl('stages/family/parenting/0-3/日常护理/')}">护理操作</a> · <a href="${siteUrl('stages/family/parenting/0-3/')}">按当前月龄进入</a></p>
+  </section>
+
+  <section class="home-section child-stage-entry">
+    <h2>孩子已经更大，从当前阶段继续</h2>
+    <p>每个阶段把身体、生活、关系和学习连起来，再按需要查具体主题。</p>
+    <div class="stage-grid entry-grid">${['3-6', '6-9', '9-12', '12-14', '14-18'].map(age => `<a class="stage-card" href="${siteUrl(`paths/learning/ages/${age}.html`)}"><h3>${age.replace('-', '–')} 岁阅读</h3><p class="age">从本阶段第一篇开始</p></a>`).join('')}</div>
+    <p><a href="${siteUrl('paths/parenting/parent-wellbeing.html')}">父母自己的压力、休息与关系</a> · <a href="${siteUrl('paths/reading-progress.html')}">查看本次整理范围</a></p>
   </section>
 
   <section class="home-section">
-    <h2>鼓楼是什么</h2>
-    <p>鼓楼是一个开放的成长知识库，整理从出生到老年不同人生阶段中值得理解、练习和持续关注的主题。</p>
-    <p>这里的内容来自发展心理学、教育学、儿科医学和其他专业领域，尽量写成普通家庭可以读懂、用得上的文字。</p>
+    <h2>关于鼓楼</h2>
+    <p>鼓楼是一个开放的成长知识库，整理育儿、身心发展和兴趣学习的资料，帮助读者了解不同阶段的需求，并把知识用于日常生活。</p>
+    <p>“鼓楼”呼应英文 grow（成长），也是作者长大的地方；拨浪鼓图标来自童年记忆。</p>
   </section>
 
   <section class="home-section">
-    <h2>项目动机</h2>
-    <p>成长相关的问题常常分散在论文、专业书和不同机构的指南里。鼓楼希望把这些知识整理成清晰的阶段框架，让人在具体时刻更容易找到合适的起点。</p>
-    <p>我们尤其关注那些需要在信息过多、时间有限或压力较大时做出的日常决定。</p>
-  </section>
-
-  <section class="home-section">
-    <h2>项目规划</h2>
-    <p>鼓楼会逐步完善人生阶段、兴趣学习和跨阶段主题的内容，并持续补充参考来源、实践方法和需要留意的信号。</p>
-    <p>长期目标是帮助每个人在不同阶段理解自己的任务，形成可执行、可复盘的成长路径。</p>
-  </section>
-
-  <section class="home-section">
-    <h2>现阶段目标</h2>
-    <p>当前优先服务对象是 <strong>0–3 岁新手父母</strong>，帮助他们应对早期照护中的不确定和焦虑。</p>
-    <p>使用方式很简单：从<strong>观察问题</strong>出发，理解它属于哪个阶段或主题，再<strong>找到下一步行动</strong>，而不是一次读完所有内容。</p>
+    <h2>从新手父母开始</h2>
+    <p>成长相关的资料分散在论文、专业书和各类指南里，读者往往要自己判断先读什么、哪些建议适合当前处境。鼓楼希望把这一步整理工作做好，提供清楚的起点和连贯的阅读顺序。</p>
+    <p>从 <strong>0–3 岁新手父母</strong>起步，现有育儿阅读覆盖至 18 岁，并接入父母支持和兴趣课程。其他人生阶段目前以概览为主，入口会说明可读内容的深度。编辑整理与专业复核分别记录。</p>
   </section>
 
   <section class="home-section">
@@ -678,6 +864,7 @@ function build() {
     throw new Error(`Route validation failed with ${errors.length} error(s)`);
   }
   if (warnings.length > 0) console.log(`  ⚠ ${warnings.length} unreferenced knowledge pages (available for direct browsing)`);
+  const readerRoutes = routeData(registry);
 
   // 写首页
   fs.writeFileSync(path.join(OUT, 'index.html'), renderHomePageWithRoutes(registry));
@@ -688,7 +875,7 @@ function build() {
   if (fs.existsSync(roadmapPath)) {
     const raw = fs.readFileSync(roadmapPath, 'utf-8');
     const { data: fm, content } = safeMatter(raw);
-    const bodyHtml = marked(content);
+    const bodyHtml = addHeadingIds(marked(content));
     const title = extractTitle(fm, bodyHtml);
     const desc = extractDescription(fm, bodyHtml);
     const sidebar = buildFallbackSidebar('roadmap.md', allFiles);
@@ -701,6 +888,8 @@ function build() {
       breadcrumb: renderBreadcrumbs('roadmap.md', registry, title),
       content: rewriteLinks(bodyHtml, 'roadmap.md'),
       references: '',
+      currentRel: 'roadmap.md',
+      readerData: readerRoutes,
     });
     fs.writeFileSync(path.join(OUT, 'roadmap.html'), html);
     console.log('  ✓ roadmap.html');
@@ -726,16 +915,20 @@ function build() {
 
       const title = extractTitle(fm, '');
       const sidebar = buildSidebar(rel, registry);
-      const routeNav = renderRouteNav(getRouteContext(rel, registry));
+      const routeContext = getRouteContext(rel, registry);
+      const routeNav = renderRouteNav(routeContext);
       const html = renderPage({
         title,
         description: `${title} — 鼓楼`,
         sidebar,
         routeNav,
+        routeNavBottom: renderRouteNav(routeContext, { bottom: true }),
         metaCard: renderMetaCard(fm),
         breadcrumb: renderBreadcrumbs(rel, registry, title),
         content: '<p><em>此部分内容正在编写中，敬请期待。</em></p>',
         references: '',
+        currentRel: rel,
+        readerData: readerRoutes,
       });
       fs.writeFileSync(outPath, html);
       count++;
@@ -746,7 +939,7 @@ function build() {
     if (content.trim().length === 0) continue;
 
     // Markdown → HTML
-    const bodyHtml = marked(content);
+    const bodyHtml = addHeadingIds(marked(content));
 
     // 提取元信息
     const title = extractTitle(fm, bodyHtml);
@@ -756,7 +949,8 @@ function build() {
 
     // 构建侧边栏
     const sidebar = buildSidebar(rel, registry);
-    const routeNav = renderRouteNav(getRouteContext(rel, registry));
+    const routeContext = getRouteContext(rel, registry);
+    const routeNav = renderRouteNav(routeContext);
 
     // 重写链接
     const rewritten = rewriteLinks(bodyHtml, rel);
@@ -767,10 +961,13 @@ function build() {
       description: desc,
       sidebar,
       routeNav,
+      routeNavBottom: renderRouteNav(routeContext, { bottom: true }),
       metaCard,
       breadcrumb: renderBreadcrumbs(rel, registry, title),
       content: rewritten,
       references,
+      currentRel: rel,
+      readerData: readerRoutes,
     });
 
     // 写入输出
@@ -844,6 +1041,8 @@ function build() {
         breadcrumb: renderBreadcrumbs(`${dir}/_index.md`, registry, dir === 'stages' ? '阶段主线' : dir === 'interests' ? '兴趣副线' : dir),
         content: `<h1>${dir === 'stages' ? '阶段主线' : dir === 'interests' ? '兴趣副线' : dir}</h1>\n<div class="stage-grid">${links}</div>`,
         references: '',
+        currentRel: `${dir}/_index.md`,
+        readerData: readerRoutes,
       });
 
       const outDir = path.join(OUT, dir);

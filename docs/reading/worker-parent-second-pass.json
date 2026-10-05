@@ -1,0 +1,98 @@
+{
+  "worker": "parent-second-pass",
+  "date": "2026-10-05",
+  "scope": "父母支持第二轮：11篇非主线父母文章与两个专题入口；父母_index及夫妻调适、育儿焦虑、完美主义由root另行整合。本记录不等同于医学、心理、儿科或危机服务专业审定。",
+  "files": [
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产前准备/prenatal-preparation-01.md",
+      "status": "integrated",
+      "note": "围绕临近分娩或刚发现分工不清的场景，改为先写三类联系人、非工作时间路径和夜间交接卡；明确宝宝已出生可直接返回当前主线，不必重走产前清单。",
+      "sources_checked": [
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/parental-wellbeing-01.md",
+      "status": "integrated",
+      "note": "将原来的快速判断改成持续、影响和安全三项观察，保留情绪波动/尽快评估/立即危机三路；把具体交接、休息和身体急症分流连接回当前孩子章节。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/sleep-deprivation-01.md",
+      "status": "integrated",
+      "note": "保留今晚困到无法安全照料的场景和安全睡眠交接，去掉固定几分钟的伪阈值，改为短暂离开照护现场清醒；继续区分立即危机、尽快专业评估和一般轮班调整。",
+      "sources_checked": [
+        "https://www.cdc.gov/sleep/about/?CDC_AAref_Val=https%3A%2F%2Fwww.cdc.gov%2Fsleep%2Fabout_sleep%2Fhow_much_sleep.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/postpartum-depression-01.md",
+      "status": "integrated",
+      "note": "在持续低落、无法照料和危机场景之间保留分流，明确两周不是等待期限；补充“孕期–12个月”只是导航背景，已出生数月或非分娩者也不因此排除求助，并保留回到当前孩子章节的路径。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/parental-role-modeling-01.md",
+      "status": "rewritten",
+      "note": "将“说谎是可以的，只要不被发现”改为孩子可能如何理解，并示范诚实拒答与隐私边界；补充情绪失控时先把孩子交给可信任成人的安全例外，保留手机、修复、阅读和共同生活的具体示范。 跨年龄返航：从主线跳入先用页面返回链接回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/关系维护/intergenerational-parenting-01.md",
+      "status": "integrated",
+      "note": "在长辈给药、喂食、抱持或安排睡眠的具体场景中，要求先暂停可能不安全的操作并把孩子放回安全位置；保留非安全偏好可试行、共同目标和第三方资料。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/关系维护/parenting-support-network-01.md",
+      "status": "integrated",
+      "note": "删除“2–3个支持者”和“线下更有效”的统一标准，改用可联系、能完成具体交接、可靠安全来判断支持；新增线上/电话/线下/专业支持的用途区别和请求时的安全边界。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/育儿压力/comparison-anxiety-01.md",
+      "status": "rewritten",
+      "note": "把社交媒体比较改为信息片段和待核对线索；补充吃量、吞咽、体重、尿量等担忧不能归结为气质差异的分支；将取关改成可撤销的信息实验，保留回到年龄主线或专业咨询的动作。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/自我照顾/identity-maintenance-01.md",
+      "status": "rewritten",
+      "note": "删除身份单一化必然导致焦虑、抑郁或空巢危机的箭头因果；改为观察兴趣丧失、隔绝、功能和安全变化，并把个人活动写成可交接、可撤销的小尝试，必要时返回心理支持文章和专业求助。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/自我照顾/parent-health-01.md",
+      "status": "integrated",
+      "note": "保留产后身体恢复、休息、饮食和活动的场景动作；补充运动遇到疼痛、出血增加、伤口变化、头晕或呼吸困难时停止并联系医疗团队，避免把运动当作急症或持续功能下降的替代。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/自我照顾/parent-me-time-01.md",
+      "status": "integrated",
+      "note": "把内疚和个人时间放回安全交接语境：个人需要可以纳入家庭分工，但无人能安全接手或照料者已无法保证安全时应先求助；保留可取消的小片段和返回当前孩子主线。 跨年龄返航：从主线跳入先回原章节；无上下文时进入按年龄路线。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/parenting/parent-wellbeing.md",
+      "status": "rewritten",
+      "note": "轻量专题入口保留，完整目录统一在父母支持主页；孕期、产后与更大孩子父母分开进入，查完返回原章原节，直接打开时选择孩子当前年龄，不再默认返回新生儿主线。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/perinatal-depression",
+        "https://www.cdc.gov/hearher/maternal-warning-signs/index.html"
+      ]
+    },
+    {
+      "path": "paths/parenting/parent-adolescent.md",
+      "status": "integrated",
+      "note": "明确这是14–18岁主线的专题延伸，不是另一条年龄进度；在沟通文章之前前置自伤、自杀相关表达、暴力威胁、严重混乱和无法保证安全的危机分流，并保留返回阶段入口。；去掉对当前年龄连续路线的“辅助”标签。",
+      "sources_checked": []
+    }
+  ]
+}

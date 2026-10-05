@@ -1,0 +1,347 @@
+{
+  "scope": "6-9、9-12、12-14、14-18岁育儿指导，以及对应学习年龄路线和12-14辅助路径",
+  "review_date": "2026-10-05",
+  "review_status": "draft",
+  "files": [
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/_index.md",
+      "status": "rewritten",
+      "note": "把入口改成先读学校任务、睡眠、同伴、阅读、创造五章；身体、屏幕、金钱等放到按需表，入口先解释阅读顺序和年龄切换。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/development-assessment.md",
+      "status": "rewritten",
+      "note": "从固定能力检查改为观察记录：先记任务与支持，再看身体、关系、兴趣和功能变化；明确不把一次表现当诊断，并保留求助边界。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/school-learning-habits-01.md",
+      "status": "integrated",
+      "note": "作为六至九岁第一主线章，阅读位置先说明任务启动、求助和检查的顺序，正文保留把作业拆成下一步的例子。；作业场景加入父母焦虑查阅入口，保留孩子原章返回。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/sleep-management-01.md",
+      "status": "rewritten",
+      "note": "返修睡眠主线：保留CDC 6–12岁参考范围和睡眠—白天功能观察，移除温度、周末偏移、固定流程分钟数和一月阈值，把屏幕安排改为可尝试的家庭观察。",
+      "sources_checked": [
+        "https://www.cdc.gov/sleep/about/",
+        "https://cdc.gov/physical-activity-education/staying-healthy/sleep.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/friendship-skills-01.md",
+      "status": "integrated",
+      "note": "把同伴章放在睡眠之后，先用加入游戏、轮流和冲突修复的场景解释关系，不再用理论人物段落作为入门门槛，并区分普通冲突和持续欺凌。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/independent-reading-01.md",
+      "status": "integrated",
+      "note": "保留共读、陪读、漫画和重复阅读等例子，删掉识字量百分比、固定页数和阶段时长门槛，改用理解、主动求助和兴趣判断书的难度。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/creative-thinking-01.md",
+      "status": "integrated",
+      "note": "主线最后以解释—尝试—反馈—修改收束学习路线，删除理论综述式开场，保留允许多种答案和让孩子说明修改理由的实践。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/oral-expression-01.md",
+      "status": "integrated",
+      "note": "明确口头表达是阅读和同伴章的可选补充，先从复述经历和说明理由开始，不把发音或公开表现当作阶段通关。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/money-concepts-01.md",
+      "status": "integrated",
+      "note": "放入入口的按需主题区，阅读位置先说明它服务于真实购买、等待和选择场景，保留家庭小额决策例子，不让金钱概念打断主线。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/认知与心理/screen-game-management-01.md",
+      "status": "integrated",
+      "note": "把屏幕管理从固定年龄分钟表改为观察是否影响睡眠、学习、关系和安全；提醒可以帮助转换活动，但不把倒计时当治疗或达标规则。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/sports-habits-01.md",
+      "status": "integrated",
+      "note": "作为身体支持的可选阅读，保留游戏化运动和安全场景，避免把某项运动或频次写成认知路线的前置条件。",
+      "sources_checked": [
+        "https://www.who.int/initiatives/behealthy/physical-activity",
+        "https://www.who.int/publications/i/item/9789241599979"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/6-9岁/身体能力/vision-protection-01.md",
+      "status": "integrated",
+      "note": "把视物困难、户外和近距离用眼作为按需观察，删掉普遍适用的户外时长和治疗效果说法，保留验光及眼科随访边界。",
+      "sources_checked": [
+        "https://aao.org/eye-health/tips-prevention/sun",
+        "https://aao.org/eye-health/tips-prevention/blue-light-digital-eye-strain"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/_index.md",
+      "status": "rewritten",
+      "note": "入口先给出自我管理、睡眠、同伴、创新、历史视角五章的线性顺序；运动、视力、财务和表达转为按问题选读，并说明何时切换12-14岁。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/development-assessment.md",
+      "status": "rewritten",
+      "note": "用目标—策略—反馈的观察框架串起学习、身体、同伴和兴趣，增加记录模板和功能性求助条件，避免把年龄段当统一测试窗口。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/self-regulated-learning-01.md",
+      "status": "integrated",
+      "note": "作为主线第一章，阅读位置先连接6-9岁任务习惯，再引向计划、执行和复盘；保留小步计划而不要求完整自律。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/身体能力/sleep-management-01.md",
+      "status": "rewritten",
+      "note": "返修睡眠主线：保留CDC 6–12岁参考范围，改写接近青春期作息变化为个体可能性，移除固定温度、周末偏移、固定分钟数和一月阈值。",
+      "sources_checked": [
+        "https://www.cdc.gov/sleep/about/",
+        "https://cdc.gov/physical-activity-education/staying-healthy/sleep.html"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/peer-relationships-01.md",
+      "status": "integrated",
+      "note": "把同伴章接到睡眠和自我管理后，以归属、冲突、排斥和欺凌的区别为阅读支点，去掉理论人物堆叠并保留何时求助。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/innovative-thinking-01.md",
+      "status": "integrated",
+      "note": "主线第四章改成想法—试做—得到反馈—修改的循环，理论姓名退到参考文献；例子继续允许失败和多种可行答案。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/historical-worldview-01.md",
+      "status": "integrated",
+      "note": "作为主线收束章，阅读位置说明它把前几章的提问和证据判断放到更大的时间、因果和多视角中，不要求孩子背完整历史结论。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/public-speaking-01.md",
+      "status": "integrated",
+      "note": "删除15-20%焦虑比例、黄金窗口和固定2分钟练习，改为从可信任听众和熟悉话题开始，并说明持续影响功能时寻求支持。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/认知与心理/financial-decision-01.md",
+      "status": "integrated",
+      "note": "标为按问题选读的生活决策补充，保留比较需要、愿望和后果的例子，不把金钱判断作为学习主线的能力门槛。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/身体能力/sports-habits-01.md",
+      "status": "integrated",
+      "note": "把运动定位为支持睡眠、情绪和身体参与的选读主题，补充WHO关于儿童青少年活动的一般背景，不写成专项训练剂量。",
+      "sources_checked": [
+        "https://www.who.int/initiatives/behealthy/physical-activity",
+        "https://www.who.int/publications/i/item/9789241599979"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/9-12岁/身体能力/vision-protection-01.md",
+      "status": "integrated",
+      "note": "删掉度数增长、百分比和固定复查周期等容易制造确定感的说法，改为观察视物困难并遵循验光或眼科方案。",
+      "sources_checked": [
+        "https://aao.org/eye-health/tips-prevention/sun",
+        "https://aao.org/eye-health/tips-prevention/blue-light-digital-eye-strain"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/_index.md",
+      "status": "rewritten",
+      "note": "入口改为青春期沟通、身体变化、学习时间、同伴、数字、身份和元认知七章；第二篇沟通实战及其他内容明确是遇事选读。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/development-assessment.md",
+      "status": "rewritten",
+      "note": "以身体隐私和沟通为起点，接到学习、同伴、数字与自主判断；记录模板强调孩子的解释和选择权，红旗只导向专业帮助。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/puberty-communication-01.md",
+      "status": "rewritten",
+      "note": "root在独立返修后完整重编，以回家/隐私的场景区分个人选择、共同安排和安全风险，解释事实—担忧—约定，连到下一篇身体信息与隐私支持。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/body-development-01.md",
+      "status": "integrated",
+      "note": "删除身高、Tanner、初潮和首次遗精的统一年龄表及自诊阈值，改为隐私、个体差异和需要时请医疗专业人员评估。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/academic-time-management-01.md",
+      "status": "integrated",
+      "note": "把学习时间章放在身体支持之后，阅读位置先解释把体力、作业和恢复放进同一张计划，再进入优先级和下一步任务。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/peer-relationship-deep-01.md",
+      "status": "integrated",
+      "note": "承接沟通和身体隐私，聚焦亲密友谊、边界、排斥与求助；保留孩子自己命名关系经验的空间，不以社交数量判断发展。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/digital-literacy-01.md",
+      "status": "integrated",
+      "note": "删除‘关键期’和必然影响整个青春期的断言，改为从一条信息、一次隐私或骚扰事件练习来源、证据、边界和求助。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/identity-exploration-01.md",
+      "status": "integrated",
+      "note": "将身份探索开场从Erikson等理论改成兴趣、关系和选择的日常例子，并保留情绪持续影响功能时的NIMH式求助边界，不把探索排除在心理支持之外。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/metacognition-learning-strategies-01.md",
+      "status": "integrated",
+      "note": "补上主线第七章的阅读位置，把前面身体、关系、数字和学习经验收束为一次小复盘；正文仍保留目标、卡点、反馈和下一步四问。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/12-14岁/认知与心理/puberty-communication-02.md",
+      "status": "rewritten",
+      "note": "返修沟通实战：删除年龄人格脚本、10–11岁等未经本轮核对的年龄结论、6小时网络阈值和预防/效果保证，保留场景示例并改为按功能与安全判断求助。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/_index.md",
+      "status": "rewritten",
+      "note": "入口先读沟通、安全心理、学习兴趣、学业压力、数字生活和叛逆冲突六章；实操页按发生的问题打开，紧急安全提示放在入口可见位置。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/development-assessment.md",
+      "status": "rewritten",
+      "note": "观察框架按关系安全、心理数字、学习方向组织，加入青少年希望保留的选择权和下次联系谁，明确自伤或无法保持安全时立即求助。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/teen-depression",
+        "https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/parent-teen-communication-01.md",
+      "status": "integrated",
+      "note": "把理论开场换成邀请、隐私和安全边界的具体场景；‘每天10分钟’改为留出短暂对话，暂停改为等双方能重新听见对方。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/adolescent-mental-health-01.md",
+      "status": "rewritten",
+      "note": "独立返修去掉两周伪阈值与正常标签，root再把颜色表改成按安全和日常功能选择行动，补权威出处与危机不等待预约的分支。",
+      "sources_checked": [
+        "https://www.nimh.nih.gov/health/publications/teen-depression",
+        "https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health"
+      ]
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/autonomous-learning-and-interest-01.md",
+      "status": "integrated",
+      "note": "作为心理安全之后的学习方向章，阅读位置强调由青少年说明兴趣和约束，再把兴趣转成小规模尝试，不把升学结果预先写死。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/academic-pressure-01.md",
+      "status": "integrated",
+      "note": "删除理论堆叠和‘每天10分钟’固定沟通要求，改成从比较、任务过载和恢复不足的具体迹象进入；压力实战页标为按需打开。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/academic-pressure-02.md",
+      "status": "integrated",
+      "note": "把家长已经比较或指责后的修复写成条件式选择，删除Dix 80%等无普遍适用依据的数字，并保留先确认安全和当下状态的顺序。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/digital-life-01.md",
+      "status": "integrated",
+      "note": "用使用功能、睡眠学习影响、隐私与安全场景替代理论综述和青春期必然性，保留共同定规则、出现风险时求助的路径。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/digital-life-02.md",
+      "status": "integrated",
+      "note": "作为数字生活实操补充，阅读位置先要求描述具体平台行为和实际影响，再选择边界或安全动作，避免把所有上网都当作同一种风险。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/adolescent-rebellion-01.md",
+      "status": "rewritten",
+      "note": "返修冲突理论篇：把“叛逆”改为需区分的成人统称，区分个人选择、共同安排和安全底线，移除固定暂停分钟数并补充暴力/威胁时的安全求助。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/adolescent-rebellion-02.md",
+      "status": "rewritten",
+      "note": "返修冲突实战篇：移除5秒、10分钟、30分钟、唯一方法和倍数保证，保留道歉与重新协商例子，改为安全分开、双方能重新听见对方后再谈。",
+      "sources_checked": []
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/14-18岁/认知与心理/parent-teen-communication-02.md",
+      "status": "integrated",
+      "note": "把修复页改为发生冲突后的条件式入口，保留承认—重新邀请—改变下一次行为，删除2-3周打开、3个月等待等不受支持的保证或阈值。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/ages/6-9.md",
+      "status": "rewritten",
+      "note": "把学习路线改为五章线性阅读并在每章设置停点，明确身体、屏幕、表达和金钱是按问题选读，年龄切换不再像技能通关。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/ages/9-12.md",
+      "status": "rewritten",
+      "note": "把路线顺序固定为自我管理—睡眠—同伴—创新—历史视角，每章说明前后关系和停点，选读入口不再把主题链接伪装成连续能力等级。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/ages/12-14.md",
+      "status": "rewritten",
+      "note": "把青春期路线按沟通、身体、学习、同伴、数字、身份、元认知串起，并把第二篇沟通实战放到发生具体冲突时再打开。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/learning/ages/14-18.md",
+      "status": "rewritten",
+      "note": "把路线按关系安全、心理、兴趣学习、学业压力、数字生活、冲突理解排列，实战页改成问题触发的辅助阅读并保持安全提示在前。；最终整合把本阶段常见的照料者压力接入父母专题及统一支持目录，作为可返回的按需查阅。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/12-14/physical.md",
+      "status": "rewritten",
+      "note": "重写为身体变化的可选支持路径：先讲隐私、差异、观察与何时求助，不用统一青春期时间表把孩子推入自诊或主线进度。",
+      "sources_checked": []
+    },
+    {
+      "path": "paths/12-14/cognitive-psychological.md",
+      "status": "rewritten",
+      "note": "改成按问题选择沟通、身体、同伴、数字、身份、学习和元认知的辅助地图，并在表内解释首次出现的术语和求助边界。",
+      "sources_checked": []
+    }
+  ],
+  "cannot_verify_or_needs_professional_review": [
+    "本轮只打开并核对了列出的CDC、WHO、AAO和NIMH页面；其余文章的文献列表没有据此宣称已经完成原始论文复核。",
+    "本轮返修实际使用的睡眠依据是CDC 6–12岁睡眠范围及睡眠问题求助方向；卧室环境、家庭作息安排和屏幕使用仍需按当地儿科/睡眠专业意见复核。",
+    "青春期沟通和冲突实战篇本轮只做了去宿命化、去固定阈值和安全边界修订，没有逐条复核其发展心理学研究引用；仍需专业编辑复核。",
+    "青春期身体变化、视力治疗与复查、学习困难和心理危机的具体判断仍需中国大陆当地儿科/眼科/精神心理专业人员及家庭实际情况复核；文章保留draft，不代表专业核准。",
+    "危机求助的本地可及路径、学校转介流程和法律边界未在本轮建立统一目录；正文只保留当地急救、急诊、学校或专业人员等方向性提示。",
+    "路线重排改善了线性阅读入口，但旧文章之间的全部交叉链接和网站渲染结果仍需父任务的整体构建与人工走读确认。"
+  ]
+}

@@ -21,6 +21,7 @@ related_prompts: [3-6-physical-basic-movement-01, 6-9-physical-vision-protection
 ---
 
 ## 你需要知道的
+**阅读位置**：运动是学习和关系的支持条件，不是兑换屏幕或纠正体型的惩罚。WHO 对 5–17 岁儿童提出每天累计至少 60 分钟中高强度活动的公共卫生建议；家庭可从孩子愿意参与、无痛且能恢复的活动开始。
 
 **为什么重要？** 6-9 岁的孩子开始形成较稳定的日常习惯。童年是否经常运动，与成年后的运动参与有关。运动也不只影响体能，它和注意力、记忆及心理状态都有关系。
 
@@ -46,7 +47,7 @@ related_prompts: [3-6-physical-basic-movement-01, 6-9-physical-vision-protection
 3. 不要强调"锻炼"，只是"全家一起玩"
 
 **为什么有效**：运动成为家庭活动而非"孩子的任务"
-**频率**：每周 2-3 次
+**安排提示**：可从一周内安排一两次开始，按反应调整
 
 ### 2. 运动游戏化（6 岁+）
 
@@ -56,7 +57,7 @@ related_prompts: [3-6-physical-basic-movement-01, 6-9-physical-vision-protection
 - "你能把球踢进那个框里吗？"
 
 **为什么有效**：游戏化让孩子觉得运动是玩而不是任务
-**频率**：随时
+**安排提示**：有合适机会时
 
 ### 3. 尝试不同运动（7 岁+）
 
@@ -66,7 +67,7 @@ related_prompts: [3-6-physical-basic-movement-01, 6-9-physical-vision-protection
 3. 不要急于报培训班，先让他"玩"够
 
 **为什么有效**：找到孩子真正喜欢的运动
-**频率**：每月 1 次
+**安排提示**：有合适机会时安排；不必按月完成
 
 ### 4. 运动社交（7 岁+）
 
@@ -76,7 +77,7 @@ related_prompts: [3-6-physical-basic-movement-01, 6-9-physical-vision-protection
 3. 和朋友一起比自己练更有趣
 
 **为什么有效**：社交让运动更有动力
-**频率**：每周 1-2 次
+**安排提示**：可先在一周内找一两次合适机会，按反应调整
 
 ### 5. 运动记录（8 岁+）
 
@@ -86,7 +87,7 @@ related_prompts: [3-6-physical-basic-movement-01, 6-9-physical-vision-protection
 3. 可以画星星或贴贴纸作为奖励
 
 **为什么有效**：可视化进步增加成就感
-**频率**：每天
+**安排提示**：纳入日常；不作为达标考核
 
 ---
 

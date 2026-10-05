@@ -1,5 +1,13 @@
 # 发展心理学核心文献
 
+这份书目供读者核对理论背景。先从[年龄阅读入口](../paths/learning/ages/_index.md)建立当前问题的理解，遇到想追溯的概念时再查这里。无需认识全部理论作者才能继续正文。
+
+## 先认识这些资料的用途
+
+依恋研究帮助讨论孩子怎样在关系中寻求支持；执行功能讨论等待、记住步骤和转换等过程；身份研究讨论人如何理解自己的角色与选择。这些研究视角不等于给个人定性，也不为统一年龄、次数或疗效提供自动依据。
+
+以下保留经典书目作为背景记录，未逐项重新阅读全文。不同理论与时代的研究方法、样本和限制不同；具体行动建议仍要核对直接依据。本文修正了 Butler 1963 年论文的题名、期刊和页码，依据 [PubMed 书目记录](https://pubmed.ncbi.nlm.nih.gov/14017386/)。
+
 ## 经典理论
 
 - Piaget, J. (1952). *The Origins of Intelligence in Children*. International Universities Press.
@@ -52,9 +60,11 @@
 ## 中年与老年
 
 - Levinson, D. J. (1978). *The Seasons of a Man's Life*. Knopf.
-- Butler, R. N. (1963). The life review. *International Journal of Aging and Human Development*, 4, 73-80.
+- Butler, R. N. (1963). [The life review: an interpretation of reminiscence in the aged](https://pubmed.ncbi.nlm.nih.gov/14017386/). *Psychiatry*, 26, 65–76.
 
 ## 自我效能与自我调节
 
 - Bandura, A. (1997). *Self-Efficacy: The Exercise of Control*. Freeman.
 - Zimmerman, B. J. (2002). Becoming a self-regulated learner. *Theory Into Practice*, 41(2), 64-70.
+
+[返回资料入口](_index.md) · [继续年龄阅读](../paths/learning/ages/_index.md)

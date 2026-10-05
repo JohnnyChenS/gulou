@@ -1,13 +1,13 @@
 # 孕产与婴儿早期照护资料
 
-用于[新手爸妈教程：产前两个月到宝宝六个月](../stages/家庭期（25-45岁）/育儿指导/quick-start.md)的资料索引。检索与核对日期：**2026-09-17**。动态网页可能继续更新；记录来源能帮助复核，不表示教程已经通过临床专家审定。
+主线阅读先进入[新手父母连续阅读](../paths/parenting/new-parent/_index.md)。本页保留原综合教程的来源记录，供核对操作条件与维护引用。用于[新手爸妈教程：产前两个月到宝宝六个月](../stages/家庭期（25-45岁）/育儿指导/quick-start.md)的资料索引。检索与核对日期：**2026-09-17**。动态网页可能继续更新；记录来源能帮助复核，不表示教程已经通过临床专家审定。
 
 ## 使用方式与边界
 
 - 中国孕产期保健规范用于理解本地访视和复查框架；医院、社区及个人出院计划决定实际时间。WHO、NHS、CDC、AAP 的医疗服务流程不直接替代中国本地流程。
 - 机构指南及面向家长的解释页用于安全、护理和喂养依据；月龄观察资料不充当发育筛查或诊断工具。
 - 正文里的家庭分工、配餐和交班例子是编辑整理的实践示例，没有“经过试验证明最优”的含义。
-- 资料核对与产科、儿科、哺乳、营养及心理专业复核是不同步骤。教程保持 `review_status: draft`；本次未将其加入产品知识清单，也未改变现有 `agent_use` 内容。
+- 资料核对与产科、儿科、哺乳、营养及心理专业复核是不同步骤。教程保持 `review_status: draft`；下方为 2026-09-17 的历史来源记录，不代表此后的全库编辑结果。2026-10-05 的章节与专题改写分别保留相邻引用和核对说明，未因此取得新的专业审定。
 - 引文采用机构／作者、年份、题名、链接和检索日期的记录方式。只有本次检索明确取得的发布日期或更新年份才填年份，其他动态页记为 `n.d.`，不把检索日期当成发布日期。NHS 下属机构署实际机构名；AAP 网站转载的 Schmitt 症状指引不写成 AAP 原创指南。
 
 ## 本次审核发现与修订对应
@@ -137,3 +137,9 @@
 50. Schmitt Pediatric Guidelines. (n.d.). *[Swallowed Foreign Object](https://www.healthychildren.org/English/tips-tools/symptom-checker/IFrame/Pages/symptomviewer.aspx?symptom=Swallowed+Foreign+Object)*. 中文主题：AAP：误吞异物。
 
 51. Centers for Disease Control and Prevention. (2026). *[When, What, and How to Introduce Solid Foods](https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html)*. 中文主题：CDC：何时、如何开始辅食。
+
+## 新编排怎样使用这些资料
+
+连续阅读章解释眼下必需的知识；原教程和护理专题保留操作细节；本页用于查出处。它们的角色不同，不能把来源清单当成读者需要逐篇补课的顺序。本文没有把历史检索日期整体改成今天，新增来源以对应正文的记录为准。
+
+[回到连续阅读](../paths/parenting/new-parent/_index.md) · [返回资料入口](_index.md)
