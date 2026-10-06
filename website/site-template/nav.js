@@ -147,11 +147,18 @@ document.addEventListener('DOMContentLoaded', function() {
       var chapterUrl = new URL(chapter.path, window.location.href);
       chapterUrl.search = '?' + contextQuery({ route: context.route, chapter: context.chapter, section: '' }, '');
       chapterUrl.hash = sectionHash;
-      actions.appendChild(makeLink('返回主线：' + chapter.label + (context.section ? ' · 原位置' : ''), chapterUrl.toString(), 'route-back'));
+      actions.appendChild(makeLink('查阅结束 · 返回主线：' + chapter.label + (context.section ? ' · 原位置' : ''), chapterUrl.toString(), 'route-back'));
     }
     panel.appendChild(actions);
     var target = document.querySelector('.content-inner');
-    if (target) target.insertBefore(panel, target.querySelector('.route-nav, h1, h2') || target.firstChild);
+    if (target) {
+      target.insertBefore(panel, target.querySelector('.route-nav, h1, h2') || target.firstChild);
+      if (!onChapter) {
+        var bottomPanel = panel.cloneNode(true);
+        bottomPanel.className += ' route-nav-bottom';
+        target.appendChild(bottomPanel);
+      }
+    }
   }
 
   var routes = readData();
@@ -180,9 +187,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (context && explicitContext) {
     document.querySelectorAll('.route-choice-panel').forEach(function(panel) { panel.remove(); });
-    document.querySelectorAll('.route-nav').forEach(function(panel) {
-      if (!panel.classList.contains('route-nav-bottom')) panel.remove();
-    });
+    var selectedChapter = context.route.chapters[context.chapter];
+    var isSelectedChapter = selectedChapter
+      && normalizePath(window.location.href) === normalizePath(selectedChapter.path);
+    if (isSelectedChapter) {
+      // A chapter entered through its own route keeps the server-rendered
+      // adjacent navigation. The live panel still replaces the duplicate
+      // top navigation with the selected route's context.
+      document.querySelectorAll('.route-nav').forEach(function(panel) {
+        if (!panel.classList.contains('route-nav-bottom')) panel.remove();
+      });
+    } else {
+      // Supporting pages can have a static footer/sidebar for their own
+      // course. Once a reader has chosen another course, those controls would
+      // silently switch routes and lose the original return position.
+      document.querySelectorAll('.route-nav').forEach(function(panel) { panel.remove(); });
+      var routeSidebar = document.querySelector('.sidebar');
+      if (routeSidebar) routeSidebar.remove();
+    }
     renderLiveContext(context);
   }
 

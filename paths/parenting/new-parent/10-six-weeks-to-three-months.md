@@ -4,15 +4,21 @@ topic: 六周至三个月：把互动放进清醒时间
 age_range: 6周至3个月
 review_status: draft
 source_content: stages/家庭期（25-45岁）/育儿指导/quick-start.md
-source_checked_at: 2026-10-05
-source_check_note: 依据本章列明的公开资料和现有 quick-start 重编；尚未完成逐条专业复核。
+source_checked_at: 2026-10-06
+source_check_note: 本轮核对 AAP 婴儿发热与急救求助说明，补回本章可独立识别的安全提示；互动与睡眠资料沿用原章节，尚未完成逐条专业复核。
 ---
 
 # 第十章：六周至三个月，把互动放进清醒时间
 
 宝宝刚吃完又找奶，白天睡得短，傍晚一到就哭。到了六周以后，父母常常想为每次变化找到一个固定原因，或急着排出一张作息表。第八章已经讲过怎样判断吃奶、尿布、体重、睡眠和哭闹；这一章只向前走一步：在宝宝清醒、舒服的时候，怎样安排一点交流和活动，同时保留吃饭、睡觉和休息的余地。
 
-如果宝宝出现第八章列出的危险变化，先回到[安全信号与求助入口](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#safety)，不要用本章的互动方法拖延求助。早产、住院后回家、特殊喂养或已有疾病的宝宝，继续按主管团队的方案。
+## 出现这些变化，先求助
+
+宝宝呼吸费力、嘴唇或舌头发蓝灰、难以唤醒、没有反应或抽搐时，立即联系当地急救，不先尝试互动或补记录。[AAP 儿童急救求助说明](https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/When-to-Call-Emergency-Medical-Services-EMS.aspx)
+
+三个月及以下的宝宝，直肠温度达到 38°C 或以上，即使看起来还好，也要立即联系儿科。直肠测温是从肛门测量温度，需按医护教法操作；怀疑发热、量不准或宝宝状态不对时，先联系医护，不为取得某个读数而等待。[AAP 婴儿发热指导](https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx)
+
+完整的[安全信号与求助入口](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#safety)可用于进一步查阅，不需要先读完前面的章节才求助。早产、住院后回家、特殊喂养或已有疾病的宝宝，继续按主管团队的方案。
 
 ## 先找到“可以来回”的时刻
 

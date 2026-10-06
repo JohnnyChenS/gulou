@@ -266,6 +266,10 @@ body {
   margin-top: 32px;
 }
 
+.route-extension-live.route-nav-bottom {
+  position: static;
+}
+
 .route-chapter-list {
   margin-top: 8px;
 }
@@ -296,6 +300,16 @@ body {
 
 .content-inner {
   max-width: var(--max-content-width);
+}
+
+body:has(.route-extension-live) .content,
+body:has(.route-extension-live) .site-footer {
+  margin-left: 0;
+}
+
+body:has(.route-extension-live) .content {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .content [id] {

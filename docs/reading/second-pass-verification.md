@@ -4,7 +4,7 @@
 
 范围：`gulou-core` 的现有公开内容、网站阅读编排和相关检查。`gulou-agent` 未参与本轮修改。
 
-工作分支：`improve/second-pass-reading`。起点为 `1ad4aafbcd5f7ae9616457da4247662f77a3208f`。本轮变更尚未提交或推送。
+工作分支：`improve/second-pass-reading`。起点为 `1ad4aafbcd5f7ae9616457da4247662f77a3208f`。记录生成时变更尚未提交；2026-10-06 已提交为 `640c80b`，并快进合并到本地 `main`，尚未推送。后续定向修复见[阅读连续性修复记录](reading-continuity-verification.md)。
 
 ## 用户目标与编辑决定
 

@@ -78,16 +78,27 @@ test('legacy architecture routes remain ten-stage sequences', () => {
   assert.deepEqual(route.chapters, [], 'legacy supporting links are not chapter progress');
 });
 
-function runNav({ pagePath, pageRel, query, hash = '', links = [], routes, hashTarget = null, hasBottom = false }) {
+function runNav({ pagePath, pageRel, query, hash = '', links = [], routes, hashTarget = null, hasBottom = false, routePanels = null, sidebar = null }) {
   const callbacks = {};
   const history = [];
   const root = {
     inserted: null,
+    appended: [],
     querySelector() { return null; },
     insertBefore(node) { this.inserted = node; },
+    appendChild(node) { this.appended.push(node); },
   };
+  const panels = routePanels || (hasBottom ? [{
+    className: 'route-nav route-nav-bottom',
+    classList: { contains(value) { return value === 'route-nav-bottom'; } },
+    remove() { this.removed = true; },
+  }] : []);
+  const sidebarNode = sidebar ? {
+    removed: false,
+    remove() { this.removed = true; },
+  } : null;
   function element(tag) {
-    return {
+    const node = {
       tagName: tag,
       className: '',
       textContent: '',
@@ -101,6 +112,15 @@ function runNav({ pagePath, pageRel, query, hash = '', links = [], routes, hashT
       remove() { this.removed = true; },
       setAttribute() {},
     };
+    node.cloneNode = function(deep) {
+      const copy = element(tag);
+      copy.className = node.className;
+      copy.textContent = node.textContent;
+      copy.href = node.href;
+      if (deep) node.children.forEach(child => copy.appendChild(child.cloneNode ? child.cloneNode(true) : child));
+      return copy;
+    };
+    return node;
   }
   const script = { textContent: JSON.stringify(routes) };
   const details = { open: false };
@@ -113,11 +133,13 @@ function runNav({ pagePath, pageRel, query, hash = '', links = [], routes, hashT
     createElement: element,
     querySelector(selector) {
       if (selector === '.content-inner') return root;
-      if (selector === '.route-nav-bottom' && hasBottom) return { className: 'route-nav-bottom' };
+      if (selector === '.route-nav-bottom') return panels.find(panel => !panel.removed && panel.classList.contains('route-nav-bottom')) || null;
+      if (selector === '.sidebar') return sidebarNode;
       return null;
     },
     querySelectorAll(selector) {
       if (selector === 'a[href]') return links;
+      if (selector === '.route-nav') return panels;
       return [];
     },
   };
@@ -131,7 +153,7 @@ function runNav({ pagePath, pageRel, query, hash = '', links = [], routes, hashT
   const source = require('node:fs').readFileSync(require('node:path').join(__dirname, '../site-template/nav.js'), 'utf8');
   vm.runInNewContext(source, { document, window, URL, URLSearchParams, Array, JSON, Number, String, RegExp });
   callbacks.DOMContentLoaded();
-  return { links, root, history, details, callbacks, scrolls };
+  return { links, root, history, details, callbacks, scrolls, panels, sidebar: sidebarNode, document };
 }
 
 test('nested optional links preserve BASE_PATH route context and return section', () => {
@@ -141,7 +163,7 @@ test('nested optional links preserve BASE_PATH route context and return section'
       { rel: 'paths/parenting/new-parent/01-before-birth.md', path: '/gulou/paths/parenting/new-parent/01-before-birth.html', label: '第一章', anchors: ['safety'] },
       { rel: 'paths/parenting/new-parent/02-ready-for-hospital.md', path: '/gulou/paths/parenting/new-parent/02-ready-for-hospital.html', label: '第二章', anchors: ['safety'] },
     ],
-    allowed: ['/gulou/paths/parenting/new-parent/01-before-birth.html', '/gulou/stages/care.html', '/gulou/stages/care-two.html'],
+    allowed: ['/gulou/paths/parenting/new-parent/01-before-birth.html', '/gulou/stages/care.html', '/gulou/stages/care-two.html', '/gulou/stages/care-three.html'],
   }];
   const link = { href: 'https://example.test/gulou/stages/care-two.html#feeding', classList: { contains() { return false; } }, addEventListener(type, cb) { this.callback = cb; } };
   const first = runNav({
@@ -159,6 +181,7 @@ test('nested optional links preserve BASE_PATH route context and return section'
   const second = runNav({
     pagePath: '/gulou/stages/care-two.html', pageRel: 'stages/care-two.md',
     query: '?reader_group=new-parent-reading&reader_route=prenatal-first-week&reader_chapter=0&reader_section=safety',
+    links: [{ href: 'https://example.test/gulou/stages/care-three.html', classList: { contains() { return false; } } }],
     routes,
   });
   assert.ok(second.root.inserted);
@@ -168,6 +191,8 @@ test('nested optional links preserve BASE_PATH route context and return section'
   assert.equal(back.hash, '#safety');
   assert.equal(back.searchParams.get('reader_route'), 'prenatal-first-week');
   assert.equal(actions.children.length, 1, 'extension pages keep only the return-to-mainline action');
+  assert.equal(second.root.appended.length, 1, 'a second extension page also gets an end-of-article return panel');
+  assert.equal(second.root.appended[0].children[1].children[0].href, actions.children[0].href);
 });
 
 test('the current chapter context points to the route directory and leaves adjacent links at the bottom', () => {
@@ -181,11 +206,53 @@ test('the current chapter context points to the route directory and leaves adjac
   };
   const result = runNav({
     pagePath: '/gulou/paths/new/01.html', pageRel: 'paths/new/01.md',
-    query: '?reader_group=new-parent-reading&reader_route=prenatal-first-week&reader_chapter=0', routes: [route], hasBottom: true,
+    query: '?reader_group=new-parent-reading&reader_route=prenatal-first-week&reader_chapter=0', routes: [route], hasBottom: true, sidebar: true,
   });
   assert.match(result.root.inserted.className, /route-current-live/);
   assert.match(result.root.inserted.children[1].children[0].textContent, /查看主线目录/);
   assert.equal(result.root.inserted.children[1].children.length, 1);
+  assert.equal(result.panels[0].removed, undefined, 'a selected chapter keeps its static footer');
+  assert.equal(result.sidebar.removed, false, 'a selected chapter keeps its route sidebar');
+});
+
+test('an extension page removes its own course footer and sidebar while preserving the selected return context', () => {
+  const footer = {
+    className: 'route-nav route-nav-bottom',
+    classList: { contains(value) { return value === 'route-nav-bottom'; } },
+    remove() { this.removed = true; },
+  };
+  const result = runNav({
+    pagePath: '/gulou/stages/family/parenting/parents/prenatal/prenatal-preparation-01.html',
+    pageRel: 'stages/family/parenting/parents/prenatal/prenatal-preparation-01.md',
+    query: '?reader_group=new-parent-reading&reader_route=prenatal-first-week&reader_chapter=0&reader_section=先建立一条求助链',
+    routes: [{
+      group: 'new-parent-reading', key: 'prenatal-first-week', label: '新手父母连续阅读',
+      chapters: [{ path: '/gulou/paths/parenting/new-parent/01-before-birth.html', label: '第一章', anchors: ['先建立一条求助链'] }],
+      allowed: [
+        '/gulou/paths/parenting/new-parent/01-before-birth.html',
+        '/gulou/stages/family/parenting/parents/prenatal/prenatal-preparation-01.html',
+      ],
+    }],
+    routePanels: [footer],
+    sidebar: true,
+  });
+  assert.equal(footer.removed, true, 'the extension must not retain its own course footer');
+  assert.equal(result.sidebar.removed, true, 'the extension must not advertise its own course in the sidebar');
+  const actions = result.root.inserted.children[1].children;
+  assert.equal(actions.length, 1, 'the extension exposes only a return action');
+  const back = new URL(actions[0].href);
+  assert.equal(back.pathname, '/gulou/paths/parenting/new-parent/01-before-birth.html');
+  assert.equal(back.searchParams.get('reader_group'), 'new-parent-reading');
+  assert.equal(back.searchParams.get('reader_chapter'), '0');
+  assert.equal(back.searchParams.has('reader_section'), false);
+  assert.equal(decodeURIComponent(back.hash.slice(1)), '先建立一条求助链');
+  assert.match(actions[0].textContent, /查阅结束.*返回主线/);
+  assert.equal(result.root.appended.length, 1, 'the extension gets a return panel after the article');
+  const bottomActions = result.root.appended[0].children[1].children;
+  assert.match(result.root.appended[0].className, /route-nav-bottom/);
+  assert.equal(bottomActions.length, 1);
+  assert.equal(bottomActions[0].href, actions[0].href, 'top and bottom return to the same chapter and section');
+  assert.equal(result.document.querySelector('.route-nav-bottom'), null, 'removed static footer must not remain discoverable');
 });
 
 test('a chosen shared-article route remains navigable without a static chapter footer', () => {

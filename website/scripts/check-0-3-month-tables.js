@@ -11,6 +11,10 @@ const chapterPath = path.resolve(__dirname, '../site/paths/parenting/new-parent/
 const chapter = fs.readFileSync(chapterPath, 'utf8');
 const quickStartPath = path.resolve(__dirname, '../site/stages/family/parenting/quick-start.html');
 const quickStart = fs.readFileSync(quickStartPath, 'utf8');
+const parentSupport = fs.readFileSync(path.resolve(__dirname, '../site/stages/family/parenting/parents/index.html'), 'utf8');
+const prenatal = fs.readFileSync(path.resolve(__dirname, '../site/stages/family/parenting/parents/prenatal/prenatal-preparation-01.html'), 'utf8');
+const sleep = fs.readFileSync(path.resolve(__dirname, '../site/stages/family/parenting/parents/postpartum/sleep-deprivation-01.html'), 'utf8');
+const depression = fs.readFileSync(path.resolve(__dirname, '../site/stages/family/parenting/parents/postpartum/postpartum-depression-01.html'), 'utf8');
 const oldAgeRoutePath = path.resolve(__dirname, '../site/paths/learning/ages/0-3.html');
 
 function assert(condition, message) {
@@ -42,6 +46,44 @@ assert(quickStart.includes('先处理安全问题'), '快速入口应先提供�
 assert(quickStart.includes('/stages/family/parenting/0-3/日常护理/newborn-sleep-01.html'), '快速入口应链接到日常照料正文');
 assert(quickStart.includes('/stages/family/parenting/0-3/cognitive/attachment-01.html'), '快速入口应链接到当前认知专题');
 assert(!quickStart.includes('按月龄速查'), '快速入口不应传播旧的月龄速查框架');
+
+// A reader may enter at their baby's current age without reading chapter 8.
+const chapterSafety = chapter.match(/<h2\b[^>]*>出现这些变化，先求助<\/h2>[\s\S]*?(?=<h2\b)/)?.[0] || '';
+assert(chapterSafety, '第十章应在互动方法前独立展示安全分流');
+const interactionHeading = chapter.match(/<h2\b[^>]*>先找到“可以来回”的时刻<\/h2>/)?.[0] || '';
+assert(interactionHeading && chapter.indexOf(chapterSafety) < chapter.indexOf(interactionHeading), '第十章安全分流应先于互动方法');
+for (const signal of ['呼吸费力', '难以唤醒', '没有反应', '抽搐', '立即联系当地急救']) {
+  assert(chapterSafety.includes(signal), `第十章应直接说明急救条件：${signal}`);
+}
+assert(/三个月及以下[\s\S]*直肠温度[\s\S]*38°C[\s\S]*立即联系儿科/.test(chapterSafety), '第十章应明确适用年龄、测温部位、发热阈值与求助动作');
+assert(chapterSafety.includes('不为取得某个读数而等待'), '量不准或宝宝状态不对时不应等待读数');
+assert(chapterSafety.includes('主管团队的方案'), '第十章应保留特殊情况的个体医嘱边界');
+
+// Preserve caregiver safety and support guarantees independently of age-route
+// naming, so removing a redundant directory does not remove these checks.
+assert(parentSupport.includes('/paths/parenting/new-parent/index.html'), '父母支持应连接新手父母主线');
+assert(parentSupport.includes('/stages/family/parenting/index.html'), '父母支持应能返回当前唯一年龄目录入口');
+assert(parentSupport.includes('不把父母文章算作孩子年龄主线的进度'), '父母支持应与孩子主线并行');
+const crisisStart = parentSupport.indexOf('id="有立即危险-先求助"');
+const readingStart = parentSupport.indexOf('id="新生儿家庭的四篇短路线"');
+assert(crisisStart >= 0 && readingStart > crisisStart, '父母支持入口应先分流危机，再提供阅读路线');
+for (const signal of ['伤害自己或孩子', '幻觉', '无法保证安全', '接手孩子', '当地急救']) {
+  assert(parentSupport.includes(signal), `父母支持应保留危机条件或安全交接：${signal}`);
+}
+assert(prenatal.includes('支持与分工'), '产前准备应覆盖支持与照料分工');
+assert(!prenatal.includes('68%'), '产前准备不应恢复缺少语境的固定比例承诺');
+assert(!prenatal.includes('奶瓶（即使母乳喂养也备 1-2 个）'), '产前准备不应恢复非必要的固定用品清单');
+assert(sleep.includes('一段连续休息'), '睡眠剥夺应以连续休息和明确交接为行动目标');
+for (const legacyPhrase of ['21:00-1:00', '1-2 分钟']) {
+  assert(!sleep.includes(legacyPhrase), `睡眠剥夺不应恢复旧的固定安排：${legacyPhrase}`);
+}
+assert(depression.includes('分娩者、父亲、伴侣和其他照料者'), '心理支持应覆盖不同照料者');
+for (const signal of ['立即求助', '可靠的成人立即接手宝宝', '不要让处于危机中的人独处', '当地急救服务']) {
+  assert(depression.includes(signal), `产后抑郁页面应保留危机求助动作：${signal}`);
+}
+for (const content of [quickStart, sleep, depression]) {
+  assert(!content.includes('400-161-9995'), '照料和心理支持页面不应恢复未经核实的旧热线');
+}
 
 assert(!fs.existsSync(oldAgeRoutePath), '旧 0–3 岁年龄路线壳应已删除');
 

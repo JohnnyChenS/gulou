@@ -122,20 +122,21 @@
     {
       "path": "interests/language/英语学习/beginner.md",
       "status": "rewritten",
-      "note": "删除长篇提示词、30周日历、固定词数和资源堆叠，改为声音—文字—意思、语境词语和一句回应的入门循环；原有 Nation、Krashen 和课程标准书目保留，未在本轮阅读全文核验。",
+      "note": "删除长篇提示词、30周日历、固定词数和资源堆叠，改为声音—文字—意思、语境词语和一句回应的入门循环；原有 Nation、Krashen 和课程标准书目保留，未在本轮阅读全文核验。；2026-10-06：补入原创玩具车示范，连接材料、具体英文与中文释义、孩子回应、难度调整和结束条件；不新增固定进度或能力测验。",
       "sources_checked": [],
       "title": "英语入门",
       "role": "独立兴趣课程 · 语言",
       "reading_note": "先按当前理解与表达能力选择任务，再决定继续或减小难度。",
       "entry": "interests/language/_index.md",
       "entry_label": "语言路线入口",
-      "sha256": "e6d736bbf88a5269be0a5be7a9e7290ac6c32b97a5ae3fdc7d301daaa2e3070c",
+      "sha256": "6ef3e82db81a9a8479c2d4a002adb9a23d0f1e8381453e2485f577f76f361092",
       "previous_review": {
         "status": "rewritten",
         "note": "全文编辑重写；以能否理解熟悉信息、完成短互动和说明不懂之处作为入门/进阶信号，删掉固定词汇量和年龄门槛；保留示例日历并标明可暂停、缩短、重排，不是升级或毕业门槛；未独立核验 CEFR 事实。",
         "sources_checked": []
       },
-      "review_round": 2
+      "review_round": 2,
+      "followup_reviewed_at": "2026-10-06"
     },
     {
       "path": "interests/language/英语学习/intermediate.md",
@@ -977,14 +978,17 @@
     {
       "path": "paths/parenting/new-parent/10-six-weeks-to-three-months.md",
       "status": "rewritten",
-      "note": "从重复吃奶、尿布、体重和哭闹复习改为清醒时的来回互动、昼夜线索、清醒趴玩和一次小环境调整，明确它与第八、九章的不同。",
-      "sources_checked": [],
+      "note": "从重复吃奶、尿布、体重和哭闹复习改为清醒时的来回互动、昼夜线索、清醒趴玩和一次小环境调整，明确它与第八、九章的不同。；2026-10-06：补回可直接识别的婴儿急救与发热求助提示，不依赖读者已读第八章；明确测温部位、量不准时不等待与个体医嘱边界。本次仅核对 AAP 的发热和急救说明，未重审互动、睡眠或全库医学内容。",
+      "sources_checked": [
+        "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx",
+        "https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/When-to-Call-Emergency-Medical-Services-EMS.aspx"
+      ],
       "title": "六周至三个月：把互动放进清醒时间",
       "role": "产前至三岁主线 · 第10章",
       "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
       "entry": "paths/parenting/new-parent/_index.md",
       "entry_label": "十五章主线",
-      "sha256": "a287481c113c3bd9ff80f6af0525a1447b8a3f8359e0040ff372f8bee6a4204c",
+      "sha256": "3076f237638ce7a074bc7611a63be4427a2eb77d11689479aef9c3087dde456a",
       "previous_review": {
         "status": "rewritten",
         "note": "承接 09 的照料循环，把喂养、排泄、体重、睡眠和哭闹放回同一日常观察框架。",
@@ -993,7 +997,8 @@
           "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/Back-to-Sleep-Tummy-to-Play.aspx"
         ]
       },
-      "review_round": 2
+      "review_round": 2,
+      "followup_reviewed_at": "2026-10-06"
     },
     {
       "path": "paths/parenting/new-parent/11-three-to-six-months.md",
