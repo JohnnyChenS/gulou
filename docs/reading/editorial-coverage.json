@@ -4,7 +4,7 @@
   "complete": true,
   "scope": "当前公开版本的累计编辑覆盖；第二轮合并冗余入口并复核正文，不含私有 Agent、未编写课程、专业审定与真实读者验证",
   "counts": {
-    "rewritten": 62,
+    "rewritten": 63,
     "integrated": 70,
     "retained": 51
   },
@@ -870,38 +870,47 @@
     {
       "path": "paths/parenting/new-parent/04-first-day.md",
       "status": "integrated",
-      "note": "通读；第一天以在医护指导下完成喂养、抱放和安全睡眠为主，和前后章节职责不同。；本轮另修正引用类型或合并入口的站内链接。",
-      "sources_checked": [],
+      "note": "通读；第一天以在医护指导下完成喂养、抱放和安全睡眠为主，和前后章节职责不同。；本轮另修正引用类型或合并入口的站内链接。 2026-10-06：出生第一天就地解释乙肝、卡介苗，说明HBsAg阳性/不详的12小时首剂及阳性时免疫球蛋白安排，增加可选查阅入口；仅核对新增接种内容。",
+      "sources_checked": [
+        "https://wsjk.ln.gov.cn/wsjk/zfxxgk/zc/gjjwj/2026080914181242596/index.shtml"
+      ],
       "title": "出生后第一天：先稳定，再学习",
       "role": "产前至三岁主线 · 第4章",
       "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
       "entry": "paths/parenting/new-parent/_index.md",
       "entry_label": "十五章主线",
-      "sha256": "2701b4c91f7b2139e45d23152b65d03a24d79c8ef6479212a30ef0af7924d1a9",
+      "sha256": "fe7abf1820901ace8db7d1909c863b3785bcbc35cfcfa9ef69ba70ba3366c9fe",
       "previous_review": {
         "status": "retained",
         "note": "正文完整复读后保留；从产妇观察到新生儿喂养、筛查和第一次操作顺序完整，接到出院前准备。",
         "sources_checked": []
       },
-      "review_round": 2
+      "review_round": 2,
+      "followup_reviewed_at": "2026-10-06"
     },
     {
       "path": "paths/parenting/new-parent/05-going-home.md",
       "status": "integrated",
-      "note": "通读；回家交接、喂养保存、尿布脐带洗澡和安全睡眠集中回答出院前最实际的问题，保留安全细节。；本轮另修正引用类型或合并入口的站内链接。",
-      "sources_checked": [],
+      "note": "通读；回家交接、喂养保存、尿布脐带洗澡和安全睡眠集中回答出院前最实际的问题，保留安全细节。；本轮另修正引用类型或合并入口的站内链接。 2026-10-06：在出院交接中补入接种证建档、满月乙肝与两个月方案咨询；必要术语直接解释，五联和年龄窗口的完整比较作为可选查阅；仅核对新增接种内容。",
+      "sources_checked": [
+        "https://wsjk.ln.gov.cn/wsjk/zfxxgk/zc/gjjwj/2026080914181242596/index.shtml",
+        "https://www.chinacdc.cn/jkyj/mygh02/yfjzfw/jzfw/202606/t20260617_1836820.html",
+        "https://cdc.fuzhou.gov.cn/zz/ddgz/jkjy/mygh/202501/t20250109_4959258.htm",
+        "https://icdc.chinacdc.cn/sjd/sjzxxx/sjhydt/202412/t20241216_303319.html"
+      ],
       "title": "准备回家：把护理动作接起来",
       "role": "产前至三岁主线 · 第5章",
       "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
       "entry": "paths/parenting/new-parent/_index.md",
       "entry_label": "十五章主线",
-      "sha256": "4786a59201bd5604ffaddd6546b38e7deb565cb3d6d357f66448e51130b01b1c",
+      "sha256": "b377862aac4757de514aa0920001a2c7cd5cdb1c98abd4d5776940e4a984febd",
       "previous_review": {
         "status": "retained",
         "note": "正文完整复读后保留；出院交接与第一晚同页展开，知道谁负责、哪些记录带走、什么情况求助。",
         "sources_checked": []
       },
-      "review_round": 2
+      "review_round": 2,
+      "followup_reviewed_at": "2026-10-06"
     },
     {
       "path": "paths/parenting/new-parent/06-first-week.md",
@@ -978,17 +987,19 @@
     {
       "path": "paths/parenting/new-parent/10-six-weeks-to-three-months.md",
       "status": "rewritten",
-      "note": "从重复吃奶、尿布、体重和哭闹复习改为清醒时的来回互动、昼夜线索、清醒趴玩和一次小环境调整，明确它与第八、九章的不同。；2026-10-06：补回可直接识别的婴儿急救与发热求助提示，不依赖读者已读第八章；明确测温部位、量不准时不等待与个体医嘱边界。本次仅核对 AAP 的发热和急救说明，未重审互动、睡眠或全库医学内容。",
+      "note": "从重复吃奶、尿布、体重和哭闹复习改为清醒时的来回互动、昼夜线索、清醒趴玩和一次小环境调整，明确它与第八、九章的不同。；2026-10-06：补回可直接识别的婴儿急救与发热求助提示，不依赖读者已读第八章；明确测温部位、量不准时不等待与个体医嘱边界。本次仅核对 AAP 的发热和急救说明，未重审互动、睡眠或全库医学内容。 2026-10-06：补入直接按当前月龄入章者也能理解的两个月接种安排，区分免费程序与五联日期并维持婴儿发热分流；仅核对新增接种内容。",
       "sources_checked": [
         "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx",
-        "https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/When-to-Call-Emergency-Medical-Services-EMS.aspx"
+        "https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/When-to-Call-Emergency-Medical-Services-EMS.aspx",
+        "https://wsjk.ln.gov.cn/wsjk/zfxxgk/zc/gjjwj/2026080914181242596/index.shtml",
+        "https://cdc.fuzhou.gov.cn/zz/ddgz/jkjy/mygh/202501/t20250109_4959258.htm"
       ],
       "title": "六周至三个月：把互动放进清醒时间",
       "role": "产前至三岁主线 · 第10章",
       "reading_note": "沿页上的上一章、下一章继续；“需要时再查”用于当前问题，查完可返回本章。",
       "entry": "paths/parenting/new-parent/_index.md",
       "entry_label": "十五章主线",
-      "sha256": "3076f237638ce7a074bc7611a63be4427a2eb77d11689479aef9c3087dde456a",
+      "sha256": "029eae5b3bb921bf8824d90d58f9bab04aba2ced407ff79a7520a8bac888ce39",
       "previous_review": {
         "status": "rewritten",
         "note": "承接 09 的照料循环，把喂养、排泄、体重、睡眠和哭闹放回同一日常观察框架。",
@@ -1366,20 +1377,21 @@
     {
       "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
       "status": "rewritten",
-      "note": "删除月龄能力地图与重复学习路径，按八项日常操作及十五项发展问题查阅；新手系统阅读直接进入十五章，咨询与即时求助优先。",
+      "note": "删除月龄能力地图与重复学习路径，按八项日常操作及十五项发展问题查阅；新手系统阅读直接进入十五章，咨询与即时求助优先。 2026-10-06：日常照料表新增接种本与疫苗选择，确保新专题从年龄目录可发现。",
       "sources_checked": [],
       "title": "婴幼儿照料与成长查阅",
       "role": "本年龄专题地图",
       "reading_note": "按眼前的照料或发展问题查阅；从头理解养育过程请进入十五章主线。",
       "entry": "paths/parenting/new-parent/_index.md",
       "entry_label": "本年龄连续路线",
-      "sha256": "4ae7be20995f364b58eef7ae5baea68e18cac295827a47045827db99939f6f92",
+      "sha256": "2b2b2b0ceb6c6b3d9839ae39f13e30340139fdb5d2c9bb2c4ebe8667c50d1367",
       "previous_review": {
         "status": "rewritten",
         "note": "全文复读并重编入口，把十五章主线、月龄地图、全部护理/认知/身体专题分层，第一次系统阅读沿主线，具体问题再查专题。",
         "sources_checked": []
       },
-      "review_round": 2
+      "review_round": 2,
+      "followup_reviewed_at": "2026-10-06"
     },
     {
       "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/development-assessment.md",
@@ -1548,6 +1560,33 @@
         "sources_checked": []
       },
       "review_round": 2
+    },
+    {
+      "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/日常护理/vaccination-guide-01.md",
+      "status": "rewritten",
+      "note": "2026-10-06新增全文；按出生接种、接种证、前六月预约、免费与自费分类、五联含义和带条件针数示例、其他自费年龄窗口及安全交接编排。核对2026程序原表与相关条款；地方接种表仅用于Hib/IPV/五联对应条目，轮状病毒共识仅核对相关程序条目。保留草稿状态，未完成专业审定。 独立复核后补充稳定早产儿按实际月龄、低出生体重乙肝特殊程序和卡介苗时机，将小月龄发热求助置于开头。",
+      "sources_checked": [
+        "https://wsjk.ln.gov.cn/wsjk/zfxxgk/zc/gjjwj/2026080914181242596/index.shtml",
+        "https://www.chinacdc.cn/jkyj/mygh02/yfjzfw/mycx/202607/t20260709_1837982.html",
+        "https://www.chinacdc.cn/jkyj/mygh02/yfjzfw/jzfw/202606/t20260617_1836820.html",
+        "https://cdc.fuzhou.gov.cn/zz/ddgz/jkjy/mygh/202501/t20250109_4959258.htm",
+        "https://www.guanganqu.gov.cn/gaqrmzf/c114828/pc/content/content_1717763230551453696.html",
+        "https://icdc.chinacdc.cn/sjd/sjzxxx/sjhydt/202412/t20241216_303319.html",
+        "https://icdc.chinacdc.cn/zxxx/hydt/202412/t20241217_303327.html",
+        "https://www.chinacdc.cn/jkyj/crb2/bl/grxfxb/jswj_fxb/202409/P020240907592485015438.pdf",
+        "https://www.chinacdc.cn/jkyj/crb2/bl/lxxgm/jswj_lg/202511/t20251103_313229.html",
+        "https://www.ndcpa.gov.cn/jbkzzx/c100040/common/content/content_1877524874852421632.html",
+        "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx",
+        "https://www.chinacdc.cn/jkyj/mygh02/ymkyfjb/jshzy/202606/t20260618_1837073.html",
+        "https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/When-to-Call-Emergency-Medical-Services-EMS.aspx"
+      ],
+      "title": "出生后预防接种：接种本、五联与自费选择",
+      "role": "0–3岁日常护理 · 接种安排与方案查阅",
+      "reading_note": "沿正文从出生记录理解到满月预约，再比较含相同成分的方案；从主线进入时可返回原章原节。",
+      "entry": "stages/家庭期（25-45岁）/育儿指导/0-3岁/_index.md",
+      "entry_label": "0–3岁照料查阅",
+      "sha256": "674f429be31b97087967cd534ae3f885687e9aa5308c36fbbc01e7c9be27be91",
+      "followup_reviewed_at": "2026-10-06"
     },
     {
       "path": "stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/attachment-01.md",
@@ -3078,20 +3117,23 @@
     {
       "path": "stages/家庭期（25-45岁）/育儿指导/quick-start.md",
       "status": "integrated",
-      "note": "通读查阅用途与护理安全；统一命名早期照料手册，直接解释术语与当面学习，移除旧综合教程的入口表述，当前操作和求助锚点仍服务十五章阅读。",
-      "sources_checked": [],
+      "note": "通读查阅用途与护理安全；统一命名早期照料手册，直接解释术语与当面学习，移除旧综合教程的入口表述，当前操作和求助锚点仍服务十五章阅读。 2026-10-06：补入出生接种记录、满月预约及疫苗专题查阅，保留既有婴儿发热求助；新增内容核对至2026-10-06，其他护理来源日期不变。",
+      "sources_checked": [
+        "https://wsjk.ln.gov.cn/wsjk/zfxxgk/zc/gjjwj/2026080914181242596/index.shtml"
+      ],
       "title": "早期照料手册：操作、交接与求助",
       "role": "操作与安全查阅",
       "reading_note": "按当前时间段或护理操作定位，查完回到十五章主线的原章节。",
       "entry": "paths/parenting/new-parent/_index.md",
       "entry_label": "十五章主线",
-      "sha256": "1352e1b4d38aadd297d9acdf548cd4f79abb33284f5684f12c1a6e59d55e51a0",
+      "sha256": "4a6c75bbfa817f2219b99282fb212e04a1f75cb88d6651ec26b3cc346e82325e",
       "previous_review": {
         "status": "integrated",
         "note": "完整复读646行操作与安全正文，保留其成熟步骤和20个显式锚点；入口改为查阅用途，六个月交接指向实际第十二章。",
         "sources_checked": []
       },
-      "review_round": 2
+      "review_round": 2,
+      "followup_reviewed_at": "2026-10-06"
     },
     {
       "path": "stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md",
@@ -3518,5 +3560,6 @@
       "paths/exploration/youth/04-compare-and-choose-next-step.md",
       "paths/exploration/youth/_index.md"
     ]
-  }
+  },
+  "updated_at": "2026-10-06"
 }

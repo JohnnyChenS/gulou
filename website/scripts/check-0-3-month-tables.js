@@ -33,7 +33,7 @@ assert(page.includes('正在照料宝宝'), '0–3 岁页面应提供日常照�
 assert(page.includes('想理解宝宝的变化'), '0–3 岁页面应提供发展理解入口');
 assert(page.includes('安全与求助'), '0–3 岁页面应先提供安全分流');
 assert(page.includes('怎样观察并准备咨询'), '0–3 岁页面应提供持续担忧时的咨询入口');
-for (const carePage of ['crying-checklist-01.html', 'holding-newborn-01.html', 'feeding-guide-01.html', 'burping-guide-01.html', 'diaper-changing-01.html', 'newborn-sleep-01.html', 'colic-relief-01.html', 'bathing-care-01.html']) {
+for (const carePage of ['crying-checklist-01.html', 'holding-newborn-01.html', 'feeding-guide-01.html', 'burping-guide-01.html', 'diaper-changing-01.html', 'newborn-sleep-01.html', 'colic-relief-01.html', 'bathing-care-01.html', 'vaccination-guide-01.html']) {
   assert(page.includes(`日常护理/${carePage}`), `0–3 岁页面应能找到日常照料：${carePage}`);
 }
 for (const topicPage of ['learning-foundations-01.html', 'attachment-01.html', 'cause-effect-01.html', 'object-permanence-01.html', 'joint-attention-01.html', 'early-reading-01.html', 'screen-time-01.html', 'symbolic-thinking-01.html', 'self-awareness-01.html', 'empathy-01.html', 'autonomy-01.html']) {
