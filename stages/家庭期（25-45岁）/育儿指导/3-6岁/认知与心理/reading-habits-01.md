@@ -3,13 +3,13 @@ id: 3-6-core-reading-habits-01
 stage: "3-6"
 track: core
 domain: cognitive-psychological
-topic: 早期阅读习惯培养
+topic: 共读与阅读习惯
 age_range: 3-6y
 difficulty: foundational
 review_status: draft
 references:
-  - Bus, A. G., et al. (1995). Joint book reading makes for success in learning to read: A meta-analysis. Review of Educational Research, 65(1), 1-21.
-  - Mol, S. E., & Bus, A. G. (2011). To read or not to read: A meta-analysis of print exposure. Psychological Bulletin, 137(2), 267-296.
+  - "Bus, A. G., et al. (1995). Joint book reading makes for success in learning to read: A meta-analysis. Review of Educational Research, 65(1), 1-21."
+  - "Mol, S. E., & Bus, A. G. (2011). To read or not to read: A meta-analysis of print exposure. Psychological Bulletin, 137(2), 267-296."
   - Dickinson, D. K., & Tabors, P. O. (2001). Beginning Literacy with Language. Brookes Publishing.
   - American Academy of Pediatrics. Tips to Help Your Child Enjoy Reading Aloud.
   - NAEYC. Developmentally Appropriate Practice.
@@ -17,7 +17,7 @@ tags: [阅读, 绘本, 亲子阅读, 早期识字, 语言发展]
 related_prompts: [3-6-core-pre-literacy-math-01, 0-3-core-early-reading-01]
 ---
 
-# 早期阅读习惯培养
+# 共读与阅读习惯
 
 > **一句话**：阅读可以从孩子的兴趣开始，在反复共读、聊天、看图和讲故事中形成习惯，不需要先通过认字考核。
 

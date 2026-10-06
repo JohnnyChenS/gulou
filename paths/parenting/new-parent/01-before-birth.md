@@ -43,6 +43,6 @@ source_check_note: 重编依据 quick-start.md 的 2026-09-17 资料记录；本
 
 ### 需要时再查
 
-- [原教程：按阶段进入](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#timeline)
-- [原教程：用品和家庭分工](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#before-eight-weeks)
+- [照料手册：按阶段进入](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#timeline)
+- [照料手册：用品和家庭分工](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#before-eight-weeks)
 - [产前准备与迎接新生儿](../../../stages/家庭期（25-45岁）/育儿指导/父母自身/产前准备/prenatal-preparation-01.md)

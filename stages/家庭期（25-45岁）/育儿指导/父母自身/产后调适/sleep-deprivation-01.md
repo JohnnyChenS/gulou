@@ -8,7 +8,7 @@ age_range: 0-24m
 difficulty: foundational
 review_status: draft
 references:
-  - American Academy of Pediatrics. Sleep-Related Infant Deaths: Updated 2022 Recommendations.
+  - "American Academy of Pediatrics. Sleep-Related Infant Deaths: Updated 2022 Recommendations."
   - Dennis, C. L., & Ross, L. (2005). Relationships among infant sleep patterns, maternal fatigue, and development of depressive symptomatology. Birth, 32(3), 187-193.
   - Mindell, J. A., et al. (2006). Behavioral treatment of bedtime problems and night wakings in infants and young children. Sleep, 29(10), 1263-1276.
   - National Institute of Mental Health. Perinatal Depression. 2023.

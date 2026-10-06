@@ -13,7 +13,7 @@ references:
   - Centers for Disease Control and Prevention. Developmental Milestones. https://www.cdc.gov/act-early/milestones/index.html
   - Centers for Disease Control and Prevention. Key Points about Developmental Milestone Checklists. https://www.cdc.gov/act-early/milestones/key-points.html
   - UNICEF Parenting. How babies learn through play. https://www.unicef.org/parenting/child-development/how-babies-learn-through-play
-  - ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/
+  - "ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/"
 tags: [发展观察, 0-3岁, 里程碑, 亲子互动, 专业咨询]
 agent_use:
   primary_user: parent
@@ -151,14 +151,14 @@ CDC 的里程碑清单适合帮助家庭和专业人员沟通，也提醒家长�
 | 感觉与适应 | 触发因素、孩子状态、环境调整和日常影响 | 不凭一种偏好诊断“感统失调” |
 | 自我与自主 | 选择、拒绝、展示、所有权、情绪和参与 | 不把“我的”或不分享等同于自私 |
 
-## 三、把观察变成四周行动
+## 三、根据观察决定下一步
 
 可以使用一个很小的循环：
 
-1. **选择一个问题**：例如“洗头时总是哭”“还没有主动指物”“吃新质地会咳嗽”。
+1. **选择一个问题**：例如“洗头时总是哭”或“换了衣服后不愿活动”。
 2. **记录真实情境**：不额外制造测试，记录孩子状态、触发因素和成人回应。
 3. **做一个低风险调整**：改变姿势、环境、材料、语言或等待时间，只改一个变量。
-4. **一周后复盘**：是更容易参与了，还是没有变化、变得更糟，或出现新的红旗？
+4. **回看变化**：是更容易参与了，还是没有变化、变得更糟，或出现新的警示信号？有倒退、吞咽或呼吸问题时，先求助，不等观察一段时间。
 
 如果没有改善，不代表家长做错了，也不意味着要不断增加训练。可能需要更换策略、减少压力，或寻求专业评估。
 
@@ -192,10 +192,4 @@ CDC 的里程碑清单适合帮助家庭和专业人员沟通，也提醒家长�
 我希望专业人员帮助判断什么：
 ```
 
-## 六、深入内容
-
-**认知与心理**：[安全依恋](认知与心理/attachment-01.md) | [因果探索](认知与心理/cause-effect-01.md) | [客体持续](认知与心理/object-permanence-01.md) | [联合注意](认知与心理/joint-attention-01.md) | [自主性](认知与心理/autonomy-01.md) | [自我意识](认知与心理/self-awareness-01.md) | [符号思维](认知与心理/symbolic-thinking-01.md) | [共情](认知与心理/empathy-01.md)
-
-**身体能力**：[粗大动作](身体能力/gross-motor-01.md) | [精细动作](身体能力/fine-motor-01.md) | [感觉体验](身体能力/sensory-integration-01.md) | [口部运动](身体能力/oral-motor-01.md)
-
-**语言与父母支持**：[0–3 岁母语发展](../../../../interests/language/母语发展/0-3岁.md) | [父母心理调适](../父母自身/产后调适/parental-wellbeing-01.md) | [睡眠剥夺应对](../父母自身/产后调适/sleep-deprivation-01.md)
+需要查某个具体变化时，回到[宝宝照料与成长目录](_index.md)选一篇；想从头理解当前阶段，继续[新手父母阅读](../../../../paths/parenting/new-parent/_index.md)。

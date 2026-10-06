@@ -5,59 +5,44 @@ const path = require('path');
 
 const pagePath = path.resolve(__dirname, '../site/stages/family/parenting/0-3/index.html');
 const page = fs.readFileSync(pagePath, 'utf8');
+const routePath = path.resolve(__dirname, '../site/paths/parenting/new-parent/index.html');
+const route = fs.readFileSync(routePath, 'utf8');
+const chapterPath = path.resolve(__dirname, '../site/paths/parenting/new-parent/10-six-weeks-to-three-months.html');
+const chapter = fs.readFileSync(chapterPath, 'utf8');
 const quickStartPath = path.resolve(__dirname, '../site/stages/family/parenting/quick-start.html');
 const quickStart = fs.readFileSync(quickStartPath, 'utf8');
-const parentSupportPath = path.resolve(__dirname, '../site/stages/family/parenting/parents/index.html');
-const parentSupport = fs.readFileSync(parentSupportPath, 'utf8');
-const prenatalPath = path.resolve(__dirname, '../site/stages/family/parenting/parents/prenatal/prenatal-preparation-01.html');
-const prenatal = fs.readFileSync(prenatalPath, 'utf8');
-const sleepPath = path.resolve(__dirname, '../site/stages/family/parenting/parents/postpartum/sleep-deprivation-01.html');
-const sleep = fs.readFileSync(sleepPath, 'utf8');
-const depressionPath = path.resolve(__dirname, '../site/stages/family/parenting/parents/postpartum/postpartum-depression-01.html');
-const depression = fs.readFileSync(depressionPath, 'utf8');
+const oldAgeRoutePath = path.resolve(__dirname, '../site/paths/learning/ages/0-3.html');
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
-const monthly = page.match(/<h3\b[^>]*>月龄观察地图<\/h3>[\s\S]*?<h3\b[^>]*>月龄相关内容<\/h3>/)?.[0] || '';
-const related = page.match(/<h3\b[^>]*>月龄相关内容<\/h3>[\s\S]*?<h3\b[^>]*>主题关联，而非学习顺序<\/h3>/)?.[0] || '';
-
-assert(monthly, '0–3 岁页面应包含月龄观察地图区块');
-assert(monthly.includes('不是达标表'), '月龄观察地图应说明其不是达标表');
-assert(monthly.includes('可以观察的变化'), '月龄观察地图应使用可观察变化，而不是固定达标要求');
-assert(!monthly.includes('<a '), '月龄观察地图不应重复具体能力文章链接');
-
-assert(related, '0–3 岁页面应包含月龄相关内容区块');
-for (const label of ['产前准备与迎接新生儿', '新手父母心理调适', '日常护理指南', '母语与多语言互动（0–3 岁）']) {
-  assert(related.includes(label), `月龄相关内容应保留${label}入口`);
+assert(route.includes('新手父母连续阅读'), '0–3 岁连续理解应从新手父母主线进入');
+assert(route.includes('十五章主线'), '新手父母主线应列出完整十五章');
+assert(chapter.includes('route-chapter-list'), '新手父母章节页应使用可展开的章节列表');
+for (const chapter of ['01-before-birth.html', '08-reading-baby-signals.html', '15-twenty-four-to-thirty-six-months.html']) {
+  assert(route.includes(chapter), `新手父母主线应包含${chapter}`);
 }
+
+assert(page.includes('宝宝照料与成长：需要时查'), '0–3 岁页面应明确自己是按需查阅页');
+assert(page.includes('正在照料宝宝'), '0–3 岁页面应提供日常照料入口');
+assert(page.includes('想理解宝宝的变化'), '0–3 岁页面应提供发展理解入口');
+assert(page.includes('安全与求助'), '0–3 岁页面应先提供安全分流');
+assert(page.includes('怎样观察并准备咨询'), '0–3 岁页面应提供持续担忧时的咨询入口');
+for (const carePage of ['crying-checklist-01.html', 'holding-newborn-01.html', 'feeding-guide-01.html', 'burping-guide-01.html', 'diaper-changing-01.html', 'newborn-sleep-01.html', 'colic-relief-01.html', 'bathing-care-01.html']) {
+  assert(page.includes(`日常护理/${carePage}`), `0–3 岁页面应能找到日常照料：${carePage}`);
+}
+for (const topicPage of ['learning-foundations-01.html', 'attachment-01.html', 'cause-effect-01.html', 'object-permanence-01.html', 'joint-attention-01.html', 'early-reading-01.html', 'screen-time-01.html', 'symbolic-thinking-01.html', 'self-awareness-01.html', 'empathy-01.html', 'autonomy-01.html']) {
+  assert(page.includes(`cognitive/${topicPage}`), `0–3 岁页面应能找到当前专题：${topicPage}`);
+}
+assert(!page.includes('月龄观察地图'), '0–3 岁查阅页不应再用月龄地图组织阅读');
+assert(!page.includes('月龄相关内容'), '0–3 岁查阅页不应再保留旧月龄路线区块');
 
 assert(quickStart.includes('先处理安全问题'), '快速入口应先提供安全分流');
-assert(quickStart.includes('按孩子当前阶段进入'), '快速入口应按阶段导航，而不是按固定达标项导航');
-assert(quickStart.includes('/stages/family/parenting/0-3/日常护理/newborn-sleep-01.html'), '快速入口应链接到新生儿睡眠正文');
+assert(quickStart.includes('/stages/family/parenting/0-3/日常护理/newborn-sleep-01.html'), '快速入口应链接到日常照料正文');
+assert(quickStart.includes('/stages/family/parenting/0-3/cognitive/attachment-01.html'), '快速入口应链接到当前认知专题');
 assert(!quickStart.includes('按月龄速查'), '快速入口不应传播旧的月龄速查框架');
-for (const legacyPhrase of ['200-300 词', '自主意志', '符号思维', '共情萌芽', '400-161-9995']) {
-  assert(!quickStart.includes(legacyPhrase), `快速入口不应保留旧表述：${legacyPhrase}`);
-}
 
-assert(parentSupport.includes('/paths/parenting/new-parent/index.html'), '父母支持入口应连接新手父母主线');
-assert(parentSupport.includes('/paths/learning/ages/index.html'), '跨年龄父母支持应能返回孩子当前年龄');
-assert(parentSupport.includes('有立即危险，先求助'), '父母支持入口应先分流危机，再提供阅读路线');
-assert(parentSupport.includes('不把父母文章算作孩子年龄主线的进度'), '父母支持应与孩子主线并行');
-assert(!parentSupport.includes('## 理论依据'), '父母支持入口不应把不同性质的理论平铺为统一依据');
-
-assert(prenatal.includes('支持与分工'), '产前准备应覆盖支持网络与照料分工');
-assert(!prenatal.includes('68%'), '产前准备不应保留缺少当前语境的固定比例承诺');
-assert(!prenatal.includes('奶瓶（即使母乳喂养也备 1-2 个）'), '产前准备不应把非必要用品写成固定清单');
-
-assert(sleep.includes('一段连续休息'), '睡眠剥夺页面应把连续休息作为核心行动目标');
-for (const legacyPhrase of ['21:00-1:00', '1-2 分钟', '400-161-9995']) {
-  assert(!sleep.includes(legacyPhrase), `睡眠剥夺页面不应保留旧表述：${legacyPhrase}`);
-}
-
-assert(depression.includes('分娩者、父亲、伴侣和其他照料者'), '产后抑郁页面应覆盖不同照料者');
-assert(depression.includes('立即求助'), '产后抑郁页面应明确立即求助路径');
-assert(!depression.includes('400-161-9995'), '产后抑郁页面不应保留未经核实的旧热线');
+assert(!fs.existsSync(oldAgeRoutePath), '旧 0–3 岁年龄路线壳应已删除');
 
 console.log('0–3 entry checks passed');

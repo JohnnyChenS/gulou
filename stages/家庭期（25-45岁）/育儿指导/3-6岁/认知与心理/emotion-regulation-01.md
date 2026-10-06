@@ -3,7 +3,7 @@ id: 3-6-core-emotion-regulation-01
 stage: "3-6"
 track: core
 domain: cognitive-psychological
-topic: 情绪管理（情绪调节）
+topic: 情绪调节与共同恢复
 age_range: 3-6y
 difficulty: foundational
 review_status: draft
@@ -11,13 +11,13 @@ references:
   - Thompson, R. A. (1994). Emotion regulation. Monographs of the SRCD, 59(2-3), 25-52.
   - Eisenberg, N., et al. (2010). Relations of early childhood effortful control. Child Development, 81(1), 84-99.
   - Gottman, J. M., et al. (1996). Parental meta-emotion philosophy. Journal of Family Psychology, 10(3), 243-268.
-  - ZERO TO THREE. It Takes Two: The Role of Co-Regulation in Building Self-Regulation Skills.
+  - "ZERO TO THREE. It Takes Two: The Role of Co-Regulation in Building Self-Regulation Skills."
   - Harvard Center on the Developing Child. Serve and Return.
 tags: [情绪调节, 情绪识别, 情绪表达, 自我控制]
 related_prompts: [3-6-core-executive-function-01, 3-6-core-theory-of-mind-01]
 ---
 
-# 情绪管理（情绪调节）
+# 情绪调节与共同恢复
 
 > **一句话**：情绪调节不是不哭不闹，而是在成人共同调节和清晰边界中，逐渐学会表达、恢复和寻求帮助。
 

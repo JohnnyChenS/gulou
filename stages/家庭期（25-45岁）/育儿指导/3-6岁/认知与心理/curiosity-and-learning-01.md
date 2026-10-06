@@ -73,7 +73,7 @@ related_prompts: [3-6-core-executive-function-01, 3-6-core-attention-focus-01, 3
 
 ### 5. 共同阅读，但不把书变成测验
 
-读完可以问一个和故事有关的问题，也可以只聊一张图。让孩子选书、重复喜欢的段落、用自己的方式讲故事。早期阅读习惯和前阅读能力可以分别参考[早期阅读习惯培养](reading-habits-01.md)与[前阅读与前数学](pre-literacy-math-01.md)。
+读完可以问一个和故事有关的问题，也可以只聊一张图。让孩子选书、重复喜欢的段落、用自己的方式讲故事。共读习惯和前阅读能力可以分别参考[共读与阅读习惯](reading-habits-01.md)与[前阅读与前数学](pre-literacy-math-01.md)。
 
 ### 6. 让失败停留在“这一次”
 
@@ -109,8 +109,7 @@ related_prompts: [3-6-core-executive-function-01, 3-6-core-attention-focus-01, 3
 ## 延伸阅读
 
 - [自控力和专注力（执行功能）](executive-function-01.md)
-- [学龄前儿童专注力培养](attention-focus-01.md)
-- [早期阅读习惯培养](reading-habits-01.md)
+- [专注、投入与活动转换](attention-focus-01.md)
+- [共读与阅读习惯](reading-habits-01.md)
 - [前阅读与前数学](pre-literacy-math-01.md)
-- [学习与探索路径](../../../../../paths/learning/_index.md)
-- [兴趣发现与拓展](../../../../../paths/learning/questions/interest-discovery.md)
+- [父母年龄阶段目录](../../_index.md)

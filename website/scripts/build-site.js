@@ -216,12 +216,6 @@ function renderMetaCard(fm) {
     const statusMap = { draft: '草稿', planned: '规划中', reviewed: '已审核', published: '已发布' };
     items.push(`<span class="meta-item"><strong>状态：</strong>${escapeHtml(statusMap[fm.review_status] || fm.review_status)}</span>`);
   }
-  if (fm.source_check_note) {
-    items.push(`<span class="meta-item"><strong>来源核对：</strong>${escapeHtml(fm.source_check_note)}</span>`);
-  }
-  if (fm.tags && fm.tags.length) {
-    items.push(fm.tags.map(t => `<span class="tag">${t}</span>`).join(' '));
-  }
 
   if (items.length === 0) return '';
   return `<div class="meta-card">${items.join('\n')}</div>`;
@@ -229,8 +223,12 @@ function renderMetaCard(fm) {
 
 /** 渲染参考文献 */
 function renderReferences(fm) {
-  if (!fm.references || fm.references.length === 0) return '';
-  const items = fm.references.map(r => `<li>${r}</li>`).join('\n');
+  if (fm.references == null) return '';
+  if (!Array.isArray(fm.references) || fm.references.some(reference => typeof reference !== 'string')) {
+    throw new Error(`References must be text entries; quote YAML values containing a colon: ${fm.id || fm.topic || fm.name}`);
+  }
+  if (fm.references.length === 0) return '';
+  const items = fm.references.map(r => `<li>${escapeHtml(r)}</li>`).join('\n');
   return `\n<h2>参考文献</h2>\n<ul class="references">${items}</ul>`;
 }
 
@@ -357,34 +355,22 @@ function renderTopNav() {
       <img src="${siteUrl('assets/logo.png')}" alt="鼓楼" class="logo-img">
       <span>鼓楼</span>
     </a>
-    <a href="${siteUrl('paths/')}">从这里开始</a>
-    <a href="${siteUrl('stages/')}">人生阶段</a>
-    <a href="${siteUrl('interests/')}">兴趣副线</a>
-    <a href="${siteUrl('references/')}">知识参考</a>
-    <a href="https://github.com/JohnnyChenS/gulou/blob/main/CONTRIBUTING.md">参与贡献</a>
-    <a href="https://github.com/JohnnyChenS/gulou">GitHub</a>
+    <a href="${siteUrl('paths/')}">选择阅读</a>
+    <a href="${siteUrl('paths/exploration/youth/')}">探索自己</a>
+    <a href="${siteUrl('interests/')}">兴趣课程</a>
+    <a href="${siteUrl('references/')}">查来源</a>
   </nav>`;
 }
 
 function renderReadingGuide(rel) {
   const record = editorialPages.get(rel);
   if (!record) return '';
-  const status = {
-    rewritten: '正文已重编',
-    integrated: '正文与路线已整合',
-    retained: '全文检查后保留',
-  }[record.status];
   const entry = record.entry && record.entry !== rel
     ? `<a href="${siteUrl(resolvePath(record.entry))}">回到${escapeHtml(record.entry_label || '阅读入口')}</a>`
     : '';
-  const scope = rel === 'paths/reading-progress.md'
-    ? ''
-    : `<a href="${siteUrl('paths/reading-progress.html')}">查看整理范围</a>`;
-  const links = [entry, scope].filter(Boolean).join(' · ');
   return `<aside class="reading-guide" aria-label="本篇阅读用途">
-    <p><strong>${escapeHtml(record.role || '阅读资料')}</strong> · ${escapeHtml(status || '整理中')}</p>
     <p>${escapeHtml(record.reading_note || '')}</p>
-    ${links ? `<p>${links}</p>` : ''}
+    ${entry ? `<p>${entry}</p>` : ''}
   </aside>`;
 }
 
@@ -537,7 +523,7 @@ function safeJson(value) {
     .replace(/\u2029/g, '\\u2029');
 }
 
-function renderPage({ title, description, sidebar, routeNav, routeNavBottom, metaCard, breadcrumb, content, references, isHome, currentRel, readerData }) {
+function renderPage({ title, description, sidebar, routeNav, routeNavBottom, metaCard, breadcrumb, content, references, sourceNote, currentRel, readerData }) {
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -557,10 +543,11 @@ function renderPage({ title, description, sidebar, routeNav, routeNavBottom, met
     <main class="content">
       <div class="content-inner">
         ${breadcrumb || ''}
-        ${metaCard}
         ${routeNav || ''}
-        ${renderReadingGuide(currentRel)}
+        ${routeNav ? '' : renderReadingGuide(currentRel)}
+        ${metaCard}
         ${content}
+        ${sourceNote ? `<details class="source-note"><summary>来源核对与审核范围</summary><p>${escapeHtml(sourceNote)}</p></details>` : ''}
         ${references}
         ${routeNavBottom || ''}
       </div>
@@ -568,129 +555,10 @@ function renderPage({ title, description, sidebar, routeNav, routeNavBottom, met
   </div>
 
   <footer class="site-footer">
-    <p>内容基于 <a href="https://github.com/JohnnyChenS/gulou">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
+    <p><a href="${siteUrl('stages/')}">人生阶段</a> · <a href="${siteUrl('paths/reading-progress.html')}">内容维护记录</a> · <a href="https://github.com/JohnnyChenS/gulou">开源项目</a> · CC BY-SA 4.0</p>
   </footer>
   <script src="${templateUrl('nav.js')}"></script>
   ${readerData ? `<script type="application/json" id="reader-route-data">${safeJson(readerData)}</script>` : ''}
-</body>
-</html>`;
-}
-
-function renderHomePage() {
-  return `<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>鼓楼 — 覆盖全人生阶段的成长知识库</title>
-  <meta name="description" content="鼓楼 = grow，译为“成长”。把权威的成长发展知识，整理成每个人看得懂、用得上的结构化内容。">
-  <link rel="icon" type="image/png" href="${BASE_PATH}assets/favicon.png">
-  <link rel="stylesheet" href="${templateUrl('style.css')}">
-</head>
-<body>
-  <nav class="top-nav">
-    <a href="${BASE_PATH}" class="logo">
-      <img src="${BASE_PATH}assets/logo.png" alt="鼓楼" class="logo-img">
-      <span>鼓楼</span>
-    </a>
-    <a href="${BASE_PATH}stages/">阶段主线</a>
-    <a href="${BASE_PATH}interests/">兴趣副线</a>
-    <a href="${BASE_PATH}paths/">学习路径</a>
-    <a href="${BASE_PATH}references/">理论依据</a>
-    <a href="${BASE_PATH}roadmap.html">教育图谱</a>
-  </nav>
-
-  <div class="hero">
-    <img src="${BASE_PATH}assets/logo.png" alt="鼓楼" class="hero-logo">
-    <h1>鼓楼</h1>
-    <p class="subtitle">鼓楼 = grow，译为“成长”。同时“鼓楼”亦是我长大的地方，拨浪鼓(logo) 是童年的声音。</p>
-  </div>
-
-  <div class="home-section">
-    <h2>这是什么</h2>
-    <p>一个覆盖全人生阶段的成长知识库。</p>
-    <p>从出生到老年，每个阶段都有需要学习和成长的课题——语言、运动、职业发展、育儿、健康管理。这些知识分散在学术论文、专业书籍和专家观点中，普通人很难系统获取。</p>
-    <p>鼓楼做的事情很简单：<strong>把权威的成长发展知识，整理成每个人看得懂、用得上的结构化内容。</strong></p>
-    <p>核心是知识内容本身，不是 AI 工具。你可以直接阅读获取指导，也可以在此基础上构建个性化建议。</p>
-  </div>
-
-  <div class="home-section">
-    <h2>长远愿景</h2>
-    <p>鼓楼不会永远只做育儿。人生每个阶段都有需要学习和成长的课题——语言、运动、职业发展、健康管理。育儿是起点，不是终点。</p>
-    <p>内容按人生阶段组织，每个阶段有独立的知识体系。除了阶段主线，还规划了跨阶段的兴趣学习路径——语言学习、音乐乐器、运动健身、艺术创作、职业技能。</p>
-    <p>完整规划见 <a href="${BASE_PATH}roadmap.html">教育图谱</a>。</p>
-  </div>
-
-  <div class="home-section">
-    <h2>为什么先做育儿</h2>
-    <p>作者本人即将成为新手父亲。面对一个新生命的到来，和所有准父母一样，既期待又忐忑。想给孩子最好的成长环境，却不知道该关注什么、怎么引导、哪些信号需要注意。</p>
-    <p>这些知识其实都有——发展心理学、教育学、儿科医学等领域积累了大量研究成果。但它们分散在学术论文和专业书籍中，普通人很难系统获取。</p>
-    <p>所以鼓楼先从育儿开始：<strong>把这些权威的成长发展知识，整理成家长看得懂、用得上的结构化内容。</strong></p>
-    <p>育儿内容归属在「<a href="${BASE_PATH}stages/family/">家庭期（25-45 岁）</a>」阶段下，涵盖 0-18 岁的认知与心理、身体能力两条主线，以及父母自身的心理支持。这样设计是因为养育孩子本身就是人生某个阶段的核心课题，和其他阶段的内容保持统一的组织逻辑。</p>
-  </div>
-
-  <div class="home-section">
-    <h2>参与贡献</h2>
-    <p>鼓楼是一个开源项目，欢迎任何人参与。你可以：</p>
-    <ul>
-      <li><strong>完善育儿内容</strong> — 目前 0-3 岁和 3-6 岁已有内容，6-12 岁正在补充</li>
-      <li><strong>启动其他阶段</strong> — 大学期、职场发展、兴趣学习等方向都在等待启动</li>
-      <li><strong>提供专业审核</strong> — 如果你是教育、心理、医学领域的从业者</li>
-      <li><strong>翻译成其他语言</strong> — 让更多人受益</li>
-    </ul>
-    <p>贡献前请阅读 <a href="https://github.com/JohnnyChenS/gulou/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>。</p>
-  </div>
-
-  <h2 style="text-align:center; margin-bottom:24px;">按人生阶段探索</h2>
-
-  <div class="stage-grid">
-    <a href="${BASE_PATH}stages/14-18/" class="stage-card">
-      <h3>青春期（未完善）</h3>
-      <p class="age">14-18 岁 · 身份探索、心理健康、学业发展</p>
-    </a>
-    <a href="${BASE_PATH}stages/18-22/" class="stage-card">
-      <h3>大学期（未完善）</h3>
-      <p class="age">18-22 岁 · 学术能力、职业探索、独立生活</p>
-    </a>
-    <a href="${BASE_PATH}stages/22-28/" class="stage-card">
-      <h3>职场开始（未完善）</h3>
-      <p class="age">22-28 岁 · 职业发展、财务规划、健康管理</p>
-    </a>
-    <a href="${BASE_PATH}stages/28-40/" class="stage-card">
-      <h3>职场发展（未完善）</h3>
-      <p class="age">28-40 岁 · 专业精通、领导力、认知发展</p>
-    </a>
-    <a href="${BASE_PATH}stages/family/" class="stage-card">
-      <h3>家庭期</h3>
-      <p class="age">25-45 岁 · 育儿指导、婚姻经营、家庭管理</p>
-    </a>
-    <a href="${BASE_PATH}stages/40-60/" class="stage-card">
-      <h3>中年期（未完善）</h3>
-      <p class="age">40-60 岁 · 智慧判断、职业传承、健康维护</p>
-    </a>
-    <a href="${BASE_PATH}stages/60-plus/" class="stage-card">
-      <h3>老年期（未完善）</h3>
-      <p class="age">60+ 岁 · 认知保持、社会连接、生命叙事</p>
-    </a>
-  </div>
-
-  <h2 style="text-align:center; margin-bottom:24px;">按兴趣探索</h2>
-
-  <div class="stage-grid" style="max-width:600px;">
-    <a href="${BASE_PATH}interests/language/" class="stage-card">
-      <h3>语言学习</h3>
-      <p class="age">母语发展 + 英语学习</p>
-    </a>
-    <a href="${BASE_PATH}interests/mountaineering/" class="stage-card">
-      <h3>登山</h3>
-      <p class="age">从入门到自主攀登</p>
-    </a>
-  </div>
-
-
-  <footer class="site-footer" style="margin-left:0;">
-    <p>内容基于 <a href="https://github.com/JohnnyChenS/gulou">鼓楼</a> 开源项目 · 采用 CC BY-SA 4.0 协议</p>
-  </footer>
 </body>
 </html>`;
 }
@@ -725,24 +593,6 @@ function renderInterestCards(registry) {
 }
 
 function renderHomePageWithRoutes(registry) {
-  const incompleteStages = new Set([
-    '青春期（14-18岁）',
-    '大学期（18-22岁）',
-    '职场开始（22-28岁）',
-    '职场发展（28-40岁）',
-    '中年期（40-60岁）',
-    '老年期（60+岁）',
-  ]);
-  const stagePages = STAGE_ORDER
-    .map(name => ({ name, page: registry.byRel.get(`stages/${name}/_index.md`) }))
-    .filter(({ page }) => page);
-  const stageCards = stagePages.map(({ name, page }) => {
-    const incomplete = incompleteStages.has(name) ? '（概览）' : '';
-    return `<a href="${siteUrl(resolvePath(page.rel))}" class="stage-card">
-      <h3>${page.fm.stage_name || name}${incomplete}</h3>
-      <p class="age">${page.fm.age_range || ''}</p>
-    </a>`;
-  }).join('\n');
   return `<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -757,25 +607,31 @@ function renderHomePageWithRoutes(registry) {
   ${renderTopNav()}
   <div class="hero home-hero">
     <img src="${siteUrl('assets/logo.png')}" alt="鼓楼" class="hero-logo">
-    <h1>鼓楼：陪你走过人生每个阶段</h1>
-    <p class="subtitle">一个开放的成长知识库，把零散知识编成可以逐步理解的阅读主线。</p>
+    <h1>养育孩子，也认识自己</h1>
+    <p class="subtitle">从眼前的生活开始，一章一章读懂成长。</p>
   </div>
 
   <section class="home-section new-parent-entry" aria-labelledby="new-parent-entry-title">
     <h2 id="new-parent-entry-title">第一次当父母，从这里读起</h2>
-    <p>沿十五章主线，从出生前的准备读到三岁。照料、身体活动、交流和父母支持随着生活变化接起来；必要词语在正文里解释，查阅资料后可以回到原章原节。</p>
+    <p>从准备出生、第一次喂奶，读到孩子开始说话和自己做事。每章接住一个新的生活变化，也解释为什么这样照料。</p>
     <div class="reader-entry-actions">
       <a class="reader-start" href="${siteUrl('paths/parenting/new-parent/01-before-birth.html')}">从第一章开始 →</a>
       <a href="${siteUrl('paths/parenting/new-parent/')}">查看十五章目录</a>
     </div>
-    <p class="reader-lookup">已有具体问题：<a href="${siteUrl('stages/family/parenting/quick-start.html')}#safety">安全信号与求助</a> · <a href="${siteUrl('stages/family/parenting/0-3/日常护理/')}">护理操作</a> · <a href="${siteUrl('stages/family/parenting/0-3/')}">按当前月龄进入</a></p>
+    <p class="reader-lookup">已有具体问题：<a href="${siteUrl('stages/family/parenting/quick-start.html')}#safety">安全信号与求助</a> · <a href="${siteUrl('stages/family/parenting/0-3/#正在照料宝宝')}">护理操作</a> · <a href="${siteUrl('paths/parenting/new-parent/#十五章主线')}">按当前阶段选章</a></p>
   </section>
 
   <section class="home-section child-stage-entry">
     <h2>孩子已经更大，从当前阶段继续</h2>
     <p>每个阶段把身体、生活、关系和学习连起来，再按需要查具体主题。</p>
-    <div class="stage-grid entry-grid">${['3-6', '6-9', '9-12', '12-14', '14-18'].map(age => `<a class="stage-card" href="${siteUrl(`paths/learning/ages/${age}.html`)}"><h3>${age.replace('-', '–')} 岁阅读</h3><p class="age">从本阶段第一篇开始</p></a>`).join('')}</div>
-    <p><a href="${siteUrl('paths/parenting/parent-wellbeing.html')}">父母自己的压力、休息与关系</a> · <a href="${siteUrl('paths/reading-progress.html')}">查看本次整理范围</a></p>
+    <div class="stage-grid entry-grid">${['3-6', '6-9', '9-12', '12-14', '14-18'].map(age => `<a class="stage-card" href="${siteUrl(`stages/family/parenting/${age}/`)}"><h3>${age.replace('-', '–')} 岁阅读</h3><p class="age">从本阶段第一篇开始</p></a>`).join('')}</div>
+    <p><a href="${siteUrl('stages/family/parenting/parents/')}">父母自己的压力、休息与关系</a></p>
+  </section>
+
+  <section class="home-section youth-entry">
+    <h2>想知道自己喜欢什么、适合什么</h2>
+    <p>不知道从哪里开始，可以先找一次愿意尝试的事情。把体验说清楚，再决定继续、换一种做法，或者停下来。</p>
+    <div class="reader-entry-actions"><a class="reader-start" href="${siteUrl('paths/exploration/youth/')}">开始探索自己 →</a></div>
   </section>
 
   <section class="home-section">
@@ -791,8 +647,8 @@ function renderHomePageWithRoutes(registry) {
   </section>
 
   <section class="home-section">
-    <h2>按人生阶段探索</h2>
-    <div class="stage-grid entry-grid">${stageCards}</div>
+    <h2>其他人生阶段</h2>
+    <p>大学、工作、中年和老年的材料目前以概览为主。<a href="${siteUrl('stages/')}">查看已有内容</a>。</p>
   </section>
 
   ${renderInterestCards(registry)}
@@ -927,6 +783,7 @@ function build() {
         breadcrumb: renderBreadcrumbs(rel, registry, title),
         content: '<p><em>此部分内容正在编写中，敬请期待。</em></p>',
         references: '',
+        sourceNote: fm.source_check_note,
         currentRel: rel,
         readerData: readerRoutes,
       });
@@ -966,6 +823,7 @@ function build() {
       breadcrumb: renderBreadcrumbs(rel, registry, title),
       content: rewritten,
       references,
+      sourceNote: fm.source_check_note,
       currentRel: rel,
       readerData: readerRoutes,
     });

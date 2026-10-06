@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       var sectionHash = context.section ? '#' + context.section : '';
       var chapterUrl = new URL(chapter.path, window.location.href);
-      chapterUrl.search = '';
+      chapterUrl.search = '?' + contextQuery({ route: context.route, chapter: context.chapter, section: '' }, '');
       chapterUrl.hash = sectionHash;
       actions.appendChild(makeLink('返回主线：' + chapter.label + (context.section ? ' · 原位置' : ''), chapterUrl.toString(), 'route-back'));
     }
@@ -184,52 +184,30 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!panel.classList.contains('route-nav-bottom')) panel.remove();
     });
     renderLiveContext(context);
+  }
+
+  // Put context in the actual destination before any interaction. Native
+  // middle-click, modifier-click and "open in new tab" all use this href.
+  if (context) {
     document.querySelectorAll('a[href]').forEach(function(link) {
       if (link.classList.contains('route-back') || link.classList.contains('route-prev') || link.classList.contains('route-next')) return;
       var target;
       try { target = new URL(link.href, window.location.href); } catch (error) { return; }
       if (target.origin !== window.location.origin || target.protocol !== window.location.protocol) return;
       if (entryChapterForTarget(target) >= 0) return;
-      if (target.pathname === window.location.pathname && target.hash === window.location.hash) return;
+      if (target.pathname === window.location.pathname) return;
       var routeAllowed = context.route.allowed.some(function(item) {
         return normalizePath(item) === normalizePath(target.href);
       });
       if (!routeAllowed) return;
-      link.addEventListener('click', function() {
-        var hash = target.hash || '';
-        var targetChapter = chapterIndexForTarget(context.route, target);
-        var nextContext = {
-          route: context.route,
-          chapter: targetChapter >= 0 ? targetChapter : context.chapter,
-          section: targetChapter >= 0 ? '' : (context.section || sectionForLink(link)),
-        };
-        target.search = '?' + contextQuery(nextContext, '');
-        target.hash = hash;
-        link.href = target.toString();
-      }, { once: true });
-    });
-  }
-
-  if (context && context.implicit) {
-    document.querySelectorAll('a[href]').forEach(function(link) {
-      var target;
-      try { target = new URL(link.href, window.location.href); } catch (error) { return; }
-      if (target.origin !== window.location.origin || target.protocol !== window.location.protocol) return;
-      if (entryChapterForTarget(target) >= 0) return;
-      if (link.classList.contains('route-back') || link.classList.contains('route-prev') || link.classList.contains('route-next')) return;
-      var routeAllowed = context.route.allowed.some(function(item) { return normalizePath(item) === normalizePath(target.href); });
-      if (!routeAllowed) return;
-      link.addEventListener('click', function() {
-        var targetChapter = chapterIndexForTarget(context.route, target);
-        var nextContext = {
-          route: context.route,
-          chapter: targetChapter >= 0 ? targetChapter : context.chapter,
-          section: targetChapter >= 0 ? '' : sectionForLink(link),
-        };
-        target.search = '?' + contextQuery(nextContext, '');
-        target.hash = target.hash || '';
-        link.href = target.toString();
-      }, { once: true });
+      var targetChapter = chapterIndexForTarget(context.route, target);
+      var nextContext = {
+        route: context.route,
+        chapter: targetChapter >= 0 ? targetChapter : context.chapter,
+        section: targetChapter >= 0 ? '' : (context.section || sectionForLink(link)),
+      };
+      applyContext(target, nextContext);
+      link.href = target.toString();
     });
   }
 
@@ -243,10 +221,17 @@ document.addEventListener('DOMContentLoaded', function() {
       if (target.origin !== window.location.origin || target.protocol !== window.location.protocol) return;
       var chapter = entryChapterForTarget(target);
       if (chapter < 0) return;
-      link.addEventListener('click', function() {
-        target.search = '?' + contextQuery({ route: entryRoute, chapter: chapter, section: '' }, '');
-        link.href = target.toString();
-      }, { once: true });
+      applyContext(target, { route: entryRoute, chapter: chapter, section: '' });
+      link.href = target.toString();
+    });
+  }
+
+  function applyContext(target, nextContext) {
+    Array.from(target.searchParams.keys()).forEach(function(key) {
+      if (key.indexOf('reader_') === 0) target.searchParams.delete(key);
+    });
+    new URLSearchParams(contextQuery(nextContext, '')).forEach(function(value, key) {
+      target.searchParams.set(key, value);
     });
   }
 

@@ -12,12 +12,12 @@ evidence_level: mixed
 prerequisites: []
 next_topics: [0-3-core-joint-attention-01, 0-3-core-symbolic-thinking-01, 0-3-core-screen-time-01]
 references:
-  - Raising Children Network. Reading with babies: benefits, tips and book suggestions. https://raisingchildren.net.au/babies/play-learning/literacy-reading-stories/reading-from-birth
-  - Raising Children Network. Reading with toddlers: benefits, tips and book recommendations. https://raisingchildren.net.au/toddlers/play-learning/literacy-reading-stories/reading-with-toddlers
+  - "Raising Children Network. Reading with babies: benefits, tips and book suggestions. https://raisingchildren.net.au/babies/play-learning/literacy-reading-stories/reading-from-birth"
+  - "Raising Children Network. Reading with toddlers: benefits, tips and book recommendations. https://raisingchildren.net.au/toddlers/play-learning/literacy-reading-stories/reading-with-toddlers"
   - ZERO TO THREE. How to Introduce Toddlers and Babies to Books. https://www.zerotothree.org/resource/how-to-introduce-toddlers-and-babies-to-books/
   - ZERO TO THREE. Supporting Language and Literacy Skills from 0–12 Months. https://www.zerotothree.org/resource/supporting-language-and-literacy-skills-from-0-12-months/
   - ZERO TO THREE. Supporting Language and Literacy Skills from 12–24 Months. https://www.zerotothree.org/resource/supporting-language-and-literacy-skills-from-12-24-months/
-  - Bus, A. G., van IJzendoorn, M. H., & Pellegrini, A. D. (1995). Joint book reading makes for success in learning to read: A meta-analysis. Review of Educational Research, 65(1), 1-21.
+  - "Bus, A. G., van IJzendoorn, M. H., & Pellegrini, A. D. (1995). Joint book reading makes for success in learning to read: A meta-analysis. Review of Educational Research, 65(1), 1-21."
   - Murray, A., & Egan, S. M. (2014). Does reading to infants benefit their cognitive development? A review. Child Care in Practice, 20(4), 332-349.
 tags: [阅读, 绘本, 早期阅读, 亲子阅读, 语言发展, 0-3岁]
 related_prompts: [0-3-core-joint-attention-01, 0-3-core-symbolic-thinking-01]

@@ -60,9 +60,9 @@
 
 ### 从阅读过程进入
 
-[新手父母十五章主线](paths/parenting/new-parent/_index.md)覆盖产前至三岁；之后进入[年龄阅读目录](paths/learning/ages/_index.md)。[父母支持](paths/parenting/parent-wellbeing.md)与儿童阶段并行，专题在理解当前处境后查阅。
+[新手父母十五章主线](paths/parenting/new-parent/_index.md)覆盖产前至三岁；之后从[育儿阶段入口](stages/家庭期（25-45岁）/育儿指导/_index.md)选择当前年龄。每个年龄只维护一个目录。[父母支持](stages/家庭期（25-45岁）/育儿指导/父母自身/_index.md)与儿童阶段并行。青少年本人可以直接读[四章自我探索](paths/exploration/youth/_index.md)。
 
-现有育儿主题共 90 篇：0–3 岁 23、3–6 岁 16、6–9 岁 10、9–12 岁 9、12–14 岁 8、14–18 岁 10、父母支持 14，另有目录与发展观察页。存在正文不代表已经取得专业审核，兴趣的周计划也不代表保证按时达到某个水平。
+育儿专题覆盖日常照料、身体、认知、关系与父母支持，按问题从阶段目录查阅。存在正文不代表已经取得专业审核；兴趣课程按实践和条件推进，不承诺统一完成时间。
 
 内容分为连续章节、操作查阅、概念专题、阶段概览及来源。共同要求是解释清楚、前后连贯、来源可追溯、边界与求助条件准确，不强制每篇填满相同标题或活动频率。
 
@@ -118,9 +118,11 @@ python scripts/gen-reference.py  # 生成 references/reference-list.md
 
 连续路线通过 frontmatter 的 `chapters` 显式列出章节。目录、当前位置和上下篇来自这份编排，正文中的来源与延伸链接不计入进度。并列入口使用 `route_group_mode: alternatives`，明确递进的阶段课程使用 `sequence`。
 
-新手父母从[主线目录](paths/parenting/new-parent/_index.md)进入；需要即时操作时使用[综合教程](stages/家庭期（25-45岁）/育儿指导/quick-start.md)。已有教程路径与锚点保持稳定。
+新手父母从[主线目录](paths/parenting/new-parent/_index.md)进入；需要即时操作时使用[照料手册](stages/家庭期（25-45岁）/育儿指导/quick-start.md)。重复入口或正文可以合并删除，更新当前站内引用即可，不维护历史兼容壳页。
 
 正文应先明确读者处境和要解释的问题，首次出现的必要概念在当地讲清楚，并交代前后章节的联系。护理指南可以写步骤，概念文章可以用贯穿的例子；共同要求见[新手父母阅读约定](docs/reading/new-parent-reading-contract.md)及[贡献指南](CONTRIBUTING.md)。
+
+第二轮的实际改写、入口删除、来源范围及工程检查见[二次优化与验证记录](docs/reading/second-pass-verification.md)。当前逐页记录以 [editorial-coverage.json](docs/reading/editorial-coverage.json) 为准，早期审查文档中的文件路径可能已合并或删除。
 
 ## 参与贡献
 

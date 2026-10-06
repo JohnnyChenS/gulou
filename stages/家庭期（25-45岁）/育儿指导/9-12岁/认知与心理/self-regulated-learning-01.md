@@ -100,5 +100,5 @@ related_prompts: [9-12-core-innovative-thinking-01, 12-14-core-academic-time-man
 
 - [创新思维](innovative-thinking-01.md)
 - [了解过去和不同文化](historical-worldview-01.md)
-- [学习与探索路径](../../../../../paths/learning/_index.md)
+- [学习与探索路径](../../../../../paths/_index.md)
 - [兴趣发现与拓展](../../../../../paths/learning/questions/interest-discovery.md)

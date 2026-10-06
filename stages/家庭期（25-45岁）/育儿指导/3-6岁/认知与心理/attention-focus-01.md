@@ -3,7 +3,7 @@ id: 3-6-core-attention-focus-01
 stage: "3-6"
 track: core
 domain: cognitive-psychological
-topic: 学龄前专注力培养
+topic: 专注、投入与活动转换
 age_range: 3-6y
 difficulty: foundational
 review_status: draft
@@ -17,7 +17,7 @@ tags: [专注力, 注意力, 执行功能, 学龄前, 蒙特梭利]
 related_prompts: [3-6-core-executive-function-01, 3-6-core-delay-of-gratification-01]
 ---
 
-# 学龄前儿童专注力培养
+# 专注、投入与活动转换
 
 > **一句话**：专注力不是一个固定时长，也不只是“能不能坐住”；它会受兴趣、任务难度、身体状态和环境影响，需要成人一起搭好条件。
 

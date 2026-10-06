@@ -24,4 +24,4 @@
 
 内容组织可以参考 Raising Children Network、ZERO TO THREE、UNICEF Parenting 等网站的问题表达和阅读安排；它们的名称不能自动成为其他正文结论的证据，也不授权复制文章、图片或商业推荐。
 
-[回到阅读主线](../paths/_index.md) · [查看年龄入口](../paths/learning/ages/_index.md)
+[回到阅读主线](../paths/_index.md) · [查看年龄入口](../stages/家庭期（25-45岁）/育儿指导/_index.md)

@@ -26,6 +26,6 @@ age_range: 18-22岁
 
 ## 从概览进入现有课程
 
-本站尚没有完整大学课程。可以按任务进入[英语学习](../../paths/language/english.md)，按基础和目标选择水平；有开发经验的人可以进入[系统架构与 AI 工程](../../interests/system-architecture/_index.md)。[兴趣发现](../../paths/learning/questions/interest-discovery.md)提供试用与调整思路，年龄不是课程通关条件。
+本站尚没有完整大学课程。可以按任务进入[英语学习](../../paths/language/english.md)，按基础和目标选择水平；有开发经验的人可以进入[系统架构与 AI 工程](../../interests/system-architecture/_index.md)。如果还不知道要投入哪一项活动，可先走[青少年本人探索路线](../../paths/exploration/youth/_index.md)，把兴趣拆成一次可退出的小尝试；年龄不是课程通关条件。
 
 当真实工作成为主要任务，继续看[初入职场](../职场开始（22-28岁）/_index.md)。阶段变化带来新处境，也允许保留原来有效的方法。

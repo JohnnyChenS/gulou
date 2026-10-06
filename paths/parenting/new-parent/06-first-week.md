@@ -45,8 +45,8 @@ source_check_note: 重编依据 quick-start.md 的 2026-09-17 资料记录；本
 
 ### 需要时再查
 
-- [原教程：家庭交接卡](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#handover)
-- [原教程：第 2–6 周恢复期](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#weeks-two-six)
-- [原教程：哭闹与常见问题](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#crying)
+- [照料手册：家庭交接卡](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#handover)
+- [照料手册：第 2–6 周恢复期](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#weeks-two-six)
+- [照料手册：哭闹与常见问题](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#crying)
 - [睡眠剥夺应对](../../../stages/家庭期（25-45岁）/育儿指导/父母自身/产后调适/sleep-deprivation-01.md)
 - [主线目录：产前至三岁](_index.md)

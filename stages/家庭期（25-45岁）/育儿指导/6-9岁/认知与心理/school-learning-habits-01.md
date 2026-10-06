@@ -100,4 +100,4 @@ related_prompts: [6-9-core-independent-reading-01, 6-9-core-oral-expression-01]
 - [独立阅读过渡](independent-reading-01.md)
 - [口头表达能力](oral-expression-01.md)
 - [创造性思维](creative-thinking-01.md)
-- [学习与探索路径](../../../../../paths/learning/_index.md)
+- [学习与探索路径](../../../../../paths/_index.md)

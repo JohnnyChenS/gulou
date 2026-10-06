@@ -12,7 +12,7 @@ evidence_level: mixed
 prerequisites: []
 next_topics: [0-3-core-gross-motor-01, 0-3-core-oral-motor-01, 0-3-core-early-reading-01]
 references:
-  - Centers for Disease Control and Prevention. Foods and Drinks for 6 to 24 Month Olds: Choking Hazards. https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html
+  - "Centers for Disease Control and Prevention. Foods and Drinks for 6 to 24 Month Olds: Choking Hazards. https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
   - Centers for Disease Control and Prevention. When, What, and How to Introduce Solid Foods. https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html
   - Centers for Disease Control and Prevention. Fingers, Spoons, Forks, and Cups. https://www.cdc.gov/infant-toddler-nutrition/mealtime/fingers-spoons-forks-and-cups.html
   - Centers for Disease Control and Prevention. Learn the Signs. Act Early. https://www.cdc.gov/act-early/milestones/index.html
@@ -76,9 +76,7 @@ agent_use:
 
 # 精细动作
 
-> **一句话**：手部能力来自很多安全、可重复的日常操作。自主进食可以是其中一个机会，但不是唯一、也不是“最好的训练课”。
-
-## 真实场景
+孩子把东西拿住、换到另一只手，再把它放进盒子，手和眼睛就在一起配合。我们说的“精细动作”，主要指手和手指完成这些小操作的能力。吃饭、翻书和收拾玩具都能提供尝试的机会。
 
 宝宝开始把手伸向食物，照料者一边担心弄脏，一边担心他还不会捏。有人建议“给更小的食物练对捏”，另一个人则把一堆玩具和零食放到托盘上。真正重要的顺序是：先确认孩子是否准备好进食，再确认姿势、食物质地和看护是否安全，最后才看他用了哪种手指动作。
 
@@ -95,7 +93,7 @@ agent_use:
 
 这些是观察方向，不是所有孩子都按同一天完成的里程碑。比“会不会捏起某个小东西”更有用的问题是：动作是否在增加，是否两侧都能使用，孩子是否愿意参与，是否在舒适和安全的条件下尝试。
 
-## 方法 / 活动
+## 把练习放进日常操作
 
 ### ① 抓握、传递和放下（0–12 个月）
 
@@ -151,10 +149,6 @@ agent_use:
 - 进食时反复咳嗽、呛咳、吞咽困难、声音湿哑，或进食影响生长和状态。
 
 这些信号不能靠文章自测确诊。疑似窒息、吞下电池或磁铁、呼吸困难等情况属于急症，应立即获得急救帮助。
-
-## 今天就能做的一件事
-
-下一次孩子清醒且状态不错时，给他一个经过检查的安全物品和一个空容器，先示范一次“拿起—放进—拿出”，然后让他自己试。若正好是进餐时间，优先保证坐姿、食物质地和专注看护，不把这顿饭变成动作考试。
 
 ## 延伸探索
 

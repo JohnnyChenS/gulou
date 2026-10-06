@@ -12,7 +12,7 @@ evidence_level: context-dependent
 prerequisites: [0-3-core-attachment-01]
 next_topics: [0-3-core-self-awareness-01, 0-3-core-empathy-01]
 references:
-  - CDC. Positive Parenting Tips: Toddlers (1–2 years). https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-1-2-years.html
+  - "CDC. Positive Parenting Tips: Toddlers (1–2 years). https://www.cdc.gov/child-development/positive-parenting-tips/toddlers-1-2-years.html"
   - Erikson, E. H. (1950). Childhood and Society. W. W. Norton.
   - Kopp, C. B. (1982). Antecedents of self-regulation. Developmental Psychology, 18(2), 199-214.
   - Ryan, R. M., & Deci, E. L. (2000). Self-determination theory. American Psychologist, 55(1), 68-78.

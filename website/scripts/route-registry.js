@@ -154,7 +154,9 @@ function getRouteContext(rel, registry) {
 
   return {
     currentRel: rel,
-    readingChapter: Boolean(current && current.fm && current.fm.page_type === 'reading-chapter'),
+    // Explicit route membership determines the reading view for ordinary
+    // topic pages too. Shared articles still require a reader's route choice.
+    readingChapter: articleIndex >= 0 || Boolean(current && current.fm && current.fm.page_type === 'reading-chapter'),
     route: currentRoute,
     steps,
     previous,

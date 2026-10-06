@@ -73,12 +73,6 @@ agent_use:
 
 # 洗澡与脐带护理
 
-> **一句话**：洗澡前先准备好环境和用品，全程托住并看护宝宝；脐部保持清洁干燥，不把酒精或其他产品当作常规护理。
-
----
-
-## 真实场景
-
 第一次给宝宝洗澡。你提前准备了浴盆、浴巾、干净尿布和衣服，宝宝入水后却突然哭了。你手忙脚乱，不知道是继续洗、抱起来，还是先检查哪里不舒服。
 
 宝宝哭并不自动说明你做错了；先把安全支撑、呼吸、体温和环境处理好。如果照料者需要拿东西或离开，必须先把宝宝交给另一位成年人，不能把宝宝独自留在水里。
@@ -157,24 +151,9 @@ agent_use:
 
 ---
 
-## 今天就能做的一件事
-
-检查一下宝宝脐带的状态：是否清洁、干燥，尿布是否在脐部以下。把浴巾、干净衣物、尿布和清洁用水放到伸手可及的位置，并和另一位照料者约定谁负责全程看护。
-
----
-
-## 一周观察与复盘
-
-本周完成一次“准备—全程看护—清洁—擦干—复盘”的小循环：
-
-- 洗澡前是否已经准备齐用品、整理好接手安排？
-- 宝宝在哪个环节出现不适，调整支撑或节奏后是否有变化？
-- 脐部是否保持清洁干燥，是否出现红肿扩散、分泌物或持续出血？
-- 是否需要把皮肤、脐部、体温或洗澡安全问题带给专业人员？
+## 资料来源
 
 进一步阅读可参考 [AAP 的新生儿洗澡建议](https://www.healthychildren.org/English/ages-stages/baby/bathing-skin-care/Pages/Bathing-Your-Newborn.aspx)、[AAP 的脐带护理建议](https://www.healthychildren.org/English/ages-stages/baby/bathing-skin-care/pages/Umbilical-Cord-Care.aspx)、[WHO 新生儿护理建议](https://www.who.int/tools/your-life-your-health/life-phase/newborns-and-children-under-5-years/caring-for-newborns) 和 [NHS 洗澡指南](https://www.nhs.uk/best-start-in-life/baby/baby-basics/caring-for-your-baby/bathing-your-baby/)。
-
----
 
 ## 延伸探索
 

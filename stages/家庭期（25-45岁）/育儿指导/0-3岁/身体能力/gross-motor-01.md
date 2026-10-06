@@ -14,9 +14,9 @@ next_topics: [0-3-core-fine-motor-01, 0-3-core-sensory-integration-01, 0-3-daily
 references:
   - World Health Organization. (2019). Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age. https://www.who.int/publications/i/item/9789241550536
   - Centers for Disease Control and Prevention. Learn the Signs. Act Early. https://www.cdc.gov/act-early/milestones/index.html
-  - Centers for Disease Control and Prevention. Positive Parenting Tips: Infants. https://www.cdc.gov/child-development/positive-parenting-tips/infants.html
-  - American Academy of Pediatrics. Baby Walkers: A Dangerous Choice. https://www.healthychildren.org/English/safety-prevention/at-home/Pages/Baby-Walkers-A-Dangerous-Choice.aspx
-  - Hadders-Algra, M. (2018). Early human motor development: From variation to the ability to vary and adapt. Human Movement Science, 64, 40-49.
+  - "Centers for Disease Control and Prevention. Positive Parenting Tips: Infants. https://www.cdc.gov/child-development/positive-parenting-tips/infants.html"
+  - "American Academy of Pediatrics. Baby Walkers: A Dangerous Choice. https://www.healthychildren.org/English/safety-prevention/at-home/Pages/Baby-Walkers-A-Dangerous-Choice.aspx"
+  - "Hadders-Algra, M. (2018). Early human motor development: From variation to the ability to vary and adapt. Human Movement Science, 64, 40-49."
 tags: [粗大动作, 翻身, 爬行, 学步, 俯卧活动]
 related_prompts: [0-3-core-fine-motor-01, 0-3-core-sensory-integration-01]
 agent_use:
@@ -77,9 +77,7 @@ agent_use:
 
 # 粗大动作
 
-> **一句话**：粗大动作不是一张按月打勾的清单。清醒时的安全地面活动、足够的自由探索和对孩子状态的观察，比追着某个日期练动作更重要。
-
-## 真实场景
+抬头、翻身、坐起来和移动，需要头颈、躯干和四肢一起工作。这些涉及整个身体的动作叫“粗大动作”。照料者可以提供安全空间，再看孩子怎样尝试新的姿势和移动方式。
 
 宝宝 4 个月了还不会翻身，家里有人拿邻居家的孩子来比较。另一个孩子 10 个月了还不怎么爬，却会用屁股挪到想去的地方。照料者真正需要判断的，不是“别人已经会了，我家是不是晚了”，而是：孩子有没有持续尝试，动作是否两侧都在发展，活动时是否舒服，以及家里有没有给他安全的活动机会。
 
@@ -115,7 +113,7 @@ WHO 建议婴儿在清醒时进行分散的地面活动，包括俯卧活动；�
 
 这些区间不是硬截止日期。早产儿还要结合校正年龄和医生意见；如果你担心，不要等到“超过表格才算问题”，可以带着视频和观察记录提前咨询。
 
-## 方法 / 活动
+## 给身体留出移动的空间
 
 ### ① 清醒时的地面活动（0–6 个月）
 
@@ -166,10 +164,6 @@ WHO 建议婴儿在清醒时进行分散的地面活动，包括俯卧活动；�
 - 走路、跑跳时持续明显异常，反复摔倒并伴随疼痛、失去平衡或功能下降。
 
 这些信号不能靠文章自测确诊，也不需要等到某个固定月龄才可以咨询。若出现严重受伤、意识改变或呼吸困难，立即呼叫当地急救服务。
-
-## 今天就能做的一件事
-
-下一次孩子清醒且状态不错时，清出一小块安全地面，把手机和屏幕移开，观察他自己选择的一个动作：转头、伸手、翻身、移动或扶站都可以。你只需要跟随他的兴趣，在他疲劳或抗拒时停下，并记下当时的状态和环境。
 
 ## 延伸探索
 

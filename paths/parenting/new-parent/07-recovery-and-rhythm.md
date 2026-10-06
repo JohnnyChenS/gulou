@@ -62,7 +62,7 @@ source_check_note: 核对了本章列明的 NHS 产后恢复、复查、心理�
 
 ### 需要时再查
 
-- [原教程：第 2–6 周恢复期](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#weeks-two-six)
+- [照料手册：第 2–6 周恢复期](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#weeks-two-six)
 - [NHS：产后身体变化与恢复](https://www.nhs.uk/pregnancy/labour-and-birth/your-body/)
 - [NHS：产后复查讨论什么](https://www.nhs.uk/baby/support-and-services/your-6-week-postnatal-check/)——具体日期和项目以本地团队与个人情况为准
 - [NHS：产后抑郁](https://www.nhs.uk/mental-health/conditions/postnatal-depression/)

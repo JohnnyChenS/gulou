@@ -1,4 +1,17 @@
 ---
+page_type: route
+route_group: learning-age
+route_group_mode: alternatives
+route_key: 6-9
+route_order: 3
+route_label: 6–9 岁
+route_next: ../9-12岁/_index.md
+chapters:
+  - 认知与心理/school-learning-habits-01.md
+  - 身体能力/sleep-management-01.md
+  - 认知与心理/friendship-skills-01.md
+  - 认知与心理/independent-reading-01.md
+  - 认知与心理/creative-thinking-01.md
 stage: "6-9"
 age_range: 6-9岁
 stage_name: 学龄初
@@ -45,11 +58,10 @@ stage_name: 学龄初
 
 ## 学完这一阶段并不等于什么
 
-年龄切换只是新的阅读入口，不是能力毕业。进入[9–12 岁行动路线](../../../../paths/learning/ages/9-12.md)前，关注孩子是否能在需要时说出目标、卡点和求助对象；不必等到每项表现都稳定。
+年龄切换只是新的阅读入口，不是能力毕业。进入[9–12 岁阶段](../9-12岁/_index.md)前，关注孩子是否能在需要时说出目标、卡点和求助对象；不必等到每项表现都稳定。
 
 理论背景放在各篇参考资料中，不能替代对孩子当前情境的观察。本阶段正文仍为 draft，未完成专业审定。
 
-## 阅读入口
+## 这页就是本年龄的连续阅读入口
 
-- [本年龄连续阅读路线](../../../../paths/learning/ages/6-9.md)
-- [全部学习路线](../../../../paths/learning/_index.md)
+本页先给出五章主线，再列按问题进入的专题。读完一章后停下来观察一次真实场景，不需要跳到另一个年龄页寻找顺序。需要跨年龄时，进入[9–12 岁阶段](../9-12岁/_index.md)；全部路线索引会由学习目录统一提供。

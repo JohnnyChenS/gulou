@@ -1,6 +1,6 @@
 # 发展心理学核心文献
 
-这份书目供读者核对理论背景。先从[年龄阅读入口](../paths/learning/ages/_index.md)建立当前问题的理解，遇到想追溯的概念时再查这里。无需认识全部理论作者才能继续正文。
+这份书目供读者核对理论背景。先从[年龄阅读入口](../stages/家庭期（25-45岁）/育儿指导/_index.md)建立当前问题的理解，遇到想追溯的概念时再查这里。无需认识全部理论作者才能继续正文。
 
 ## 先认识这些资料的用途
 
@@ -67,4 +67,4 @@
 - Bandura, A. (1997). *Self-Efficacy: The Exercise of Control*. Freeman.
 - Zimmerman, B. J. (2002). Becoming a self-regulated learner. *Theory Into Practice*, 41(2), 64-70.
 
-[返回资料入口](_index.md) · [继续年龄阅读](../paths/learning/ages/_index.md)
+[返回资料入口](_index.md) · [继续年龄阅读](../stages/家庭期（25-45岁）/育儿指导/_index.md)

@@ -1,6 +1,6 @@
 # 动作发展与运动科学核心文献
 
-孩子从看、伸手、翻身到走跑，需要身体、环境和参与机会共同作用。动作出现时间有差异；本文是查来源的书目，不是用来测试孩子是否合格的表。先读[年龄主线](../paths/learning/ages/_index.md)，再按问题核对资料。
+孩子从看、伸手、翻身到走跑，需要身体、环境和参与机会共同作用。动作出现时间有差异；本文是查来源的书目，不是用来测试孩子是否合格的表。先读[年龄主线](../stages/家庭期（25-45岁）/育儿指导/_index.md)，再按问题核对资料。
 
 ## 区分观察与处方
 
@@ -45,4 +45,4 @@
 
 - Steinberg, L. (2008). A social neuroscience perspective on adolescent risk-taking. *Developmental Review*, 28(1), 78-106.
 
-[返回资料入口](_index.md) · [继续年龄阅读](../paths/learning/ages/_index.md)
+[返回资料入口](_index.md) · [继续年龄阅读](../stages/家庭期（25-45岁）/育儿指导/_index.md)

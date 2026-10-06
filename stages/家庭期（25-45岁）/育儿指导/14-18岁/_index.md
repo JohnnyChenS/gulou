@@ -1,4 +1,17 @@
 ---
+page_type: route
+route_group: learning-age
+route_group_mode: alternatives
+route_key: 14-18
+route_order: 6
+route_label: 14–18 岁
+chapters:
+  - 认知与心理/parent-teen-communication-01.md
+  - 认知与心理/adolescent-mental-health-01.md
+  - 认知与心理/autonomous-learning-and-interest-01.md
+  - 认知与心理/academic-pressure-01.md
+  - 认知与心理/digital-life-01.md
+  - 认知与心理/adolescent-rebellion-01.md
 stage: "14-18"
 age_range: 14-18岁
 stage_name: 青春期
@@ -35,7 +48,6 @@ stage_name: 青春期
 
 理论和研究姓名放在正文参考资料中；本阶段所有文章保持 draft，尚未完成专业审定。
 
-## 阅读入口
+## 这页就是本年龄的连续阅读入口
 
-- [本年龄连续阅读路线](../../../../paths/learning/ages/14-18.md)
-- [全部学习路线](../../../../paths/learning/_index.md)
+本页先给出六章父母主线，再列发生具体问题时才打开的实战补充。青少年本人可从[本人探索路线](../../../../paths/exploration/youth/_index.md)进入；两条路线服务不同读者，不互相作为前置。

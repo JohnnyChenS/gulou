@@ -13,7 +13,7 @@ prerequisites: []
 next_topics: [0-3-core-object-permanence-01, 0-3-core-joint-attention-01, 0-3-core-symbolic-thinking-01]
 references:
   - Centers for Disease Control and Prevention. Developmental Milestones. https://www.cdc.gov/act-early/milestones/index.html
-  - ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/
+  - "ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/"
   - UNICEF Parenting. The science of play. https://www.unicef.org/parenting/child-care/science-of-play
   - Gopnik, A., et al. (2001). Causal learning mechanisms in very young children. Science, 297(5582), 1176-1179.
   - Piaget, J. (1952). The Origins of Intelligence in Children. International Universities Press.

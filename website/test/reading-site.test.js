@@ -68,10 +68,45 @@ test('each built chapter view exposes its draft state and correct adjacent chapt
   });
 });
 
-test('the existing tutorial keeps its safety, month, and operation destinations', () => {
+test('the care handbook exposes the operation and safety destinations used by current chapters', () => {
   const tutorial = read('stages/family/parenting/quick-start.html');
   const ids = new Set(Array.from(tutorial.matchAll(/\bid="([^"]+)"/g), match => match[1]));
   for (const id of ['safety', 'timeline', 'feeding', 'milk-safety', 'sleep', 'diaper', 'bath', 'crying', 'weeks-two-six', 'months-one-three', 'months-three-six', 'next-stage', 'handover']) {
     assert.ok(ids.has(id), `existing tutorial destination missing: ${id}`);
   }
+});
+
+test('ordinary age-route topics have a collapsed directory and a next chapter after the body', () => {
+  const html = read('stages/family/parenting/3-6/cognitive/emotion-regulation-01.html');
+  assert.match(html, /<details class="route-chapter-list">/);
+  const footer = html.match(/<section\b[^>]*class="route-nav route-nav-bottom"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(footer, 'a topic used as a chapter needs navigation after reading');
+  const next = footer.match(/<a class="route-next" href="([^"]+)"/);
+  assert.ok(next, 'the second chapter needs a next chapter');
+  assert.ok(new URL(next[1].replaceAll('&amp;', '&'), 'https://gulou.invalid').pathname.endsWith('/stages/family/parenting/3-6/cognitive/social-play-01.html'));
+});
+
+test('young readers have their own four-chapter course and homepage entry', () => {
+  const home = read('index.html');
+  const primary = home.match(/<section\b[^>]*class="[^"]*youth-entry[^\"]*"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(primary, 'homepage must expose the youth course directly');
+  assert.ok(home.indexOf(primary) < home.indexOf('关于鼓楼'));
+  const names = ['01-not-sure-what-i-like', '02-try-without-choosing', '03-when-you-did-not-keep-going', '04-compare-and-choose-next-step'];
+  names.forEach((name, index) => {
+    const html = read('paths/exploration/youth/' + name + '.html');
+    const nav = html.match(/<section\b[^>]*class="route-nav"[\s\S]*?<\/section>/)?.[0];
+    assert.ok(nav, name + ' needs course navigation');
+    assert.ok(html.includes('状态：</strong>草稿'), name + ' must retain its real review state');
+    for (const [className, adjacent] of [['route-prev', index - 1], ['route-next', index + 1]]) {
+      const link = nav.match(new RegExp(`<a class="${className}" href="([^"]+)"`));
+      if (adjacent < 0 || adjacent >= names.length) assert.equal(link, null);
+      else {
+        assert.ok(link, name + ' missing ' + className);
+        const url = new URL(link[1].replace(/&amp;/g, '&'), 'https://gulou.invalid');
+        assert.ok(url.pathname.endsWith('/paths/exploration/youth/' + names[adjacent] + '.html'));
+        assert.equal(url.searchParams.get('reader_route'), 'youth-self-exploration');
+        assert.equal(url.searchParams.get('reader_chapter'), String(adjacent));
+      }
+    }
+  });
 });

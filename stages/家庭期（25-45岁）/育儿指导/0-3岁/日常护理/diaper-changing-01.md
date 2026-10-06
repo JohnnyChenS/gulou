@@ -15,7 +15,7 @@ references:
   - NHS. How to change your baby's nappy. https://www.nhs.uk/baby/caring-for-a-newborn/how-to-change-your-babys-nappy/
   - NHS. Nappy rash. https://www.nhs.uk/baby/caring-for-a-newborn/nappy-rash/
   - American Academy of Pediatrics. Common Diaper Rashes & Treatments. https://www.healthychildren.org/English/ages-stages/baby/diapers-clothing/Pages/Diaper-Rash.aspx
-  - American Academy of Pediatrics. Baby's First Days: Bowel Movements & Urination. https://www.healthychildren.org/English/ages-stages/baby/Pages/babys-first-days-bowel-movements-and-urination.aspx
+  - "American Academy of Pediatrics. Baby's First Days: Bowel Movements & Urination. https://www.healthychildren.org/English/ages-stages/baby/Pages/babys-first-days-bowel-movements-and-urination.aspx"
 tags: [尿不湿, 换尿布, 尿布疹, 新生儿, 皮肤护理, 湿尿布]
 related_prompts: [0-3-dailycare-bathing-01, 0-3-dailycare-feeding-01]
 agent_use:
@@ -58,8 +58,6 @@ agent_use:
 ---
 
 # 换尿不湿与尿布区护理
-
-> **一句话**：先把材料准备好、全程保持一只手保护，再温和清洁和拍干；尿布也是观察皮肤、喂养和健康变化的窗口。
 
 ## 先把安全放在第一位
 

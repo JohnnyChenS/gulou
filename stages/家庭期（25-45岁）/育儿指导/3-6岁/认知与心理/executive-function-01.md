@@ -10,7 +10,7 @@ review_status: draft
 references:
   - Diamond, A. (2013). Executive functions. Annual Review of Psychology, 64, 135-168.
   - Blair, C., & Razza, R. P. (2007). Relating effortful control to emerging ability. Child Development, 78(2), 647-663.
-  - Harvard Center on the Developing Child. Activities Guide: Enhancing and Practicing Executive Function Skills.
+  - "Harvard Center on the Developing Child. Activities Guide: Enhancing and Practicing Executive Function Skills."
   - CDC. Developmental Monitoring and Screening.
 tags: [执行功能, 抑制控制, 工作记忆, 认知灵活性, 自控力, 专注力]
 related_prompts: [3-6-core-delay-of-gratification-01, 3-6-core-theory-of-mind-01]

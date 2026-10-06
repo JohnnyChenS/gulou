@@ -5,6 +5,7 @@ const path = require('path');
 
 const entryPath = path.resolve(__dirname, '../site/stages/family/parenting/3-6/index.html');
 const entry = fs.readFileSync(entryPath, 'utf8');
+const oldAgeRoutePath = path.resolve(__dirname, '../site/paths/learning/ages/3-6.html');
 const assessmentPath = path.resolve(__dirname, '../site/stages/family/parenting/3-6/development-assessment.html');
 const assessment = fs.readFileSync(assessmentPath, 'utf8');
 const executivePath = path.resolve(__dirname, '../site/stages/family/parenting/3-6/cognitive/executive-function-01.html');
@@ -36,16 +37,27 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+assert(entry.includes('连续阅读：从参与到共同学习'), '3–6 岁入口应提供连续阅读主线');
+assert(entry.includes('身体参与'), '3–6 岁主线应从身体参与开始');
+assert(entry.includes('共同调节'), '3–6 岁主线应把成人共同调节放在前面');
+assert(entry.includes('任务有开始、进行和收尾'), '3–6 岁主线应把任务转换和收尾说清楚');
 assert(entry.includes('按观察进入'), '3–6 岁入口应引导家长按观察问题进入正文');
+assert(entry.includes('发展观察与风险提示'), '3–6 岁入口应提供风险分流');
+assert(entry.includes('cognitive/curiosity-and-learning-01.html'), '3–6 岁入口应能进入连续主线正文');
+assert(entry.includes('physical/outdoor-habits-01.html'), '3–6 岁入口应能进入身体参与正文');
 assert(entry.includes('兴趣尝试'), '3–6 岁入口应保留兴趣拓展的位置');
+assert(entry.includes('专题地图'), '3–6 岁入口应把其他内容标为按需查阅地图');
+assert(curiosity.includes('route-chapter-list'), '3–6 岁章节页应使用可展开的章节列表');
 assert(!entry.includes('关键期'), '3–6 岁入口不应把发展写成单一关键期');
 assert(!entry.includes('每日户外活动不少于2小时'), '3–6 岁入口不应把户外活动写成固定达标量');
 assert(!entry.includes('建议每 3 个月做一次完整评估'), '3–6 岁入口不应要求家庭按固定周期做完整评估');
 assert(!entry.includes('## 理论依据'), '3–6 岁入口不应把不同性质的理论平铺为统一依据');
+assert(!fs.existsSync(oldAgeRoutePath), '旧 3–6 岁年龄路线壳应已删除');
 
-assert(assessment.includes('不是一张打分表'), '3–6 岁发展评估应明确不是家庭打分表');
+assert(assessment.includes('不是一张打分表'), '3–6 岁发展观察应明确不是家庭打分表');
 assert(assessment.includes('观察—调整—复盘'), '3–6 岁发展评估应提供观察、调整和复盘循环');
 assert(assessment.includes('可以观察的变化'), '3–6 岁发展评估应以可观察变化组织年龄段内容');
+assert(assessment.includes('不能替代经过验证的正式发展筛查工具'), '3–6 岁发展观察应明确专业筛查边界');
 for (const legacyPhrase of ['场景测试', '勾选式', '每 3 个月做一次']) {
   assert(!assessment.includes(legacyPhrase), `3–6 岁发展评估不应保留旧框架：${legacyPhrase}`);
 }

@@ -44,7 +44,13 @@ for (const file of sourceFiles) {
   if (!parsed.content.trim()) errors.push(`empty published content: ${rel}`);
   const built = path.join(site, rel === 'roadmap.md' ? 'roadmap.html' : resolvePath(rel));
   if (!fs.existsSync(built)) errors.push(`content not built: ${rel}`);
-  else if (!fs.readFileSync(built, 'utf8').includes('aria-label="本篇阅读用途"')) errors.push(`reading use/status not visible: ${rel}`);
+  else {
+    const html = fs.readFileSync(built, 'utf8');
+    if (!html.includes('aria-label="本篇阅读用途"') && !html.includes('class="route-nav"') && !html.includes('aria-label="选择阅读路线"')) {
+      errors.push(`reading purpose or chapter navigation not visible: ${rel}`);
+    }
+    if (html.includes('[object Object]')) errors.push(`malformed rendered content: ${rel}`);
+  }
 }
 
 // Every existing parenting topic must be discoverable from its own stage/support

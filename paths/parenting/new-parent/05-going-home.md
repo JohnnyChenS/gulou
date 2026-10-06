@@ -59,7 +59,7 @@ source_check_note: 重编依据 quick-start.md 的 2026-09-17 资料记录；本
 
 ### 需要时再查
 
-- [原教程：喂养、尿布、洗澡和睡眠](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#feeding)
+- [照料手册：喂养、尿布、洗澡和睡眠](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#feeding)
 - [NHS：换尿布](https://www.nhs.uk/baby/caring-for-a-newborn/how-to-change-your-babys-nappy/)
 - [NHS：给宝宝洗澡](https://www.nhs.uk/best-start-in-life/baby/baby-basics/caring-for-your-baby/bathing-your-baby/)
 - [CDC：配方奶冲调与保存](https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/preparation-and-storage.html)

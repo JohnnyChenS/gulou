@@ -143,7 +143,7 @@ test('nested optional links preserve BASE_PATH route context and return section'
     ],
     allowed: ['/gulou/paths/parenting/new-parent/01-before-birth.html', '/gulou/stages/care.html', '/gulou/stages/care-two.html'],
   }];
-  const link = { href: 'https://example.test/gulou/stages/care.html#feeding', classList: { contains() { return false; } }, addEventListener(type, cb) { this.callback = cb; } };
+  const link = { href: 'https://example.test/gulou/stages/care-two.html#feeding', classList: { contains() { return false; } }, addEventListener(type, cb) { this.callback = cb; } };
   const first = runNav({
     pagePath: '/gulou/stages/care.html', pageRel: 'stages/care.md',
     query: '?reader_group=new-parent-reading&reader_route=prenatal-first-week&reader_chapter=0&reader_section=safety',
@@ -151,7 +151,7 @@ test('nested optional links preserve BASE_PATH route context and return section'
   });
   assert.match(first.root.inserted.className, /route-extension-live/);
   assert.equal(first.root.inserted.children[1].children.length, 1);
-  link.callback();
+  assert.equal(link.callback, undefined, 'the native destination must work without a click handler');
   assert.match(link.href, /reader_chapter=0/);
   assert.match(link.href, /reader_section=safety/);
   assert.match(link.href, /#feeding$/);
@@ -163,7 +163,10 @@ test('nested optional links preserve BASE_PATH route context and return section'
   });
   assert.ok(second.root.inserted);
   const actions = second.root.inserted.children[1];
-  assert.match(actions.children[0].href, /new-parent\/01-before-birth\.html#safety$/);
+  const back = new URL(actions.children[0].href);
+  assert.ok(back.pathname.endsWith('/new-parent/01-before-birth.html'));
+  assert.equal(back.hash, '#safety');
+  assert.equal(back.searchParams.get('reader_route'), 'prenatal-first-week');
   assert.equal(actions.children.length, 1, 'extension pages keep only the return-to-mainline action');
 });
 
@@ -217,7 +220,7 @@ test('implicit context is enabled only for unique chapters and chapter clicks ch
   };
   const chapterLink = { href: 'https://example.test/gulou/paths/new/02.html', classList: { contains() { return false; } }, addEventListener(type, cb) { this.callback = cb; } };
   const unique = runNav({ pagePath: '/gulou/paths/new/01.html', pageRel: 'paths/new/01.md', query: '', links: [chapterLink], routes: [route] });
-  chapterLink.callback();
+  assert.equal(chapterLink.callback, undefined);
   assert.match(chapterLink.href, /reader_chapter=1/);
 
   const sharedRoute = { ...route, group: 'other', key: 'other', chapters: route.chapters.slice() };
@@ -245,19 +248,17 @@ test('entering a stage chapter from its directory selects that route after a cro
     query: '?reader_group=new-parent&reader_route=infancy&reader_chapter=0&reader_section=下一阶段',
     links: [chapter, optional], routes: [oldRoute, newRoute],
   });
-  chapter.callback();
+  assert.equal(chapter.callback, undefined);
   const next = new URL(chapter.href);
   assert.equal(next.searchParams.get('reader_group'), 'ages');
   assert.equal(next.searchParams.get('reader_route'), 'preschool');
   assert.equal(next.searchParams.get('reader_chapter'), '0');
   assert.equal(next.searchParams.has('reader_section'), false);
   assert.equal(decodeURIComponent(next.hash), '#活动');
-  optional.callback();
   assert.equal(new URL(optional.href).searchParams.get('reader_route'), 'infancy', 'reading supporting information still preserves the original handoff');
 
   const direct = makeLink('https://example.test/gulou/outdoor.html');
   runNav({pagePath: '/gulou/paths/preschool.html', pageRel: 'paths/preschool.md', query: '', links: [direct], routes: [oldRoute, newRoute]});
-  direct.callback();
   assert.equal(new URL(direct.href).searchParams.get('reader_route'), 'preschool', 'starting in a route directory also selects that route for a shared article');
 });
 
@@ -272,6 +273,30 @@ test('hash targets inside collapsed details open on load and hashchange', () => 
   result.callbacks.hashchange();
   assert.equal(result.details.open, true);
   assert.deepEqual(result.scrolls, ['start', 'start']);
+});
+
+test('a new-tab destination retains the source section and independent query parameters', () => {
+  const routes = [{
+    group: 'ages', key: 'preschool', path: '/gulou/ages/preschool.html',
+    chapters: [{ path: '/gulou/reading.html', label: '执行功能', anchors: ['延伸探索'] }],
+    allowed: ['/gulou/reading.html', '/gulou/topic.html'],
+  }];
+  const heading = { tagName: 'H2', id: '延伸探索', previousElementSibling: null };
+  const link = {
+    href: 'https://example.test/gulou/topic.html?view=full#例子',
+    previousElementSibling: heading,
+    classList: { contains() { return false; } },
+    addEventListener() { throw new Error('new-tab navigation cannot depend on click'); },
+  };
+  runNav({ pagePath: '/gulou/reading.html', pageRel: 'reading.md', query: '', links: [link], routes });
+  const destination = new URL(link.href);
+  assert.equal(destination.searchParams.get('reader_section'), '延伸探索');
+  assert.equal(destination.searchParams.get('view'), 'full');
+  assert.equal(decodeURIComponent(destination.hash), '#例子');
+  const opened = runNav({ pagePath: destination.pathname, pageRel: 'topic.md', query: destination.search, routes });
+  const back = new URL(opened.root.inserted.children[1].children[0].href);
+  assert.equal(decodeURIComponent(back.hash), '#延伸探索');
+  assert.equal(back.searchParams.get('reader_route'), 'preschool');
 });
 
 test('invalid route, chapter, page, and section context is removed', () => {

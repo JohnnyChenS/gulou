@@ -13,7 +13,7 @@ prerequisites: []
 next_topics: [0-3-core-cause-effect-01, 0-3-core-attachment-01, 0-3-core-symbolic-thinking-01]
 references:
   - Centers for Disease Control and Prevention. Developmental Milestones. https://www.cdc.gov/act-early/milestones/index.html
-  - ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/
+  - "ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/"
   - ZERO TO THREE. Getting Ready for School Begins at Birth. https://www.zerotothree.org/wp-content/uploads/2022/05/Getting-Ready-for-School-Begins-at-Birth.pdf
   - Piaget, J. (1952). The Origins of Intelligence in Children. International Universities Press.
   - Baillargeon, R. (1987). Object permanence in 3.5- and 4.5-month-old infants. Developmental Psychology, 23(5), 655-664.

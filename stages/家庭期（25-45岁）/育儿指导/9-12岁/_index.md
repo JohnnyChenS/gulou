@@ -1,4 +1,17 @@
 ---
+page_type: route
+route_group: learning-age
+route_group_mode: alternatives
+route_key: 9-12
+route_order: 4
+route_label: 9–12 岁
+route_next: ../12-14岁/_index.md
+chapters:
+  - 认知与心理/self-regulated-learning-01.md
+  - 身体能力/sleep-management-01.md
+  - 认知与心理/peer-relationships-01.md
+  - 认知与心理/innovative-thinking-01.md
+  - 认知与心理/historical-worldview-01.md
 stage: "9-12"
 age_range: 9-12岁
 stage_name: 学龄中
@@ -37,9 +50,8 @@ stage_name: 学龄中
 
 ## 下一年龄入口
 
-进入[12–14 岁行动路线](../../../../paths/learning/ages/12-14.md)不要求孩子先“完成”本页所有表现。只要新的学习任务、同伴关系或自主安排需要新的支持，就可以切换年龄入口，也可以回到本阶段的短步骤。
+进入[12–14 岁阶段](../12-14岁/_index.md)不要求孩子先“完成”本页所有表现。只要新的学习任务、同伴关系或自主安排需要新的支持，就可以切换年龄入口，也可以回到本阶段的短步骤。
 
-## 阅读入口
+## 这页就是本年龄的连续阅读入口
 
-- [本年龄连续阅读路线](../../../../paths/learning/ages/9-12.md)
-- [全部学习路线](../../../../paths/learning/_index.md)
+本页先给出五章主线，再列按问题进入的专题。需要处理更复杂的自主、身体和同伴问题时，进入[12–14 岁阶段](../12-14岁/_index.md)；路线索引由学习目录统一提供。

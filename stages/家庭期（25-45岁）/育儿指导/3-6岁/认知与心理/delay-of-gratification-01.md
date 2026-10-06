@@ -10,7 +10,7 @@ review_status: draft
 references:
   - Mischel, W., et al. (1989). Delay of gratification in children. Science, 244(4907), 933-938.
   - Watts, T. W., et al. (2018). Revisiting the marshmallow test. Psychological Science, 29(7), 1159-1177.
-  - Harvard Center on the Developing Child. Activities Guide: Enhancing and Practicing Executive Function Skills.
+  - "Harvard Center on the Developing Child. Activities Guide: Enhancing and Practicing Executive Function Skills."
 tags: [延迟满足, 自我控制, 自我调节]
 related_prompts: [3-6-core-executive-function-01, 3-6-core-emotion-regulation-01]
 ---

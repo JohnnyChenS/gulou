@@ -39,6 +39,6 @@ source_check_note: 重编依据 quick-start.md 的 2026-09-17 资料记录；本
 
 ### 需要时再查
 
-- [原教程：出生后 0–24 小时](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#first-day)
+- [照料手册：出生后 0–24 小时](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#first-day)
 - [AAP：安全睡眠](https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx)
 - [WHO：照顾新生儿](https://www.who.int/tools/your-life-your-health/life-phase/newborns-and-children-under-5-years/caring-for-newborns)

@@ -13,7 +13,7 @@ prerequisites: [0-3-core-cause-effect-01]
 next_topics: [0-3-core-empathy-01, 0-3-core-early-reading-01]
 references:
   - UNICEF. The science of play. https://www.unicef.org/parenting/child-care/science-of-play
-  - ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/
+  - "ZERO TO THREE. Learning Through Play: Birth to 12 Months. https://www.zerotothree.org/resource/learning-through-play-birth-to-12-months/"
   - Piaget, J. (1962). Play, Dreams and Imitation in Childhood. Norton.
   - Lillard, A. S. (2002). Pretend play and cognitive development. Blackwell Handbook of Childhood Cognitive Development.
   - McCune, N. J. (1995). A normative study of representational play. Developmental Psychology, 31(2), 198-206.

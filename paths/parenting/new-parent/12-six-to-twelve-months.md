@@ -54,4 +54,4 @@ source_check_note: 依据本章列明的公开资料和既有口部运动与进�
 - [NHS：婴儿食物过敏](https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/food-allergies/)
 - [NHS：Choking 与 gagging](https://www.nhs.uk/best-start-in-life/baby/weaning/safe-weaning/choking-and-gagging-on-food/)
 - [CDC：6 个月发展观察](https://www.cdc.gov/act-early/milestones/6-months.html)
-- [原教程：接近满 6 个月](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#next-stage)
+- [照料手册：接近满 6 个月](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#next-stage)

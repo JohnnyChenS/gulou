@@ -8,7 +8,7 @@ age_range: 3-6y
 difficulty: foundational
 review_status: draft
 references:
-  - Papadatou-Pastou, M., et al. (2020). Human handedness: A meta-analysis. Psychological Bulletin, 146(6), 481-524.
+  - "Papadatou-Pastou, M., et al. (2020). Human handedness: A meta-analysis. Psychological Bulletin, 146(6), 481-524."
 tags: [利手, 左利手, 惯用手]
 related_prompts: [3-6-physical-hand-eye-coordination-01]
 ---

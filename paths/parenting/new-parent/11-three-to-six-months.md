@@ -12,7 +12,7 @@ source_check_note: 依据本章列明的公开资料和现有 quick-start 重编
 
 宝宝开始更稳地抬头、伸手碰东西、发出更多声音，也可能突然翻身。照料者的任务随之从“抱稳”扩展到“让地面空间安全、让宝宝自己试、及时发现不能等待的变化”。动作变多不等于可以无人看护，能翻身也不等于床上可以放软物。
 
-如果宝宝呼吸异常、难以唤醒、抽搐、明显拒奶或精神迅速变差，先求助；三个月以内仍遵守前章发热边界。安全睡眠和急救入口见[原教程安全区](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#safety)。
+如果宝宝呼吸异常、难以唤醒、抽搐、明显拒奶或精神迅速变差，先求助；三个月以内仍遵守前章发热边界。安全睡眠和急救入口见[照料手册安全区](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#safety)。
 
 ## 先改环境，再期待动作
 
@@ -41,4 +41,4 @@ source_check_note: 依据本章列明的公开资料和现有 quick-start 重编
 - [CDC：6 个月发展观察](https://www.cdc.gov/act-early/milestones/6-months.html)
 - [AAP：安全睡眠](https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx)
 - [AAP：开始辅食的准备信号](https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/Starting-Solid-Foods.aspx?nfstatusdescripQuestions=nfstatusdescripQuestions)
-- [原教程：3–6 个月](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#months-three-six)
+- [照料手册：3–6 个月](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#months-three-six)

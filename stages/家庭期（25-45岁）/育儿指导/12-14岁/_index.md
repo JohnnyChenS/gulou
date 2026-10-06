@@ -1,4 +1,19 @@
 ---
+page_type: route
+route_group: learning-age
+route_group_mode: alternatives
+route_key: 12-14
+route_order: 5
+route_label: 12–14 岁
+route_next: ../14-18岁/_index.md
+chapters:
+  - 认知与心理/puberty-communication-01.md
+  - 认知与心理/body-development-01.md
+  - 认知与心理/academic-time-management-01.md
+  - 认知与心理/peer-relationship-deep-01.md
+  - 认知与心理/digital-literacy-01.md
+  - 认知与心理/identity-exploration-01.md
+  - 认知与心理/metacognition-learning-strategies-01.md
 stage: "12-14"
 age_range: 12-14岁
 stage_name: 青春期前期
@@ -26,7 +41,7 @@ stage_name: 青春期前期
 
 ## 身体支持入口
 
-身体能力主题仍在补充，可查看[12–14 岁身体发展专题规划](../../../../paths/12-14/physical.md)。持续疼痛、发育困扰、饮食或运动明显改变、睡眠持续受影响时，应联系合格专业人员，不用文章中的年龄范围自行判断。
+身体能力主题仍在补充。持续疼痛、发育困扰、饮食或运动明显改变、睡眠持续受影响时，应联系合格专业人员，不用文章中的年龄范围自行判断。
 
 ## 发展观察与风险提示
 
@@ -34,9 +49,8 @@ stage_name: 青春期前期
 
 ## 下一年龄入口
 
-进入[14–18 岁行动路线](../../../../paths/learning/ages/14-18.md)是阅读上的年龄切换，不代表孩子已经完成独立或冲突管理。需要时可回到本阶段的具体章节。
+进入[14–18 岁阶段](../14-18岁/_index.md)是阅读上的年龄切换，不代表孩子已经完成独立或冲突管理。需要时可回到本阶段的具体章节。
 
-## 阅读入口
+## 这页就是本年龄的连续阅读入口
 
-- [本年龄连续阅读路线](../../../../paths/learning/ages/12-14.md)
-- [全部学习路线](../../../../paths/learning/_index.md)
+本页先给出七章主线，再列发生具体问题时才打开的实战补充。需要处理更强的自主需求、心理健康或方向选择时，进入[14–18 岁阶段](../14-18岁/_index.md)；路线索引由学习目录统一提供。

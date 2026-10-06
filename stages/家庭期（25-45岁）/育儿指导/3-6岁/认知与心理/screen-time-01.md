@@ -3,7 +3,7 @@ id: 3-6-core-screen-time-01
 stage: "3-6"
 track: core
 domain: cognitive-psychological
-topic: 数码产品与屏幕时间管理
+topic: 屏幕与家庭节奏
 age_range: 3-6y
 difficulty: foundational
 review_status: draft
@@ -16,7 +16,7 @@ tags: [屏幕时间, 数码产品, 电子产品, 家庭媒体计划, 媒体素�
 related_prompts: [3-6-core-attention-focus-01, 3-6-core-executive-function-01, parenting-role-modeling-01]
 ---
 
-# 数码产品与屏幕时间管理
+# 屏幕与家庭节奏
 
 > **一句话**：屏幕可以是沟通、学习或娱乐工具；家庭需要一起决定内容、场景和边界，确保它没有挤掉睡眠、运动、游戏和面对面关系。
 
@@ -135,6 +135,6 @@ related_prompts: [3-6-core-attention-focus-01, 3-6-core-executive-function-01, p
 
 ## 延伸探索
 
-- [学龄前儿童专注力培养](attention-focus-01.md) — 观察屏幕、环境和任务如何影响投入
+- [专注、投入与活动转换](attention-focus-01.md) — 观察屏幕、环境和任务如何影响投入
 - [执行功能](executive-function-01.md) — 过渡、等待和家庭规则需要共同支持
 - [社会性游戏](social-play-01.md) — 为屏幕之外的同伴互动留出空间

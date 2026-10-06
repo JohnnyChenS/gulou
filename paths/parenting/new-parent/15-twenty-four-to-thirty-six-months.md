@@ -44,4 +44,4 @@ source_check_note: 本章依据列明的公开资料，结合既有学习基础�
 - [CDC：3 岁里程碑](https://www.cdc.gov/act-early/milestones/3-years.html)
 - [原有 0–3 岁早期阅读主题](../../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/early-reading-01.md)
 - [原有 0–3 岁学习基础主题](../../../stages/家庭期（25-45岁）/育儿指导/0-3岁/认知与心理/learning-foundations-01.md)
-- [3–6 岁线性阅读路线](../../learning/ages/3-6.md)
+- [3–6 岁线性阅读路线](../../../stages/家庭期（25-45岁）/育儿指导/3-6岁/_index.md)

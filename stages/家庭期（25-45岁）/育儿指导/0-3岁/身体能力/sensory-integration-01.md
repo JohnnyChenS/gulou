@@ -15,7 +15,7 @@ references:
   - American Academy of Pediatrics. Sensory Integration Therapies for Children With Developmental and Behavioral Disorders. https://publications.aap.org/pediatrics/article/129/6/1186/32067/Sensory-Integration-Therapies-for-Children-With
   - HealthyChildren.org. Sensory Integration Therapy. https://www.healthychildren.org/English/health-issues/conditions/developmental-disabilities/Pages/Sensory-Integration-Therapy.aspx
   - World Health Organization. Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age. https://www.who.int/publications/i/item/9789241550536
-  - Centers for Disease Control and Prevention. Positive Parenting Tips: Infants. https://www.cdc.gov/child-development/positive-parenting-tips/infants.html
+  - "Centers for Disease Control and Prevention. Positive Parenting Tips: Infants. https://www.cdc.gov/child-development/positive-parenting-tips/infants.html"
   - Ayres, A. J. (1979). Sensory integration and the child. Western Psychological Services.
 tags: [感觉体验, 前庭觉, 触觉, 感官发展, 日常适应]
 related_prompts: [0-3-core-gross-motor-01, 0-3-core-fine-motor-01]
@@ -76,15 +76,11 @@ agent_use:
 
 # 感觉体验与日常适应
 
-> **一句话**：孩子对声音、触感、移动和光线的反应有个体差异。先观察它影响了什么，再调整环境和互动；不要凭一个偏好给孩子贴“感统失调”的标签。
-
-## 真实场景
-
 有的孩子一洗头就哭，有的孩子不愿意踩草地，有的孩子在吸尘器响起时捂住耳朵，还有的孩子在疲劳时反复撞家具或转圈。照料者很容易从一个行为跳到一个结论：“他是不是感统失调？”
 
 更有用的起点是记录具体情况：什么刺激出现了，孩子当时的身体和情绪状态是什么，反应持续多久，是否影响了日常任务，改变环境后有没有改善。一个孤立的偏好不能诊断发育或行为问题。
 
-## 先理解三个边界
+## 从反应到判断，中间还要看什么
 
 ### 1. 感觉反应不是诊断
 
@@ -169,10 +165,6 @@ agent_use:
 - 家庭必须依靠高强度活动才能完成基本照料，孩子和照料者都处于持续压力中。
 
 这些信号不能用来自己诊断“感统失调”。出现严重受伤、呼吸困难、意识改变或误吞危险物，应立即获得急救帮助。
-
-## 今天就能做的一件事
-
-选一个最近最影响日常的场景，例如洗头、穿衣或吸尘器声音。今天只做一个调整：提前告诉孩子、降低刺激、给他选择，或安排一个可以退出的位置。记录调整前后的反应，不追求一次“适应成功”。
 
 ## 延伸探索
 

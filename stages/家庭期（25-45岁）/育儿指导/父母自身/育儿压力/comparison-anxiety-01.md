@@ -9,7 +9,7 @@ difficulty: foundational
 review_status: draft
 references:
   - Festinger, L. (1954). A theory of social comparison processes. Human Relations, 7(2), 117-140.
-  - Nomaguchi, K., & Milkie, M. A. (2020). Parenthood and well-being: A decade in review. Journal of Marriage and Family, 82(1), 238-261.
+  - "Nomaguchi, K., & Milkie, M. A. (2020). Parenthood and well-being: A decade in review. Journal of Marriage and Family, 82(1), 238-261."
 tags: [比较心理, 焦虑, 社交媒体, 别人家孩子]
 ---
 
@@ -19,7 +19,7 @@ tags: [比较心理, 焦虑, 社交媒体, 别人家孩子]
 
 ## 什么时候读，读完返回哪里
 
-刷到别人的月龄记录、课程清单或家庭分工后，开始怀疑自己和孩子，或者比较已经影响当天的照料时读。先暂停信息输入；如果从年龄主线跳入，先用页面的返回链接回原章节。没有原上下文时，回到[按年龄路线](../../../../../paths/learning/ages/_index.md)选择当前年龄，再用眼前的观察替代排行榜。
+刷到别人的月龄记录、课程清单或家庭分工后，开始怀疑自己和孩子，或者比较已经影响当天的照料时读。先暂停信息输入；如果从年龄主线跳入，先用页面的返回链接回原章节。没有原上下文时，回到[按年龄路线](../../_index.md)选择当前年龄，再用眼前的观察替代排行榜。
 
 ---
 

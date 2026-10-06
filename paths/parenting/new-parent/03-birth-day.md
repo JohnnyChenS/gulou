@@ -39,6 +39,6 @@ source_check_note: 重编依据 quick-start.md 的 2026-09-17 资料记录；本
 
 ### 需要时再查
 
-- [原教程：生产当天](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#birth-day)
+- [照料手册：生产当天](../../../stages/家庭期（25-45岁）/育儿指导/quick-start.md#birth-day)
 - [NHS：产程说明](https://www.nhs.uk/pregnancy/labour-and-birth/the-stages-of-labour-and-birth/)
 - [NHS：陪产者支持](https://www.nhs.uk/best-start-in-life/pregnancy/preparing-for-labour-and-birth/tips-for-your-birthing-partner-or-partners/)
