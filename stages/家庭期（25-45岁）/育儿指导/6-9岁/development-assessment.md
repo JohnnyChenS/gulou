@@ -52,7 +52,9 @@ review_status: draft
 
 ## 何时寻求帮助
 
-如果困难在多个场景持续出现，明显影响上学、睡眠、饮食、情绪或同伴关系，或出现视力、疼痛、呼吸等身体症状，带上观察记录联系老师、儿科、眼科或儿童心理专业人员。不要用这份框架排除发育、学习或心理问题。
+孩子出现呼吸困难、嘴唇发蓝灰、意识或反应明显下降时，立即联系当地急救，不继续填写观察表。[AAP 儿童急救求助说明](https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/When-to-Call-Emergency-Medical-Services-EMS.aspx)
+
+困难持续影响上学、睡眠、饮食、情绪或同伴关系，或出现视力变化、反复疼痛等身体症状时，及时联系儿科、眼科或儿童心理专业人员；可以请老师补充学校中的观察，不必等多个场景都出现问题。对发展有担忧也可以直接提出，不用这份框架排除发育、学习或心理问题。[CDC：发展监测与发展筛查](https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html)
 
 ## 主题入口
 

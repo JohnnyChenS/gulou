@@ -36,6 +36,10 @@ jobs:
         working-directory: website
         run: BASE_PATH=/ npm run build
 
+      - name: Check content and reading routes
+        working-directory: website
+        run: npm run check:all
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

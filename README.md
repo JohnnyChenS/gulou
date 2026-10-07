@@ -85,14 +85,11 @@
 ```bash
 cd website
 npm ci
-npm run check:routes
 npm run build
-npm run check:reading
-npm run check:editorial
-npm run check:breadcrumbs
-npm run check:0-3
-npm run check:system-architecture
+npm run check:all
 ```
+
+`check:all` 运行现有九项检查，包括阅读回归、内容覆盖、本地链接与锚点。需要先构建，检查才会使用最新页面；GitHub Pages 部署也在上传前执行这些检查。单项检查仍可用于局部修改。
 
 生成后可用静态服务器预览，例如 `python3 -m http.server 8000 --directory site`。生产发布由 `.github/workflows/deploy.yml` 管理；本地构建不会发布。
 

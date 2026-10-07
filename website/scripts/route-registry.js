@@ -221,6 +221,20 @@ function validateRoutes(pages) {
   }
 
   for (const page of pages) {
+    const refs = (registry.routeRefsByPage.get(page.rel) || [])
+      .filter(ref => Array.isArray(ref.route.fm.chapters));
+    if (refs.length === 1) {
+      const ref = refs[0];
+      const next = ref.route.chapters[ref.index + 1];
+      // Only check an explicit linked promise. Ordinary mentions of “下一章”
+      // and optional reading links have no reliable machine-readable meaning.
+      for (const match of page.content.matchAll(/下一(?:章|篇)(?:的)?\s*\[[^\]]+\]\(([^)]+)\)/g)) {
+        const target = normalizeTarget(page.rel, match[1]);
+        if (target && target !== next?.target) {
+          errors.push(`${page.rel}: prose next chapter disagrees with ${ref.route.rel}: ${target}`);
+        }
+      }
+    }
     if (page.fm.page_type === 'route' || registry.routeRefsByPage.has(page.rel)) continue;
     warnings.push(`${page.rel}: no route reference`);
   }

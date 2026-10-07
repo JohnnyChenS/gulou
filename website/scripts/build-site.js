@@ -417,9 +417,13 @@ function renderRouteNav(context, { bottom = false } = {}) {
     const query = routeIsChapter ? `?${routeContextQuery(activeRoute, index)}` : '';
     return `<a href="${siteUrl(resolvePath(page.rel))}${query}"${active}><span>${index + 1}</span>${escapeHtml(pageLabel(page))}</a>`;
   }).join('');
-  const stepList = context.readingChapter && routeIsChapter
-    ? `<details class="route-chapter-list"><summary>展开章节目录</summary><div class="route-steps mobile-route-nav">${stepLinks}</div></details>`
-    : `<div class="route-steps mobile-route-nav">${stepLinks}</div>`;
+  // Route entrances explain their chapters in the body. Repeating that list
+  // before the title makes readers choose twice before they can start.
+  const stepList = route && chapterSteps.length > 0
+    ? ''
+    : (context.readingChapter && routeIsChapter
+      ? `<details class="route-chapter-list"><summary>展开章节目录</summary><div class="route-steps mobile-route-nav">${stepLinks}</div></details>`
+      : `<div class="route-steps mobile-route-nav">${stepLinks}</div>`);
   const previousPage = route ? context.previous : context.articlePrevious;
   const nextPage = route ? context.next : context.articleNext;
   const chapterHref = (page, fallbackIndex) => {
@@ -437,7 +441,7 @@ function renderRouteNav(context, { bottom = false } = {}) {
     ? `<a class="route-prev" href="${chapterHref(stepPage(previousPage), previousIndex)}">← 上一章：${escapeHtml(pageLabel(stepPage(previousPage)))}</a>`
     : '';
   const next = nextPage
-    ? `<a class="route-next" href="${chapterHref(stepPage(nextPage), nextIndex)}">下一章：${escapeHtml(pageLabel(stepPage(nextPage)))} →</a>`
+    ? `<a class="route-next" href="${chapterHref(stepPage(nextPage), nextIndex)}">${route && chapterSteps.length > 0 ? '从第一章开始' : '下一章'}：${escapeHtml(pageLabel(stepPage(nextPage)))} →</a>`
     : (steps.length > 0 ? '<span class="route-end">这条路线到这里，可以回到路线首页选择下一步。</span>' : '');
   if (bottom) {
     return `<section class="route-nav route-nav-bottom" aria-label="章节前后导航">

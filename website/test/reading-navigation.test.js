@@ -54,6 +54,23 @@ test('an explicit empty chapter list keeps supporting links out of route progres
   assert.equal(registry.routeRefsByPage.size, 0);
 });
 
+test('a linked next-chapter promise must agree with the sole explicit reading route', () => {
+  const pages = [
+    page('paths/course/_index.md', {
+      page_type: 'route', route_group: 'course', route_group_mode: 'alternatives',
+      route_key: 'course', route_order: 1, chapters: ['one.md', 'two.md'],
+    }),
+    page('paths/course/one.md', {}, '下一章[实战篇](optional.md)会继续。'),
+    page('paths/course/two.md', {}),
+    page('paths/course/optional.md', {}),
+  ];
+  assert.ok(validateRoutes(pages).errors.some(error => error.includes('prose next chapter disagrees')));
+  pages[1].content = '下一章[第二篇](two.md)会继续。需要时查[实战篇](optional.md)。';
+  assert.deepEqual(validateRoutes(pages).errors, []);
+  pages[2].content = '下一篇[实战篇](optional.md)会继续。';
+  assert.ok(validateRoutes(pages).errors.some(error => error.includes('prose next chapter disagrees')));
+});
+
 test('legacy architecture routes remain ten-stage sequences', () => {
   const pages = [
     page('interests/system-architecture/_index.md', {

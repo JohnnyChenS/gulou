@@ -21,7 +21,7 @@ name: 内容维护记录
 
 逐文件编辑记录保存在仓库的 [editorial-coverage.json](https://github.com/JohnnyChenS/gulou/blob/main/docs/reading/editorial-coverage.json)，区分正文重编、局部整合和检查后保留，并列出实际核对的来源范围。书目列在文章里，不等于本轮已重读书目全文。
 
-第二轮的具体修改和验证保存在 [docs/reading](https://github.com/JohnnyChenS/gulou/tree/main/docs/reading)。页面不再在正文前展示编辑进度；读者只需要知道当前章节、下一步和专业审核状态。
+各轮具体修改和验证保存在 [docs/reading](https://github.com/JohnnyChenS/gulou/tree/main/docs/reading)。2026-10-07 的第三轮继续修正正文承接、求助分流和模板表达，并逐篇记录改动与保留理由。页面不在正文前展示编辑进度；读者只需要知道当前章节、下一步和专业审核状态。
 
 编辑走读与工程检查可以发现跳转、重复和解释断点。它们不能代替真实读者的理解测试，也不等同于医学、心理或登山技术的专业审定。尚无相应审核记录的内容继续保留草稿和必要求助条件。
 

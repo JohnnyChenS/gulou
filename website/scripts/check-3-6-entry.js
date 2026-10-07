@@ -62,17 +62,17 @@ for (const legacyPhrase of ['场景测试', '勾选式', '每 3 个月做一次'
   assert(!assessment.includes(legacyPhrase), `3–6 岁发展评估不应保留旧框架：${legacyPhrase}`);
 }
 
-assert(executive.includes('成人支持'), '执行功能正文应把成人支持和环境调整放在前面');
+assert(executive.includes('外部支架') && executive.includes('成人示范'), '执行功能正文应解释环境提示与成人示范怎样帮助参与');
 for (const legacyPhrase of ['比 IQ 更能预测学业成功', '错过这个窗口', '注意力约 5-8 分钟']) {
   assert(!executive.includes(legacyPhrase), `执行功能正文不应保留效果或年龄承诺：${legacyPhrase}`);
 }
 
-assert(preLiteracyMath.includes('阅读和数学经验'), '前阅读与前数学正文应以日常经验组织内容');
+assert(preLiteracyMath.includes('阅读与数学经验'), '前阅读与前数学正文应以日常经验组织内容');
 for (const legacyPhrase of ['每天读 15 分钟', '最佳预测指标', '幼小衔接班的效果是短期的']) {
   assert(!preLiteracyMath.includes(legacyPhrase), `前阅读与前数学正文不应保留未经支持的承诺：${legacyPhrase}`);
 }
 
-assert(socialPlay.includes('不同形式的游戏会交错出现'), '社会性游戏正文应说明游戏形式会重叠交错');
+assert(socialPlay.includes('这些形式会交错出现'), '社会性游戏正文应说明游戏形式会重叠交错');
 for (const legacyPhrase of ['关键期', '最佳训练场', '一对一的玩伴约会比去游乐场更容易建立友谊']) {
   assert(!socialPlay.includes(legacyPhrase), `社会性游戏正文不应保留线性或效果承诺：${legacyPhrase}`);
 }
@@ -87,7 +87,7 @@ for (const legacyPhrase of ['持续注意时长', '每天 15-30 分钟', '需要
   assert(!attention.includes(legacyPhrase), `注意力正文不应保留固定时长或效果承诺：${legacyPhrase}`);
 }
 
-assert(curiosity.includes('这些是观察方向'), '好奇心正文应把年龄内容定位为观察方向');
+assert(curiosity.includes('学习准备不是固定的坐姿、问题数量或提前学会多少'), '好奇心正文不应把固定姿势、次数或预学内容当作学习门槛');
 for (const legacyPhrase of ['关键期', '最佳训练场', '最有效']) {
   assert(!curiosity.includes(legacyPhrase), `好奇心正文不应保留阶段或效果承诺：${legacyPhrase}`);
 }
@@ -112,7 +112,7 @@ for (const legacyPhrase of ['关键期', '每周 1-2 次', '4 岁以上仍不知
   assert(!genderIdentity.includes(legacyPhrase), `性别认同正文不应保留线性发展或排除性判断：${legacyPhrase}`);
 }
 
-assert(readingHabits.includes('阅读可以从孩子的兴趣开始'), '阅读习惯正文应从兴趣和关系出发');
+assert(readingHabits.includes('让书成为他愿意回来'), '阅读习惯正文应从兴趣和共同经验出发');
 for (const legacyPhrase of ['约 12% 的差异', '每 1-2 周一次', '动态调整', '直接推动语言表达能力']) {
   assert(!readingHabits.includes(legacyPhrase), `阅读习惯正文不应保留未经支持的精确或效果承诺：${legacyPhrase}`);
 }

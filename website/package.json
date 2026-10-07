@@ -14,6 +14,7 @@
     "check:system-architecture": "node scripts/check-system-architecture.js",
     "check:reading": "node --test test/reading-navigation.test.js test/reading-site.test.js",
     "check:editorial": "node scripts/check-editorial-coverage.js",
+    "check:all": "npm run check:routes && npm run check:breadcrumbs && npm run check:brain-health && npm run check:0-3 && npm run check:3-6 && npm run check:path-migration && npm run check:system-architecture && npm run check:reading && npm run check:editorial",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

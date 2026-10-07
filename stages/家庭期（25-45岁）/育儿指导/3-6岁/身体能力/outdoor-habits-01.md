@@ -9,6 +9,7 @@ difficulty: foundational
 review_status: draft
 references:
   - World Health Organization. Guidelines on physical activity, sedentary behaviour and sleep for children under 5 years of age. https://www.who.int/publications/i/item/9789241550536
+  - World Health Organization. Physical activity. https://www.who.int/news-room/fact-sheets/detail/physical-activity
 tags: [户外活动, 自然游戏, 运动习惯]
 related_prompts: [3-6-physical-basic-movement-01, 3-6-physical-balance-coordination-01]
 ---
@@ -19,7 +20,9 @@ related_prompts: [3-6-physical-basic-movement-01, 3-6-physical-balance-coordinat
 
 ## 户外活动到底在支持什么
 
-户外活动是孩子走、跑、攀爬、推拉、观察和与人一起玩的生活场景。它可以给主动活动和安静探索留出空间，也让照料者观察孩子在不同地面、光线、声音和同伴环境中的参与方式。WHO 的指南把主动活动、静坐和睡眠放在同一个家庭节奏中考虑，并没有要求每个家庭用单日数字给孩子打分。
+户外活动是孩子走、跑、攀爬、推拉、观察和与人一起玩的生活场景。它可以给主动活动和安静探索留出空间，也让照料者观察孩子在不同地面、光线、声音和同伴环境中的参与方式。
+
+查公共卫生建议时要看年龄范围：WHO 的“5 岁以下”指南适用于未满 5 岁的孩子，把活动、静坐和睡眠放在一起考虑；已满 5 岁的孩子应查[5 岁及以上身体活动建议](https://www.who.int/news-room/fact-sheets/detail/physical-activity)，不能直接沿用前一年龄组的安排。家庭还需结合健康、天气和场地条件调整。
 
 “自然探索”是指让孩子接触树叶、石头、泥沙、风和季节变化等真实材料；不等于必须去偏远野外，也不等于每次都要安排教学目标。阴天、短时间散步或在小区里看植物，也可以成为一次户外经验。
 
@@ -35,7 +38,13 @@ related_prompts: [3-6-physical-basic-movement-01, 3-6-physical-balance-coordinat
 
 只记录一个问题：孩子在什么地方、和谁一起、做什么活动时最容易投入？他是需要先走一会儿才愿意游戏，还是需要先安静观察？下次从这个线索调整，逐渐形成可持续的家庭节奏。
 
-如果孩子在活动中反复说痛、明显跛行、频繁跌倒超出平时、呼吸困难或出现其他让你担心的身体信号，先停止活动并咨询合格专业人员。持续完全回避所有活动、或在不同环境中都难以参与，也值得带着具体例子讨论；不要仅凭“不爱出门”给孩子下结论。
+孩子出现呼吸困难、嘴唇发蓝灰、意识或反应明显下降时，立即停止活动并联系当地急救，不等待下次活动再观察。可参考 [AAP 儿童急救求助说明](https://www.healthychildren.org/English/health-issues/injuries-emergencies/Pages/When-to-Call-Emergency-Medical-Services-EMS.aspx)。
+
+如果孩子在活动中反复说痛、明显跛行、频繁跌倒超出平时，或出现其他让你担心的身体信号，先停止活动并及时咨询合格专业人员。持续回避活动、参与困难影响生活，也值得带着具体例子讨论；不必等所有活动或多个环境都出现困难才咨询。不要仅凭“不爱出门”给孩子下结论。
+
+## 从这里继续
+
+带着刚才的观察进入[情绪调节与共同恢复](../认知与心理/emotion-regulation-01.md)：孩子是怎样开始、停下和重新加入的？这个问题会在后面的同伴游戏和任务转换中继续出现。
 
 ## 需要时再查
 

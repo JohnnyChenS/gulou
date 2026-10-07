@@ -11,6 +11,7 @@ references:
   - Lazarus, R. S., & Folkman, S. (1984). Stress, Appraisal, and Coping. Springer.
   - Dweck, C. S. (2006). Mindset. Random House.
   - Pomerantz, E. M., et al. (2007). Parents' involvement in children's academic lives. Review of Educational Research, 77(1), 1-38.
+  - NIMH. Child and Adolescent Mental Health. https://www.nimh.nih.gov/health/topics/child-and-adolescent-mental-health
 tags: [升学, 高考, 学业焦虑, 期望管理]
 related_prompts: [14-18-core-adolescent-mental-health-01, 14-18-core-academic-pressure-02]
 ---
@@ -23,7 +24,11 @@ related_prompts: [14-18-core-adolescent-mental-health-01, 14-18-core-academic-pr
 
 ## 先确认安全
 
-如果孩子表达不想活了、活着没意思，出现自伤行为，或因焦虑完全无法参加考试或到校，应立即让可信任的成年人陪伴，联系当地急救、急诊或危机支持。在中国大陆可拨打 **120**。不要让孩子独处，也不要把安全问题继续当作学习计划来处理。
+如果孩子正在实施自伤、已有自杀计划、伤势需要处置，或当下无法保证安全，应立即让可信任的成年人陪伴，联系当地急救、急诊或危机支持。在中国大陆可拨打 **120**。不要让孩子独处，也不要把安全问题继续当作学习计划来处理。
+
+孩子说“不想活了”、有自杀想法，或已经发生过自伤，即使没有说出计划，也要立即让可信任成人知道，并联系心理健康专业人员或当地危机服务，确认当前安全与评估安排；学校可以协助连接支持。认真听他说了什么，不把它当成考差后的气话，也不等出现计划才求助。若有即时危险、伤势或无法保证安全，按上面的紧急分流处理。[NIMH 儿童心理健康与求助](https://www.nimh.nih.gov/health/publications/children-and-mental-health)、[支持有自杀想法的人](https://www.nimh.nih.gov/health/publications/5-action-steps-to-help-someone-having-thoughts-of-suicide)
+
+如果孩子因焦虑无法参加考试或到校，或失眠、身体不适、明显低落、拒学等变化持续影响日常生活，应尽快联系学校、儿科、心理健康专业人员或其他合适的支持，进行具体评估。不能只靠学习计划或等待硬扛；若同时出现自伤、自杀想法或安全担忧，按前面的情况立即求助。
 
 ## 一次退步不等于一个结论
 
